@@ -1,16 +1,63 @@
-.global-nav {
-  font-size: 1rem;
-  &__list {
-    color: #F00;
+.content-page-title{
+  color: #000000;
+}
+
+.contact-top{
+  li{
+  font-size: 1.375rem;
+  }
+  p{
+  color: #707070;   
+  }
+  color: #707070;
+  &__mail{
+      color: #707070;
+  }
+  &__tel{
+      color: #707070;
   }
 }
 
-.global-nav {
-  font-size: 2rem;
-  &__list {
-    color: #00F;
+.contact-tpl{
+  &__description{
+      color: #707070;
   }
-  &__title {
-  font-weight: bold;
+  &__button{
+      color: #707070;
   }
+  &__copy-text{
+      color:#707070;
+
+  }
+}
+
+.contact-bottom{
+  li{
+      font-size: 1.375rem;
+      }
+  &__description{
+      color: #707070;
+  }
+  &__twitter{
+      color: #707070;
+  }
+  &__skype{
+      color: #707070;
+  }
+  &__facebook{
+      color: #707070;
+  }
+  &__line{
+      color: #707070;
+  }
+}
+
+.contact-bye-text{
+  color: #707070;
+}
+
+.footer p{
+  color: #707070;
+  font-size: 0.75rem;
+
 }
