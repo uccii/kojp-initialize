@@ -1,1 +1,16 @@
-@import 'src/normalize.css';
+.global-nav {
+  font-size: 1rem;
+  &__list {
+    color: #F00;
+  }
+}
+
+.global-nav {
+  font-size: 2rem;
+  &__list {
+    color: #00F;
+  }
+  &__title {
+  font-weight: bold;
+  }
+}
