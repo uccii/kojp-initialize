@@ -1,63 +1,124 @@
-.content-page-title{
-  color: #000000;
+body{
+  background-color: #FFFFFF;
+  margin: 36px;
 }
 
-.contact-top{
+h1{
+  height: 22px;
+  text-align: right;
+  hirgt:54px;
+}
+
+.content-page-title{
+  color: #000000;
+  text-align: center;
+  hirgt:77px;
+}
+
+
+.contact-primary{
   li{
   font-size: 1.375rem;
+  list-style: none;
+  text-align:center;
   }
   p{
-  color: #707070;   
+  color: #707070;  
+  text-align: center;
+  height: 107px;
+  margin: 36px;
   }
   color: #707070;
   &__mail{
       color: #707070;
+      background:url(http://www.australopithec.us/wp/wp-content/uploads/2019/11/mail.png)no-repeat;
   }
   &__tel{
       color: #707070;
+  }
+  &__copy-icon{
+    padding-left: 30px;
+    lime-height:30px;
+    background:url(http://www.australopithec.us/wp/wp-content/uploads/2019/11/copy.png)no-repeat;
   }
 }
 
 .contact-tpl{
   &__description{
       color: #707070;
+      text-align: center; 
   }
-  &__button{
+  &__button-1st{ 
+         /*”表示する”をセンター寄せしたいがうまく行かない */   
+      text-align: center; 
       color: #707070;
+      border-radius:98;
+      width: 122px;
+      height: 58px;
+      border: solid 1px #707070;
+      background-color: #FFFFFF;
+      border-radius: 98px;
   }
-  &__copy-text{
-      color:#707070;
 
+  &__copy-text li{
+      color:#707070;
+      list-style: none;
+      line-height: 2;
   }
+  &__copy-text {
+    　margin-left:auto;
+      margin-right: auto;
+      color:#707070;
+      list-style: none;
+      border: solid 1px #707070; 
+      background-color: #FFFFFF;
+  }
+  &__button-2nd{ 
+      /*”テキストをコピーする”を中央寄せさせたいが、うまく行かない */  
+      /*ボタン要素自体の横幅を指定したがどうすればよいか（文字の長さに関係させない）*/ 
+    　text-align:center;
+      height: 58px; 
+      margin-top:18px;
+      color:#707070;
+      list-style: none;
+      border: solid 1px #707070;
+      background-color: #FFFFFF;
+}
 }
 
-.contact-bottom{
+.contact-secondary{
   li{
       font-size: 1.375rem;
+      text-align:center;
+      list-style: none;
+      color: #707070;
       }
   &__description{
-      color: #707070;
+    text-align:center;
+    color: #707070;
+    background:url();
   }
   &__twitter{
-      color: #707070;
+    background:url();
   }
   &__skype{
-      color: #707070;
+    background:url();
   }
   &__facebook{
-      color: #707070;
+    background:url();
   }
   &__line{
-      color: #707070;
+    background:url();
   }
 }
 
 .contact-bye-text{
   color: #707070;
+  text-align: center;
 }
 
-.footer p{
+.fotter-logo{
+  text-align: center;
   color: #707070;
   font-size: 0.75rem;
-
 }
