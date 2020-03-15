@@ -5,7 +5,43 @@
   }
 }
 
+.parts-toggle-munu {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    justify-content: center;
+    > span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      flex-shrink: 0;
+      background-color: #000;
+    }
+}
+
 .global-nav {
+  &__toggle-button {
+    display: flex;
+    width: 96px;
+    height: 48px;
+    border-radius: 8px;
+    border: none;
+    padding: 8px;
+    box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, .8);
+    background-color: #fff;
+    &:before {
+      content: 'icon';
+      display: block;
+      width: 40px;
+      height: 32px;
+      flex-shrink: 0;
+    }
+  }
+  &__button-line {
+    width: 40px;
+    height: 32px;
+    padding-left: 8px;
+  }
   font-size: 2rem;
   &__list {
     color: #00F;
