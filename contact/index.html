@@ -7,6 +7,8 @@
     <title>Document</title>
   </head>
   <body>
+    <!–うまくコメントアウトできない・・・–>
+    <!–
     <header>
       <nav class="top-page-nav">
         <p class="top-page-nav__title">MENU</p>
@@ -18,6 +20,8 @@
         </ul>
       </nav>
     </header>
+    –>
+
     <h1><img alt="knickaffice" /></h1>
     <h2 class="content-page-title">CONTACT / お問い合わせ</h2>
 
@@ -25,13 +29,21 @@
       <p>
         デザインのご依頼など、お問い合わせは以下よりお受けいたします。返信まで数営業日かかることもございます。
       </p>
-      <ul>
-        <li>
-          <button class="contact-primary__mail">s@knickaoffice.jp</button>
-        </li>
-        <li>
-          <button class="contact-primary__tel">045-516-2763</button>
-        </li>
+      <!–cssの前に、htmlご相談依頼
+      音声前提として、
+      ・imgのaltで、何についての情報か
+      ・button要素で中身について（中身だけだと、どのような情報かわからなため、atlが必要？）
+      ・コピーアイコンも、そこにコピーができる要素があることを伝えるために、img？
+      　　→もしくは、button要素の中であれば、コピーできることを伝えられるものなのか？–>
+      <ul class="contact-primary__mail">
+        <li><img src="http://www.australopithec.us/wp/wp-content/uploads/2019/11/mail.png" alt="mail"></li>
+        <li></li><button>s@knickaoffice.jp</button></li>
+        <li><img class="contact-primary__mail-copy" src="http://www.australopithec.us/wp/wp-content/uploads/2019/11/copy.png" alt="mail-copy"></li>
+      </ul>
+      <ul class="contact-primary__tel">
+        <li><img src="http://www.australopithec.us/wp/wp-content/uploads/2019/11/phone.png" alt="tel">
+        <li><button>045-516-2763</button></li>
+        <li><img class="contact-primary__tel-copy"src="http://www.australopithec.us/wp/wp-content/uploads/2019/11/copy.png" alt="tel-copy"></li>
       </ul>
     </div>
 
@@ -39,7 +51,9 @@
       <p class="contact-tpl__description">
         お問い合わせ用のテンプレート（任意）をご用意しています
       </p>
+      <div class="contact-tpl__button-1st_wrapper">
       <button class="contact-tpl__button-1st">表示する</button>
+    　</div>
       <p class="contact-tpl__description">
         お問い合わせ内容でお迷いの方は、以下のテンプレートをご利用ください。
       </p>
@@ -52,7 +66,9 @@
         </li>
         <li>対象となるサービスのURLなど：</li>
       </div>
+      <div class="contact-tpl__button-2nd_wrapper">
       <button class="contact-tpl__button-2nd">テキストをコピーする</button>
+      </div>
     </div>
 
     <div class="contact-secondary">

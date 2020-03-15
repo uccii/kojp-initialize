@@ -16,41 +16,52 @@ h1{
 }
 
 
+
+
+
 .contact-primary{
-  li{
-  font-size: 1.375rem;
-  list-style: none;
-  text-align:center;
-  }
   p{
-  color: #707070;  
-  text-align: center;
-  height: 107px;
-  margin: 36px;
+    color: #707070;  
+    text-align: center;
+    height: 107px;
+    margin: 36px;
+    }
+
+  ul{
+  display: block;
+  list-style: none;
+  font-size: 2.0rem;
+  /*1.0remのフォントサイズを確認するにはどうすればよいか、ブラウザ依存？*/
+  height: 45px;
+  width: 171px;
   }
-  color: #707070;
-  &__mail{
-      color: #707070;
-      background:url(http://www.australopithec.us/wp/wp-content/uploads/2019/11/mail.png)no-repeat;
+
+  button{
+    outline:0;
   }
-  &__tel{
-      color: #707070;
+  
+  img{
+    height: 31px;
+    width: 22px;
   }
-  &__copy-icon{
-    padding-left: 30px;
-    lime-height:30px;
-    background:url(http://www.australopithec.us/wp/wp-content/uploads/2019/11/copy.png)no-repeat;
-  }
+
+
+
 }
+
+
+
+
 
 .contact-tpl{
   &__description{
       color: #707070;
       text-align: center; 
   }
+  &__button-1st_wrapper{
+    text-align:center; 
+  }
   &__button-1st{ 
-         /*”表示する”をセンター寄せしたいがうまく行かない */   
-      text-align: center; 
       color: #707070;
       border-radius:98;
       width: 122px;
@@ -73,9 +84,10 @@ h1{
       border: solid 1px #707070; 
       background-color: #FFFFFF;
   }
+  &__button-2nd_wrapper{ 
+    text-align:center;
+  }
   &__button-2nd{ 
-      /*”テキストをコピーする”を中央寄せさせたいが、うまく行かない */  
-      /*ボタン要素自体の横幅を指定したがどうすればよいか（文字の長さに関係させない）*/ 
     　text-align:center;
       height: 58px; 
       margin-top:18px;
@@ -92,23 +104,30 @@ h1{
       text-align:center;
       list-style: none;
       color: #707070;
+      padding: 8px;
       }
+
+  button{
+    outline:0;
+    height: 45px;
+    width: 171px;
+  }
+
   &__description{
     text-align:center;
     color: #707070;
-    background:url();
   }
   &__twitter{
-    background:url();
+    background:url(http://www.australopithec.us/wp/wp-content/uploads/2019/11/twitter.png)no-repeat;
   }
   &__skype{
-    background:url();
+    background:url(http://www.australopithec.us/wp/wp-content/uploads/2019/11/skype.png)no-repeat;
   }
   &__facebook{
-    background:url();
+    background:url(http://www.australopithec.us/wp/wp-content/uploads/2019/11/facebook.png)no-repeat;
   }
   &__line{
-    background:url();
+    background:url(http://www.australopithec.us/wp/wp-content/uploads/2019/11/line.png)no-repeat;
   }
 }
 
