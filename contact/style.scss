@@ -27,38 +27,40 @@ h1{
     margin: 36px;
     }
   &__mail{
-    height: 51px;
-    width: 80%;
-    padding: 8px;
-    vertical-align: bottom;
+    position: relative;
+    width: 320px;
+    margin: 0 auto;
   }
   &__mail-icon-contents{
     border-bottom: 1px solid #707070;
     height: 51px;
-    width: 80%;
-    text-align: center;
-    float: left;
+    width: 240px;
+    margin: 0 auto;
   }
   &__mail-icon{
-    width: 20%;
-    outline:0;
+    width: 37px;
     margin: 8px;
     float: left;
+    > img {
+      outline:0;
+      width: 100%;
+    }
   }
   &__mail-contents{
     color: #707070;
-    height: 34px;
-    width: 75px;
     margin: 8px;
     float: left;
   }
   &__mail-copy{
-    height: 22px;
-    margin: 8px;
-    float: left;
+    position: absolute;
+    width: 44px;
+    top: 0;
+    right: 0;
     background-color: transparent;
     border: none;
-    float: left;
+    > img {
+      width: 100%;
+    }
   }
 
 
@@ -87,14 +89,6 @@ h1{
     height: 22px;
     width: 20px;
     outline:0;
-    float: left;
-  }
-
-
-
-  button{
-    background-color: transparent;
-    border: none;
     float: left;
   }
 }
