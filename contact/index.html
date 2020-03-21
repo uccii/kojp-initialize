@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-Uh-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.scss" />
     <title>Document</title>
   </head>
   <body>
-    <!–うまくコメントアウトできない・・・–>
-    <!–
     <header>
       <nav class="top-page-nav">
         <p class="top-page-nav__title">MENU</p>
@@ -20,7 +19,6 @@
         </ul>
       </nav>
     </header>
-    –>
 
     <h1><img alt="knickaffice" /></h1>
     <h2 class="content-page-title">CONTACT / お問い合わせ</h2>
@@ -29,22 +27,51 @@
       <p>
         デザインのご依頼など、お問い合わせは以下よりお受けいたします。返信まで数営業日かかることもございます。
       </p>
-      <!–cssの前に、htmlご相談依頼
-      音声前提として、
-      ・imgのaltで、何についての情報か
-      ・button要素で中身について（中身だけだと、どのような情報かわからなため、atlが必要？）
-      ・コピーアイコンも、そこにコピーができる要素があることを伝えるために、img？
-      　　→もしくは、button要素の中であれば、コピーできることを伝えられるものなのか？–>
-      <ul class="contact-primary__mail">
-        <li><img src="http://www.australopithec.us/wp/wp-content/uploads/2019/11/mail.png" alt="mail"></li>
-        <li></li><button>s@knickaoffice.jp</button></li>
-        <li><img class="contact-primary__mail-copy" src="http://www.australopithec.us/wp/wp-content/uploads/2019/11/copy.png" alt="mail-copy"></li>
-      </ul>
-      <ul class="contact-primary__tel">
-        <li><img src="http://www.australopithec.us/wp/wp-content/uploads/2019/11/phone.png" alt="tel">
-        <li><button>045-516-2763</button></li>
-        <li><img class="contact-primary__tel-copy"src="http://www.australopithec.us/wp/wp-content/uploads/2019/11/copy.png" alt="tel-copy"></li>
-      </ul>
+
+      <dl>
+        <div class="contact-primary__mail">
+          <dt>
+            <img
+              class="contact-primary__mail-img"
+              src="http://www.australopithec.us/wp/wp-content/uploads/2019/11/mail.png"
+              alt="mail"
+            />
+          </dt>
+          <dd class="contact-primary__mail-content">
+            s@knickaoffice.jp
+            <button>
+              <img
+                class="contact-primary__mail-copy"
+                src="http://www.australopithec.us/wp/wp-content/uploads/2019/11/copy.png"
+                alt="mail-copy"
+              />
+            </button>
+          </dd>
+          <span class="contact-primary__mail-border"></span>
+        </div>
+        <div>
+          <div class="contact-primary__tel">
+            <dl>
+              <dt>
+                <img
+                  src="http://www.australopithec.us/wp/wp-content/uploads/2019/11/phone.png"
+                  alt="tel"
+                />
+              </dt>
+              <dd>
+                045-516-2763
+              </dd>
+            </dl>
+          </div>
+          <button class="contact-primary__tel-button-copy">
+            <img
+              class="contact-primary__tel-copy"
+              src="http://www.australopithec.us/wp/wp-content/uploads/2019/11/copy.png"
+              alt="tel-copy"
+            />
+          </button>
+        </div>
+      </dl>
     </div>
 
     <div class="contact-tpl">
@@ -52,8 +79,8 @@
         お問い合わせ用のテンプレート（任意）をご用意しています
       </p>
       <div class="contact-tpl__button-1st_wrapper">
-      <button class="contact-tpl__button-1st">表示する</button>
-    　</div>
+        <button class="contact-tpl__button-1st">表示する</button>
+      </div>
       <p class="contact-tpl__description">
         お問い合わせ内容でお迷いの方は、以下のテンプレートをご利用ください。
       </p>
@@ -67,7 +94,7 @@
         <li>対象となるサービスのURLなど：</li>
       </div>
       <div class="contact-tpl__button-2nd_wrapper">
-      <button class="contact-tpl__button-2nd">テキストをコピーする</button>
+        <button class="contact-tpl__button-2nd">テキストをコピーする</button>
       </div>
     </div>
 
@@ -75,20 +102,76 @@
       <p class="contact-secondary__description">
         以下のアプリからもお問い合わせも可能です
       </p>
-      <ul>
-        <li>
-          <button class="contact-secondary__twitter">@knickaoffice</button>
-        </li>
-        <li>
-          <button class="contact-secondary__skype">knickaoffice</button>
-        </li>
-        <li>
-          <button class="contact-secondary__facebook">knickaoffice</button>
-        </li>
-        <li>
-          <button class="contact-secondary__line">knickaoffice</button>
-        </li>
-      </ul>
+
+      <dl>
+        <dt class="contact-primary__twitter">
+          <img
+            src="http://www.australopithec.us/wp/wp-content/uploads/2019/11/twitter.png"
+            alt="twitter"
+          />
+        </dt>
+        <dd>
+          @knickaoffice
+          <button>
+            <img
+              class="contact-primary__twitter-copy"
+              src="http://www.australopithec.us/wp/wp-content/uploads/2019/11/copy.png"
+              alt="twitter-copy"
+            />
+          </button>
+        </dd>
+
+        <dt class="contact-primary__skype">
+          <img
+            src="http://www.australopithec.us/wp/wp-content/uploads/2019/11/skype.png"
+            alt="skype"
+          />
+        </dt>
+        <dd>
+          knickaoffice
+          <button>
+            <img
+              class="contact-primary__twitter-copy"
+              src="http://www.australopithec.us/wp/wp-content/uploads/2019/11/copy.png"
+              alt="skype-copy"
+            />
+          </button>
+        </dd>
+
+        <dt class="contact-primary__facebook">
+          <img
+            src="http://www.australopithec.us/wp/wp-content/uploads/2019/11/facebook.png"
+            alt="facebook"
+          />
+        </dt>
+        <dd>
+          knickaoffice
+          <button>
+            <img
+              class="contact-primary__facebook-copy"
+              src="http://www.australopithec.us/wp/wp-content/uploads/2019/11/copy.png"
+              alt="facebook-copy"
+            />
+          </button>
+        </dd>
+
+        <dt class="contact-primary__line">
+          <img
+            src="http://www.australopithec.us/wp/wp-content/uploads/2019/11/line.png"
+            alt="line"
+          />
+        </dt>
+        <dd>
+          knickaoffice
+          <button>
+            <img
+              class="contact-primary__facebook-copy"
+              src="http://www.australopithec.us/wp/wp-content/uploads/2019/11/copy.png"
+              alt="facebook-copy"
+            />
+          </button>
+        </dd>
+      </dl>
     </div>
 
     <p class="contact-bye-text">
