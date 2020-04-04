@@ -65,6 +65,8 @@ p {
     padding: 0;
     width: 100vw;
     height: 124px;
+    background-color: rgba(255, 255, 255, .9);
+    box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, .12);
   }
   &__list {
     color: #00F;
@@ -74,11 +76,9 @@ p {
   }
 }
 
-.global-nav-list {
+.common-nav-list {
   display: flex;
   align-items: center;
-  background-color: rgba(255, 255, 255, .9);
-  box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, .12);
   &__item {
     list-style: none;
     background-color: #E9E7DB;
@@ -90,18 +90,24 @@ p {
     border-radius: 50%;
     box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, .16);
     flex-shrink: 0;
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    align-content: center;
-    > span {
-      flex-shrink: 0;
-      width: 100%;
-      font-size: 1.2rem;
-      &:first-child {
-        font-size: 1.8rem;
-        font-weight: bold;
-        margin-bottom: 12px;
+    > a {
+        color: #707070;
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        align-content: center;
+      > span {
+        flex-shrink: 0;
+        width: 100%;
+        font-size: 1.2rem;
+        &:first-child {
+          font-size: 1.8rem;
+          font-weight: bold;
+          margin-bottom: 12px;
+        }
       }
     }
   }
@@ -152,6 +158,21 @@ p {
   background-color: rgba(255, 255, 255, .86);
   padding: 12px;
   border-radius: 8px;
+}
+
+.top-page-nav {
+  &__title {
+    font-size: 1.6rem;
+    text-align: center;
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: #A4A4A4;
+    }
+  }
+  &__list {}
 }
 
 .signature {
