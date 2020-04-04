@@ -63,45 +63,56 @@ h1{
     }
   }
 
-
-  &__tel{
+  &__phone{
+    position: relative;
+    width: 320px;
+    margin: 0 auto;
+  }
+  &__phone-icon-contents{
+    border-bottom: 1px solid #707070;
     height: 51px;
-    width: 303px;
-    padding: 8px;
-    clear:  both;
+    width: 240px;
+    margin: 0 auto;
   }
-  &__mail-icon+contents{
-    margin: 0aut;
-  }
-  &__tel-icon{
-    height: 30px;
-    width: 30px;
+  &__phone-icon{
+    width: 37px;
+    margin: 8px;
     float: left;
+    > img {
+      outline:0;
+      width: 100%;
+    }
   }
-  &__tel-contents{
+  &__phone-contents{
     color: #707070;
-    height: 340px;
-    width: 155px;
     margin: 8px;
     float: left;
   }
-  &__tel-copy{
-    height: 22px;
-    width: 20px;
-    outline:0;
-    float: left;
-  }
+  &__phone-copy{
+    position: absolute;
+    width: 44px;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    > img {
+      width: 100%;
+    }
+
+}
 }
 
 
 
 
 .contact-tpl{
-  &__description{
-      clear:  both;
-      color: #707070;
-      text-align: center; 
-  }
+  &__p.description{
+    color: #707070;  
+    text-align: center;
+    height: 107px;
+    margin: 36px;
+    }
+
   &__button-1st_wrapper{
     text-align:center; 
   }
@@ -120,7 +131,7 @@ h1{
       line-height: 2;
   }
   &__copy-text {
-    　margin-left:auto;
+    margin-left:auto;
       margin-right: auto;
       color:#707070;
       list-style: none;
@@ -132,7 +143,7 @@ h1{
     text-align:center;
   }
   &__button-2nd{ 
-    　text-align:center;
+    text-align:center;
       height: 58px; 
       margin-top:18px;
       color:#707070;
@@ -140,13 +151,172 @@ h1{
       border: solid 1px #707070;
       background-color: #FFF;
       padding: 15px 10px;
+  }
 }
-}
+
+
+
 
 .contact-secondary{
+  p{
+    color: #707070;  
+    text-align: center;
+    height: 107px;
+    margin: 36px;
+    }
 
+  &__twitter{
+    position: relative;
+    width: 320px;
+    margin: 0 auto;
+  }
+  &__twitter-icon-contents{
+    border-bottom: 1px solid #707070;
+    height: 51px;
+    width: 240px;
+    margin: 0 auto;
+  }
+  &__twitter-icon{
+    width: 37px;
+    margin: 8px;
+    float: left;
+    > img {
+      outline:0;
+      width: 100%;
+    }
+  }
+  &__twitter-contents{
+    color: #707070;
+    margin: 8px;
+    float: left;
+  }
+  &__twitter-copy{
+    position: absolute;
+    width: 44px;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    > img {
+      width: 100%;
+    }
+  }
+
+  &__skype{
+    position: relative;
+    width: 320px;
+    margin: 0 auto;
+  }
+  &__skype-icon-contents{
+    border-bottom: 1px solid #707070;
+    height: 51px;
+    width: 240px;
+    margin: 0 auto;
+  }
+  &__skype-icon{
+    width: 37px;
+    margin: 8px;
+    float: left;
+    > img {
+      outline:0;
+      width: 100%;
+    }
+  }
+  &__skype-contents{
+    color: #707070;
+    margin: 8px;
+    float: left;
+  }
+  &__skype-copy{
+    position: absolute;
+    width: 44px;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    > img {
+      width: 100%;
+    }
+  }
+
+  &__facebook{
+    position: relative;
+    width: 320px;
+    margin: 0 auto;
+  }
+  &__facebook-icon-contents{
+    border-bottom: 1px solid #707070;
+    height: 51px;
+    width: 240px;
+    margin: 0 auto;
+  }
+  &__facebook-icon{
+    width: 21px;
+    margin: 8px;
+    float: left;
+    > img {
+      outline:0;
+      width: 100%;
+    }
+  }
+  &__facebook-contents{
+    color: #707070;
+    margin: 8px;
+    float: left;
+  }
+  &__facebook-copy{
+    position: absolute;
+    width: 44px;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    > img {
+      width: 100%;
+    }
+  }
+
+  &__line{
+    position: relative;
+    width: 320px;
+    margin: 0 auto;
+  }
+  &__line-icon-contents{
+    border-bottom: 1px solid #707070;
+    height: 51px;
+    width: 240px;
+    margin: 0 auto;
+  }
+  &__line-icon{
+    width: 37px;
+    margin: 8px;
+    float: left;
+    > img {
+      outline:0;
+      width: 100%;
+    }
+  }
+  &__line-contents{
+    color: #707070;
+    margin: 8px;
+    float: left;
+  }
+  &__line-copy{
+    position: absolute;
+    width: 44px;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    > img {
+      width: 100%;
+    }
+  }
 
 }
+
+
+
 
 .contact-bye-text{
   color: #707070;
