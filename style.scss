@@ -1,18 +1,132 @@
-.global-nav {
-  font-size: 1rem;
-  &__list {
-    color: #F00;
+@import url(./src/normalize.css);
+
+html {
+  font-size: 62.5%;
+  line-height: 1.8;
+}
+
+body {
+  background: url(./img/visual-knicka.png) no-repeat top 80px right -120px;
+  background-origin: border-box;
+  color: #707070;
+  font-size: 1.6rem;
+}
+
+p {
+  margin: 0;
+}
+
+.global-logo {
+  margin: 0;
+  padding: 20px 10px 10px;
+  text-align: right;
+}
+
+.parts-toggle-munu {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    justify-content: center;
+    > span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      flex-shrink: 0;
+      background-color: #000;
+    }
+}
+
+.common-heading2 {
+  text-align: center;
+  font-weight: normal;
+  font-size: 2.2rem;
+  margin-bottom: 56px;
+}
+.common-nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__item {
+    list-style: none;
+    background-color: #E9E7DB;
+    border: 1px solid #DCDCDC;
+    width: 100%;
+    height: 100%;
+    margin-left: 8px;
+    margin-right: 8px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, .16);
+    flex-shrink: 0;
+    > a {
+        color: #707070;
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        align-content: center;
+      > span {
+        flex-shrink: 0;
+        width: 100%;
+        &:first-child {
+          font-weight: bold;
+        }
+      }
+    }
   }
 }
 
 .global-nav {
-  font-size: 2rem;
-  &__list {
-    color: #00F;
+  &__toggle-button {
+    display: flex;
+    width: 80px;
+    height: 48px;
+    border-radius: 8px;
+    border: none;
+    padding: 8px;
+    box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, .8);
+    background-color: #fff;
+    &:before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 32px;
+      flex-shrink: 0;
+      background: url(./img/logo-knicka.png) no-repeat center;
+      background-origin: border-box;
+    }
   }
-  &__title {
-  font-weight: bold;
+  &__button-line {
+    width: 32px;
+    height: 32px;
   }
+  &__menu {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 124px;
+    background-color: rgba(255, 255, 255, .9);
+    box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, .12);
+  }
+  &__item {
+    width: 104px;
+    height: 104px;
+    > a {
+      > span {
+        font-size: 1.2rem;
+        &:first-child {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+}
+
+.main-content-wrapper {
+  margin-left: 20px;
+  margin-right: 20px;
+  width: calc(100% - 40px);
 }
 
 .global-footer {
@@ -21,8 +135,40 @@
   text-align: center;
 }
 
-.statement {
-  font-size: 1.8rem;
+.top-statement {
+  background-color: rgba(255, 255, 255, .9);
+  max-width: 300px;
+  padding: 4px 4px 0;
+  box-sizing: border-box;
+  &__title {
+    font-size: 2.8rem;
+    padding: 4px;
+  }
+  &__text {
+    padding: 40px 4px 40px 40px;
+  }
+}
+
+.quote-blog-wrapper {
+  position: relative;
+  background-color: rgba(232, 231, 229, .86);
+  padding: 12px 12px 24px;
+  border-radius: 4px;
+  &__title {
+    position: absolute;
+    top: -8px;
+    right: 16px;
+    color: #4E4222;
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin: 0;
+  }
+}
+
+.quate-blog-content {
+  background-color: rgba(255, 255, 255, .86);
+  padding: 12px;
+  border-radius: 4px;
 }
 
 .signature {
