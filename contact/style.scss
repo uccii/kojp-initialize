@@ -1,10 +1,10 @@
 body{
   background-color: #FFF;
-  margin: 36px;
+  margin: 32px;
 }
 
 h1{
-  height: 22px;
+  height: 2.2rem;
   text-align: right;
   height:54px;
 }
@@ -13,6 +13,7 @@ h1{
   color: #000000;
   text-align: center;
   hirgt:77px;
+  font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', sans-serif;
 }
 
 
@@ -21,10 +22,9 @@ h1{
 
 .contact-primary{
   p{
-    color: #707070;  
-    text-align: center;
-    height: 107px;
-    margin: 36px;
+    color: #707070;
+    font-style:normal;
+    font-family: 'DNP 秀英明朝 Pr6', 'ヒラギノ角ゴ ProN W3', sans-serif;
     }
   &__mail{
     position: relative;
@@ -34,27 +34,34 @@ h1{
   &__mail-icon-contents{
     border-bottom: 1px solid #707070;
     height: 51px;
-    width: 240px;
-    margin: 0 auto;
+    width: 248px;
+    margin-top:52px;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
   }
   &__mail-icon{
-    width: 37px;
+    width: 40px;
     margin: 8px;
     float: left;
     > img {
       outline:0;
-      width: 100%;
+      width: 37px;
     }
   }
   &__mail-contents{
     color: #707070;
     margin: 8px;
     float: left;
+    font-size: 2.2rem;
+    height: 40px;
+    width: 171px;
+    text-align: center;
   }
   &__mail-copy{
     position: absolute;
-    width: 44px;
-    top: 0;
+    width: 32px;
+    top: 20px;
     right: 0;
     background-color: transparent;
     border: none;
@@ -71,27 +78,34 @@ h1{
   &__phone-icon-contents{
     border-bottom: 1px solid #707070;
     height: 51px;
-    width: 240px;
-    margin: 0 auto;
+    width: 248px;
+    margin-top:48px;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
   }
   &__phone-icon{
-    width: 37px;
+    width: 40px;
     margin: 8px;
     float: left;
     > img {
       outline:0;
-      width: 100%;
+      width: 30px;
     }
   }
   &__phone-contents{
     color: #707070;
     margin: 8px;
     float: left;
+    font-size:2.2rem;
+    height: 40px;
+    width: 171px;
+    text-align: center;
   }
   &__phone-copy{
     position: absolute;
-    width: 44px;
-    top: 0;
+    width: 32px;
+    top: 20px;
     right: 0;
     background-color: transparent;
     border: none;
@@ -102,57 +116,66 @@ h1{
 }
 }
 
-
-
-
 .contact-tpl{
-  &__p.description{
-    color: #707070;  
-    text-align: center;
-    height: 107px;
-    margin: 36px;
-    }
-
   &__button-1st_wrapper{
-    text-align:center; 
+    height: 48px;
+    margin-top:24px;
+    margin-bottom:16px;
+    width: 100%;
+  }
+
+  &__description{
+    color: #707070;
+    float: left;
+    width: 100%;
+    margin-right: -96px;
+    padding-right: 96px;
+    box-sizing: border-box;
+    line-height:21px;
   }
   &__button-1st{ 
-      color: #707070;
-      width: 122px;
-      height: 58px;
-      border: solid 1px #707070;
-      background-color: #FFF;
-      border-radius: 98px;
+    color: #707070;
+    border: solid 1px #707070;
+    background-color: #FFF;
+    border-radius: 98px;
+    margin-top:24px;
+    width: 96px;
+    height: 48px;
+    float: right;
+    margin-bottom:24px;
+  }
+  &__copy-text li{
+    color:#707070;
+    list-style: none;
+    line-height:25px;
+    clear: both;
+  }
+  &__button-2nd_wrapper{
+    clear: both;
+    margin-left:aut;
+    margin-right:aut;
+    }
+  &__copy-text {
+    color:#707070;
+    list-style: none;
+    border: solid 1px #707070; 
+    background-color: #FFF;
+    padding: 8px 16px;
   }
 
-  &__copy-text li{
-      color:#707070;
-      list-style: none;
-      line-height: 2;
-  }
-  &__copy-text {
-    margin-left:auto;
-      margin-right: auto;
-      color:#707070;
-      list-style: none;
-      border: solid 1px #707070; 
-      background-color: #FFF;
-      padding: 24px 12px;
-  }
-  &__button-2nd_wrapper{ 
-    text-align:center;
-  }
-  &__button-2nd{ 
-    text-align:center;
-      height: 58px; 
-      margin-top:18px;
-      color:#707070;
-      list-style: none;
-      border: solid 1px #707070;
-      background-color: #FFF;
-      padding: 15px 10px;
+  &__button-2nd{
+   display: block;
+    margin-top:16px;
+    color: #707070;
+    border: solid 1px #707070;
+    background-color: #FFF;
+    border-radius: 98px;
+    width: 80%;
+    height: 48px;
+
   }
 }
+
 
 
 
@@ -162,7 +185,7 @@ h1{
     color: #707070;  
     text-align: center;
     height: 107px;
-    margin: 36px;
+    margin-top:104px;
     }
 
   &__twitter{
@@ -173,64 +196,34 @@ h1{
   &__twitter-icon-contents{
     border-bottom: 1px solid #707070;
     height: 51px;
-    width: 240px;
-    margin: 0 auto;
+    width: 248px;
+    margin-top:16px;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
   }
   &__twitter-icon{
-    width: 37px;
+    width: 40px;
     margin: 8px;
     float: left;
     > img {
       outline:0;
-      width: 100%;
+      width: 32px;
     }
   }
   &__twitter-contents{
     color: #707070;
     margin: 8px;
     float: left;
+    font-size: 2.2rem;
+    height: 40px;
+    width: 171px;
+    text-align: center;
   }
   &__twitter-copy{
     position: absolute;
-    width: 44px;
-    top: 0;
-    right: 0;
-    background-color: transparent;
-    border: none;
-    > img {
-      width: 100%;
-    }
-  }
-
-  &__skype{
-    position: relative;
-    width: 320px;
-    margin: 0 auto;
-  }
-  &__skype-icon-contents{
-    border-bottom: 1px solid #707070;
-    height: 51px;
-    width: 240px;
-    margin: 0 auto;
-  }
-  &__skype-icon{
-    width: 37px;
-    margin: 8px;
-    float: left;
-    > img {
-      outline:0;
-      width: 100%;
-    }
-  }
-  &__skype-contents{
-    color: #707070;
-    margin: 8px;
-    float: left;
-  }
-  &__skype-copy{
-    position: absolute;
-    width: 44px;
-    top: 0;
+    width: 32px;
+    top: 20px;
     right: 0;
     background-color: transparent;
     border: none;
@@ -247,27 +240,35 @@ h1{
   &__facebook-icon-contents{
     border-bottom: 1px solid #707070;
     height: 51px;
-    width: 240px;
-    margin: 0 auto;
+    width: 248px;
+    margin-top:48px;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
   }
   &__facebook-icon{
-    width: 21px;
+    width: 40px;
     margin: 8px;
     float: left;
     > img {
       outline:0;
-      width: 100%;
+      width: 21px;
+      margin-left:4px;
     }
   }
   &__facebook-contents{
     color: #707070;
     margin: 8px;
     float: left;
+    font-size: 2.2rem;
+    height: 40px;
+    width: 171px;
+    text-align: center;
   }
   &__facebook-copy{
     position: absolute;
-    width: 44px;
-    top: 0;
+    width: 32px;
+    top: 20px;
     right: 0;
     background-color: transparent;
     border: none;
@@ -282,13 +283,17 @@ h1{
     margin: 0 auto;
   }
   &__line-icon-contents{
+    margin-top:48px;
     border-bottom: 1px solid #707070;
     height: 51px;
-    width: 240px;
-    margin: 0 auto;
+    width: 248px;
+    margin-top:48px;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
   }
   &__line-icon{
-    width: 37px;
+    width: 40px;
     margin: 8px;
     float: left;
     > img {
@@ -300,11 +305,15 @@ h1{
     color: #707070;
     margin: 8px;
     float: left;
+    font-size: 2.2rem;
+    height: 40px;
+    width: 171px;
+    text-align: center;
   }
   &__line-copy{
     position: absolute;
-    width: 44px;
-    top: 0;
+    width: 32px;
+    top: 20px;
     right: 0;
     background-color: transparent;
     border: none;
@@ -320,11 +329,20 @@ h1{
 
 .contact-bye-text{
   color: #707070;
-  text-align: center;
+  margin-top:62px;
 }
 
 .fotter-logo{
   text-align: center;
   color: #707070;
   font-size: 0.75rem;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.8;
+}
+
+body {
+  font-size: 1.6rem;
 }
