@@ -42,6 +42,12 @@ p {
   font-size: 2.2rem;
   margin-bottom: 56px;
 }
+.common-heading3{
+  text-align: center;
+  font-weight: normal;
+  font-size: 1.8rem;
+  margin-bottom: 56px;
+}
 .common-nav-list {
   display: flex;
   align-items: center;
@@ -174,4 +180,33 @@ p {
 .signature {
   text-align: right;
   
+}
+
+.company-overview {
+  text-align: center;
+  font-weight: normal;
+}
+
+.company-overview_heading{
+  font-weight: bold;
+}
+
+.logo-explanation{
+  text-align: center; 
+}
+
+
+@media screen and (min-width:768px) and ( max-width:1024px) {
+  /*　画面サイズが768pxから1024pxまではここを読み込む　*/
+
+.global-nav{
+
+
+
+}
+}  
+
+@media screen and (min-width:1024px) { 
+  /*　画面サイズが1024pxからはここを読み込む　*/
+
 }
