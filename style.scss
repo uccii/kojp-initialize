@@ -9,7 +9,7 @@ body {
   background: url(./img/visual-knicka.png) no-repeat top 80px right -120px;
   background-origin: border-box;
   color: #707070;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 p {
@@ -20,6 +20,7 @@ p {
   margin: 0;
   padding: 20px 10px 10px;
   text-align: right;
+  line-height: 1;
 }
 
 .parts-toggle-munu {
@@ -61,8 +62,8 @@ p {
     border: 1px solid #DCDCDC;
     width: 100%;
     height: 100%;
-    margin-left: 8px;
-    margin-right: 8px;
+    margin-left: 4px;
+    margin-right: 4px;
     border-radius: 50%;
     box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, .16);
     flex-shrink: 0;
@@ -86,15 +87,37 @@ p {
   }
 }
 
+input[type="checkbox"].common-display-toggle-check {
+  display: none;
+  & ~ * {
+    filter: opacity(0);
+    pointer-events: none;
+  }
+  &:checked ~ * {
+    filter: opacity(1);
+    transition: filter .5s;
+  }
+  &:not(:checked) ~ * {
+    filter: opacity(0);
+    transition: filter .5s;
+  }
+}
+
 .global-nav {
+  position: fixed;
+  bottom: 72px;
+  z-index: 1000;
   &__toggle-button {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 16px;
     display: flex;
     width: 80px;
     height: 48px;
     border-radius: 8px;
-    border: none;
+    box-sizing: border-box;
     padding: 8px;
-    box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, .8);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, .6);
     background-color: #fff;
     &:before {
       content: '';
@@ -114,13 +137,13 @@ p {
     margin: 0;
     padding: 0;
     width: 100vw;
-    height: 124px;
+    height: 96px;
     background-color: rgba(255, 255, 255, .9);
     box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, .12);
   }
   &__item {
-    width: 80px;
-    height: 80px;
+    width: 78px;
+    height: 78px;
     > a {
       > span {
         font-size: 1.2rem;
@@ -133,18 +156,21 @@ p {
 }
 
 .main-content-wrapper {
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 16px;
+  margin-right: 16px;
 }
 
 .global-footer {
-  font-size: 0.8rem;
-  color: #a9a9a9;
+  margin-top: 112px;
+  margin-bottom: 16px;
   text-align: center;
-}
-
-.global-footer-logo {
-  filter: opacity(33%);
+  &__logo {
+    filter: opacity(33%);
+  }
+  &__copy {
+    font-size: 0.8rem;
+    color: #a9a9a9;
+  }
 }
 
 
