@@ -1,6 +1,18 @@
+
+
+
 body{
   background-color: #FFF;
   margin: 32px;
+}
+@media(min-width: 768px){
+  body{
+  background-color: #FFF;
+  margin: 72px;
+  width:768px;
+  margin-left: auto;
+  margin-right: auto;
+  }
 }
 
 h1{
@@ -12,113 +24,116 @@ h1{
 .content-page-title{
   color: #000000;
   text-align: center;
-  hirgt:77px;
-  font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', sans-serif;
+  height:77px;
 }
-
-
-
-
 
 .contact-primary{
   p{
     color: #707070;
     font-style:normal;
-    font-family: 'DNP 秀英明朝 Pr6', 'ヒラギノ角ゴ ProN W3', sans-serif;
     }
   &__mail{
     position: relative;
     width: 320px;
     margin: 0 auto;
-  }
-  &__mail-icon-contents{
-    border-bottom: 1px solid #707070;
-    height: 51px;
-    width: 248px;
-    margin-top:52px;
-    margin-left: auto;
-    margin-right: auto;
-    clear: both;
-  }
-  &__mail-icon{
-    width: 40px;
-    margin: 8px;
-    float: left;
-    > img {
-      outline:0;
-      width: 37px;
-    }
-  }
-  &__mail-contents{
-    color: #707070;
-    margin: 8px;
-    float: left;
-    font-size: 2.2rem;
-    height: 40px;
-    width: 171px;
-    text-align: center;
-  }
-  &__mail-copy{
-    position: absolute;
-    width: 32px;
-    top: 20px;
-    right: 0;
-    background-color: transparent;
-    border: none;
-    > img {
-      width: 100%;
-    }
+    margin-top: 48px;
   }
 
-  &__phone{
-    position: relative;
-    width: 320px;
-    margin: 0 auto;
-  }
-  &__phone-icon-contents{
+  &__mail-icon-contents{
+    display: flex;
+    flex-direction: row;
     border-bottom: 1px solid #707070;
-    height: 51px;
+    height: 40px;
     width: 248px;
     margin-top:48px;
-    margin-left: auto;
-    margin-right: auto;
-    clear: both;
   }
-  &__phone-icon{
+
+  &__mail-icon{
     width: 40px;
+    flex-shrink: 0;
     margin: 8px;
-    float: left;
     > img {
       outline:0;
       width: 30px;
     }
   }
-  &__phone-contents{
+  
+  &__mail-contents{
     color: #707070;
     margin: 8px;
-    float: left;
     font-size:2.2rem;
     height: 40px;
     width: 171px;
+    flex-shrink: 0;
     text-align: center;
+    font-style: normal;
   }
-  &__phone-copy{
-    position: absolute;
-    width: 32px;
-    top: 20px;
-    right: 0;
-    background-color: transparent;
-    border: none;
-    > img {
-      width: 100%;
-    }
 
-}
+  &__mail-copy{
+    width: 32px;
+    flex-shrink: 0;
+    top: 20px;
+    margin-left:20px;
+    padding-top: 4px;
+    > img {
+      width: 18px;
+    }
+  }
+  
+  &__phone{
+    position: relative;
+    width: 320px;
+    margin: 0 auto;
+    margin-top: 48px;
+  }
+
+  &__phone-icon-contents{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #707070;
+    height: 40px;
+    width: 248px;
+    margin-top:48px;
+  }
+
+  &__phone-icon{
+    width: 40px;
+    flex-shrink: 0;
+    margin: 8px;
+    > img {
+      outline:0;
+      width: 30px;
+    }
+  }
+  
+  &__phone-contents{
+    margin: 8px;
+    height: 40px;
+    flex-basis: 171px;
+    flex-shrink: 0;
+      font-style: normal;
+      color: #707070;
+      font-size:2.2rem;
+      text-align: center;
+  }
+
+  &__phone-copy{
+    width: 32px;
+    flex-shrink: 0;
+    top: 20px;
+    margin-left:20px;
+    padding-top: 4px;
+    > img {
+      width: 18px;
+    }
+  }
+
+  
 }
 
 .contact-tpl{
   &__button-1st_wrapper{
-    height: 48px;
+    height:48px;
     margin-top:24px;
     margin-bottom:16px;
     width: 100%;
@@ -152,8 +167,6 @@ h1{
   }
   &__button-2nd_wrapper{
     clear: both;
-    margin-left:aut;
-    margin-right:aut;
     }
   &__copy-text {
     color:#707070;
@@ -172,10 +185,20 @@ h1{
     border-radius: 98px;
     width: 80%;
     height: 48px;
+    margin-left:auto;
+    margin-right:auto;
 
   }
 }
 
+.contact-border{
+  border-bottom: dashed 2px #A4A4A4;
+  width: 136px;
+  display:block;
+  margin-top:72px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 
 
@@ -186,148 +209,159 @@ h1{
     text-align: center;
     height: 107px;
     margin-top:104px;
-    }
+  }
 
-  &__twitter{
-    position: relative;
-    width: 320px;
-    margin: 0 auto;
-  }
-  &__twitter-icon-contents{
-    border-bottom: 1px solid #707070;
-    height: 51px;
-    width: 248px;
-    margin-top:16px;
-    margin-left: auto;
-    margin-right: auto;
-    clear: both;
-  }
-  &__twitter-icon{
-    width: 40px;
-    margin: 8px;
-    float: left;
-    > img {
-      outline:0;
+    &__twitter{
+      position: relative;
+      width: 320px;
+      margin: 0 auto;
+      margin-top: 48px;
+    }
+  
+    &__twitter-icon-contents{
+      display: flex;
+      flex-direction: row;
+      border-bottom: 1px solid #707070;
+      height: 40px;
+      width: 248px;
+      margin-top:48px;
+    }
+  
+    &__twitter-icon{
+      width: 40px;
+      flex-shrink: 0;
+      margin: 8px;
+      > img {
+        outline:0;
+        width: 30px;
+      }
+    }
+    
+    &__twitter-contents{
+      margin: 8px;
+      height: 40px;
+      flex-basis: 171px;
+      flex-shrink: 0;
+        font-style: normal;
+        color: #707070;
+        font-size:2.2rem;
+        text-align: center;
+    }
+  
+    &__twitter-copy{
       width: 32px;
+      flex-shrink: 0;
+      top: 20px;
+      margin-left:20px;
+      padding-top: 4px;
+      > img {
+        width: 18px;
+      }
     }
-  }
-  &__twitter-contents{
-    color: #707070;
-    margin: 8px;
-    float: left;
-    font-size: 2.2rem;
-    height: 40px;
-    width: 171px;
-    text-align: center;
-  }
-  &__twitter-copy{
-    position: absolute;
-    width: 32px;
-    top: 20px;
-    right: 0;
-    background-color: transparent;
-    border: none;
-    > img {
-      width: 100%;
-    }
-  }
 
-  &__facebook{
-    position: relative;
-    width: 320px;
-    margin: 0 auto;
-  }
-  &__facebook-icon-contents{
-    border-bottom: 1px solid #707070;
-    height: 51px;
-    width: 248px;
-    margin-top:48px;
-    margin-left: auto;
-    margin-right: auto;
-    clear: both;
-  }
-  &__facebook-icon{
-    width: 40px;
-    margin: 8px;
-    float: left;
-    > img {
-      outline:0;
-      width: 21px;
-      margin-left:4px;
-    }
-  }
-  &__facebook-contents{
-    color: #707070;
-    margin: 8px;
-    float: left;
-    font-size: 2.2rem;
-    height: 40px;
-    width: 171px;
-    text-align: center;
-  }
-  &__facebook-copy{
-    position: absolute;
-    width: 32px;
-    top: 20px;
-    right: 0;
-    background-color: transparent;
-    border: none;
-    > img {
-      width: 100%;
-    }
-  }
 
-  &__line{
-    position: relative;
-    width: 320px;
-    margin: 0 auto;
-  }
-  &__line-icon-contents{
-    margin-top:48px;
-    border-bottom: 1px solid #707070;
-    height: 51px;
-    width: 248px;
-    margin-top:48px;
-    margin-left: auto;
-    margin-right: auto;
-    clear: both;
-  }
-  &__line-icon{
-    width: 40px;
-    margin: 8px;
-    float: left;
-    > img {
-      outline:0;
-      width: 100%;
+    &__facebook{
+      position: relative;
+      width: 320px;
+      margin: 0 auto;
+      margin-top: 48px;
     }
-  }
-  &__line-contents{
-    color: #707070;
-    margin: 8px;
-    float: left;
-    font-size: 2.2rem;
-    height: 40px;
-    width: 171px;
-    text-align: center;
-  }
-  &__line-copy{
-    position: absolute;
-    width: 32px;
-    top: 20px;
-    right: 0;
-    background-color: transparent;
-    border: none;
-    > img {
-      width: 100%;
+  
+    &__facebook-icon-contents{
+      display: flex;
+      flex-direction: row;
+      border-bottom: 1px solid #707070;
+      height: 40px;
+      width: 248px;
+      margin-top:48px;
     }
-  }
+  
+    &__facebook-icon{
+      width: 40px;
+      flex-shrink: 0;
+      flex-shrink: 0;
+      margin: 0px 8px;
+      > img {
+        outline:0;
+        width: 20px;
+      }
+    }
+    
+    &__facebook-contents{
+      margin: 8px;
+      height: 40px;
+      flex-basis: 171px;
+      flex-shrink: 0;
+        font-style: normal;
+        color: #707070;
+        font-size:2.2rem;
+        text-align: center;
+    }
+  
+    &__facebook-copy{
+      width: 32px;
+      flex-shrink: 0;
+      top: 20px;
+      margin-left:20px;
+      padding-top: 4px;
+      > img {
+        width: 18px;
+      }
+    }
+
+
+    &__line{
+      position: relative;
+      width: 320px;
+      margin: 0 auto;
+      margin-top: 48px;
+    }
+  
+    &__line-icon-contents{
+      display: flex;
+      flex-direction: row;
+      border-bottom: 1px solid #707070;
+      height: 40px;
+      width: 248px;
+      margin-top:48px;
+    }
+  
+    &__line-icon{
+      width: 40px;
+      flex-shrink: 0;
+      margin: 8px;
+      > img {
+        outline:0;
+        width: 30px;
+      }
+    }
+    
+    &__line-contents{
+      margin: 8px;
+      height: 40px;
+      flex-basis: 171px;
+      flex-shrink: 0;
+        font-style: normal;
+        color: #707070;
+        font-size:2.2rem;
+        text-align: center;
+    }
+  
+    &__line-copy{
+      width: 32px;
+      flex-shrink: 0;
+      top: 20px;
+      margin-left:20px;
+      padding-top: 4px;
+      > img {
+        width: 18px;
+      }
+    }
 
 }
 
-
-
-
 .contact-bye-text{
+  clear: both;
   color: #707070;
   margin-top:62px;
 }
