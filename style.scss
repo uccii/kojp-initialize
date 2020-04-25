@@ -225,8 +225,32 @@ input[type="checkbox"].common-display-toggle-check {
   text-align: center;
 }
 
+.chief-profile__name:not(:nth-child(1))::before{
+  content: '';
+  display: inline-block;
+  background: rgb(0, 0, 0);
+  height: 14px;
+  width: 2px;
+  margin-right: 6px;
+}
+
+.chief-profile__name {
+float: left;
+}
+
+.common-notice-right{
+  font-size: 1.4rem;
+  text-align: right; 
+}
+
+.client-list__item{
+  float: left;
+}
+
 @media screen and (min-width:600px) and ( max-width:1024px) {
-  /*　画面サイズが768pxから1024pxまではここを読み込む　*/
+  /*　画面サイズが600pxから1024pxまではここを読み込む　*/
+
+
 
   .global-nav__menu{
 
@@ -242,3 +266,13 @@ input[type="checkbox"].common-display-toggle-check {
   /*　画面サイズが1024pxからはここを読み込む　*/
 
 }
+
+
+@media screen and (min-width:600px) { 
+  /*　画面サイズが600pxからはここを読み込む　*/
+
+  .top-page-nav {display:none}
+  /*　SEO的にあまりよくない？？　*/
+
+}
+
