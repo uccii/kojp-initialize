@@ -216,25 +216,27 @@ input[type="checkbox"].common-display-toggle-check {
 .company-overview {
   text-align: center;
   font-weight: normal;
-}
-
-.company-overview_heading {
-  font-weight: bold;
+  &>dt {
+    font-weight: bold
+  }
 }
 
 .logo-explanation {
   text-align: center;
 }
 
-@media screen and (min-width:768px) and ( max-width:1024px) {
+@media screen and (min-width:600px) and ( max-width:1024px) {
   /*　画面サイズが768pxから1024pxまではここを読み込む　*/
 
-.global-nav{
+  .global-nav__menu{
 
+  }
 
+  .common-nav-list{
+  }
 
 }
-}  
+
 
 @media screen and (min-width:1024px) { 
   /*　画面サイズが1024pxからはここを読み込む　*/
