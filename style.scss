@@ -6,8 +6,6 @@ html {
 }
 
 body {
-  background: url(./img/visual-knicka.png) no-repeat top 80px right -120px;
-  background-origin: border-box;
   color: #707070;
   font-size: 1.6rem;
 }
@@ -18,9 +16,10 @@ p {
 
 .global-logo {
   margin: 0;
-  padding: 20px 10px 10px;
-  text-align: right;
+  padding: 20px;
   line-height: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .parts-toggle-munu {
@@ -78,8 +77,12 @@ p {
       >span {
         flex-shrink: 0;
         width: 100%;
+        line-height: 1;
         &:first-child {
           font-weight: bold;
+        }
+        &:not(:first-child) {
+          margin-top: 8px;
         }
       }
     }
@@ -152,12 +155,18 @@ input[type="checkbox"].common-display-toggle-check {
       }
     }
   }
+  &__item-home {
+    display: none;
+  }
 }
 
 .main-content-wrapper {
-  margin-left: 16px;
-  margin-right: 16px;
-  width: calc(100% - 32px);
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+  width: 100%;
+  background: url(./img/visual-knicka.png) no-repeat top 76px right calc(-120px + 16%);
+  background-origin: border-box;
 }
 
 .global-footer {
@@ -276,3 +285,64 @@ float: left;
 
 }
 
+@media screen and (min-width:600px) {
+  /*　画面サイズが600pxからはここを読み込む:共通パーツ用　*/
+.global-nav {
+  position: relative;
+  bottom: initial;
+  z-index: 1000;
+  &__toggle-button {
+    display: none;
+  }
+  &__menu {
+    filter: opacity(1) !important;
+    transition: filter 0s !important;
+    margin: 0;
+    padding: 16px 0 0;
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    box-shadow: none;
+    justify-content: flex-end;
+  }
+  &__item {
+    width: 120px;
+    height: auto;
+    margin: 0;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    >a {
+      >span {
+        font-size: 1.2rem;
+        &:first-child {
+          font-size: 1.6rem;
+          font-weight: normal;
+        }
+        &:not(:first-child) {
+          margin-top: 16px;
+        }
+      }
+      &:hover {
+        >span {
+          &:first-child {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  &__item-home {
+    display: block;
+  }
+}
+
+.main-content-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  background-position: top 76px right calc(-28px + 4%);
+}
+
+}
