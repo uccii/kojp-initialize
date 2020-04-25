@@ -3,22 +3,26 @@
 
 body{
   background-color: #FFF;
-  margin: 32px;
-}
-@media(min-width: 768px){
-  body{
-  background-color: #FFF;
-  margin: 72px;
-  width:768px;
-  margin-left: auto;
-  margin-right: auto;
-  }
+  margin: 0px 32px;
+  @media(min-width: 768px){
+    width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+    padding:0 72px;
+    }
 }
 
 h1{
   height: 2.2rem;
   text-align: right;
   height:54px;
+  margin-right: -16px;
+} 
+
+h2{
+  font-weight: normal;
+  font-size: 2.4rem;
+  margin-top:72px;
 }
 
 .content-page-title{
@@ -28,24 +32,47 @@ h1{
 }
 
 .contact-primary{
-  p{
-    color: #707070;
-    font-style:normal;
+    &__description{
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      color: #707070;  
+      margin-top:56px;
+      @media(min-width: 768px){
+        width: 600px;
+        }
+      }
+
+  &__primary-how{
+    @media(min-width: 768px){
+      width: 625;
+      display:flex;
+      justify-content:center;
     }
+   }
+
   &__mail{
-    position: relative;
-    width: 320px;
-    margin: 0 auto;
     margin-top: 48px;
+  @media(min-width: 768px){
+    margin-top:120px;
+    width: 288px;
+    margin-right:16px;
+    margin-left:-32px;
+    }
   }
 
   &__mail-icon-contents{
     display: flex;
     flex-direction: row;
     border-bottom: 1px solid #707070;
-    height: 40px;
+    height: 48px;
     width: 248px;
-    margin-top:48px;
+    margin-top:64px;
+    margin-left: auto;
+    margin-right: auto;
+    @media(min-width: 768px){
+      margin-top:0px;
+      }
   }
 
   &__mail-icon{
@@ -75,25 +102,36 @@ h1{
     top: 20px;
     margin-left:20px;
     padding-top: 4px;
+    background: none;
+    border: none;
+    outline: none;
     > img {
       width: 18px;
+
     }
   }
   
   &__phone{
-    position: relative;
-    width: 320px;
-    margin: 0 auto;
-    margin-top: 48px;
+    margin-top: 56px;
+    @media(min-width: 768px){
+      margin-top:120px;
+      width: 288px;
+      margin-left:16px;
+      }
   }
 
   &__phone-icon-contents{
     display: flex;
     flex-direction: row;
     border-bottom: 1px solid #707070;
-    height: 40px;
+    height: 48px;
     width: 248px;
     margin-top:48px;
+    margin-left: auto;
+    margin-right: auto;
+    @media(min-width: 768px){
+      margin-top:0px;
+      }
   }
 
   &__phone-icon{
@@ -123,6 +161,9 @@ h1{
     top: 20px;
     margin-left:20px;
     padding-top: 4px;
+    background: none;
+    border: none;
+    outline: none;
     > img {
       width: 18px;
     }
@@ -132,11 +173,21 @@ h1{
 }
 
 .contact-tpl{
+
   &__button-1st_wrapper{
     height:48px;
     margin-top:24px;
     margin-bottom:16px;
     width: 100%;
+    @media(min-width: 768px){
+      width:480px;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-left: auto;
+      margin-right: auto;
+      }
   }
 
   &__description{
@@ -145,6 +196,7 @@ h1{
     width: 100%;
     margin-right: -96px;
     padding-right: 96px;
+    margin-top:64px;
     box-sizing: border-box;
     line-height:21px;
   }
@@ -153,7 +205,7 @@ h1{
     border: solid 1px #707070;
     background-color: #FFF;
     border-radius: 98px;
-    margin-top:24px;
+    margin-top:64px;
     width: 96px;
     height: 48px;
     float: right;
@@ -166,7 +218,20 @@ h1{
     clear: both;
   }
   &__button-2nd_wrapper{
+    width:312px;
+    margin-left: auto;
+    margin-right: auto;
     clear: both;
+    margin-top:32px;
+    @media(min-width: 768px){
+      width:480px;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-left: auto;
+      margin-right: auto;
+      }
     }
   &__copy-text {
     color:#707070;
@@ -183,11 +248,10 @@ h1{
     border: solid 1px #707070;
     background-color: #FFF;
     border-radius: 98px;
-    width: 80%;
+    width: 288px;
     height: 48px;
     margin-left:auto;
     margin-right:auto;
-
   }
 }
 
@@ -195,7 +259,7 @@ h1{
   border-bottom: dashed 2px #A4A4A4;
   width: 136px;
   display:block;
-  margin-top:72px;
+  margin-top:64px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -204,11 +268,30 @@ h1{
 
 
 .contact-secondary{
-  p{
+
+
+  &__description{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
     color: #707070;  
-    text-align: center;
-    height: 107px;
-    margin-top:104px;
+    margin-top:56px;
+    @media(min-width: 768px){
+      width: 600px;
+      }
+      @media(min-width: 454px){
+        text-align: center;
+        }
+    }
+  
+  &__secondary-how{
+    margin-left: auto;
+    margin-right: auto;
+    @media(min-width: 768px){
+      width: 624px;
+      display:flex;
+      flex-wrap:wrap;
+    }
   }
 
     &__twitter{
@@ -216,15 +299,21 @@ h1{
       width: 320px;
       margin: 0 auto;
       margin-top: 48px;
+      @media(min-width: 768px){
+        margin-top:36px;
+        width: 288px;
+        margin-right:8px;
+        margin-left:16px;
+        }
     }
   
     &__twitter-icon-contents{
       display: flex;
       flex-direction: row;
       border-bottom: 1px solid #707070;
-      height: 40px;
+      height: 48px;
       width: 248px;
-      margin-top:48px;
+      margin-top:56px;
     }
   
     &__twitter-icon{
@@ -254,6 +343,9 @@ h1{
       top: 20px;
       margin-left:20px;
       padding-top: 4px;
+      background: none;
+      border: none;
+      outline: none;
       > img {
         width: 18px;
       }
@@ -265,15 +357,24 @@ h1{
       width: 320px;
       margin: 0 auto;
       margin-top: 48px;
+      @media(min-width: 768px){
+        margin-top:36px;
+        width: 288px;
+        margin-right:16px;
+        margin-left:8px;
+        }
     }
   
     &__facebook-icon-contents{
       display: flex;
       flex-direction: row;
       border-bottom: 1px solid #707070;
-      height: 40px;
+      height: 48px;
       width: 248px;
       margin-top:48px;
+      @media(min-width: 768px){
+        margin-top:56px;
+        }
     }
   
     &__facebook-icon{
@@ -284,7 +385,8 @@ h1{
       > img {
         outline:0;
         width: 20px;
-      }
+       }
+
     }
     
     &__facebook-contents{
@@ -304,6 +406,9 @@ h1{
       top: 20px;
       margin-left:20px;
       padding-top: 4px;
+      background: none;
+      border: none;
+      outline: none;
       > img {
         width: 18px;
       }
@@ -315,13 +420,19 @@ h1{
       width: 320px;
       margin: 0 auto;
       margin-top: 48px;
+      @media(min-width: 768px){
+        margin-top:40px;
+        width: 288px;
+        margin-right:8px;
+        margin-left:16px;
+        }
     }
   
     &__line-icon-contents{
       display: flex;
       flex-direction: row;
       border-bottom: 1px solid #707070;
-      height: 40px;
+      height: 48px;
       width: 248px;
       margin-top:48px;
     }
@@ -353,6 +464,9 @@ h1{
       top: 20px;
       margin-left:20px;
       padding-top: 4px;
+      background: none;
+      border: none;
+      outline: none;
       > img {
         width: 18px;
       }
@@ -363,10 +477,13 @@ h1{
 .contact-bye-text{
   clear: both;
   color: #707070;
-  margin-top:62px;
+  margin-top:72px;
+ @media(min-width: 454px){
+  text-align: center;
+  }
 }
 
-.fotter-logo{
+.futter-logo{
   text-align: center;
   color: #707070;
   font-size: 0.75rem;
