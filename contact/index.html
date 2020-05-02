@@ -6,6 +6,11 @@
     <meta http-equiv="X-Uh-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="/style.scss" />
     <link rel="stylesheet" href="/contact/style.scss" />
+    <script
+  src="https://code.jquery.com/jquery-3.5.0.min.js"
+  integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+  crossorigin="anonymous"></script>
+<script src="/contact/contact-script.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -55,7 +60,7 @@
           <div class="contact-primary__mail-icon">
             <img src="./img/mail.svg" alt="mail" />
           </div>
-          <div class="contact-primary__mail-contents">s@knickaoffice.jp</div>
+          <div class="contact-primary__mail-contents"><a href="mailto:address">s@knickaoffice.jp</a></div>
           <button class="contact-primary__mail-copy">
             <img src="./img/copy.svg" alt="copy-mail" />
           </button>
@@ -67,7 +72,7 @@
           <div class="contact-primary__phone-icon">
             <img src="./img/phone.svg" alt="phone" />
           </div>
-          <div class="contact-primary__phone-contents">045-516-2763</div>
+          <div class="contact-primary__phone-contents"><a href="tel:+81-045-516-2763">045-516-2763</a></div>
           <button class="contact-primary__phone-copy">
             <img src="./img/copy.svg" alt="copy-phone" />
           </button>
@@ -81,10 +86,10 @@
         <p class="contact-tpl__description">
           お問い合わせ用のテンプレートをご用意しています（任意）
         </p>
-        <button class="contact-tpl__button-1st">表示する</button>
+        <button id="contact_tpl_button_1st" class="contact-tpl__button-1st">表示する</button>
       </div>
 
-      <div class="contact-tpl__button-2nd_wrapper">
+      <div class="contact-tpl__button-2nd_wrapper" id="contact_tpl">
         <div class="contact-tpl__copy-text">
           <li>お名前：</li>
           <li>貴社名：</li>
@@ -94,8 +99,9 @@
           </li>
           <li>対象となるサービスのURLなど：</li>
         </div>
-        <button class="contact-tpl__button-2nd">テキストをコピーする</button>
+        <button id="contact_tpl_button_2nd" class="contact-tpl__button-2nd">テキストをコピーする</button>
       </div>
+      
     </div>
     <span class="contact-border"></span>
     <div class="contact-secondary">
@@ -110,7 +116,7 @@
           <div class="contact-secondary__twitter-icon">
             <img src="./img/twitter.svg" alt="twitter" />
           </div>
-          <div class="contact-secondary__twitter-contents">@knickaoffice</div>
+          <div class="contact-secondary__twitter-contents"><a href="https://twitter.com/knickaoffice">@knickaoffice</a></div>
           <button class="contact-secondary__twitter-copy">
             <img src="./img/copy.svg" alt="copy-twitter" />
           </button>
@@ -122,7 +128,7 @@
           <div class="contact-secondary__facebook-icon">
             <img src="./img/facebook-f.svg" alt="facebook" />
           </div>
-          <div class="contact-secondary__facebook-contents">knickaoffice</div>
+          <div class="contact-secondary__facebook-contents"><a href="https://ja-jp.facebook.com/knickaoffice">knickaoffice</a></div>
           <button class="contact-secondary__facebook-copy">
             <img src="./img/copy.svg" alt="copy-facebook" />
           </button>
@@ -134,7 +140,7 @@
           <div class="contact-secondary__line-icon">
             <img src="./img/line.svg" alt="line" />
           </div>
-          <div class="contact-secondary__line-contents">knickaoffice</div>
+          <div class="contact-secondary__line-contents"><a href="http://line.me/ti/p/@cwr6960h">knickaoffice</a></div>
           <button class="contact-secondary__line-copy">
             <img src="./img/copy.svg" alt="copy-line" />
           </button>
@@ -155,5 +161,6 @@
         <small>All content Copyright ニッカオフィス / knicka office</small>
       </p>
     </futter>
+    <script src="/contact/contact-script.js"></script>
   </body>
 </html>
