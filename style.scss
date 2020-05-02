@@ -244,7 +244,7 @@ input[type="checkbox"].common-display-toggle-check {
 }
 
 .chief-profile__name {
-float: left;
+  display: inline-block;
 }
 
 .common-notice-right{
@@ -252,8 +252,14 @@ float: left;
   text-align: right; 
 }
 
+.client-list{
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .client-list__item{
-  float: left;
 }
 
 .about-detail__button{
