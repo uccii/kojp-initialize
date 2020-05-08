@@ -35,34 +35,42 @@ h2{
       }
 
   &__mail{
+    display: flex; 
+    align-items: flex-end;
     margin-top: 48px;
-    width: 320px;
+    width: 288px;
+    height:40px;
     margin: 0 auto;
     margin-top: 48px;
   }
 
-  &__mail-icon-contents{
-    display: flex;
+
+  &__mail-link{
+    display: flex; 
+    align-items: flex-end;
+    flex-shrink: 0;
+    text-decoration:none;
+    color: #707070;
     border-bottom: 1px solid #707070;
     height: 48px;
     width: 248px;
     margin-top:64px;
   }
-  
 
   &__mail-icon{
     width: 40px;
     flex-shrink: 0;
-    margin: 8px;
+    margin-right: 8px;
     > img {
       outline:0;
-      width: 30px;
+      width: 38px;
+      margin-bottom:-4px;
     }
   }
   
   &__mail-contents{
     color: #707070;
-    margin: 8px;
+    flex-shrink: 0;
     font-size:2.2rem;
     height: 40px;
     width: 171px;
@@ -78,52 +86,59 @@ h2{
   &__mail-copy{
     width: 32px;
     flex-shrink: 0;
-    top: 20px;
-    margin-left:20px;
-    padding-top: 4px;
+    margin-left:16px;
     background: none;
     border: none;
     outline: none;
     > img {
-      width: 20px;
-
+      width: 22px;
+      margin-bottom: 8px;
     }
   }
   
   &__phone{
-    margin-top: 56px;
-    width: 320px;
+    display: flex; 
+    align-items: flex-end;
+    margin-top: 48px;
+    width: 288px;
+    height:40px;
     margin: 0 auto;
     margin-top: 48px;
   }
 
-  &__phone-icon-contents{
-    display: flex;
+
+  &__phone-link{
+    display: flex; 
+    align-items: flex-end;
+    flex-shrink: 0;
+    text-decoration:none;
+    color: #707070;
     border-bottom: 1px solid #707070;
     height: 48px;
     width: 248px;
-    margin-top:48px;
+    margin-top:64px;
   }
 
   &__phone-icon{
     width: 40px;
     flex-shrink: 0;
-    margin: 8px;
+    margin-right: 8px;
     > img {
       outline:0;
-      width: 30px;
+      width: 34px;
+      margin-bottom:-4px;
     }
   }
   
   &__phone-contents{
-    margin: 8px;
-    height: 40px;
-    flex-basis: 171px;
-    flex-shrink: 0;
-    font-style: normal;
     color: #707070;
+    flex-shrink: 0;
     font-size:2.2rem;
+    height: 40px;
+    width: 171px;
+    flex-shrink: 0;
     text-align: center;
+    font-style: normal;
     > a{
       text-decoration:none;
       color: #707070;
@@ -133,16 +148,16 @@ h2{
   &__phone-copy{
     width: 32px;
     flex-shrink: 0;
-    top: 20px;
-    margin-left:20px;
-    padding-top: 4px;
+    margin-left:16px;
     background: none;
     border: none;
     outline: none;
     > img {
-      width: 20px;
+      width: 22px;
+      margin-bottom: 8px;
     }
   }
+ 
 
   
 }
@@ -150,23 +165,20 @@ h2{
 .contact-tpl{
 
   &__button-1st_wrapper{
+    display: flex;
     height:48px;
     margin-top:24px;
-    margin-bottom:16px;
-    width: 100%;
   }
 
   &__description{
     color: #707070;
-    float: left;
     width: 100%;
-    margin-right: -96px;
-    padding-right: 96px;
     margin-top:64px;
     box-sizing: border-box;
     line-height:21px;
   }
   &__button-1st{ 
+    flex-shrink: 0;
     color: #707070;
     border: solid 1px #707070;
     background-color: #FFF;
@@ -174,20 +186,20 @@ h2{
     margin-top:64px;
     width: 96px;
     height: 48px;
-    float: right;
     margin-bottom:24px;
   }
-  &__copy-text li{
+  &__copy-text{
+    > li{
     color:#707070;
     list-style: none;
     line-height:25px;
-    clear: both;
+    }
   }
   &__button-2nd_wrapper{
     width:312px;
     margin-left: auto;
     margin-right: auto;
-    clear: both;
+    /* 直前のdivに対してmargin-topがあたらない */
     margin-top:32px;
     }
   &__copy-text {
@@ -216,6 +228,7 @@ h2{
   border-bottom: dashed 2px #A4A4A4;
   width: 136px;
   display:block;
+      /* 直前のdivに対してmargin-topがあたらない */
   margin-top:64px;
   margin-left: auto;
   margin-right: auto;
@@ -225,10 +238,7 @@ h2{
 
 
 .contact-secondary{
-
-
-  &__description{
-    width: 80%;
+ &__description{
     margin-left: auto;
     margin-right: auto;
     color: #707070;  
@@ -236,178 +246,206 @@ h2{
     }
   
   &__secondary-how{
+    /* この要素を中央寄せにしたいのだが、うまくいかない… */
     margin-left: auto;
     margin-right: auto;
   }
 
   &__twitter{
-     position: relative;
-     width: 320px;
-     margin: 0 auto;
-     margin-top: 48px;
+    display: flex; 
+    flex-shrink: 0;
+    align-items: flex-end;
+    margin-top: 48px;
+    width: 288px;
+    height:40px;
+    margin: 0 auto;
+    margin-top: 48px;
   }
-  
-  &__twitter-icon-contents{
-    display: flex;
+
+
+  &__twitter-link{
+    display: flex; 
+    align-items: flex-end;
+    flex-shrink: 0;
+    text-decoration:none;
+    color: #707070;
     border-bottom: 1px solid #707070;
     height: 48px;
     width: 248px;
-    margin-top:56px;
+    margin-top:64px;
   }
-  
+
   &__twitter-icon{
     width: 40px;
     flex-shrink: 0;
-    margin: 8px;
+    margin-right: 8px;
     > img {
       outline:0;
-      width: 30px;
+      width: 32px;
+      margin-bottom:-4px;
+      margin-left:4px;
     }
   }
-    
+  
   &__twitter-contents{
-    margin: 8px;
-    height: 40px;
-    flex-basis: 171px;
-    flex-shrink: 0;
-    font-style: normal;
     color: #707070;
+    flex-shrink: 0;
     font-size:2.2rem;
+    height: 40px;
+    width: 171px;
+    flex-shrink: 0;
     text-align: center;
+    font-style: normal;
     > a{
       text-decoration:none;
       color: #707070;
     }
   }
-  
+
   &__twitter-copy{
     width: 32px;
     flex-shrink: 0;
-    top: 20px;
-    margin-left:20px;
-    padding-top: 4px;
+    margin-left:16px;
     background: none;
     border: none;
     outline: none;
     > img {
-      width: 20px;
-     }
+      width: 22px;
+      margin-bottom: 8px;
     }
+  }
 
 
   &__facebook{
-    position: relative;
-    width: 320px;
+    display: flex; 
+    flex-shrink: 0;
+    align-items: flex-end;
+    margin-top: 48px;
+    width: 288px;
+    height:40px;
     margin: 0 auto;
     margin-top: 48px;
-    }
-  
-  &__facebook-icon-contents{
-    display: flex;
+  }
+
+
+  &__facebook-link{
+    display: flex; 
+    align-items: flex-end;
+    flex-shrink: 0;
+    text-decoration:none;
+    color: #707070;
     border-bottom: 1px solid #707070;
     height: 48px;
     width: 248px;
-    margin-top:48px;
-    }
-  
+    margin-top:64px;
+  }
+
   &__facebook-icon{
     width: 40px;
     flex-shrink: 0;
-    flex-shrink: 0;
-    margin: 0 8px;
+    margin-right: 8px;
     > img {
       outline:0;
       width: 20px;
-     }
+      margin-bottom:-4px;
+      margin-left:8px;
     }
-    
+  }
+  
   &__facebook-contents{
-    margin: 8px;
-    height: 40px;
-    flex-basis: 171px;
-    flex-shrink: 0;
-    font-style: normal;
     color: #707070;
+    flex-shrink: 0;
     font-size:2.2rem;
+    height: 40px;
+    width: 171px;
+    flex-shrink: 0;
     text-align: center;
+    font-style: normal;
     > a{
       text-decoration:none;
       color: #707070;
     }
-    }
-  
+  }
+
   &__facebook-copy{
     width: 32px;
     flex-shrink: 0;
-    top: 20px;
-    margin-left:20px;
-    padding-top: 4px;
+    margin-left:16px;
     background: none;
     border: none;
     outline: none;
     > img {
-      width: 20px;
+      width: 22px;
+      margin-bottom: 8px;
     }
   }
 
   &__line{
-    position: relative;
-    width: 320px;
+    display: flex; 
+    flex-shrink: 0;
+    align-items: flex-end;
+    margin-top: 48px;
+    width: 288px;
+    height:40px;
     margin: 0 auto;
     margin-top: 48px;
   }
-  
-  &__line-icon-contents{
-    display: flex;
+
+
+  &__line-link{
+    display: flex; 
+    align-items: flex-end;
+    flex-shrink: 0;
+    text-decoration:none;
+    color: #707070;
     border-bottom: 1px solid #707070;
     height: 48px;
     width: 248px;
-    margin-top:48px;
+    margin-top:64px;
   }
-  
+
   &__line-icon{
     width: 40px;
     flex-shrink: 0;
-    margin: 8px;
+    margin-right: 8px;
     > img {
       outline:0;
-      width: 30px;
+      width: 40px;
+      margin-bottom:-4px;
     }
   }
-    
+  
   &__line-contents{
-    margin: 8px;
-    height: 40px;
-    flex-basis: 171px;
-    flex-shrink: 0;
-    font-style: normal;
     color: #707070;
+    flex-shrink: 0;
     font-size:2.2rem;
+    height: 40px;
+    width: 171px;
+    flex-shrink: 0;
     text-align: center;
+    font-style: normal;
     > a{
       text-decoration:none;
       color: #707070;
     }
   }
-  
+
   &__line-copy{
     width: 32px;
     flex-shrink: 0;
-    top: 20px;
-    margin-left:20px;
-    padding-top: 4px;
+    margin-left:16px;
     background: none;
     border: none;
     outline: none;
     > img {
-      width: 20px;
+      width: 22px;
+      margin-bottom: 8px;
     }
   }
 
 }
 
 .contact-bye-text{
-  clear: both;
   color: #707070;
   margin-top:72px;
 }
@@ -429,13 +467,11 @@ body{
     }
 
 .contact-primary{
-  &__description{
-     width: 600px;
-   }
 
   &__primary-how{
-     width: 625px;
+    width: 768px;
      display:flex;
+     flex-wrap:wrap;
      margin-left: auto;
      margin-right: auto;
    }
@@ -443,8 +479,10 @@ body{
   &__mail{
     margin-top:120px;
     width: 288px;
-    margin-right:16px;
+    margin-right:72px;
   }
+
+
 
   &__mail-icon-contents{
       margin-top:0;
@@ -466,9 +504,6 @@ body{
   &__button-1st_wrapper{
       width:480px;
       height: auto;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
       margin-left: auto;
       margin-right: auto;
       }
@@ -486,19 +521,19 @@ body{
 
 .contact-secondary{
   &__description{
-      width: 600px;
     }
 
   &__secondary-how{
-      width: 624px;
       display:flex;
       flex-wrap:wrap;
+      margin-left: auto;
+      margin-right: auto;
   }
 
   &__twitter{
       margin-top:36px;
       width: 288px;
-      margin-right:8px;
+      margin-right:72px;
       margin-left:16px;
     }
 
@@ -516,7 +551,7 @@ body{
   &__line{
      margin-top:40px;
      width: 288px;
-     margin-right:8px;
+     margin-right:72px;
      margin-left:16px;
   }
 
