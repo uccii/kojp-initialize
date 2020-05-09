@@ -1,28 +1,30 @@
 const utility = {
-  toggleClick: _e => {
+  toggleClickedAttr: _e => {
     const clickedName = "clicked";
     if (_e.currentTarget.hasAttribute(clickedName)) {
       _e.currentTarget.removeAttribute(clickedName);
     } else {
       _e.currentTarget.setAttribute(clickedName, clickedName);
     }
-  }
-};
-
-const topPage = {
-  globalNavFirstClick: _e => {
+  },
+  addfirstClickedAttr: _e => {
     _e.currentTarget.setAttribute("firstClicked", "firstClicked");
+  },
+  interlockElementWithEvent: (_originEvent, _targetElement) => {
+    switch (_originEvent.type) {
+      case "click":
+        _targetElement.click();
+        break;
+      default:
+        return false;
+    }
   }
 };
 
 const init = () => {
   const globalNav = document.querySelector(".global-nav");
-  const partsToggleMunu = document.querySelectorAll(".parts-toggle-munu");
-  globalNav.addEventListener("click", utility.toggleClick);
-  globalNav.addEventListener("click", topPage.globalNavFirstClick);
-  partsToggleMunu.forEach(_e => {
-    _e.addEventListener("click", utility.toggleClick);
-  });
+  globalNav.addEventListener("click", utility.toggleClickedAttr);
+  globalNav.addEventListener("click", utility.addfirstClickedAttr);
 };
 
 init();
