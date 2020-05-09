@@ -6,42 +6,41 @@ body{
   margin: 0 32px;
     }
 
-h1{
-  height: 2.2rem;
-  text-align: right;
-  height:54px;
-  margin-right: -16px;
-} 
 
-h2{
+.content-page-title{
+  color: #000000;
+  text-align: center;
   font-weight: normal;
   font-size: 2.4rem;
   margin-top:72px;
 }
 
-.content-page-title{
-  color: #000000;
-  text-align: center;
-  height:77px;
-}
-
 .contact-primary{
+  font-style:normal;
+
+
     &__description{
-      width: 80%;
       margin-left: auto;
       margin-right: auto;
       color: #707070;  
       margin-top:56px;
       }
 
+  &__primary-how{
+    display: flex; 
+    flex-wrap:wrap;
+    justify-content: center;
+    width: 278px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   &__mail{
     display: flex; 
     align-items: flex-end;
-    margin-top: 48px;
-    width: 288px;
+    margin-top: 53px;
+    width: 278px;
     height:40px;
-    margin: 0 auto;
-    margin-top: 48px;
   }
 
 
@@ -54,7 +53,6 @@ h2{
     border-bottom: 1px solid #707070;
     height: 48px;
     width: 248px;
-    margin-top:64px;
   }
 
   &__mail-icon{
@@ -86,7 +84,7 @@ h2{
   &__mail-copy{
     width: 32px;
     flex-shrink: 0;
-    margin-left:16px;
+    width:38px;
     background: none;
     border: none;
     outline: none;
@@ -99,11 +97,9 @@ h2{
   &__phone{
     display: flex; 
     align-items: flex-end;
-    margin-top: 48px;
-    width: 288px;
+    margin-top: 53px;
+    width: 278px;
     height:40px;
-    margin: 0 auto;
-    margin-top: 48px;
   }
 
 
@@ -116,7 +112,6 @@ h2{
     border-bottom: 1px solid #707070;
     height: 48px;
     width: 248px;
-    margin-top:64px;
   }
 
   &__phone-icon{
@@ -125,7 +120,7 @@ h2{
     margin-right: 8px;
     > img {
       outline:0;
-      width: 34px;
+      width: 38px;
       margin-bottom:-4px;
     }
   }
@@ -148,7 +143,7 @@ h2{
   &__phone-copy{
     width: 32px;
     flex-shrink: 0;
-    margin-left:16px;
+    width:38px;
     background: none;
     border: none;
     outline: none;
@@ -167,13 +162,12 @@ h2{
   &__button-1st_wrapper{
     display: flex;
     height:48px;
-    margin-top:24px;
+    margin-top:64px;
   }
 
   &__description{
     color: #707070;
     width: 100%;
-    margin-top:64px;
     box-sizing: border-box;
     line-height:21px;
   }
@@ -183,31 +177,31 @@ h2{
     border: solid 1px #707070;
     background-color: #FFF;
     border-radius: 98px;
-    margin-top:64px;
     width: 96px;
     height: 48px;
     margin-bottom:24px;
   }
-  &__copy-text{
-    > li{
-    color:#707070;
-    list-style: none;
-    line-height:25px;
-    }
-  }
+
+
   &__button-2nd_wrapper{
     width:312px;
     margin-left: auto;
     margin-right: auto;
-    /* 直前のdivに対してmargin-topがあたらない */
     margin-top:32px;
     }
+
   &__copy-text {
     color:#707070;
-    list-style: none;
     border: solid 1px #707070; 
     background-color: #FFF;
     padding: 8px 16px;
+  }
+  
+  &__copy_target{
+    list-style: none;
+    padding-left: 0;
+    line-height:2.5rem;
+    font-size: 1.6rem;
   }
 
   &__button-2nd{
@@ -243,207 +237,197 @@ h2{
     margin-right: auto;
     color: #707070;  
     margin-top:56px;
+    text-align: center;
     }
   
   &__secondary-how{
-    /* この要素を中央寄せにしたいのだが、うまくいかない… */
+    display: flex; 
+    flex-wrap:wrap;
+    justify-content: center;
+    width: 278px;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  &__twitter{
-    display: flex; 
-    flex-shrink: 0;
-    align-items: flex-end;
-    margin-top: 48px;
-    width: 288px;
-    height:40px;
-    margin: 0 auto;
-    margin-top: 48px;
-  }
-
-
-  &__twitter-link{
-    display: flex; 
-    align-items: flex-end;
-    flex-shrink: 0;
-    text-decoration:none;
-    color: #707070;
-    border-bottom: 1px solid #707070;
-    height: 48px;
-    width: 248px;
-    margin-top:64px;
-  }
-
-  &__twitter-icon{
-    width: 40px;
-    flex-shrink: 0;
-    margin-right: 8px;
-    > img {
-      outline:0;
-      width: 32px;
-      margin-bottom:-4px;
-      margin-left:4px;
     }
-  }
+
+    &__twitter{
+      display: flex; 
+      align-items: flex-end;
+      margin-top: 53px;
+      width: 278px;
+      height:40px;
+    }
   
-  &__twitter-contents{
-    color: #707070;
-    flex-shrink: 0;
-    font-size:2.2rem;
-    height: 40px;
-    width: 171px;
-    flex-shrink: 0;
-    text-align: center;
-    font-style: normal;
-    > a{
+  
+    &__twitter-link{
+      display: flex; 
+      align-items: flex-end;
+      flex-shrink: 0;
       text-decoration:none;
       color: #707070;
+      border-bottom: 1px solid #707070;
+      height: 48px;
+      width: 248px;
     }
-  }
-
-  &__twitter-copy{
-    width: 32px;
-    flex-shrink: 0;
-    margin-left:16px;
-    background: none;
-    border: none;
-    outline: none;
-    > img {
-      width: 22px;
-      margin-bottom: 8px;
-    }
-  }
-
-
-  &__facebook{
-    display: flex; 
-    flex-shrink: 0;
-    align-items: flex-end;
-    margin-top: 48px;
-    width: 288px;
-    height:40px;
-    margin: 0 auto;
-    margin-top: 48px;
-  }
-
-
-  &__facebook-link{
-    display: flex; 
-    align-items: flex-end;
-    flex-shrink: 0;
-    text-decoration:none;
-    color: #707070;
-    border-bottom: 1px solid #707070;
-    height: 48px;
-    width: 248px;
-    margin-top:64px;
-  }
-
-  &__facebook-icon{
-    width: 40px;
-    flex-shrink: 0;
-    margin-right: 8px;
-    > img {
-      outline:0;
-      width: 20px;
-      margin-bottom:-4px;
-      margin-left:8px;
-    }
-  }
   
-  &__facebook-contents{
-    color: #707070;
-    flex-shrink: 0;
-    font-size:2.2rem;
-    height: 40px;
-    width: 171px;
-    flex-shrink: 0;
-    text-align: center;
-    font-style: normal;
-    > a{
-      text-decoration:none;
-      color: #707070;
-    }
-  }
-
-  &__facebook-copy{
-    width: 32px;
-    flex-shrink: 0;
-    margin-left:16px;
-    background: none;
-    border: none;
-    outline: none;
-    > img {
-      width: 22px;
-      margin-bottom: 8px;
-    }
-  }
-
-  &__line{
-    display: flex; 
-    flex-shrink: 0;
-    align-items: flex-end;
-    margin-top: 48px;
-    width: 288px;
-    height:40px;
-    margin: 0 auto;
-    margin-top: 48px;
-  }
-
-
-  &__line-link{
-    display: flex; 
-    align-items: flex-end;
-    flex-shrink: 0;
-    text-decoration:none;
-    color: #707070;
-    border-bottom: 1px solid #707070;
-    height: 48px;
-    width: 248px;
-    margin-top:64px;
-  }
-
-  &__line-icon{
-    width: 40px;
-    flex-shrink: 0;
-    margin-right: 8px;
-    > img {
-      outline:0;
+    &__twitter-icon{
       width: 40px;
-      margin-bottom:-4px;
+      flex-shrink: 0;
+      margin-right: 8px;
+      > img {
+        outline:0;
+        width: 38px;
+        margin-bottom:-4px;
+      }
     }
-  }
+    
+    &__twitter-contents{
+      color: #707070;
+      flex-shrink: 0;
+      font-size:2.2rem;
+      height: 40px;
+      width: 171px;
+      flex-shrink: 0;
+      text-align: center;
+      font-style: normal;
+      > a{
+        text-decoration:none;
+        color: #707070;
+      }
+    }
   
-  &__line-contents{
-    color: #707070;
-    flex-shrink: 0;
-    font-size:2.2rem;
-    height: 40px;
-    width: 171px;
-    flex-shrink: 0;
-    text-align: center;
-    font-style: normal;
-    > a{
+    &__twitter-copy{
+      width: 32px;
+      flex-shrink: 0;
+      width:38px;
+      background: none;
+      border: none;
+      outline: none;
+      > img {
+        width: 22px;
+        margin-bottom: 8px;
+      }
+    }
+
+
+    &__facebook{
+      display: flex; 
+      align-items: flex-end;
+      margin-top: 53px;
+      width: 278px;
+      height:40px;
+    }
+  
+  
+    &__facebook-link{
+      display: flex; 
+      align-items: flex-end;
+      flex-shrink: 0;
       text-decoration:none;
       color: #707070;
+      border-bottom: 1px solid #707070;
+      height: 48px;
+      width: 248px;
+    }
+  
+    &__facebook-icon{
+      width: 40px;
+      flex-shrink: 0;
+      margin-right: 8px;
+      > img {
+        outline:0;
+        width: 22px;
+        margin-bottom:-4px;
+        padding-left: 4px;
+      }
+    }
+    
+    &__facebook-contents{
+      color: #707070;
+      flex-shrink: 0;
+      font-size:2.2rem;
+      height: 40px;
+      width: 171px;
+      flex-shrink: 0;
+      text-align: center;
+      font-style: normal;
+      > a{
+        text-decoration:none;
+        color: #707070;
+      }
+    }
+  
+    &__facebook-copy{
+      width: 32px;
+      flex-shrink: 0;
+      width:38px;
+      background: none;
+      border: none;
+      outline: none;
+      > img {
+        width: 22px;
+        margin-bottom: 8px;
+      }
+    }
+
+    &__line{
+      display: flex; 
+      align-items: flex-end;
+      margin-top: 53px;
+      width: 278px;
+      height:40px;
+    }
+  
+  
+    &__line-link{
+      display: flex; 
+      align-items: flex-end;
+      flex-shrink: 0;
+      text-decoration:none;
+      color: #707070;
+      border-bottom: 1px solid #707070;
+      height: 48px;
+      width: 248px;
+    }
+  
+    &__line-icon{
+      width: 40px;
+      flex-shrink: 0;
+      margin-right: 8px;
+      > img {
+        outline:0;
+        width: 38px;
+        margin-bottom:-4px;
+      }
+    }
+    
+    &__line-contents{
+      color: #707070;
+      flex-shrink: 0;
+      font-size:2.2rem;
+      height: 40px;
+      width: 171px;
+      flex-shrink: 0;
+      text-align: center;
+      font-style: normal;
+      > a{
+        text-decoration:none;
+        color: #707070;
+      }
+    }
+  
+    &__line-copy{
+      width: 32px;
+      flex-shrink: 0;
+      width:38px;
+      background: none;
+      border: none;
+      outline: none;
+      > img {
+        width: 22px;
+        margin-bottom: 8px;
+      }
     }
   }
-
-  &__line-copy{
-    width: 32px;
-    flex-shrink: 0;
-    margin-left:16px;
-    background: none;
-    border: none;
-    outline: none;
-    > img {
-      width: 22px;
-      margin-bottom: 8px;
-    }
-  }
-
-}
 
 .contact-bye-text{
   color: #707070;
@@ -466,20 +450,24 @@ body{
     padding:0 72px;
     }
 
-.contact-primary{
+.contact-primary{ 
+  &__description{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
 
   &__primary-how{
-    width: 768px;
-     display:flex;
-     flex-wrap:wrap;
-     margin-left: auto;
-     margin-right: auto;
-   }
+    width: 630px;
+    display:flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
 
   &__mail{
     margin-top:120px;
     width: 288px;
-    margin-right:72px;
   }
 
 
@@ -489,9 +477,8 @@ body{
   }
 
   &__phone{
-      margin-top:120px;
+      margin-top:0px;
       width: 288px;
-      margin-left:16px;
   }
 
   &__phone-icon-contents{
@@ -520,28 +507,22 @@ body{
 }
 
 .contact-secondary{
-  &__description{
-    }
 
   &__secondary-how{
-      display:flex;
-      flex-wrap:wrap;
-      margin-left: auto;
-      margin-right: auto;
+    width: 630px;
+    display:flex;
+    align-items: flex-end;
+    justify-content: space-between;
   }
 
   &__twitter{
       margin-top:36px;
       width: 288px;
-      margin-right:72px;
-      margin-left:16px;
     }
 
   &__facebook{
       margin-top:36px;
       width: 288px;
-      margin-right:16px;
-      margin-left:8px;
   }
 
   &__facebook-icon-contents{
@@ -549,10 +530,8 @@ body{
   }
 
   &__line{
-     margin-top:40px;
+     margin-top:50px;
      width: 288px;
-     margin-right:72px;
-     margin-left:16px;
   }
 
  }
@@ -573,6 +552,39 @@ body{
   text-align: center;
 }
 }
+
+
+@media screen and (min-width:650px){
+  /*　画面サイズが650pxからはここを読み込む　*/
+.contact-primary{
+
+    &__description{
+      width: 600px;
+      }
+    }
+}
+
+@media screen and (min-width:600px){
+  /*　画面サイズが600pxからはここを読み込む　*/
+
+.contact-tpl{
+  &__button-1st_wrapper{
+    width: 528px;
+    margin-left: auto;
+    margin-right: auto;
+    > p{
+      padding-top: 15px;
+    }
+    }
+  &__button-2nd_wrapper{
+    width: 494px;
+  }
+  }
+}
+
+
+
+
 
 
   /*　js用　*/
