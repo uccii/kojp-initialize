@@ -9,42 +9,40 @@
     <title>Document</title>
   </head>
   <body>
-<header class="global-header">
-  <h1 class="global-logo">
-    <img src="./img/logo-knicka-wide.png" alt="knicka office" />
-  </h1>
-  <nav class="global-nav">
-    <label for="GLOBAL_NAV_TOGGLE_BUTTON" class="global-nav__toggle-button">
-      <div class="global-nav__button-line parts-toggle-munu">
-        <span></span><span></span><span></span>
-      </div>
-    </label>
-    <input
-      type="checkbox"
-      id="GLOBAL_NAV_TOGGLE_BUTTON"
-      class="common-display-toggle-check"
-    />
-    <ul class="global-nav__menu common-nav-list">
-      <li class="global-nav__item common-nav-list__item">
-        <a href=""><span>ABOUT</span><span>オフィスのこと</span></a>
-      </li>
-      <li class="global-nav__item common-nav-list__item">
-        <a href=""><span>CLIENT</span><span>顧客</span></a>
-      </li>
-      <li class="global-nav__item common-nav-list__item">
-        <a href=""><span>BLOG</span><span>ブログ</span></a>
-      </li>
-      <li class="global-nav__item common-nav-list__item">
-        <a href=""><span>CONTACT</span><span>お問い合わせ</span></a>
-      </li>
-    </ul>
-  </nav>
-</header>
+    <header class="global-header">
+      <h1 class="global-logo">
+        <img src="./img/logo-knicka-wide.png" alt="knicka office" />
+      </h1>
+      <nav class="global-nav">
+        <button class="global-nav__toggle-button">
+          <div class="global-nav__button-line parts-toggle-munu">
+            <span></span><span></span><span></span>
+          </div>
+        </button>
+        <ul class="global-nav__menu common-nav-list">
+          <li class="global-nav__item global-nav__item-home common-nav-list__item">
+            <a href=""><span>HOME</span><span>ホーム</span></a>
+          </li>
+          <li class="global-nav__item common-nav-list__item">
+            <a href=""><span>ABOUT</span><span>オフィスのこと</span></a>
+          </li>
+          <li class="global-nav__item common-nav-list__item">
+            <a href=""><span>CLIENT</span><span>顧客</span></a>
+          </li>
+          <li class="global-nav__item common-nav-list__item">
+            <a href=""><span>BLOG</span><span>ブログ</span></a>
+          </li>
+          <li class="global-nav__item common-nav-list__item">
+            <a href=""><span>CONTACT</span><span>お問い合わせ</span></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <main class="main-content-wrapper">
       <div class="top-statement">
-        <p class="top-statement__title">すべて、使い易くする</p>
-        <p class="top-statement__text">ニッカオフィスは、サービスやプロダクトを提供されている企業様向けにデザイン全般にてお力添クリエティブスタジオです。</p>
+        <p class="top-statement__title">ぜんぶ、使いやすく</p>
+        <p class="top-statement__text">ニッカオフィスは、世の中のモノやコトをぜんぶ使いやすくするクリエティブスタジオです</p>
       </div>
 
       <article class="quote-blog-wrapper">
@@ -52,13 +50,15 @@
         <article class="quate-blog-content">
           <h2 class="quate-blog-content__title">
             令和元年10月30日に考えたこと
-            <span>適当な失敗と真剣な失敗</span>
           </h2>
-          <p>
+          <p class="quate-blog-content__sub-title">
+            適当な失敗と真剣な失敗
+          </p>
+          <p class="quate-blog-content__text">
           ニッカオフィスのウチヤマケンイチです。きちんとしたレッスンのおかげでゴルフのフォームが順調に改善しています。<br>
           あと減量の方も、トレーナーのアドバイ…
           </p>
-          <a class="quate-blog-content__more">つづきを読む</a>
+          <a class="quate-blog-content__more"><span>つづきを読む</span></a>
         </article>
       </article>
 
@@ -207,5 +207,6 @@
     <small>All content Copyright ニッカオフィス / knicka office</small>
   </p>
 </footer>
+<script src="common-script.js"></script>
   </body>
 </html>
