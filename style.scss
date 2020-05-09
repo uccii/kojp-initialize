@@ -244,12 +244,11 @@ input[type="checkbox"].common-display-toggle-check {
 }
 
 .main-content-wrapper {
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 74px;
   box-sizing: border-box;
   width: 100%;
-  background: url(./img/visual-knicka.png) no-repeat top 76px right calc(-120px + 16%);
-  background-origin: border-box;
 }
 
 .global-footer {
@@ -264,43 +263,6 @@ input[type="checkbox"].common-display-toggle-check {
     color: #a9a9a9;
   }
 }
-
-.top-statement {
-  background-color: rgba(255, 255, 255, .9);
-  max-width: 300px;
-  padding: 4px 4px 0;
-  box-sizing: border-box;
-  &__title {
-    font-size: 2.8rem;
-    padding: 4px;
-  }
-  &__text {
-    padding: 40px 4px 40px 40px;
-  }
-}
-
-.quote-blog-wrapper {
-  position: relative;
-  background-color: rgba(232, 231, 229, .86);
-  padding: 12px 12px 24px;
-  border-radius: 4px;
-  &__title {
-    position: absolute;
-    top: -8px;
-    right: 16px;
-    color: #4E4222;
-    font-size: 1.2rem;
-    font-weight: normal;
-    margin: 0;
-  }
-}
-
-.quate-blog-content {
-  background-color: rgba(255, 255, 255, .86);
-  padding: 12px;
-  border-radius: 4px;
-}
-
 .signature {
   text-align: right;
 }
