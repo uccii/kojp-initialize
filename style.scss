@@ -22,20 +22,6 @@ p {
   justify-content: flex-end;
 }
 
-.parts-toggle-munu {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: space-evenly;
-  justify-content: center;
-  >span {
-    display: block;
-    width: 18px;
-    height: 2px;
-    flex-shrink: 0;
-    background-color: #000;
-  }
-}
-
 .common-heading2 {
   text-align: center;
   font-weight: normal;
@@ -91,17 +77,8 @@ p {
 
 input[type="checkbox"].common-display-toggle-check {
   display: none;
-  &~* {
-    filter: opacity(0);
-    pointer-events: none;
-  }
   &:checked~* {
-    filter: opacity(1);
-    transition: filter .5s;
-  }
-  &:not(:checked)~* {
-    filter: opacity(0);
-    transition: filter .5s;
+    display: none;
   }
 }
 
@@ -109,6 +86,7 @@ input[type="checkbox"].common-display-toggle-check {
   position: fixed;
   bottom: 72px;
   z-index: 1000;
+  pointer-events: none;
   &__toggle-button {
     position: absolute;
     top: calc(100% + 8px);
@@ -121,6 +99,7 @@ input[type="checkbox"].common-display-toggle-check {
     padding: 8px;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, .6);
     background-color: #fff;
+    pointer-events: auto;
     &:before {
       content: '';
       display: block;
@@ -142,6 +121,7 @@ input[type="checkbox"].common-display-toggle-check {
     height: 96px;
     background-color: rgba(255, 255, 255, .9);
     box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, .12);
+    filter: opacity(0);
   }
   &__item {
     width: 78px;
@@ -158,15 +138,117 @@ input[type="checkbox"].common-display-toggle-check {
   &__item-home {
     display: none;
   }
+  &[firstClicked="firstClicked"] {
+    .global-nav__menu {
+      transition: filter .5s;
+    }
+  }
+  &[clicked="clicked"] {
+    .global-nav__menu {
+      filter: opacity(1);
+    }
+    .global-nav__item {
+      >a {
+        pointer-events: auto;
+      }
+    }
+  }
+  .parts-toggle-munu {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    justify-content: center;
+    >span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      flex-shrink: 0;
+      background-color: #000;
+    }
+  }
+  &[firstClicked="firstClicked"] {
+    .parts-toggle-munu {
+      span {
+        &:nth-of-type(1) {
+          animation: toggle-menu-bar1 .5s forwards;
+        }
+        &:nth-of-type(2) {
+          transition: filter .25s;
+          filter: opacity(1);
+        }
+        &:nth-of-type(3) {
+          animation: toggle-menu-bar3 .5s forwards;
+        }
+      }
+    }
+  }
+  &[clicked="clicked"] {
+    .parts-toggle-munu {
+      span {
+        &:nth-of-type(1) {
+          animation: clicked-toggle-menu-bar1 .5s forwards;
+        }
+        &:nth-of-type(2) {
+          filter: opacity(0);
+        }
+        &:nth-of-type(3) {
+          animation: clicked-toggle-menu-bar3 .5s forwards;
+        }
+      }
+    }
+  }
+  @keyframes toggle-menu-bar1 {
+    0% {
+      transform: translateY(8px) rotate(45deg);
+    }
+    50% {
+      transform: translateY(8px) rotate(0);
+    }
+    100% {
+      transform: translateY(0) rotate(0);
+    }
+  }
+  @keyframes clicked-toggle-menu-bar1 {
+    0% {
+      transform: translateY(0) rotate(0);
+    }
+    50% {
+      transform: translateY(8px) rotate(0);
+    }
+    100% {
+      transform: translateY(8px) rotate(45deg);
+    }
+  }
+  @keyframes toggle-menu-bar3 {
+    0% {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+    50% {
+      transform: translateY(-9px) rotate(0);
+    }
+    100% {
+      transform: translateY(0) rotate(0);
+    }
+  }
+  @keyframes clicked-toggle-menu-bar3 {
+    0% {
+      transform: translateY(0) rotate(0);
+    }
+    50% {
+      transform: translateY(-9px) rotate(0);
+    }
+    100% {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+  }
 }
 
 .main-content-wrapper {
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 74px;
   box-sizing: border-box;
   width: 100%;
-  background: url(./img/visual-knicka.png) no-repeat top 76px right calc(-120px + 16%);
-  background-origin: border-box;
 }
 
 .global-footer {
@@ -181,43 +263,6 @@ input[type="checkbox"].common-display-toggle-check {
     color: #a9a9a9;
   }
 }
-
-.top-statement {
-  background-color: rgba(255, 255, 255, .9);
-  max-width: 300px;
-  padding: 4px 4px 0;
-  box-sizing: border-box;
-  &__title {
-    font-size: 2.8rem;
-    padding: 4px;
-  }
-  &__text {
-    padding: 40px 4px 40px 40px;
-  }
-}
-
-.quote-blog-wrapper {
-  position: relative;
-  background-color: rgba(232, 231, 229, .86);
-  padding: 12px 12px 24px;
-  border-radius: 4px;
-  &__title {
-    position: absolute;
-    top: -8px;
-    right: 16px;
-    color: #4E4222;
-    font-size: 1.2rem;
-    font-weight: normal;
-    margin: 0;
-  }
-}
-
-.quate-blog-content {
-  background-color: rgba(255, 255, 255, .86);
-  padding: 12px;
-  border-radius: 4px;
-}
-
 .signature {
   text-align: right;
 }
@@ -228,6 +273,10 @@ input[type="checkbox"].common-display-toggle-check {
   &>dt {
     font-weight: bold
   }
+}
+
+.company-overview_heading {
+  font-weight: bold;
 }
 
 .logo-explanation {
@@ -354,5 +403,14 @@ input[type="checkbox"].common-display-toggle-check {
   width: 100%;
   background-position: top 76px right calc(-28px + 4%);
 }
+
+}  
+
+@media screen and (min-width:600px) and ( max-width:1024px) {
+  /*　画面サイズが600pxから1024pxまではここを読み込む　*/
+}  
+
+@media screen and (min-width:1024px) { 
+  /*　画面サイズが1024pxからはここを読み込む　*/
 
 }
