@@ -1,7 +1,7 @@
 
 
 
-body{
+.global-wrapper{
   background-color: #FFF;
   margin: 0 32px;
     }
@@ -443,7 +443,7 @@ body{
 @media screen and (min-width:768px){
   /*　画面サイズが768pxからはここを読み込む　*/
 
-body{
+.global-wrapper{
     width: 768px;
     margin-left: auto;
     margin-right: auto;

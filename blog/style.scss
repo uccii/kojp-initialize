@@ -1,0 +1,128 @@
+.global-wrapper{
+  background-color: #FFF;
+    }
+
+.blogHeaderNav{
+  margin-top: -56px;
+  &__day-before{
+     > p::before{
+      content:url(/img/day-before.svg);
+     }
+    width: 88px;
+    height: 56px;
+    background-color: #FAFAFA;
+    border: none;
+    outline: none;
+    color: #707070;
+    font-size: 15px;
+    border-radius:6px;
+  }
+}
+.blog-main{
+  h2{
+    margin-top:40px;
+    font-size:1.4rem;
+    font-weight: normal;
+    text-align: center;
+  }
+  &__card{
+    width: 296px;
+    height: auto;
+    /* 画像に枠がついちゃう理由を調べる */
+    > img{
+    border-style:none;
+    }
+  }
+  &__content-height{
+        /* 高さは動的に出力する（__contentの高さを指定しないと、その下のカードブロックを入れられない） */
+    height: 1720px;
+  }
+  &__content{
+    > h3{
+      display: block;
+      font-size:1.6rem;
+      font-weight: normal;
+      width: 56px;
+    }
+    display: block;
+    margin-top: 72px;
+    margin-top:40px;
+    height:300px;
+    column-width: 300px;
+    width: 93%;
+    text-align: left;
+    column-gap:64px;
+    line-height: 2.1;
+    writing-mode: vertical-rl;
+     >p{
+      text-combine-upright: digits2;
+     }
+  }
+  &__card{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:32px;
+  }
+  }
+
+  .blogFooterNav{
+    margin-top: 32px;
+    display: flex; 
+    flex-wrap:wrap;
+    &__day-before{
+      display: flex; 
+      width: 344px;
+      height: 56px;
+      background-color: #FAFAFA;
+      border: none;
+      outline: none;
+      color: #707070;
+      font-size: 15px;
+      border-radius:6px;
+    }
+    &__day-before-zenjitsu{
+    /* before表示されない */
+      > p::before{
+        content:'◀';
+       }
+      width: 42px;
+      height: auto;
+      flex-shrink: 0;
+      font-size: 1.5rem;
+      margin: auto 8px;
+      color: #707070;
+    }
+    &__day-before-title{
+      height: auto;
+      font-size: 1.4rem;
+    }
+    &__day-after{
+      margin-top: 8px;
+      margin-bottom: 64px;
+      display: flex; 
+      justify-content: flex-end;
+      width: 344px;
+      height: 56px;
+      background-color: #FAFAFA;
+      border: none;
+      outline: none;
+      color: #707070;
+      font-size: 15px;
+      border-radius:6px;
+    }
+    &__day-after-yokujitsu{
+          /* after表示されない */
+      > p::after{
+        content:'▶';
+       }
+      width: 42px;
+      height: auto;
+      flex-shrink: 0;
+      font-size: 1.5rem;
+      margin: auto 8px;
+    }
+    &__day-after-title{
+      height: auto;
+      font-size: 1.4rem;
+    }
+  }
