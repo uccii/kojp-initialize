@@ -9,9 +9,12 @@
     <title>Document</title>
   </head>
   <body>
-<header class="global-header">
+<header class="global-header" scrolled="scrolled">
   <h1 class="global-logo">
-    <img src="./img/logo-knicka-wide.png" alt="knicka office" />
+    <picture>
+      <source srcset="./img/logo-knicka.png" media="(min-width: 600px)">
+      <img src="./img/logo-knicka-wide.png" alt="knicka office" />
+    </picture>
   </h1>
   <nav class="global-nav">
     <button class="global-nav__toggle-button">
@@ -21,19 +24,19 @@
     </button>
     <ul class="global-nav__menu common-nav-list">
       <li class="global-nav__item global-nav__item-home common-nav-list__item">
-        <a href=""><span>HOME</span><span>ホーム</span></a>
+        <a href=""><span class="global-nav__item-title">HOME</span><span class="global-nav__item-sub">ホーム</span></a>
       </li>
       <li class="global-nav__item common-nav-list__item">
-        <a href=""><span>ABOUT</span><span>オフィスのこと</span></a>
+        <a href=""><span class="global-nav__item-title">ABOUT</span><span class="global-nav__item-sub">オフィスのこと</span></a>
+      </li>
+      <li class="global-nav__item global-nav__item-client common-nav-list__item">
+        <a href=""><span class="global-nav__item-title">CLIENT</span><span class="global-nav__item-sub">顧客</span></a>
       </li>
       <li class="global-nav__item common-nav-list__item">
-        <a href=""><span>CLIENT</span><span>顧客</span></a>
+        <a href=""><span class="global-nav__item-title">BLOG</span><span class="global-nav__item-sub">ブログ</span></a>
       </li>
       <li class="global-nav__item common-nav-list__item">
-        <a href=""><span>BLOG</span><span>ブログ</span></a>
-      </li>
-      <li class="global-nav__item common-nav-list__item">
-        <a href=""><span>CONTACT</span><span>お問い合わせ</span></a>
+        <a href=""><span class="global-nav__item-title">CONTACT</span><span class="global-nav__item-sub">お問い合わせ</span></a>
       </li>
     </ul>
   </nav>
