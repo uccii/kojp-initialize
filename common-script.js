@@ -54,7 +54,7 @@ const init = () => {
   const globalHeader = document.querySelector(".global-header");
   globalNav.addEventListener("click", utility.toggleClickedAttr);
   globalNav.addEventListener("click", utility.addfirstClickedAttr);
-  // commonWork.toggleGlobalHeaderWithScroll(globalHeader);
+  commonWork.toggleGlobalHeaderWithScroll(globalHeader);
 };
 
 init();
