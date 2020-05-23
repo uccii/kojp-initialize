@@ -1,3 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="38" height="57" viewBox="0 0 38 57">
-  <text id="_" data-name="â" transform="translate(0 46)" fill="#707070" font-size="43" font-family="SegoeUISymbol, Segoe UI Symbol"><tspan x="0" y="0">â</tspan></text>
+<svg id="ã¬ã¤ã¤ã¼_1" data-name="ã¬ã¤ã¤ã¼ 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #70707a;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M200,146.86,0-.67V295Z"/>
 </svg>
