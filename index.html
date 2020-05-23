@@ -41,9 +41,19 @@
 
     <main class="main-content-wrapper">
       <div class="top-statement">
-        <p class="top-statement__title">ぜんぶ、使いやすく</p>
+        <p class="top-statement__title">ぜんぶ、</br>使いやすくする</p>
         <p class="top-statement__text">ニッカオフィスは、世の中のモノやコトを 使いやすくするクリエイティブスタジオです</p>
       </div>
+
+      <nav class="top-page-nav">
+        <p class="top-page-nav__title">MENU<!--メニューに見出しをつけない場合は、このpタグは不要？--></p>
+        <ul class="top-page-nav__menu common-nav-list">
+          <li class="top-page-nav__item common-nav-list__item"><a href=""><span>About</span><span>オフィスのこと</span></a></li>
+          <li class="top-page-nav__item common-nav-list__item"><a href=""><span>Client</span><span>顧客</span></a></li>
+          <li class="top-page-nav__item common-nav-list__item"><a href=""><span>Blog</span><span>ブログ</span></a></li>
+          <li class="top-page-nav__item common-nav-list__item"><a href=""><span>Contact</span><span>お問い合わせ</span></a></li>
+        </ul>
+      </nav>
 
       <article class="quote-blog-wrapper">
         <h1 class="quote-blog-wrapper__title">代表のブログ</h1>
@@ -62,20 +72,10 @@
         </article>
       </article>
 
-      <nav class="top-page-nav">
-        <p class="top-page-nav__title">MENU</p>
-        <ul class="top-page-nav__menu common-nav-list">
-          <li class="top-page-nav__item common-nav-list__item"><a href=""><span>About</span><span>オフィスのこと</span></a></li>
-          <li class="top-page-nav__item common-nav-list__item"><a href=""><span>Client</span><span>顧客</span></a></li>
-          <li class="top-page-nav__item common-nav-list__item"><a href=""><span>Blog</span><span>ブログ</span></a></li>
-          <li class="top-page-nav__item common-nav-list__item"><a href=""><span>Contact</span><span>お問い合わせ</span></a></li>
-        </ul>
-      </nav>
-
-      <h2 class="common-heading2 top-heading2">ABOUT / オフィスのこと</h2>
+      <h2 class="common-heading2 top-heading2">About / オフィスのこと</h2>
       <p>ニッカオフィスは、これまで50案件以上のサービス立ち上げやリニュアルを担当した知見を元に、あらゆるコトやモノを使いやすくデザインします。</p>
       <p>また制作以外にも、既存チームに入り込んで一緒にプロジェクトを進め、デザイン人材の育成や構築も行います。</p>
-      <p><a>[Twitter]</a>｜<a>[Facebookページ]</a>｜<a>[LINE@]</a></p>
+      <p class="sns-button"><a>[Twitter]</a>｜<a>[Facebookページ]</a>｜<a>[LINE@]</a></p>
       <div  class=about-detail><button>提供プランを詳しく見る<!--以下の内容をボタンで閉じておく--></button></div>
 <ul>
   <li>クリエイティブ全般のコンサルティング・制作（グラフィック、ウェブ、インテリア・プロダクトほか）</li>
@@ -86,9 +86,9 @@
   <li>人材（デザイナー、プロデューサー、営業、経営幹部）のスキルセット定義とそれに伴う育成</li>
 </ul>
 <div  class=contract><button>単価・契約条件について</button></div>
-
       <p class="service__image"><img alt="オフィスのこと"></p>
-      <h2 class="common-heading2 top-heading2">CLIENT / 顧客</h2>
+
+      <h2 class="common-heading2 top-heading2">Client / 顧客</h2>
       <ul class="client-list">
         <li class="client-list__item"><a href="https://www.hr-s.co.jp/" target="_blank"><img alt="HRソリューションズ株式会社" class="client-list__image"></a></li>
         <li class="client-list__item"><a href="https://corp.en-japan.com/" target="_blank"><img alt="エン・ジャパン株式会社" class="client-list__image"></a></li>
@@ -109,7 +109,7 @@
         <p class="chief-profile__name">ウチヤマ ケンイチ</p>
         <p class="chief-profile__name">Kenichi UCHIYAMA</p>
 <div>
-  <dl>
+  <dl class="cheif-profile__history">
         <dt>1981年</dt>
         <dd>神奈川県横浜市生まれ</dd>
         <dt>2007年</dt>
@@ -130,10 +130,8 @@
           <dd>プロジェクトマネジメント</dd>
         </dl>
       </div>
-      <p>
-        <a>Twitter</a>｜<a>LINE@</a>｜<a>Facebook</a>｜<a>
-          mixi
-        </a>
+      <p class="sns-button">
+        <a>[Twitter]</a>｜<a>[Facebookページ]</a>｜<a>[LINE@]</a>
       </p>
       <div>経歴詳細<!--以下の内容をボタンで閉じておく--></div>
       <dl class="cheif-profile__history">

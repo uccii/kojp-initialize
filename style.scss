@@ -275,7 +275,7 @@ input[type="checkbox"].common-display-toggle-check {
   }
 }
 
-.company-overview_heading {
+.company-overview_ {
   font-weight: bold;
 }
 
@@ -313,6 +313,10 @@ input[type="checkbox"].common-display-toggle-check {
 
 .about-detail__button{
   text-align: center ;
+}
+
+.cheif-profile__history {
+display: flex;
 }
 
 @media screen and (min-width:600px) and ( max-width:1024px) {
@@ -405,6 +409,26 @@ input[type="checkbox"].common-display-toggle-check {
 }
 
 }  
+
+
+.top-statement__text{
+  margin-left: 8px;
+}
+
+.sns-button{
+text-align: right;
+}
+
+.company-overview dd{
+  padding: 0 0 16px;
+}
+
+.cheif-profile__expert dd{
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
 
 @media screen and (min-width:600px) and ( max-width:1024px) {
   /*　画面サイズが600pxから1024pxまではここを読み込む　*/
