@@ -419,16 +419,23 @@ display: flex;
 text-align: right;
 }
 
-.company-overview dd{
+.company-overview dd {
   padding: 0 0 16px;
 }
 
-.cheif-profile__expert dd{
-  display:flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
+.cheif-profile__expert dd {
+display:inline-block;
 }
+
+.cheif-profile__history dd {
+  display:inline-block;
+}
+
+
+.global-wrapper{
+padding:  0 32px 0 ;
+}
+
 
 @media screen and (min-width:600px) and ( max-width:1024px) {
   /*　画面サイズが600pxから1024pxまではここを読み込む　*/
@@ -436,5 +443,14 @@ text-align: right;
 
 @media screen and (min-width:1024px) { 
   /*　画面サイズが1024pxからはここを読み込む　*/
+}
 
+
+@media screen and (min-width:688px) { 
+  /*　画面サイズが688pxからはここを読み込む　*/
+.global-narrow-box {
+  width: 624px;
+  margin-left: auto;
+  margin-right: auto;
+  }
 }
