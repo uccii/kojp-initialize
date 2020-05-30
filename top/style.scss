@@ -1,3 +1,16 @@
+// placeholder
+%yu-mincho-pr6n {
+  font-family: "yu-mincho-pr6n",sans-serif;
+  font-weight: 400;
+  font-style: normal; 
+}
+
+%ten-mincho {
+  font-family:"ten-mincho",serif;
+  font-weight: 400;
+  font-style: normal; 
+}
+
 .main-content-wrapper {
   background: url(./img/visual-knicka.png) no-repeat top right calc(-120px + 16%);
   background-origin: border-box;
@@ -5,7 +18,7 @@
 
 .top-statement {
   background-color: rgba(255, 255, 255, .9);
-  max-width: 300px;
+  max-width: 320px;
   padding: 4px 4px 0;
   box-sizing: border-box;
   &__title {
@@ -15,6 +28,14 @@
   &__text {
     padding: 8px 4px 24px 4px;
     font-size: 1.5rem;
+    >br {
+      &:nth-child(1) {
+        display: inline;
+      }
+      &:nth-child(2) {
+        display: none;
+      }
+    }
   }
 }
 
@@ -74,12 +95,12 @@
 }
 
 .quate-blog-content {
+  @extend %ten-mincho;
   background-color: rgba(255, 255, 255, .86);
   padding: 4px 16px 16px;
   border-radius: 4px;
   &__title {
     font-size: 1.8rem;
-    font-weight: normal;
     text-align: center;
     margin: 0;
     position: relative;
@@ -121,5 +142,43 @@
       border-right: 1px solid #707070;
       transform: rotate(45deg);
     }
+  }
+}
+
+@media screen and (min-width:600px) and ( max-width:1024px) {
+.top-statement {
+  max-width: 456px;
+  &__title {
+    >br {
+      display: none;
+    }
+  }
+  &__text {
+    >br {
+      &:nth-child(1) {
+        display: none;
+      }
+      &:nth-child(2) {
+        display: inline;
+      }
+    }
+  }
+}
+.quote-blog-wrapper {
+  width: 368px;
+}
+}  
+
+@media screen and (min-width:1024px) { 
+  /*　画面サイズが1024pxからはここを読み込む　*/
+}
+
+
+@media screen and (min-width:688px) { 
+  /*　画面サイズが688pxからはここを読み込む　*/
+.global-narrow-box {
+  width: 624px;
+  margin-left: auto;
+  margin-right: auto;
   }
 }
