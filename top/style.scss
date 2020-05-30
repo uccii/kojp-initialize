@@ -11,8 +11,8 @@
   font-style: normal; 
 }
 
-.main-content-wrapper {
-  background: url(./img/visual-knicka.png) no-repeat top right calc(-120px + 16%);
+.global-wrapper {
+  background: url(./img/visual-knicka.png) no-repeat top 184px right calc(-120px + 16%);
   background-origin: border-box;
 }
 
@@ -43,7 +43,7 @@
   &:before {
     display: block;
     content: '';
-    width: 33vw;
+    width: 40px;
     height: 1px;
     margin: 32px auto;
     border-top: 1px dashed #A4A4A4;
@@ -145,7 +145,7 @@
   }
 }
 
-@media screen and (min-width:600px) and ( max-width:1024px) {
+@media screen and (min-width:600px) {
 .top-statement {
   max-width: 456px;
   &__title {
@@ -167,6 +167,10 @@
 .quote-blog-wrapper {
   width: 368px;
 }
+}  
+
+@media screen and (min-width:600px) and ( max-width:1024px) {
+  /*　画面サイズが601psから1024pxからはここを読み込む　*/
 }  
 
 @media screen and (min-width:1024px) { 

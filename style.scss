@@ -33,6 +33,9 @@ p {
   margin: 0;
 }
 
+.global-wrapper{
+}
+  
 .global-logo {
   margin: 0;
   padding: 20px;
@@ -282,6 +285,21 @@ input[type="checkbox"].common-display-toggle-check {
     color: #a9a9a9;
   }
 }
+
+.about-detail {
+  &>button {
+    display: flex;
+    width: 280px;
+    height: 48px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 8px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, .6);
+    background-color: #fff;
+    pointer-events: auto;
+  }
+}
+
 .signature {
   text-align: right;
 }
@@ -361,6 +379,10 @@ display: flex;
 
 @media screen and (min-width:600px) { 
   /*　画面サイズが600pxからはここを読み込む　*/
+.global-wrapper{
+  padding:  0 32px;
+}
+    
 
   .top-page-nav {display:none}
   /*　SEO的にあまりよくない？？　*/
@@ -450,20 +472,9 @@ display:inline-block;
   display:inline-block;
 }
 
-
-.global-wrapper{
-padding:  0 32px 0 ;
-}
-
-
-@media screen and (min-width:600px) and ( max-width:1024px) {
-  /*　画面サイズが600pxから1024pxまではここを読み込む　*/
-}  
-
 @media screen and (min-width:1024px) { 
   /*　画面サイズが1024pxからはここを読み込む　*/
 }
-
 
 @media screen and (min-width:688px) { 
   /*　画面サイズが688pxからはここを読み込む　*/
