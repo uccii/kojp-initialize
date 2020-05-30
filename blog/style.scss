@@ -5,17 +5,6 @@
 .blog-header-nav{
   margin-top: -56px;
   &__day-before{
-     > p::before{
-       /* アイコンを上下中央にする術考える */
-      content: '';
-      display: inline-block;
-      height: 15px;
-      width: 15px;
-      background-image:url(./img/day-before.svg);
-      background-repeat: no-repeat;
-      padding-right:12px; 
-      margin-top: -2px;
-     }
     width: 88px;
     height: 56px;
     background-color: #FAFAFA;
@@ -24,6 +13,20 @@
     color: #707070;
     font-size: 15px;
     border-radius:6px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+     &:before{
+       /* アイコンを上下中央にする術考える */
+      content: '';
+      display: inline-block;
+      height: 15px;
+      width: 15px;
+      background-image:url(./img/day-before.svg);
+      background-repeat: no-repeat;
+     }
   }
 }
 .blog-main{
@@ -93,22 +96,25 @@
       border-radius:6px;
     }
     &__day-before-zenjitsu{
+      display: flex;
+      flex-wrap: nowrap;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
     &:before{
           /* アイコンを上下中央にする術考える */
-      content: '';
-      display: inline-block;
-      height: 15px;
-      width: 15px;
-      background-image:url(./img/day-before.svg);
-      background-repeat: no-repeat;
-      padding-right:2px; 
-     }
-      width: 48px;
+          content: '';
+          display: inline-block;
+          height: 15px;
+          width: 15px;
+          background-image:url(./img/day-before.svg);
+          background-repeat: no-repeat;
+           }
+      width: 49px;
       height: auto;
       flex-shrink: 0;
       font-size: 1.5rem;
       margin: auto 8px;
-      color: #707070;
     }
     &__day-before-title{
       height: auto;
@@ -132,15 +138,20 @@
       margin-top:8px;
     }
     &__day-after-yokujitsu{
+      display: flex;
+      flex-wrap: nowrap;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
           &:after{
           /* アイコンを上下中央にする術考える */
-            content: '';
-            display: inline-block;
-            height: 15px;
-            width: 15px;
-            background-image:url(./img/day-after.svg);
-            background-repeat: no-repeat;
-            margin-left:4px; 
+          content: '';
+          display: inline-block;
+          height: 15px;
+          width: 15px;
+          background-image:url(./img/day-after.svg);
+          background-repeat: no-repeat;
+          margin-left:2px;
            }
       width: 49px;
       height: auto;
@@ -187,6 +198,11 @@
 
     @media screen and (min-width:736px){
       /*　画面サイズが736pxからはここを読み込む　*/
+      .blog-header-nav{
+        width: 736px;
+        margin-right: auto;
+        margin-left: auto;
+        }
       .blog-footer-nav{
         margin-right: auto;
         margin-left: auto;
