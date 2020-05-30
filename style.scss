@@ -1,4 +1,9 @@
 @import url(./src/normalize.css);
+// original font
+@font-face {
+  font-family: "knicka-mincho";
+  src: url("./src/font/knicka-mincho-Regular.woff2") format("woff2");
+}
 
 // placeholder
 %yu-mincho-pr6n {
