@@ -12,7 +12,7 @@ $(function() {
     }
   });
 
-  //コピーの挙動
+  //コピーの挙動：FMTのコピー
   //$("#contact_tpl_button_1st").click(function() {
   //  document.getElementById( "#copy_target li" ).value = "list" ;
   //  $("#copy_area").append('<textarea id="copy_textarea"></textarea>')
@@ -24,6 +24,8 @@ $(function() {
   //  target.remove()
   //  alert("ブレスト結果をコピーしました！")
   //https://qiita.com/at-946/items/16902fc9e26926d6ff4f
+
+  //コピーの挙動：各SNSのコピー
 
   //下記は消さない
 });
