@@ -1,593 +1,217 @@
-
-
-
 .global-wrapper{
   background-color: #FFF;
-  margin: 0 32px;
     }
 
-
-.content-page-title{
-  color: #000000;
-  text-align: center;
-  font-weight: normal;
-  font-size: 2.4rem;
-  margin-top:72px;
-}
-
-.contact-primary{
-  font-style:normal;
-
-
-    &__description{
-      margin-left: auto;
-      margin-right: auto;
-      color: #707070;  
-      margin-top:56px;
-      }
-
-  &__primary-how{
-    display: flex; 
-    flex-wrap:wrap;
-    justify-content: center;
-    width: 278px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  &__mail{
-    display: flex; 
-    align-items: flex-end;
-    margin-top: 53px;
-    width: 278px;
-    height:40px;
-  }
-
-
-  &__mail-link{
-    display: flex; 
-    align-items: flex-end;
-    flex-shrink: 0;
-    text-decoration:none;
-    color: #707070;
-    border-bottom: 1px solid #707070;
-    height: 48px;
-    width: 248px;
-  }
-
-  &__mail-icon{
-    width: 40px;
-    flex-shrink: 0;
-    margin-right: 8px;
-    > img {
-      outline:0;
-      width: 38px;
-      margin-bottom:-4px;
-    }
-  }
-  
-  &__mail-contents{
-    color: #707070;
-    flex-shrink: 0;
-    font-size:2.2rem;
-    height: 40px;
-    width: 171px;
-    flex-shrink: 0;
-    text-align: center;
-    font-style: normal;
-    > a{
-      text-decoration:none;
-      color: #707070;
-    }
-  }
-
-  &__mail-copy{
-    width: 32px;
-    flex-shrink: 0;
-    width:38px;
-    background: none;
+.blog-header-nav{
+  margin-top: -56px;
+  &__day-before{
+    width: 88px;
+    height: 56px;
+    background-color: #FAFAFA;
     border: none;
     outline: none;
-    > img {
-      width: 22px;
-      margin-bottom: 8px;
-    }
-  }
-  
-  &__phone{
-    display: flex; 
-    align-items: flex-end;
-    margin-top: 53px;
-    width: 278px;
-    height:40px;
-  }
-
-
-  &__phone-link{
-    display: flex; 
-    align-items: flex-end;
-    flex-shrink: 0;
-    text-decoration:none;
     color: #707070;
-    border-bottom: 1px solid #707070;
-    height: 48px;
-    width: 248px;
-  }
-
-  &__phone-icon{
-    width: 40px;
-    flex-shrink: 0;
-    margin-right: 8px;
-    > img {
-      outline:0;
-      width: 38px;
-      margin-bottom:-4px;
-    }
-  }
-  
-  &__phone-contents{
-    color: #707070;
-    flex-shrink: 0;
-    font-size:2.2rem;
-    height: 40px;
-    width: 171px;
-    flex-shrink: 0;
-    text-align: center;
-    font-style: normal;
-    > a{
-      text-decoration:none;
-      color: #707070;
-    }
-  }
-
-  &__phone-copy{
-    width: 32px;
-    flex-shrink: 0;
-    width:38px;
-    background: none;
-    border: none;
-    outline: none;
-    > img {
-      width: 22px;
-      margin-bottom: 8px;
-    }
-  }
- 
-
-  
-}
-
-.contact-tpl{
-
-  &__button-1st_wrapper{
+    font-size: 15px;
+    border-radius:6px;
     display: flex;
-    height:48px;
-    margin-top:64px;
-  }
-
-  &__description{
-    color: #707070;
-    width: 100%;
-    box-sizing: border-box;
-    line-height:21px;
-  }
-  &__button-1st{ 
+    flex-wrap: nowrap;
     flex-shrink: 0;
-    color: #707070;
-    border: solid 1px #707070;
-    background-color: #FFF;
-    border-radius: 98px;
-    width: 96px;
-    height: 48px;
-    margin-bottom:24px;
+    align-items: center;
+    justify-content: center;
+     &:before{
+       /* アイコンを上下中央にする術考える */
+      content: '';
+      display: inline-block;
+      height: 15px;
+      width: 15px;
+      background-image:url(./img/day-before.svg);
+      background-repeat: no-repeat;
+     }
   }
-
-
-  &__button-2nd_wrapper{
-    width:312px;
+}
+.blog-main{
+  h2{
+    margin-top:40px;
+    font-size:1.4rem;
+    font-weight: normal;
+    text-align: center;
+  }
+  &__card{
+    width: 296px;
+    height: auto;
+    /* 画像に枠がついちゃう理由を調べる */
+    > img{
+    border-style:none;
+    }
+  }
+  &__content-height{
+        /* 高さは動的に出力する（__contentの高さを指定しないと、その下のカードブロックを入れられない） */
+    height: 1720px;
+    width: auto;
+    display: block;
+  }
+  &__content{
+    > h3{
+      display: block;
+      font-size:1.6rem;
+      font-weight: normal;
+      width: 56px;
+    }
+    display: block;
+    margin-top: 72px;
+    margin-top:40px;
+    height:300px;
+    column-width: 300px;
+    width: 93%;
+    text-align: left;
+    column-gap:64px;
+    line-height: 2.1;
+    writing-mode: vertical-rl;
+     >p{
+      text-combine-upright: digits2;
+     }
+  }
+  &__card{
     margin-left: auto;
     margin-right: auto;
     margin-top:32px;
-    }
-
-  &__copy-text {
-    color:#707070;
-    border: solid 1px #707070; 
-    background-color: #FFF;
-    padding: 8px 16px;
   }
-  
-  &__copy_target{
-    list-style: none;
-    padding-left: 0;
-    line-height:2.5rem;
-    font-size: 1.6rem;
   }
 
-  &__button-2nd{
-   display: block;
-    margin-top:16px;
-    color: #707070;
-    border: solid 1px #707070;
-    background-color: #FFF;
-    border-radius: 98px;
-    width: 288px;
-    height: 48px;
-    margin-left:auto;
-    margin-right:auto;
-  }
-}
-
-.contact-border{
-  border-bottom: dashed 2px #A4A4A4;
-  width: 136px;
-  display:block;
-      /* 直前のdivに対してmargin-topがあたらない */
-  margin-top:64px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-
-
-.contact-secondary{
- &__description{
-    margin-left: auto;
-    margin-right: auto;
-    color: #707070;  
-    margin-top:56px;
-    text-align: center;
-    }
-  
-  &__secondary-how{
+  .blog-footer-nav{
+    margin-top: 32px;
     display: flex; 
     flex-wrap:wrap;
     justify-content: center;
-    width: 278px;
-    margin-left: auto;
-    margin-right: auto;
-    }
-
-    &__twitter{
+    align-items: flex-start;
+    &__day-before{
       display: flex; 
-      align-items: flex-end;
-      margin-top: 53px;
-      width: 278px;
-      height:40px;
-    }
-  
-  
-    &__twitter-link{
-      display: flex; 
-      align-items: flex-end;
-      flex-shrink: 0;
-      text-decoration:none;
-      color: #707070;
-      border-bottom: 1px solid #707070;
-      height: 48px;
-      width: 248px;
-    }
-  
-    &__twitter-icon{
-      width: 40px;
-      flex-shrink: 0;
-      margin-right: 8px;
-      > img {
-        outline:0;
-        width: 38px;
-        margin-bottom:-4px;
-      }
-    }
-    
-    &__twitter-contents{
-      color: #707070;
-      flex-shrink: 0;
-      font-size:2.2rem;
-      height: 40px;
-      width: 171px;
-      flex-shrink: 0;
-      text-align: center;
-      font-style: normal;
-      > a{
-        text-decoration:none;
-        color: #707070;
-      }
-    }
-  
-    &__twitter-copy{
-      width: 32px;
-      flex-shrink: 0;
-      width:38px;
-      background: none;
+      width: 344px;
+      height: 56px;
+      background-color: #FAFAFA;
       border: none;
       outline: none;
-      > img {
-        width: 22px;
-        margin-bottom: 8px;
-      }
-    }
-
-
-    &__facebook{
-      display: flex; 
-      align-items: flex-end;
-      margin-top: 53px;
-      width: 278px;
-      height:40px;
-    }
-  
-  
-    &__facebook-link{
-      display: flex; 
-      align-items: flex-end;
-      flex-shrink: 0;
-      text-decoration:none;
       color: #707070;
-      border-bottom: 1px solid #707070;
-      height: 48px;
-      width: 248px;
+      font-size: 15px;
+      border-radius:6px;
     }
-  
-    &__facebook-icon{
-      width: 40px;
-      flex-shrink: 0;
-      margin-right: 8px;
-      > img {
-        outline:0;
-        width: 22px;
-        margin-bottom:-4px;
-        padding-left: 4px;
-      }
-    }
-    
-    &__facebook-contents{
-      color: #707070;
-      flex-shrink: 0;
-      font-size:2.2rem;
-      height: 40px;
-      width: 171px;
-      flex-shrink: 0;
-      text-align: center;
-      font-style: normal;
-      > a{
-        text-decoration:none;
-        color: #707070;
-      }
-    }
-  
-    &__facebook-copy{
-      width: 32px;
-      flex-shrink: 0;
-      width:38px;
-      background: none;
-      border: none;
-      outline: none;
-      > img {
-        width: 22px;
-        margin-bottom: 8px;
-      }
-    }
-
-    &__line{
-      display: flex; 
-      align-items: flex-end;
-      margin-top: 53px;
-      width: 278px;
-      height:40px;
-    }
-  
-  
-    &__line-link{
-      display: flex; 
-      align-items: flex-end;
-      flex-shrink: 0;
-      text-decoration:none;
-      color: #707070;
-      border-bottom: 1px solid #707070;
-      height: 48px;
-      width: 248px;
-    }
-  
-    &__line-icon{
-      width: 40px;
-      flex-shrink: 0;
-      margin-right: 8px;
-      > img {
-        outline:0;
-        width: 38px;
-        margin-bottom:-4px;
-      }
-    }
-    
-    &__line-contents{
-      color: #707070;
-      flex-shrink: 0;
-      font-size:2.2rem;
-      height: 40px;
-      width: 171px;
-      flex-shrink: 0;
-      text-align: center;
-      font-style: normal;
-      > a{
-        text-decoration:none;
-        color: #707070;
-      }
-    }
-  
-    &__line-copy{
-      width: 32px;
-      flex-shrink: 0;
-      width:38px;
-      background: none;
-      border: none;
-      outline: none;
-      > img {
-        width: 22px;
-        margin-bottom: 8px;
-      }
-    }
-  }
-
-.contact-bye-text{
-  color: #707070;
-  margin-top:72px;
-}
-
-.futter-logo{
-  text-align: center;
-  color: #707070;
-  font-size: 0.75rem;
-}
-
-@media screen and (min-width:768px){
-  /*　画面サイズが768pxからはここを読み込む　*/
-
-.global-wrapper{
-    width: 768px;
-    margin-left: auto;
-    margin-right: auto;
-    padding:0 72px;
-    }
-
-.contact-primary{ 
-  &__description{
-    width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    }
-
-
-  &__primary-how{
-    width: 630px;
-    display:flex;
-    align-items: flex-end;
-    justify-content: space-between;
-  }
-
-  &__mail{
-    margin-top:120px;
-    width: 288px;
-  }
-
-
-
-  &__mail-icon-contents{
-      margin-top:0;
-  }
-
-  &__phone{
-      margin-top:0px;
-      width: 288px;
-  }
-
-  &__phone-icon-contents{
-      margin-top:0;
-  }
-}
-
-.contact-tpl{
-
-  &__button-1st_wrapper{
-      width:480px;
-      height: auto;
-      margin-left: auto;
-      margin-right: auto;
-      }
- 
-  &__button-2nd_wrapper{
-      width:480px;
-      height: auto;
+    &__day-before-zenjitsu{
       display: flex;
+      flex-wrap: nowrap;
+      flex-shrink: 0;
+      align-items: center;
       justify-content: center;
-      flex-wrap: wrap;
-      margin-left: auto;
-      margin-right: auto;
-      }
-}
-
-.contact-secondary{
-
-  &__secondary-how{
-    width: 630px;
-    display:flex;
-    align-items: flex-end;
-    justify-content: space-between;
-  }
-
-  &__twitter{
-      margin-top:36px;
-      width: 288px;
+    &:before{
+          /* アイコンを上下中央にする術考える */
+          content: '';
+          display: inline-block;
+          height: 15px;
+          width: 15px;
+          background-image:url(./img/day-before.svg);
+          background-repeat: no-repeat;
+           }
+      width: 49px;
+      height: auto;
+      flex-shrink: 0;
+      font-size: 1.5rem;
+      margin: auto 8px;
+    }
+    &__day-before-title{
+      height: auto;
+      font-size: 1.4rem;
+      margin-top: auto;
+      margin-bottom: auto;
     }
 
-  &__facebook{
-      margin-top:36px;
-      width: 288px;
-  }
-
-  &__facebook-icon-contents{
-      margin-top:56px;
-  }
-
-  &__line{
-     margin-top:50px;
-     width: 288px;
-  }
-
- }
-}
-
-
-@media screen and (min-width:454px){
-  /*　画面サイズが454pxからはここを読み込む　*/
-
-
-.contact-secondary{
-  &__description{
-        text-align: center;
+    &__day-after{
+      margin-bottom: 64px;
+      display: flex; 
+      justify-content: flex-end;
+      width: 344px;
+      height: 56px;
+      background-color: #FAFAFA;
+      border: none;
+      outline: none;
+      color: #707070;
+      font-size: 15px;
+      border-radius:6px;
+      margin-top:8px;
+    }
+    &__day-after-yokujitsu{
+      display: flex;
+      flex-wrap: nowrap;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+          &:after{
+          /* アイコンを上下中央にする術考える */
+          content: '';
+          display: inline-block;
+          height: 15px;
+          width: 15px;
+          background-image:url(./img/day-after.svg);
+          background-repeat: no-repeat;
+          margin-left:2px;
+           }
+      width: 49px;
+      height: auto;
+      flex-shrink: 0;
+      font-size: 1.5rem;
+      margin: auto 8px;
+    }
+    &__day-after-title{
+      height: auto;
+      font-size: 1.4rem;
+      margin-top: auto;
+      margin-bottom: auto;
     }
   }
 
-.contact-bye-text{
-  text-align: center;
+
+  @media screen and (min-width:600px){
+    /*　画面サイズが600pxからはここを読み込む　*/
+.main-content-wrapper{
+  padding-left: 16px;
+  padding-right: 16px;
 }
-}
-
-
-@media screen and (min-width:650px){
-  /*　画面サイズが650pxからはここを読み込む　*/
-.contact-primary{
-
-    &__description{
-      width: 600px;
-      }
-    }
-}
-
-@media screen and (min-width:600px){
-  /*　画面サイズが600pxからはここを読み込む　*/
-
-.contact-tpl{
-  &__button-1st_wrapper{
-    width: 528px;
-    margin-left: auto;
+.blog-main{
+  &__content{
+    width: 560px;
     margin-right: auto;
-    > p{
-      padding-top: 15px;
-    }
-    }
-  &__button-2nd_wrapper{
-    width: 494px;
+    margin-left: auto;
   }
-  }
+&__content-right{
+  margin-top:-15px;
+}
 }
 
+.blog-header-nav{
+  margin-top: 62px;
+  &__day-before{
+    width: 160px;
+  }
 
 
-
-
-
-  /*　js用　*/
-#contact_tpl{
-  display: none;
 }
+ /*　タイトル下は空白にするために、２カラムにしたほうがいいと思うが、どうしようか考える*/
+    }
+
+    @media screen and (min-width:736px){
+      /*　画面サイズが736pxからはここを読み込む　*/
+      .blog-header-nav{
+        width: 736px;
+        margin-right: auto;
+        margin-left: auto;
+        }
+      .blog-footer-nav{
+        margin-right: auto;
+        margin-left: auto;
+        width: 702px;
+        justify-content: space-between;
+
+        &__day-after{
+          margin-top:0;
+        }
+
+      }
+    }
