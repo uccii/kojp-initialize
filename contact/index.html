@@ -63,12 +63,32 @@
             <div class="contact-primary__mail-icon">
               <img src="./img/mail.svg" alt="mail" />
             </div>
-            <div class="contact-primary__mail-contents">s@knickaoffice.jp</div>
+            <div class="contact-primary__mail-contents" id="mail">s@knickaoffice.jp</div>
           </a>
-          <button class="contact-primary__mail-copy">
+          <button class="contact-primary__mail-copy" onclick="copy_1()">
             <img src="./img/copy.svg" alt="copy-mail" />
           </button>
         </div>
+
+
+
+
+      <!--  //コピーの挙動：各SNSのコピー　mail -->
+        <script>
+        function copy_1() {
+          var text = document.getElementById("mail").innerText;
+          var area = document.createElement("textarea");
+          area.textContent = text;
+          document.body.appendChild(area);
+          area.select();
+          document.execCommand("copy");
+          document.body.removeChild(area);
+          alert('コピーしました');
+        }
+        </script>
+
+
+
 
         <div class="contact-primary__phone">
           <a href="tel:+81-045-516-2763" class="contact-primary__phone-link">
@@ -95,23 +115,34 @@
       </div>
 
       <div class="contact-tpl__button-2nd_wrapper" id="contact_tpl">
-        <div class="contact-tpl__copy-text">
-          <ul id="copy_target" class="contact-tpl__copy_target">
-            <li>お名前：</li>
-            <li>貴社名：</li>
-            <li>ご希望の返信先（メール、電話など）：</li>
-            <li>
-              お問い合わせの内容（デザインの依頼、見積もりの依頼、講演の依頼、など）：
-            </li>
-            <li>対象となるサービスのURLなど：</li>
-          </ul>
+        <div class="contact-tpl__copy-frame">
+<textarea class="contact-tpl__copy-text" readonly="readonly">
+お名前：
+貴社名：
+ご希望の返信先（メール、電話など）：
+お問い合わせの内容（デザインの依頼、見積もりの依頼、講演の依頼、など）：
+対象となるサービスのURLなど：
+</textarea>
         </div>
-        <button id="contact_tpl_button_2nd" class="contact-tpl__button-2nd">
+        <button onclick = "copy()" class="contact-tpl__button-2nd">
           テキストをコピーする
         </button>
-        <div id="copy_area"></div>
       </div>
     </div>
+
+
+  <!--  //コピーの挙動：FMTのコピー -->
+  <script>
+    function copy() {
+      var text = document.getElementsByTagName("textarea")[0];
+      text.select();
+      document.execCommand("copy");
+      alert('コピーしました');
+      }
+  </script>
+
+
+
     <span class="contact-border"></span>
     <div class="contact-secondary">
       <div class="contact-secondary__description">
