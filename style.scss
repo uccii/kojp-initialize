@@ -1,4 +1,22 @@
 @import url(./src/normalize.css);
+// original font
+@font-face {
+  font-family: "knicka-mincho";
+  src: url("./src/font/knicka-mincho-Regular.woff2") format("woff2");
+}
+
+// placeholder
+%yu-mincho-pr6n {
+  font-family: "yu-mincho-pr6n",sans-serif;
+  font-weight: 400;
+  font-style: normal; 
+}
+
+%ten-mincho {
+  font-family:"ten-mincho",serif;
+  font-weight: 400;
+  font-style: normal; 
+}
 
 html {
   font-size: 62.5%;
@@ -8,6 +26,7 @@ html {
 body {
   color: #707070;
   font-size: 1.6rem;
+  @extend %yu-mincho-pr6n;
 }
 
 p {
