@@ -46,7 +46,7 @@
   }
   &__content-height{
         /* 高さは動的に出力する（__contentの高さを指定しないと、その下のカードブロックを入れられない） */
-    height: 1720px;
+    // height: 1720px;
     width: auto;
     display: block;
   }
@@ -58,8 +58,8 @@
       width: 56px;
     }
     display: block;
-    margin-top: 72px;
-    margin-top:40px;
+    margin-top:64px;
+    margin-bottom: 64px;
     height:300px;
     column-width: 300px;
     width: 93%;
