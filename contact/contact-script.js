@@ -13,73 +13,33 @@ $(function() {
   });
 
   //コピーの挙動：FMTのコピー  copyの定義がうまくいってない？scriptで反映
+  $(".contact-tpl__button-2nd").click(function() {
+    copy();
+  });
   function copy() {
     var text = document.getElementsByTagName("textarea")[0];
     text.select();
     document.execCommand("copy");
+    alert("コピーしました");
   }
 
-  //コピーの挙動：FMTのコピー  copyの定義がうまくいってない？scriptで反映
-  //function copy() {
-  //var text = document.getElementsByTagName("textarea")[0];
-  //text.select();
-  //document.execCommand("copy");
-  // }
-  //コピーの挙動：FMTのコピー  textareaの高さ調節
-  //$(function() {
-  //var $obj = $("#textarea");
-  //var height = parseInt($obj.css("lineHeight"));
-  //$obj.on("input", function(e) {
-  //  var lines = ($(this).val() + "\n").match(/\n/g).length;
-  //  $(this).height(height * lines);
-  //});
-
-  //});
-  //$("#contact_tpl_button_1st").click(function() {
-  //  document.getElementById( "#copy_target li" ).value = "list" ;
-  //  $("#copy_area").append('<textarea id="copy_textarea"></textarea>')
-  //  document.getElementById( "#copy_textarea" ).value = "target" ;
-  //  list.each ->
-  //    target.append($(@).text() + '\n')
-  //  target.select()
-  //  document.execCommand("Copy")
-  //  target.remove()
-  //  alert("ブレスト結果をコピーしました！")
-  //https://qiita.com/at-946/items/16902fc9e26926d6ff4f
-
   //コピーの挙動：各SNSのコピー（mail 読み込まれないのでhtmlに一旦記載）
-  function copy_1() {
+  $(".contact-primary__mail-copy").click(function() {
+    //指定のclassのボタンをクリック
     var text = document.getElementById("mail").innerText;
+    //mailの文字列を取得
+    copy_1(text);
+  });
+  function copy_1(_text) {
     var area = document.createElement("textarea");
-    area.textContent = text;
+    //textareaを生成
+    area.textContent = _text;
+    //mailの内容をtextarea
     document.body.appendChild(area);
     area.select();
     document.execCommand("copy");
     document.body.removeChild(area);
   }
-
-  //  function copy() {
-  //範囲を指定
-  //  let range = document.createRange();
-  //  let span = document.getElementById("mail");
-  // range.selectNodeContents(mail);
-
-  //指定した範囲を選択状態にする
-  //  let selection = document.getSelection();
-  //  selection.removeAllRanges();
-  //  selection.addRange(range);
-
-  //コピー
-  //  document.execCommand("copy");
-  //  alert("コピーしました");
-  //   }
-  //https://fuuno.net/web02/copy/copy.html
-  // function copy() {
-  //  var text = document.getElementsByTagName("mail")[0];
-
-  // text.select();
-  // document.execCommand("copy");
-  //}
-
+  //定数名がcopy_1、引数名が_text _textに　textメゾットで書き換えて
   //下記は消さない
 });
