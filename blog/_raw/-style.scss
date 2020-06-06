@@ -31,6 +31,17 @@
   }
 }
 .blog-main{
+  &__content-left{
+    margin-right: 10px;
+    width: 748;
+    -float:left;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
+
+
+
+
   h2{
     margin-top:40px;
     font-size:1.4rem;
@@ -51,17 +62,14 @@
     display: block;
   }
   &__content{
-    > h3{
-      display: block;
-      font-size:1.6rem;
-      font-weight: normal;
-      width: 56px;
-      font-family: "knicka-mincho","ten-mincho-text","yu-mincho-pr6n",sans-serif;
-      src: url("/blog/font/knicka-mincho-Regular.woff2") format('woff2');
-    }
+    -display:flex;
+    -flex-direction:row-reverse;
+    -flex-wrap:wrap;
+    display: grid;
+    grid-template-rows: 300px 1fr;
+    grid-template-columns: 1fr 80px ;
     font-family: "knicka-mincho","ten-mincho-text","yu-mincho-pr6n",sans-serif;
     src: url("/blog/font/knicka-mincho-Regular.woff2") format('woff2');
-    display: block;
     margin-top:64px;
     margin-bottom: 64px;
     height:300px;
@@ -74,6 +82,23 @@
      >p{
       text-combine-upright: digits2;
      }
+  }
+  &__content-right{
+    >h3{
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    font-size:1.6rem;
+    font-weight: normal;
+    width: 56px;
+    font-family: "knicka-mincho","ten-mincho-text","yu-mincho-pr6n",sans-serif;
+    src: url("/blog/font/knicka-mincho-Regular.woff2") format('woff2');
+    /**&:after{
+      content: '';
+      display: block;
+      height: 1000px;
+      width: 24px;
+     } **/
+    }
   }
   &__card{
     margin-left: auto;
@@ -107,7 +132,6 @@
       justify-content: center;
       font-family: "ten-mincho-text","yu-mincho-pr6n",sans-serif;
     &:before{
-          /* アイコンを上下中央にする術考える */
           content: '';
           display: inline-block;
           height: 15px;
@@ -152,7 +176,6 @@
       justify-content: center;
       font-family: "ten-mincho-text","yu-mincho-pr6n",sans-serif;
           &:after{
-          /* アイコンを上下中央にする術考える */
           content: '';
           display: inline-block;
           height: 15px;
@@ -192,6 +215,7 @@
   }
 &__content-right{
   margin-top:-15px;
+  width: 198px;
 }
 }
 

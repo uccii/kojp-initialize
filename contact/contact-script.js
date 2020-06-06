@@ -12,7 +12,7 @@ $(function() {
     }
   });
 
-  //コピーの挙動：FMTのコピー  copyの定義がうまくいってない？scriptで反映
+  //コピーの挙動：FMTのコピー
   $(".contact-tpl__button-2nd").click(function() {
     copy();
   });
@@ -23,23 +23,34 @@ $(function() {
     alert("コピーしました");
   }
 
-  //コピーの挙動：各SNSのコピー（mail 読み込まれないのでhtmlに一旦記載）
+  //コピーの挙動：各SNSのコピー
   $(".contact-primary__mail-copy").click(function() {
-    //指定のclassのボタンをクリック
     var text = document.getElementById("mail").innerText;
-    //mailの文字列を取得
+    copy_1(text);
+  });
+  $(".contact-primary__phone-copy").click(function() {
+    var text = document.getElementById("phone").innerText;
+    copy_1(text);
+  });
+  $(".contact-secondary__twitter-copy").click(function() {
+    var text = document.getElementById("twitter").innerText;
+    copy_1(text);
+  });
+  $(".contact-secondary__facebook-copy").click(function() {
+    var text = document.getElementById("facebook").innerText;
+    copy_1(text);
+  });
+  $(".contact-secondary__line-copy").click(function() {
+    var text = document.getElementById("line").innerText;
     copy_1(text);
   });
   function copy_1(_text) {
     var area = document.createElement("textarea");
-    //textareaを生成
     area.textContent = _text;
-    //mailの内容をtextarea
     document.body.appendChild(area);
     area.select();
     document.execCommand("copy");
     document.body.removeChild(area);
+    alert("コピーしました");
   }
-  //定数名がcopy_1、引数名が_text _textに　textメゾットで書き換えて
-  //下記は消さない
 });
