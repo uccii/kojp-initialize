@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-Uh-Compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <script>
-      (function(d) {
-        var config = {
-          kitId: 'xcm6mon',
-          scriptTimeout: 3000,
-          async: true
-        },
-        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-      })(document);
-    </script>
-    <link rel="stylesheet" href="style.scss" />
-    <link rel="stylesheet" href="./top/style.scss" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="global-wrapper">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-Uh-Compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script>
+    (function (d) {
+      var config = {
+        kitId: 'xcm6mon',
+        scriptTimeout: 3000,
+        async: true
+      },
+        h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+    })(document);
+  </script>
+  <link rel="stylesheet" href="style.scss" />
+  <link rel="stylesheet" href="./top/style.scss" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="global-wrapper">
     <header class="global-header">
       <h1 class="global-logo">
         <img src="./img/logo-knicka-wide.png" alt="knicka office" />
@@ -58,10 +60,12 @@
 
       <nav class="top-page-nav">
         <ul class="top-page-nav__menu common-nav-list">
-          <li class="top-page-nav__item common-nav-list__item"><a href=""><span>About</span><span>オフィスのこと</span></a></li>
+          <li class="top-page-nav__item common-nav-list__item"><a href=""><span>About</span><span>オフィスのこと</span></a>
+          </li>
           <li class="top-page-nav__item common-nav-list__item"><a href=""><span>Client</span><span>顧客</span></a></li>
           <li class="top-page-nav__item common-nav-list__item"><a href=""><span>Blog</span><span>ブログ</span></a></li>
-          <li class="top-page-nav__item common-nav-list__item"><a href=""><span>Contact</span><span>お問い合わせ</span></a></li>
+          <li class="top-page-nav__item common-nav-list__item"><a href=""><span>Contact</span><span>お問い合わせ</span></a>
+          </li>
         </ul>
       </nav>
 
@@ -75,8 +79,8 @@
             適当な失敗と真剣な失敗
           </p>
           <p class="quate-blog-content__text">
-          ニッカオフィスのウチヤマケンイチです。きちんとしたレッスンのおかげでゴルフのフォームが順調に改善しています。<br>
-          あと減量の方も、トレーナーのアドバイ…
+            ニッカオフィスのウチヤマケンイチです。きちんとしたレッスンのおかげでゴルフのフォームが順調に改善しています。<br>
+            あと減量の方も、トレーナーのアドバイ…
           </p>
           <a class="quate-blog-content__more"><span>つづきを読む</span></a>
         </article>
@@ -84,11 +88,22 @@
 
       <h2 class="common-heading2 top-heading2">About / オフィスのこと</h2>
       <div class="global-narrow-box">
-      <p>ニッカオフィスは、これまで50案件以上のサービス立ち上げやリニュアルを担当した知見を元に、あらゆるコトやモノを使いやすくデザインします。</p>
-      <p>また制作以外にも、既存チームに入り込んで一緒にプロジェクトを進め、デザイン人材の育成や構築も行います。</p>
+        <p>ニッカオフィスは、これまで50案件以上のサービス立ち上げやリニュアルを担当した知見を元に、あらゆるコトやモノを使いやすくデザインします。</p>
+        <p>また制作以外にも、既存チームに入り込んで一緒にプロジェクトを進め、デザイン人材の育成や構築も行います。</p>
       </div>
-      <p class="sns-button"><a>[Twitter]</a>｜<a>[Facebookページ]</a>｜<a>[LINE@]</a></p>
-      <div class="about-detail about-detail--fit-right"><button>提供プランを詳しく見る<!--以下の内容をボタンで閉じておく--></button></div>
+      <ul class="sns-button">
+        <li class="sns-button__item">
+          <a><img src="./img/twitter.svg" alt="Twitter"></a>
+        </li>
+        <li class="sns-button__item">
+          <a><img src="./img/facebook-f.svg" alt="Facebookページ"></a>
+        </li>
+        <li class="sns-button__item">
+          <a><img src="./img/line.svg" alt="LINE@"></a>
+        </li>
+      </ul>
+      <div class="about-detail about-detail--fit-right"><button>提供プランを詳しく見る
+          <!--以下の内容をボタンで閉じておく--></button></div>
       <div class="common-border-box-light-gray">
         <ul>
           <li>クリエイティブ全般のコンサルティング・制作（グラフィック、ウェブ、インテリア・プロダクトほか）</li>
@@ -106,143 +121,158 @@
 
       <h2 class="common-heading2 top-heading2">Client / 顧客</h2>
       <ul class="client-list">
-        <li class="client-list__item"><a href="https://www.hr-s.co.jp/" target="_blank"><img src="img/logo-en-japan.png" alt="HRソリューションズ株式会社" class="client-list__image"></a></li>
-        <li class="client-list__item"><a href="https://corp.en-japan.com/" target="_blank"><img src="img/logo-en-japan.png" alt="エン・ジャパン株式会社" class="client-list__image"></a></li>
-        <li class="client-list__item"><a href="https://www.kayac.com/" target="_blank"><img src="img/logo-en-japan.png" alt="面白法人カヤック" class="client-list__image"></a></li>
-        <li class="client-list__item"><a href="https://www.cbase.co.jp/" target="_blank"><img src="img/logo-en-japan.png" alt="株式会社シーベース" class="client-list__image"></a></li>
-        <li class="client-list__item"><a href="https://www.staffservice.co.jp/" target="_blank"><img src="img/logo-en-japan.png" alt="株式会社スタッフサービス・ホールディングス" class="client-list__image"></a></li>
-        <li class="client-list__item"><a href="https://zeku.co.jp/" target="_blank"><img src="img/logo-en-japan.png" alt="株式会社ゼクウ" class="client-list__image"></a></li>
-        <li class="client-list__item"><a href="https://corp.chatwork.com/ja/" target="_blank"><img src="img/logo-en-japan.png" alt="Chatwork株式会社" class="client-list__image"></a></li>
-        <li class="client-list__item"><a href="https://visits.world/" target="_blank"><img src="img/logo-en-japan.png" alt="VISITS Technologies株式会社" class="client-list__image"></a></li>
-        <li class="client-list__item"><a href="https://recruit-holdings.co.jp/" target="_blank"><img src="img/logo-en-japan.png" alt="株式会社リクルートホールディングス" class="client-list__image"></a></li>
+        <li class="client-list__item"><a href="https://www.hr-s.co.jp/" target="_blank"><img src="img/logo-en-japan.png"
+              alt="HRソリューションズ株式会社" class="client-list__image"></a></li>
+        <li class="client-list__item"><a href="https://corp.en-japan.com/" target="_blank"><img
+              src="img/logo-en-japan.png" alt="エン・ジャパン株式会社" class="client-list__image"></a></li>
+        <li class="client-list__item"><a href="https://www.kayac.com/" target="_blank"><img src="img/logo-en-japan.png"
+              alt="面白法人カヤック" class="client-list__image"></a></li>
+        <li class="client-list__item"><a href="https://www.cbase.co.jp/" target="_blank"><img
+              src="img/logo-en-japan.png" alt="株式会社シーベース" class="client-list__image"></a></li>
+        <li class="client-list__item"><a href="https://www.staffservice.co.jp/" target="_blank"><img
+              src="img/logo-en-japan.png" alt="株式会社スタッフサービス・ホールディングス" class="client-list__image"></a></li>
+        <li class="client-list__item"><a href="https://zeku.co.jp/" target="_blank"><img src="img/logo-en-japan.png"
+              alt="株式会社ゼクウ" class="client-list__image"></a></li>
+        <li class="client-list__item"><a href="https://corp.chatwork.com/ja/" target="_blank"><img
+              src="img/logo-en-japan.png" alt="Chatwork株式会社" class="client-list__image"></a></li>
+        <li class="client-list__item"><a href="https://visits.world/" target="_blank"><img src="img/logo-en-japan.png"
+              alt="VISITS Technologies株式会社" class="client-list__image"></a></li>
+        <li class="client-list__item"><a href="https://recruit-holdings.co.jp/" target="_blank"><img
+              src="img/logo-en-japan.png" alt="株式会社リクルートホールディングス" class="client-list__image"></a></li>
       </ul>
       <p class="common-notice-right">※五十音順</p>
       <p class="common-notice-right">※一部のみ掲載</p>
 
-      <h2 class="common-heading3 top-heading3">代表プロフィール</h2>
+      <h2 class="common-heading2 top-heading2">代表プロフィール</h2>
       <div class="chief-profile">
-      <figure class="common-fluid-wide-image common-fluid-wide-image--high">
-        <img src="img/image-chief-profile.png" alt="ウチヤマケンイチ プロフィール写真">
-      </figure>
+        <figure class="common-fluid-wide-image common-fluid-wide-image--high">
+          <img src="img/image-chief-profile.png" alt="ウチヤマケンイチ プロフィール写真">
+        </figure>
         <p class="chief-profile__name">ウチヤマ ケンイチ</p>
         <p class="chief-profile__name">Kenichi UCHIYAMA</p>
-      <div class="global-narrow-box">
-      <dl class="chief-profile__history">
-        <dt>1981年</dt>
-        <dd>神奈川県横浜市生まれ</dd>
-        <dt>2007年</dt>
-        <dd>東京理科大学大学院理工学研究科建築学専攻修了</dd>
-        <dt>2016年</dt>
-        <dd>株式会社リクルート退社</dd>
-        <dt>2017年</dt>
-        <dd>ニッカオフィスを法人化し独立</dd>
-      </dl>
-        <dl class="chief-profile__expert">
-          <dt>専門分野</dt>
-          <dd>UXデザイン</dd>
-          <dd>インフォメーションアーキテクト</dd>
-          <dd>人材育成</dd>
-          <dd>問題特定・解決</dd>
-          <dd>ロジカルシンキング</dd>
-          <dd>プロジェクトマネジメント</dd>
-        </dl>
-      </div>
-      <div class="sns-button">
-        <ul>
-          <li class="sns-button__item"><a href=""><img src="./img/twitter.svg" alt="Twitter"></a></li>
-          <li class="sns-button__item"><a href=""><img src="./img/facebook-f.svg" alt="Facebook"></a></li>
-          <li class="sns-button__item"><a href=""><img src="./img/line.svg" alt="LINE"></a></li>
-        </ul>
-      </div>
-      <div class="about-detail about-detail--fit-left"><button>経歴詳細<!--以下の内容をボタンで閉じておく--></button></div>
-      <div class="global-narrow-box">
-      <dl class="chief-profile__history">
-        <dt>1981年</dt>
-        <dd>神奈川県横浜市生まれ</dd>
-        <dt>2001年</dt>
-        <dd>
-        <p>大学入学。建築学科にて建築、家具、インテリアを専攻。Charles & Ray Eamesのデザイン理論を研究。</p>
-        </dd>
-        <dt>2007年</dt>
-        <dd>
-          <ul>
-          <li>東京理科大学大学院建築学専攻修了</li>
-          <li>株式会社リクルート入社　不動産情報サイトSUUMOの新規立ち上げを担当</li>
-          </ui>
-        </dd>
-        <dt>2010年</dt>
-        <dd>
-          <p>UI/UXの専門部署に異動し、リクルートグループの人材、結婚、ECサイトなどのサイト設計、サービス設計を手がける。</p>
-        </dd>
-        <dt>2011年</dt>
-        <dd>個人事業としてニッカオフィスを設立。会社員とダブルワーク開始</dd>
-        <dt>2016年</dt>
-        <dd>リクルート退社</dd>
-        <dt>2017年</dt>
-        <dd>ニッカオフィスを法人化し独立</dd>
-      </dl>
-    </div>
-      </p>
-      <h2 class="common-heading2 top-heading2">会社概要</h2>
-      <dl class="company-overview">
-        <dt>法人名</dt>
-        <dd>ニッカオフィス合同会社　knicka office LLC</dd>
-        <dt>代表社員</dt>
-        <dd>内山 賢一　Kenichi UCHIYAMA</dd>
-        <dt>従業員数</dt>
-        <dd>１名（2020年３月末現在）</dd>
-        <dt>資本金</dt>
-        <dd>100万円（2020年３月末現在）</dd>
-        <dt>所在地</dt>
-        <dd>220-0051 神奈川県横浜市西区中央2-3-13 ニッカオフィスビル４F</dd>
-        <dt>設立</dt>
-        <dd>2017年1月4日</dd>
-        <dt>事業内容</dt>
-        <dd>
-          <ul>
-            <li>クリエイティブ、デザインに関するコンサルティング、制作</li>
-            <li>デザイン人材の育成</li>
-          </ul>
-        </dd>
-        <dt>沿革</dt>
-        <dd>
-          <dl class="company-overview__history">
-          <dt>2001年</dt>
-          <dd>Dada*graphとして活動開始</dd>
-          <dt>2005年</dt>
-          <dd>knickaに活動名を変更</dd>
-          <dt>2010年</dt>
-          <dd>西前銀座商店会（横浜市西区）内にオフィスを移転</dd>
-          <dt>2011年</dt>
-          <dd>ニッカオフィス / knicka office に事業名を変更し、個人事業として正式に事業化</dd>
-          <dt>2017年</dt>
-          <dd>「ニッカオフィス合同会社」として法人化</dd>
+        <div class="global-narrow-box">
+          <dl class="chief-profile__history">
+            <dt>1981年</dt>
+            <dd>神奈川県横浜市生まれ</dd>
+            <dt>2007年</dt>
+            <dd>東京理科大学大学院理工学研究科建築学専攻修了</dd>
+            <dt>2016年</dt>
+            <dd>株式会社リクルート退社</dd>
+            <dt>2017年</dt>
+            <dd>ニッカオフィスを法人化し独立</dd>
           </dl>
-        </dd>
-      </dl>
+          <dl class="chief-profile__expert">
+            <dt>専門分野</dt>
+            <dd>UXデザイン</dd>
+            <dd>インフォメーションアーキテクト</dd>
+            <dd>人材育成</dd>
+            <dd>問題特定・解決</dd>
+            <dd>ロジカルシンキング</dd>
+            <dd>プロジェクトマネジメント</dd>
+          </dl>
+        </div>
+        <ul class="sns-button">
+          <li class="sns-button__item">
+            <a><img src="./img/twitter.svg" alt="Twitter"></a>
+          </li>
+          <li class="sns-button__item">
+            <a><img src="./img/facebook-f.svg" alt="Facebookページ"></a>
+          </li>
+          <li class="sns-button__item">
+            <a><img src="./img/line.svg" alt="LINE@"></a>
+          </li>
+        </ul>
+        <div class="about-detail about-detail--fit-left"><button>経歴詳細
+            <!--以下の内容をボタンで閉じておく--></button></div>
+        <div class="global-narrow-box">
+          <dl class="chief-profile__history">
+            <dt>1981年</dt>
+            <dd>神奈川県横浜市生まれ</dd>
+            <dt>2001年</dt>
+            <dd>
+              <p>大学入学。建築学科にて建築、家具、インテリアを専攻。Charles & Ray Eamesのデザイン理論を研究。</p>
+            </dd>
+            <dt>2007年</dt>
+            <dd>
+              <ul>
+                <li>東京理科大学大学院建築学専攻修了</li>
+                <li>株式会社リクルート入社　不動産情報サイトSUUMOの新規立ち上げを担当</li>
+                </ui>
+            </dd>
+            <dt>2010年</dt>
+            <dd>
+              <p>UI/UXの専門部署に異動し、リクルートグループの人材、結婚、ECサイトなどのサイト設計、サービス設計を手がける。</p>
+            </dd>
+            <dt>2011年</dt>
+            <dd>個人事業としてニッカオフィスを設立。会社員とダブルワーク開始</dd>
+            <dt>2016年</dt>
+            <dd>リクルート退社</dd>
+            <dt>2017年</dt>
+            <dd>ニッカオフィスを法人化し独立</dd>
+          </dl>
+        </div>
+        </p>
+        <h2 class="common-heading2 top-heading2">会社概要</h2>
+        <dl class="company-overview">
+          <dt>法人名</dt>
+          <dd>ニッカオフィス合同会社　knicka office LLC</dd>
+          <dt>代表社員</dt>
+          <dd>内山 賢一　Kenichi UCHIYAMA</dd>
+          <dt>従業員数</dt>
+          <dd>１名（2020年３月末現在）</dd>
+          <dt>資本金</dt>
+          <dd>100万円（2020年３月末現在）</dd>
+          <dt>所在地</dt>
+          <dd>220-0051 神奈川県横浜市西区中央2-3-13 ニッカオフィスビル４F</dd>
+          <dt>設立</dt>
+          <dd>2017年1月4日</dd>
+          <dt>事業内容</dt>
+          <dd>
+            <ul>
+              <li>クリエイティブ、デザインに関するコンサルティング、制作</li>
+              <li>デザイン人材の育成</li>
+            </ul>
+          </dd>
+          <dt>沿革</dt>
+          <dd>
+            <dl class="company-overview__history">
+              <dt>2001年</dt>
+              <dd>Dada*graphとして活動開始</dd>
+              <dt>2005年</dt>
+              <dd>knickaに活動名を変更</dd>
+              <dt>2010年</dt>
+              <dd>西前銀座商店会（横浜市西区）内にオフィスを移転</dd>
+              <dt>2011年</dt>
+              <dd>ニッカオフィス / knicka office に事業名を変更し、個人事業として正式に事業化</dd>
+              <dt>2017年</dt>
+              <dd>「ニッカオフィス合同会社」として法人化</dd>
+            </dl>
+          </dd>
+        </dl>
 
-      <figure class="common-fluid-wide-image">
-        <img src="img/image-about-office.png" alt="オフィスのこと">
-      </figure>
+        <figure class="common-fluid-wide-image">
+          <img src="img/image-about-office.png" alt="オフィスのこと">
+        </figure>
 
-      <h3 class="common-heading3">ロゴに込めた想い</h3>
-      <p class="logo-explanation"><img src="./img/logo-knicka-bic-black.png" alt="ニッカオフィスロゴ" /></p>
-      <div class="global-narrow-box">
-      <p>
-        ニッカオフィスのロゴは、「人」と「鍵穴」がモチーフです。</br>
-        人と課題をよく観察し、鍵を開けるようにパッと問題を解決する糸口を見つけること。</br>
-        ニッカオフィスはそんなクリエイティブスタジオでありたいと思っています。</br>
-      </p>
-    </div>
+        <h3 class="common-heading2 top-heading2">ロゴに込めた想い</h3>
+        <p class="logo-explanation"><img src="./img/logo-knicka-bic-black.png" alt="ニッカオフィスロゴ" /></p>
+        <div class="global-narrow-box">
+          <p>
+            ニッカオフィスのロゴは、「人」と「鍵穴」の形をモチーフにしています。
+            <br>
+            人をよく観察し、ずっと開かなかったドアの鍵をパッと開けるように問題解決の糸口を見つける。ニッカオフィスはそんなクリエイティブスタジオでありたいと思っています。
+          </p>
+        </div>
     </main>
-    
-<footer class="global-footer">
-  <p class="global-footer__logo"><img src="./img/logo-knicka.png" alt="" /></p>
-  <p class="global-footer__copy">
-    <small>All content Copyright ニッカオフィス / knicka office</small>
-  </p>
-</footer>
-<script src="common-script.js"></script>
-</div> 
+
+    <footer class="global-footer">
+      <p class="global-footer__logo"><img src="./img/logo-knicka.png" alt="" /></p>
+      <p class="global-footer__copy">
+        <small>All content Copyright ニッカオフィス / knicka office</small>
+      </p>
+    </footer>
+    <script src="common-script.js"></script>
+  </div>
 </body>
+
 </html>

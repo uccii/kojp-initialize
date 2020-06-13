@@ -2,24 +2,25 @@
 // original font
 @font-face {
   font-family: "knicka-mincho";
-  src: url("./src/font/knicka-mincho-Regular.woff2") format("woff2");
+  src: url("./src/font/knicka-mincho-Regular.woff2") format("woff2"),
+       url("./src/font/knicka-mincho-Regular.woff") format("woff");
 }
 
 // placeholder
 %yu-mincho-pr6n {
-  font-family: "yu-mincho-pr6n",sans-serif;
+  font-family: "yu-mincho-pr6n", serif;
   font-weight: 400;
   font-style: normal; 
 }
 
 %ten-mincho {
-  font-family:"ten-mincho",serif;
+  font-family:"ten-mincho", serif;
   font-weight: 400;
   font-style: normal; 
 }
 
 %knicka-mincho-with-ten-mincho {
-  font-family: "knicka-mincho", "ten-mincho-text", serif;
+  font-family: "knicka-mincho", "ten-mincho-text", "yu-mincho-pr6n", serif;
   font-weight: 400;
   font-style: normal; 
 }
@@ -32,7 +33,8 @@ html {
 body {
   color: #707070;
   font-size: 1.6rem;
-  @extend %knicka-mincho-with-ten-mincho;
+  @extend %yu-mincho-pr6n;
+  // @extend %knicka-mincho-with-ten-mincho;
 }
 
 p {
@@ -322,34 +324,23 @@ input[type="checkbox"].common-display-toggle-check {
   }
 }
 
-.about-detail {
-  &>button {
-    display: flex;
-    margin: 0 auto;
-    height: 64px;
-    background-color: #F5F4EE;
-    border: none;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50px;
-    padding: 0 25px;
-  }
-  &--fit-left {
-    &>button {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-      margin-left: -24px;
-      margin-right: auto;
+.sns-button {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: flex-end;
+  &__item {
+    margin-left: 20px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    &:first-child {
+      margin-left: 0;
     }
-  }
-  &--fit-right {
-    &>button {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-      margin-right: -24px;
-      margin-left: auto;
+    img {
+      width: 100%;
+      height: 100%;
     }
-  }
+  }  
 }
 
 .signature {
@@ -362,33 +353,6 @@ input[type="checkbox"].common-display-toggle-check {
   img {
     width: 100%;
     object-fit: contain;
-  }
-}
-
-.chief-profile {
-  &__name {
-    display: inline-block;
-    &:not(:nth-of-tyep(1)) {
-      &:before {
-        content: '';
-        display: inline-block;
-        background: #000;
-        height: 14px;
-        width: 2px;
-        margin-right: 6px;
-      }
-    }
-  }
-  &__history {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    dt {
-      width: 25%;
-    }
-    dd {
-      width: 75%;
-    }
   }
 }
 
@@ -544,14 +508,6 @@ text-align: right;
 
 .company-overview dd {
   padding: 0 0 16px;
-}
-
-.cheif-profile__expert dd {
-display:inline-block;
-}
-
-.cheif-profile__history dd {
-  display:inline-block;
 }
 
 @media screen and (min-width:1024px) { 
