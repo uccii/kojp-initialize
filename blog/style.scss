@@ -18,7 +18,7 @@
     flex-shrink: 0;
     align-items: center;
     justify-content: center;
-    font-family: "ten-mincho-text",sans-serif;
+    font-family: "ten-mincho-text",serif;
      &:before{
       content: '';
       display: inline-block;
@@ -36,7 +36,7 @@
     font-size:1.4rem;
     font-weight: normal;
     text-align: center;
-    font-family: "knicka-mincho","ten-mincho-text",sans-serif;
+    font-family: "knicka-mincho","ten-mincho-text",serif;
   }
   &__card{
     width: 296px;
@@ -55,9 +55,9 @@
       font-size:1.6rem;
       font-weight: normal;
       width: 56px;
-      font-family: "knicka-mincho","ten-mincho-text",sans-serif;
+      font-family: "knicka-mincho","ten-mincho-text",serif;
     }
-    font-family: "knicka-mincho","ten-mincho-text",sans-serif;
+    font-family: "knicka-mincho","ten-mincho-text",serif;
     display: block;
     margin-top:64px;
     margin-bottom: 64px;
@@ -103,7 +103,7 @@
       flex-shrink: 0;
       align-items: center;
       justify-content: center;
-      font-family: "ten-mincho-text",sans-serif;
+      font-family: "ten-mincho-text",serif;
     &:before{
           /* アイコンを上下中央にする術考える */
           content: '';
@@ -125,7 +125,7 @@
       font-size: 1.4rem;
       margin-top: auto;
       margin-bottom: auto;
-      font-family: "ten-mincho-text",sans-serif;
+      font-family: "ten-mincho-text",serif;
     }
 
     &__day-after{
@@ -148,7 +148,7 @@
       flex-shrink: 0;
       align-items: center;
       justify-content: center;
-      font-family: "ten-mincho-text",sans-serif;
+      font-family: "ten-mincho-text",serif;
           &:after{
           /* アイコンを上下中央にする術考える */
           content: '';
@@ -171,7 +171,7 @@
       font-size: 1.4rem;
       margin-top: auto;
       margin-bottom: auto;
-      font-family: "ten-mincho-text",sans-serif;
+      font-family: "ten-mincho-text",serif;
     }
   }
 
