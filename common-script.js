@@ -21,10 +21,29 @@ const utility = {
   }
 };
 
+const work = {
+  slideToggle: _e => {
+    if (window.jQuery) {
+      const $ = window.jQuery;
+      const target = document.querySelector(
+        `[data-slide-content="${_e.currentTarget.dataset.slideTarget}"]`
+      );
+      $(target).slideDown();
+    }
+  }
+};
+
 const init = () => {
   const globalNav = document.querySelector(".global-nav");
   globalNav.addEventListener("click", utility.toggleClickedAttr);
   globalNav.addEventListener("click", utility.addfirstClickedAttr);
+
+  const slideToggleButton = document.querySelectorAll(
+    ".js-slide-toggle-button"
+  );
+  slideToggleButton.forEach(_element => {
+    _element.addEventListener("click", work.slideToggle);
+  });
 };
 
 init();

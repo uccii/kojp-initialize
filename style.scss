@@ -51,9 +51,6 @@ ul {
   list-style: none;
 }
 
-.global-wrapper{
-}
-  
 .global-logo {
   margin: 0;
   padding: 20px;
@@ -116,13 +113,14 @@ ul {
 }
 
 .common-border-box-light-gray {
+  margin: 28px auto;
   border: 1px solid #EFEFEF;
   box-shadow: 0 0 3px 0;
   padding: 24px;
 }
 
 .common-fluid-wide-image {
-  margin: 0 -24px;
+  margin: 40px -24px;
   width: 100vw;
   height: 192px;
   &--high {
@@ -328,6 +326,7 @@ input[type="checkbox"].common-display-toggle-check {
   display: flex;
   flex-shrink: 0;
   justify-content: flex-end;
+  margin: 28px 0;
   &__item {
     margin-left: 20px;
     display: block;
@@ -343,6 +342,36 @@ input[type="checkbox"].common-display-toggle-check {
   }  
 }
 
+.about-detail {
+  &>button {
+    display: flex;
+    margin: 24px auto;
+    height: 64px;
+    background-color: #F5F4EE;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    padding: 0 25px;
+  }
+  &--fit-left {
+    &>button {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      margin-left: -24px;
+      margin-right: auto;
+    }
+  }
+  &--fit-right {
+    &>button {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      margin-right: -24px;
+      margin-left: auto;
+    }
+  }
+}
+
 .signature {
   text-align: right;
 }
@@ -353,27 +382,6 @@ input[type="checkbox"].common-display-toggle-check {
   img {
     width: 100%;
     object-fit: contain;
-  }
-}
-
-.company-overview {
-  text-align: center;
-  font-weight: normal;
-  dt {
-    font-weight: bold
-  }
-  &__history {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    text-align: left;
-    dt {
-      font-weight: normal;
-      width: 25%;
-    }
-    dd {
-      width: 75%;
-    }
   }
 }
 
@@ -405,33 +413,11 @@ input[type="checkbox"].common-display-toggle-check {
 @media screen and (min-width:600px) and ( max-width:1024px) {
   /*　画面サイズが600pxから1024pxまではここを読み込む　*/
 
-
-
-  .global-nav__menu{
-
-  }
-
-  .common-nav-list{
-  }
-
 }
 
 
 @media screen and (min-width:1024px) { 
   /*　画面サイズが1024pxからはここを読み込む　*/
-
-}
-
-
-@media screen and (min-width:600px) { 
-  /*　画面サイズが600pxからはここを読み込む　*/
-.global-wrapper{
-  padding:  0 32px;
-}
-    
-
-  .top-page-nav {display:none}
-  /*　SEO的にあまりよくない？？　*/
 
 }
 
@@ -487,27 +473,6 @@ input[type="checkbox"].common-display-toggle-check {
     display: block;
   }
 }
-
-.main-content-wrapper {
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  background-position: top 76px right calc(-28px + 4%);
-}
-
-}  
-
-
-.top-statement__text{
-  margin-left: 8px;
-}
-
-.sns-button{
-text-align: right;
-}
-
-.company-overview dd {
-  padding: 0 0 16px;
 }
 
 @media screen and (min-width:1024px) { 
