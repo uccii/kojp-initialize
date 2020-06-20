@@ -83,6 +83,20 @@
   }
 }
 
+.top-offer-plan {
+  &__wrapper {
+    display: none;
+  }
+  > li {
+    display: list-item;
+    list-style: disc inside;
+    margin-top: 3rem;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
 .quote-blog-wrapper {
   position: relative;
   background-color: rgba(232, 231, 229, .86);
@@ -166,9 +180,14 @@
     }
   }
   &__history {
+    &__wrapper {
+      display: none;
+    }
     display: flex;
     width: 100%;
     flex-wrap: wrap;
+    margin: 0;
+    padding: 24px 0;
     dt {
       width: 25%;
     }
@@ -186,6 +205,18 @@
         &:before {
           content: "、";
         }
+      }
+    }
+  }
+  &__toggle-button {
+    width: 13em;
+    &:after {
+      content: '＋';
+      display: block;
+    }
+    &[clicked="clicked"] {
+      &:after {
+        content: '−';
       }
     }
   }
