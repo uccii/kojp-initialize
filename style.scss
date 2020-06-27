@@ -425,10 +425,13 @@ input[type="checkbox"].common-display-toggle-check {
 
 }
 
-
-@media screen and (min-width:1024px) { 
-  /*　画面サイズが1024pxからはここを読み込む　*/
-
+@media screen and (min-width:688px) { 
+  /*　画面サイズが688pxからはここを読み込む　*/
+.global-narrow-box {
+  width: 624px;
+  margin-left: auto;
+  margin-right: auto;
+  }
 }
 
 @media screen and (min-width:600px) {
@@ -506,7 +509,11 @@ input[type="checkbox"].common-display-toggle-check {
     flex-direction: row-reverse;
     align-items: center;
     &+* {
-      padding-top: 122px;
+      &:before {
+        content: '';
+        display: block;
+        padding-top: 122px;
+      }
     }
     .global-logo {
       padding-top: 0;
@@ -577,15 +584,22 @@ input[type="checkbox"].common-display-toggle-check {
 }
 }
 
-@media screen and (min-width:1024px) { 
-  /*　画面サイズが1024pxからはここを読み込む　*/
+@media screen and (min-width:768px) {
+.client-list{
+  justify-content: flex-start;
+  &__item {
+    margin: 16px 0;
+    padding: 0 16px;
+    box-sizing: border-box;
+    width: calc(33%);
+  }
+}
 }
 
-@media screen and (min-width:688px) { 
-  /*　画面サイズが688pxからはここを読み込む　*/
-.global-narrow-box {
-  width: 624px;
-  margin-left: auto;
-  margin-right: auto;
+@media screen and (min-width:1024px) {
+.client-list{
+  &__item {
+    width: calc(25%);
   }
+}
 }
