@@ -109,6 +109,16 @@ const init = () => {
       toggleElement.clicked.bind(toggleElement)
     );
   });
+
+  const parallaxTarget = document.querySelectorAll(".js-parallax-window");
+  parallaxTarget.forEach(_element => {
+    if (window.jQuery) {
+      const $ = window.jQuery;
+      $(_element).parallax({
+        imageSrc: _element.dataset.parallaxImageSrc
+      });
+    }
+  });
 };
 
 init();

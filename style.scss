@@ -129,14 +129,12 @@ ul {
 .common-fluid-image {
   margin: 40px calc(-50vw + 50%);;
   width: 100vw;
-  height: 192px;
-  &--high {
-    height: 208px;
+  &__parallax {
+    min-height: 376px;
+    background: transparent;
   }
   img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    display: none;
   }
 }
 
