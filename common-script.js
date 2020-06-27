@@ -115,7 +115,8 @@ const init = () => {
     if (window.jQuery) {
       const $ = window.jQuery;
       $(_element).parallax({
-        imageSrc: _element.dataset.parallaxImageSrc
+        imageSrc: _element.dataset.parallaxImageSrc,
+        overScrollFix: true
       });
     }
   });
