@@ -51,6 +51,12 @@ ul {
   list-style: none;
 }
 
+%clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 .global-logo {
   margin: 0;
   padding: 20px;
@@ -471,6 +477,34 @@ input[type="checkbox"].common-display-toggle-check {
   }
   &__item-home {
     display: block;
+  }
+}
+
+.about-detail {
+  &>button {
+    display: flex;
+    margin: 24px auto;
+    height: 64px;
+    background-color: #F5F4EE;
+    border: none;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px;
+    padding: 0 25px;
+  }
+  &--fit-left {
+    &>button {
+      border-radius: 50px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  &--fit-right {
+    &>button {
+      border-radius: 50px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 }
