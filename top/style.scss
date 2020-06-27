@@ -1,3 +1,12 @@
+// mixin
+@mixin clearfix() {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
 // placeholder
 %yu-mincho-pr6n {
   font-family: "yu-mincho-pr6n", serif;
@@ -115,7 +124,6 @@
 }
 
 .quate-blog-content {
-  @extend %knicka-mincho-with-ten-mincho;
   background-color: rgba(255, 255, 255, .86);
   padding: 4px 16px 16px;
   border-radius: 4px;
@@ -247,6 +255,15 @@
   }
 }
 
+.logo-explanation {
+  width: 274px;
+  margin: 0 auto;
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
 @media screen and (min-width:600px) {
 .global-wrapper {
   background-position-y: 166px;
@@ -277,12 +294,84 @@
 .quote-blog-wrapper {
   width: 368px;
 }
+
+.chief-profile {
+  &__chief-photo {
+    margin: 0 auto 0 0;
+    padding-right: 24px;
+    float: left;
+    width: 50%;
+  }
+  &__history-short {
+    display: block;
+    width: auto;
+    float: left;
+    width: calc(50% - 24px);
+    @include clearfix();
+    dt {
+      float: left;
+    }
+    dd {
+      display: inline-block;
+      @include clearfix();
+    }
+  }
+  &__row-box {
+    clear: both;
+    padding-top: 24px;
+    display: flex;
+    align-items: flex-end;
+  }
+  &__expert {
+    margin: 0 104px 0 0;
+  }
+  &__sns-button {
+    margin: 0;
+  }
+}
+
 .cheif-profile__expert dd {
 display:inline-block;
 }
 
 .cheif-profile__history dd {
   display:inline-block;
+}
+
+.company-overview {
+  &__wrapper {
+    @include clearfix();
+  }
+  float: left;
+  width: 50%;
+  dt {
+    text-align: left;
+  }
+  dd {
+    text-align: left;
+  }
+  &__history {
+    dt {
+      float: left;
+      margin-top: 0;
+    }
+    dd {
+      display: inline-block;
+      @include clearfix();
+    }
+  }
+}
+
+.logo-explanation {
+  margin: 0;
+  &__wrapper {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+  }
+  &__text {
+    width: 415px;
+  }
 }
 
 }  

@@ -36,19 +36,19 @@
         </button>
         <ul class="global-nav__menu common-nav-list">
           <li class="global-nav__item global-nav__item-home common-nav-list__item">
-            <a href=""><span>HOME</span><span>ホーム</span></a>
+            <a href=""><span class="global-nav__item-title">HOME</span><span class="global-nav__item-sub">ホーム</span></a>
           </li>
           <li class="global-nav__item common-nav-list__item">
-            <a href=""><span>ABOUT</span><span>オフィスのこと</span></a>
+            <a href=""><span class="global-nav__item-title">ABOUT</span><span class="global-nav__item-sub">オフィスのこと</span></a>
+          </li>
+          <li class="global-nav__item global-nav__item-client common-nav-list__item">
+            <a href=""><span class="global-nav__item-title">CLIENT</span><span class="global-nav__item-sub">顧客</span></a>
           </li>
           <li class="global-nav__item common-nav-list__item">
-            <a href=""><span>CLIENT</span><span>顧客</span></a>
+            <a href=""><span class="global-nav__item-title">BLOG</span><span class="global-nav__item-sub">ブログ</span></a>
           </li>
           <li class="global-nav__item common-nav-list__item">
-            <a href=""><span>BLOG</span><span>ブログ</span></a>
-          </li>
-          <li class="global-nav__item common-nav-list__item">
-            <a href=""><span>CONTACT</span><span>お問い合わせ</span></a>
+            <a href=""><span class="global-nav__item-title">CONTACT</span><span class="global-nav__item-sub">お問い合わせ</span></a>
           </li>
         </ul>
       </nav>
@@ -118,9 +118,9 @@
         </ul>
       </div>
 
-      <figure class="common-fluid-wide-image">
+      <div class="common-fluid-image">
         <img src="img/image-about-office.png" alt="オフィスのこと">
-      </figure>
+      </div>
 
       <h2 class="common-heading2 top-heading2">Client / 顧客</h2>
       <ul class="client-list">
@@ -147,12 +147,12 @@
 
       <h2 class="common-heading2 top-heading2">代表プロフィール</h2>
       <div class="chief-profile">
-        <figure class="common-fluid-wide-image common-fluid-wide-image--high chief-profile__chief-photo">
+        <figure class="common-wide-image common-wide-image--high chief-profile__chief-photo">
           <img src="img/image-chief-profile.png" alt="ウチヤマケンイチ プロフィール写真">
         </figure>
         <p class="chief-profile__name">ウチヤマ ケンイチ</p>
         <p class="chief-profile__name">Kenichi UCHIYAMA</p>
-        <dl class="chief-profile__history">
+        <dl class="chief-profile__history chief-profile__history-short">
           <dt>1981年</dt>
           <dd>神奈川県横浜市生まれ</dd>
           <dt>2007年</dt>
@@ -218,55 +218,59 @@
           </dl>
         </div>
         <h2 class="common-heading2 top-heading2">会社概要</h2>
-        <dl class="company-overview">
-          <dt>法人名</dt>
-          <dd>ニッカオフィス合同会社　knicka office LLC</dd>
-          <dt>代表社員</dt>
-          <dd>内山 賢一　Kenichi UCHIYAMA</dd>
-          <dt>従業員数</dt>
-          <dd>１名（2020年３月末現在）</dd>
-          <dt>資本金</dt>
-          <dd>100万円（2020年３月末現在）</dd>
-          <dt>所在地</dt>
-          <dd>220-0051 神奈川県横浜市西区中央2-3-13 ニッカオフィスビル４F</dd>
-          <dt>設立</dt>
-          <dd>2017年1月4日</dd>
-          <dt>事業内容</dt>
-          <dd>
-            <ul>
-              <li>クリエイティブ、デザインに関するコンサルティング、制作</li>
-              <li>デザイン人材の育成</li>
-            </ul>
-          </dd>
-          <dt>沿革</dt>
-          <dd>
-            <dl class="company-overview__history">
-              <dt>2001年</dt>
-              <dd>Dada*graphとして活動開始</dd>
-              <dt>2005年</dt>
-              <dd>knickaに活動名を変更</dd>
-              <dt>2010年</dt>
-              <dd>西前銀座商店会（横浜市西区）内にオフィスを移転</dd>
-              <dt>2011年</dt>
-              <dd>ニッカオフィス / knicka office に事業名を変更し、個人事業として正式に事業化</dd>
-              <dt>2017年</dt>
-              <dd>「ニッカオフィス合同会社」として法人化</dd>
-            </dl>
-          </dd>
-        </dl>
+        <div class="company-overview__wrapper">
+          <dl class="company-overview">
+            <dt>法人名</dt>
+            <dd>ニッカオフィス合同会社　knicka office LLC</dd>
+            <dt>代表社員</dt>
+            <dd>内山 賢一　Kenichi UCHIYAMA</dd>
+            <dt>従業員数</dt>
+            <dd>１名（2020年３月末現在）</dd>
+            <dt>資本金</dt>
+            <dd>100万円（2020年３月末現在）</dd>
+            <dt>所在地</dt>
+            <dd>220-0051 神奈川県横浜市西区中央2-3-13 ニッカオフィスビル４F</dd>
+            <dt>設立</dt>
+            <dd>2017年1月4日</dd>
+            <dt>事業内容</dt>
+            <dd>
+              <ul>
+                <li>クリエイティブ、デザインに関するコンサルティング、制作</li>
+                <li>デザイン人材の育成</li>
+              </ul>
+            </dd>
+          </dl>
+          <dl class="company-overview">
+            <dt>沿革</dt>
+            <dd>
+              <dl class="company-overview__history">
+                <dt>2001年</dt>
+                <dd>Dada*graphとして活動開始</dd>
+                <dt>2005年</dt>
+                <dd>knickaに活動名を変更</dd>
+                <dt>2010年</dt>
+                <dd>西前銀座商店会（横浜市西区）内にオフィスを移転</dd>
+                <dt>2011年</dt>
+                <dd>ニッカオフィス / knicka office に事業名を変更し、個人事業として正式に事業化</dd>
+                <dt>2017年</dt>
+                <dd>「ニッカオフィス合同会社」として法人化</dd>
+              </dl>
+            </dd>
+          </dl>
+        </div>
 
-        <figure class="common-fluid-wide-image">
+        <figure class="common-fluid-image">
           <img src="img/image-about-office.png" alt="オフィスのこと">
         </figure>
 
         <h3 class="common-heading2 top-heading2">ロゴに込めた想い</h3>
-        <p class="logo-explanation"><img src="./img/logo-knicka-bic-black.png" alt="ニッカオフィスロゴ" /></p>
-        <div class="global-narrow-box">
-          <p>
-            ニッカオフィスのロゴは、「人」と「鍵穴」の形をモチーフにしています。
-            <br>
-            人をよく観察し、ずっと開かなかったドアの鍵をパッと開けるように問題解決の糸口を見つける。ニッカオフィスはそんなクリエイティブスタジオでありたいと思っています。
-          </p>
+        <div class="logo-explanation__wrapper">
+          <p class="logo-explanation"><img src="./img/logo-knicka-bic-black.png" alt="ニッカオフィスロゴ" /></p>
+          <div class="logo-explanation__text">
+            <p>ニッカオフィスのロゴは、「人」と「鍵穴」の形をモチーフにしています。
+              <br>人をよく観察し、ずっと開かなかったドアの鍵をパッと開けるように問題解決の糸口を見つける。ニッカオフィスはそんなクリエイティブスタジオでありたいと思っています。
+            </p>
+          </div>
         </div>
     </main>
 

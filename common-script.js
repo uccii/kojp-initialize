@@ -23,6 +23,34 @@ const utility = {
   }
 };
 
+const commonWork = {
+  toggleGlobalHeaderWithScroll: _globalHeader => {
+    let scrollFlag = false;
+    const threshold = _globalHeader.clientHeight;
+    const toggleScrolledAttr = _e => {
+      if (!scrollFlag) {
+        window.requestAnimationFrame(() => {
+          scrollFlag = false;
+          const scrolledName = "scrolled";
+          if (window.scrollY > threshold) {
+            _globalHeader.setAttribute(scrolledName, scrolledName);
+            console.log("多い: " + window.scrollY);
+          } else {
+            if (_globalHeader.hasAttribute(scrolledName)) {
+              _globalHeader.removeAttribute(scrolledName);
+            }
+            console.log("少ない: " + window.scrollY);
+          }
+        });
+        scrollFlag = true;
+      }
+    };
+    window.addEventListener("scroll", toggleScrolledAttr, {
+      passive: true
+    });
+  }
+};
+
 const work = {
   slideToggle: _e => {
     if (window.jQuery) {
@@ -61,8 +89,10 @@ const work = {
 
 const init = () => {
   const globalNav = document.querySelector(".global-nav");
+  const globalHeader = document.querySelector(".global-header");
   globalNav.addEventListener("click", utility.toggleClickedAttr);
   globalNav.addEventListener("click", utility.addfirstClickedAttr);
+  commonWork.toggleGlobalHeaderWithScroll(globalHeader);
 
   const slideToggleButton = document.querySelectorAll(
     ".js-slide-toggle-button"
