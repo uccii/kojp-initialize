@@ -410,6 +410,11 @@ input[type="checkbox"].common-display-toggle-check {
     margin: 8px 0;
     width: calc(50% - 12px);
   }
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   &__image {
     width: 100%;
     object-fit: scale-down;
