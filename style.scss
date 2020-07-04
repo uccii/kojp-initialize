@@ -1,67 +1,461 @@
-.global-nav {
-  font-size: 1rem;
-  &__list {
-    color: #F00;
+@import url(./src/normalize.css);
+// original font
+@font-face {
+  font-family: "knicka-mincho";
+  src: url("./src/font/knicka-mincho-Regular.woff2") format("woff2");
+}
+
+// placeholder
+%yu-mincho-pr6n {
+  font-family: "yu-mincho-pr6n",sans-serif;
+  font-weight: 400;
+  font-style: normal; 
+}
+
+%ten-mincho {
+  font-family:"ten-mincho",serif;
+  font-weight: 400;
+  font-style: normal; 
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.8;
+}
+
+body {
+  color: #707070;
+  font-size: 1.6rem;
+  // @extend %yu-mincho-pr6n;
+  font-family: "knicka-mincho";
+}
+
+.global-logo {
+  margin: 0;
+  padding: 20px;
+  line-height: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.common-heading2 {
+  text-align: center;
+  font-weight: normal;
+  font-size: 2.2rem;
+  margin-bottom: 56px;
+}
+
+.common-heading3 {
+  text-align: center;
+  font-weight: normal;
+  font-size: 1.8rem;
+  margin-bottom: 56px;
+}
+
+.common-nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__item {
+    list-style: none;
+    background-color: #E9E7DB;
+    border: 1px solid #DCDCDC;
+    width: 100%;
+    height: 100%;
+    margin-left: 4px;
+    margin-right: 4px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, .16);
+    flex-shrink: 0;
+    >a {
+      color: #707070;
+      text-decoration: none;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      align-content: center;
+      >span {
+        flex-shrink: 0;
+        width: 100%;
+        line-height: 1;
+        &:first-child {
+          font-weight: bold;
+        }
+        &:not(:first-child) {
+          margin-top: 8px;
+        }
+      }
+    }
   }
 }
 
-.parts-toggle-munu {
+input[type="checkbox"].common-display-toggle-check {
+  display: none;
+  &:checked~* {
+    display: none;
+  }
+}
+
+.global-nav {
+  position: fixed;
+  bottom: 72px;
+  z-index: 1000;
+  pointer-events: none;
+  &__toggle-button {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 16px;
+    display: flex;
+    width: 80px;
+    height: 48px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 8px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, .6);
+    background-color: #fff;
+    pointer-events: auto;
+    &:before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 32px;
+      flex-shrink: 0;
+      background: url(./img/logo-knicka.png) no-repeat center;
+      background-origin: border-box;
+    }
+  }
+  &__button-line {
+    width: 32px;
+    height: 32px;
+  }
+  &__menu {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 96px;
+    background-color: rgba(255, 255, 255, .9);
+    box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, .12);
+    filter: opacity(0);
+  }
+  &__item {
+    width: 78px;
+    height: 78px;
+  }
+  &__item-title {
+    font-size: 1.5rem;
+  }
+  &__item-sub {
+    font-size: 1.2rem;
+  }
+  &__item-home {
+    display: none;
+  }
+  &[firstClicked="firstClicked"] {
+    .global-nav__menu {
+      transition: filter .5s;
+    }
+  }
+  &[clicked="clicked"] {
+    .global-nav__menu {
+      filter: opacity(1);
+    }
+    .global-nav__item {
+      >a {
+        pointer-events: auto;
+      }
+    }
+  }
+  .parts-toggle-munu {
     display: flex;
     flex-wrap: wrap;
     align-content: space-evenly;
     justify-content: center;
-    > span {
+    >span {
       display: block;
       width: 18px;
       height: 2px;
       flex-shrink: 0;
       background-color: #000;
     }
-}
-
-.global-nav {
-  &__toggle-button {
-    display: flex;
-    width: 96px;
-    height: 48px;
-    border-radius: 8px;
-    border: none;
-    padding: 8px;
-    box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, .8);
-    background-color: #fff;
-    &:before {
-      content: 'icon';
-      display: block;
-      width: 40px;
-      height: 32px;
-      flex-shrink: 0;
+  }
+  &[firstClicked="firstClicked"] {
+    .parts-toggle-munu {
+      span {
+        &:nth-of-type(1) {
+          animation: toggle-menu-bar1 .5s forwards;
+        }
+        &:nth-of-type(2) {
+          transition: filter .25s;
+          filter: opacity(1);
+        }
+        &:nth-of-type(3) {
+          animation: toggle-menu-bar3 .5s forwards;
+        }
+      }
     }
   }
-  &__button-line {
-    width: 40px;
-    height: 32px;
-    padding-left: 8px;
+  &[clicked="clicked"] {
+    .parts-toggle-munu {
+      span {
+        &:nth-of-type(1) {
+          animation: clicked-toggle-menu-bar1 .5s forwards;
+        }
+        &:nth-of-type(2) {
+          filter: opacity(0);
+        }
+        &:nth-of-type(3) {
+          animation: clicked-toggle-menu-bar3 .5s forwards;
+        }
+      }
+    }
   }
-  font-size: 2rem;
-  &__list {
-    color: #00F;
+  @keyframes toggle-menu-bar1 {
+    0% {
+      transform: translateY(8px) rotate(45deg);
+    }
+    50% {
+      transform: translateY(8px) rotate(0);
+    }
+    100% {
+      transform: translateY(0) rotate(0);
+    }
   }
-  &__title {
-  font-weight: bold;
+  @keyframes clicked-toggle-menu-bar1 {
+    0% {
+      transform: translateY(0) rotate(0);
+    }
+    50% {
+      transform: translateY(8px) rotate(0);
+    }
+    100% {
+      transform: translateY(8px) rotate(45deg);
+    }
   }
+  @keyframes toggle-menu-bar3 {
+    0% {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+    50% {
+      transform: translateY(-9px) rotate(0);
+    }
+    100% {
+      transform: translateY(0) rotate(0);
+    }
+  }
+  @keyframes clicked-toggle-menu-bar3 {
+    0% {
+      transform: translateY(0) rotate(0);
+    }
+    50% {
+      transform: translateY(-9px) rotate(0);
+    }
+    100% {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+  }
+}
+
+.main-content-wrapper {
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .global-footer {
-  font-size: 0.8rem;
-  color: #a9a9a9;
+  margin-top: 112px;
+  margin-bottom: 16px;
   text-align: center;
+  &__logo {
+    filter: opacity(33%);
+  }
+  &__copy {
+    font-size: 0.8rem;
+    color: #a9a9a9;
+  }
 }
 
-.statement {
-  font-size: 1.8rem;
+.top-wrapper {
+  background: url(./img/visual-knicka.png) no-repeat top 198px right calc(-120px + 16%);
+  background-origin: border-box;
+}
+
+.top-statement {
+  background-color: rgba(255, 255, 255, .9);
+  max-width: 300px;
+  padding: 4px 4px 0;
+  box-sizing: border-box;
+  &__title {
+    font-size: 2.8rem;
+    padding: 4px;
+  }
+  &__text {
+    padding: 40px 4px 40px 40px;
+  }
+}
+
+.quote-blog-wrapper {
+  position: relative;
+  background-color: rgba(232, 231, 229, .86);
+  padding: 12px 12px 24px;
+  border-radius: 4px;
+  &__title {
+    position: absolute;
+    top: -8px;
+    right: 16px;
+    color: #4E4222;
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin: 0;
+  }
+}
+
+.quate-blog-content {
+  background-color: rgba(255, 255, 255, .86);
+  padding: 12px;
+  border-radius: 4px;
 }
 
 .signature {
   text-align: right;
-  
+}
+
+.company-overview {
+  text-align: center;
+  font-weight: normal;
+}
+
+.company-overview_heading {
+  font-weight: bold;
+}
+
+.logo-explanation {
+  text-align: center;
+}
+
+@media screen and (min-width:600px) {
+  /*　画面サイズが600pxからはここを読み込む　*/
+.global-nav {
+  position: relative;
+  bottom: initial;
+  pointer-events: auto;
+  &__toggle-button {
+    display: none;
+  }
+  &__menu {
+    filter: opacity(1) !important;
+    transition: filter 0s !important;
+    margin: 0;
+    padding: 16px 0 0;
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    box-shadow: none;
+    justify-content: flex-end;
+  }
+  &__item {
+    width: 120px;
+    height: auto;
+    margin: 0;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    >a {
+      >span {
+        &:first-child {
+          font-weight: normal;
+        }
+        &:not(:first-child) {
+          margin-top: 16px;
+        }
+      }
+      &:hover {
+        >span {
+          &:first-child {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  &__item-title {
+    font-size: 1.6rem;
+  }
+  &__item-sub {
+    font-size: 1.2rem;
+  }
+  &__item-home {
+    display: block;
+  }
+}
+.global-header {
+  &[scrolled="scrolled"] {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 48px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+    align-items: center;
+    &+* {
+      padding-top: 122px;
+    }
+    .global-logo {
+      padding-top: 0;
+      padding-bottom: 0;
+      width: 36px;
+      height: 36px;
+      &> img {
+        display: none;
+      }
+      &:before {
+        display: block;
+        content: url(./img/logo-knicka.png);
+      }
+    }
+    .global-nav {
+      &__menu {
+        padding-top: 0;
+      }
+      &__item {
+        width: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+      &__item-client {
+        display: none;
+      }
+      &__item-title {
+      }
+      &__item-sub {
+        display: none;
+      }
+    }
+  }
+}
+
+.main-content-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  background-position: top 76px right calc(-28px + 4%);
+}
+
+}  
+
+@media screen and (min-width:600px) and ( max-width:1024px) {
+  /*　画面サイズが600pxから1024pxまではここを読み込む　*/
+}  
+
+@media screen and (min-width:1024px) { 
+  /*　画面サイズが1024pxからはここを読み込む　*/
+
 }

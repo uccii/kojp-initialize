@@ -4,128 +4,165 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-Uh-Compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script>
+      (function(d) {
+        var config = {
+          kitId: 'xcm6mon',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
     <link rel="stylesheet" href="style.scss" />
+    <link rel="stylesheet" href="./top/style.scss" />
     <title>Document</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
   <body>
-    <h1><img alt="knicka office" /></h1>
+    <div class="top-wrapper">
+<header class="global-header">
+  <h1 class="global-logo">
+    <img src="./img/logo-knicka-wide.png" alt="knicka office" />
+  </h1>
+  <nav class="global-nav">
+    <button class="global-nav__toggle-button">
+      <div class="global-nav__button-line parts-toggle-munu">
+        <span></span><span></span><span></span>
+      </div>
+    </button>
+    <ul class="global-nav__menu common-nav-list">
+      <li class="global-nav__item global-nav__item-home common-nav-list__item">
+        <a href=""><span class="global-nav__item-title">HOME</span><span class="global-nav__item-sub">ホーム</span></a>
+      </li>
+      <li class="global-nav__item common-nav-list__item">
+        <a href=""><span class="global-nav__item-title">ABOUT</span><span class="global-nav__item-sub">オフィスのこと</span></a>
+      </li>
+      <li class="global-nav__item global-nav__item-client common-nav-list__item">
+        <a href=""><span class="global-nav__item-title">CLIENT</span><span class="global-nav__item-sub">顧客</span></a>
+      </li>
+      <li class="global-nav__item common-nav-list__item">
+        <a href=""><span class="global-nav__item-title">BLOG</span><span class="global-nav__item-sub">ブログ</span></a>
+      </li>
+      <li class="global-nav__item common-nav-list__item">
+        <a href=""><span class="global-nav__item-title">CONTACT</span><span class="global-nav__item-sub">お問い合わせ</span></a>
+      </li>
+    </ul>
+  </nav>
+</header>
 
-    <header>
-      <nav class="global-nav">
-        <button type="button" class="global-nav__toggle-button">
-          <div class="global-nav__button-line parts-toggle-munu">
-            <span></span><span></span><span></span>
-          </div>
-        </button>
-        <ul class="global-nav__ global-nav-list">
-            <li class="global-nav-list__item">HOME</li>
-            <li class="global-nav-list__item">ABOUT</li>
-            <li class="global-nav-list__item">BLOG</li>
-            <li class="global-nav-list__item">PROJECT</li>
-            <li class="global-nav-list__item">CONTACT</li>
-          </ul>
+    <main class="main-content-wrapper">
+      <div class="top-statement">
+        <p class="top-statement__title">すべて、使い易くする</p>
+        <p class="top-statement__text">ニッカオフィスは、サービスやプロダクトを提供されている企業様向けにデザイン全般にてお力添クリエティブスタジオです。</p>
+      </div>
+
+      <article class="quote-blog-wrapper">
+        <h1 class="quote-blog-wrapper__title">代表のブログ</h1>
+        <article class="quate-blog-content">
+          <h2 class="quate-blog-content__title">
+            令和元年10月30日に考えたこと
+            <span>適当な失敗と真剣な失敗</span>
+          </h2>
+          <p>
+          ニッカオフィスのウチヤマケンイチです。きちんとしたレッスンのおかげでゴルフのフォームが順調に改善しています。<br>
+          あと減量の方も、トレーナーのアドバイ…
+          </p>
+          <a class="quate-blog-content__more">つづきを読む</a>
+        </article>
+      </article>
+
+      <nav class="top-page-nav">
+        <p class="top-page-nav__title">MENU</p>
+        <ul class="top-page-nav__menu common-nav-list">
+          <li class="top-page-nav__item common-nav-list__item"><a href=""><span>ABOUT</span><span>会社概要</span></a></li>
+          <li class="top-page-nav__item common-nav-list__item"><a href=""><span>BLOG</span><span>ブログ</span></a></li>
+          <li class="top-page-nav__item common-nav-list__item"><a href=""><span>PROJECT</span></a></li>
+          <li class="top-page-nav__item common-nav-list__item"><a href=""><span>CONTACT</span><span>お問い合わせ</span></a></li>
+        </ul>
       </nav>
-    </header>
 
-    <div>
-      <p class=statement>すべて、使い易くする。</p>
-      <p>ニッカオフィスは、サービスやプロダクトを提供されている企業様向けにデザイン全般にてお力添クリエティブスタジオです。</p>
-    </div>
+      <p>私たちはニッカオフィスはこれまでに50以上のサービスの立ち上げや大規模リニュアルを担当した知見と経験を元に、貴社の既存チームに入り込み、一緒にプロダクト検討やデザイン作成やデザインチームの構築や育成を行います。</p>
 
-    <article>
-      代表のブログ 令和元年10月30日に考えたこと 適当な失敗と真剣な失敗
-      ニッカオフィスのウチヤマケンイチです。きちんとしたレッスンのおかげでゴルフのフォームが順調に改善しています。
-      あと減量の方も、トレーナーのアドバイ… <a>つづきを読む</a>
-    </article>
+      <h2 class="common-heading2">サービスについて</h2>
+      <p>ニッカオフィスは、主にサービスやプロダクトを提供されている企業様向けにデザイン全般にてお力添えをしているクリエティブスタジオです。これまでに50以上のサービスの立ち上げや大規模リニュアルを担当した知見と経験を元に、貴社の既存チームに入り込み、一緒にプロダクト検討やデザイン作成やデザインチームの構築や育成を行います。
+      </p>
+      <p><img alt="サービスについてのイラスト・画像" /></p>
+      <p>
+        ウェブ、アプリ、インテリア、プロダクト、街づくりなどジャンルは問わずデザインで世の中と人の暮らしが今よりもちょっと快適で便利で楽しくできるよう頑張ります。
+        <p class="signature">代表社員 ウチヤマ ケンイチ</p>
+      </p>
+      <a>プロジェクト一覧</a>
+      <hr>
+      <h2 class="common-heading2">代表プロフィール</h2>
+      <p>
+        ウチヤマ ケンイチ｜内山 賢一｜Kenichi UCHIYAMA
+        専門：UXデザイン、情報設計（インフォメーションアーキテクト、クリエイティブディレクション、メディアプロデュース、育成、クリティカルシンキング、ロジカルシンキング
+      </p>
+      <p><img alt="ウチヤマケンイチプロフィール写真" /></p>
+      <p>
+      <p>略歴</p>
+      <dl>
+        <dt>1981年</dt><dd>神奈川県横浜市生まれ</dd>
+        <dt>2007年</dt>
+        <dd>
+          <p>東京理科大学大学院建築学専攻修了</p>
+          <p>大学、大学院で建築、インテリアを専攻し、Charles & Ray Eamesのデザイン理論を研究。在学中の2001年にknicka officeの前身となるDada*graphを設立。その後2005年に社名をknickaに変更</p>
+        </dd>
+        <dt>2007年</dt>
+        <dd>
+          <p>株式会社リクルート入社</p>
+          <p>不動産情報サイトの企画、新規立ち上げに携わる。2010年よりUI/UXの専門部署に異動し、リクルートグループの人材、結婚、ECサイトなどのサイト設計、サービス設計を手がける。</p>
+        </dd>
+        <dt>2011年</dt><dd>個人事業としてニッカオフィスを設立。会社員とのダブルワーク開始</dd>
+        <dt>2016年</dt><dd>リクルート退社 2017年　ニッカオフィスを法人化し独立</dd>
+      </dl>
+      </p>
 
-    <nav class="top-page-nav">
-      <p class="top-page-nav__title">MENU</p>
-      <ul class="top-page-nav__list">
-        <li>ABOUTニッカオフィスのこと</li>
-        <li>BLOGブログ</li>
-        <li>BLOGブログ</li>
-        <li>CONTACTお問い合わせ</li>
-      </ul>
-    </nav>
+      <p>
+        <a>Twitter</a>｜<a>LINE@</a>｜<a>Facebook</a>｜<a>
+          mixi
+        </a>
+      </p>
 
-    <p>私たちはニッカオフィスはこれまでに50以上のサービスの立ち上げや大規模リニュアルを担当した知見と経験を元に、貴社の既存チームに入り込み、一緒にプロダクト検討やデザイン作成やデザインチームの構築や育成を行います。</p>
+      <h2 class="common-heading2">会社概要</h2>
+      <dl>
+        <dt>法人名</dt>
+        <dd>ニッカオフィス合同会社 / knicka office LLC</dd>
+        <dt>代表社員</dt>
+        <dd>内山 賢一 / Kenichi UCHIYAMA</dd>
+        <dt>所在地</dt>
+        <dd>220-0051 神奈川県横浜市西区中央2-3-13 ニッカオフィスビル３・４F</dd>
+        <dt>設立</dt>
+        <dd>2017年1月4日</dd>
+        <dt>事業内容</dt>
+        <dd>・クリエイティブ（グラフィックデザイン、ウェブデザイン、インテリアデザインほか）のコンサルティング、制作ほか・人材（デザイナー、プロデューサー、営業、経営幹部）のスキルセット定義とそれに伴う育成</dd>
+        <dt>沿革</dt>
+        <dd>
+          <p>2001年 「Dada*graph」設立（ニッカオフィス合同会社の前身）</p>
+          <p>2005年 「knicka」へブランド名を変更 2011年　「ニッカオフィス / knicka office」に事業名を変更。代表社員ウチヤマケンイチの個人事業として事業化</p>
+          <p>同年　横浜市西区の西前商店街内にオフィスを移転</p>
+          <p>2017年　「ニッカオフィス合同会社」として法人設立</p>
+        </dd>
+      </dl>
 
-    <h2>サービスについて</h2>
-    <p>ニッカオフィスは、主にサービスやプロダクトを提供されている企業様向けにデザイン全般にてお力添えをしているクリエティブスタジオです。これまでに50以上のサービスの立ち上げや大規模リニュアルを担当した知見と経験を元に、貴社の既存チームに入り込み、一緒にプロダクト検討やデザイン作成やデザインチームの構築や育成を行います。
-    </p>
-    <p><img alt="サービスについてのイラスト・画像" /></p>
-    <p>
-      ウェブ、アプリ、インテリア、プロダクト、街づくりなどジャンルは問わずデザインで世の中と人の暮らしが今よりもちょっと快適で便利で楽しくできるよう頑張ります。
-      <p class="signature">代表社員 ウチヤマ ケンイチ</p>
-    </p>
-    <a>プロジェクト一覧</a>
-    <hr>
-    <h2>代表プロフィール</h2>
-    <p>
-      ウチヤマ ケンイチ｜内山 賢一｜Kenichi UCHIYAMA
-      専門：UXデザイン、情報設計（インフォメーションアーキテクト、クリエイティブディレクション、メディアプロデュース、育成、クリティカルシンキング、ロジカルシンキング
-    </p>
-    <p><img alt="ウチヤマケンイチプロフィール写真" /></p>
-    <p>
-    <p>略歴</p>
-    <dl>
-      <dt>1981年</dt><dd>神奈川県横浜市生まれ</dd>
-      <dt>2007年</dt>
-      <dd>
-        <p>東京理科大学大学院建築学専攻修了</p>
-        <p>大学、大学院で建築、インテリアを専攻し、Charles & Ray Eamesのデザイン理論を研究。在学中の2001年にknicka officeの前身となるDada*graphを設立。その後2005年に社名をknickaに変更</p>
-      </dd>
-      <dt>2007年</dt>
-      <dd>
-        <p>株式会社リクルート入社</p>
-        <p>不動産情報サイトの企画、新規立ち上げに携わる。2010年よりUI/UXの専門部署に異動し、リクルートグループの人材、結婚、ECサイトなどのサイト設計、サービス設計を手がける。</p>
-      </dd>
-      <dt>2011年</dt><dd>個人事業としてニッカオフィスを設立。会社員とのダブルワーク開始</dd>
-      <dt>2016年</dt><dd>リクルート退社 2017年　ニッカオフィスを法人化し独立</dd>
-    </dl>
-    </p>
-
-    <p>
-      <a>Twitter</a>｜<a>LINE@</a>｜<a>Facebook</a>｜<a>
-        mixi
-      </a>
-    </p>
-
-    <h2>会社概要</h2>
-    <dl>
-      <dt>法人名</dt>
-      <dd>ニッカオフィス合同会社 / knicka office LLC</dd>
-      <dt>代表社員</dt>
-      <dd>内山 賢一 / Kenichi UCHIYAMA</dd>
-      <dt>所在地</dt>
-      <dd>220-0051 神奈川県横浜市西区中央2-3-13 ニッカオフィスビル３・４F</dd>
-      <dt>設立</dt>
-      <dd>2017年1月4日</dd>
-      <dt>事業内容</dt>
-      <dd>・クリエイティブ（グラフィックデザイン、ウェブデザイン、インテリアデザインほか）のコンサルティング、制作ほか・人材（デザイナー、プロデューサー、営業、経営幹部）のスキルセット定義とそれに伴う育成</dd>
-      <dt>沿革</dt>
-      <dd>
-        <p>2001年 「Dada*graph」設立（ニッカオフィス合同会社の前身）</p>
-        <p>2005年 「knicka」へブランド名を変更 2011年　「ニッカオフィス / knicka office」に事業名を変更。代表社員ウチヤマケンイチの個人事業として事業化</p>
-        <p>同年　横浜市西区の西前商店街内にオフィスを移転</p>
-        <p>2017年　「ニッカオフィス合同会社」として法人設立</p>
-      </dd>
-    </dl>
-
-    <p><a>[Facebookページ]</a>｜<a>[LINE@]</a></p>
-    <hr>
-    <h3>ロゴに込めた意味</h3>
-    <p><img alt="ニッカオフィスロゴ" /></p>
-    <p>
-      ニッカオフィスのロゴは、「人」と「鍵穴」をモチーフにしています。</br>
-      人をよく見て、鍵を開けるようにパッと問題を解決する糸口を見つける。</br>
-      ニッカオフィスはそんなクリエイティブスタジオでありたいと思っています。</br>
-    </p>
-    <footer>
-      <div class="global-footer">
-        <p><img alt="" /></p>
-        <p class=><small>All content Copyright ニッカオフィス / knicka office</small></p>
-    </footer>
+      <p><a>[Facebookページ]</a>｜<a>[LINE@]</a></p>
+      <hr>
+      <h3 class="common-heading3">ロゴに込めた意味</h3>
+      <p><img alt="ニッカオフィスロゴ" /></p>
+      <p>
+        ニッカオフィスのロゴは、「人」と「鍵穴」をモチーフにしています。</br>
+        人をよく見て、鍵を開けるようにパッと問題を解決する糸口を見つける。</br>
+        ニッカオフィスはそんなクリエイティブスタジオでありたいと思っています。</br>
+      </p>
+    </main>
+<footer class="global-footer">
+  <p class="global-footer__logo"><img src="./img/logo-knicka.png" alt="" /></p>
+  <p class="global-footer__copy">
+    <small>All content Copyright ニッカオフィス / knicka office</small>
+  </p>
+</footer>
+</div>
+<script src="common-script.js"></script>
   </body>
 </html>
