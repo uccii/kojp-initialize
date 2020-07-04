@@ -1,21 +1,27 @@
-@import url(./src/normalize.css);
 // original font
 @font-face {
   font-family: "knicka-mincho";
-  src: url("src/font/knicka-mincho-Regular.woff2") format("woff2");
+  src: url("/font/knicka-mincho-Regular.woff2") format("woff2"),
+    url("/font/knicka-mincho-Regular.woff") format("woff");
 }
 
 // placeholder
 %yu-mincho-pr6n {
-  font-family: "yu-mincho-pr6n",sans-serif;
+  font-family: "yu-mincho-pr6n", serif;
   font-weight: 400;
-  font-style: normal; 
+  font-style: normal;
 }
 
 %ten-mincho {
-  font-family:"ten-mincho",serif;
+  font-family: "ten-mincho", serif;
   font-weight: 400;
-  font-style: normal; 
+  font-style: normal;
+}
+
+%knicka-mincho-with-ten-mincho {
+  font-family: "knicka-mincho", "ten-mincho-text", "yu-mincho-pr6n", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 html {
@@ -24,10 +30,31 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   color: #707070;
   font-size: 1.6rem;
-  // @extend %yu-mincho-pr6n;
-  font-family: "knicka-mincho";
+  @extend %yu-mincho-pr6n;
+  // @extend %knicka-mincho-with-ten-mincho;
+}
+
+p {
+  margin: 0;
+}
+
+dd {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+%clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 .global-logo {
@@ -36,6 +63,11 @@ body {
   line-height: 1;
   display: flex;
   justify-content: flex-end;
+
+  &__image {
+    width: 150px;
+    height: auto;
+  }
 }
 
 .common-heading2 {
@@ -56,6 +88,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
   &__item {
     list-style: none;
     background-color: #E9E7DB;
@@ -67,6 +100,7 @@ body {
     border-radius: 50%;
     box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, .16);
     flex-shrink: 0;
+
     >a {
       color: #707070;
       text-decoration: none;
@@ -76,13 +110,16 @@ body {
       flex-wrap: wrap;
       text-align: center;
       align-content: center;
+
       >span {
         flex-shrink: 0;
         width: 100%;
         line-height: 1;
+
         &:first-child {
           font-weight: bold;
         }
+
         &:not(:first-child) {
           margin-top: 8px;
         }
@@ -91,8 +128,47 @@ body {
   }
 }
 
+.common-border-box-light-gray {
+  margin: 28px auto;
+  border: 1px solid #EFEFEF;
+  box-shadow: 0 0 3px 0;
+  padding: 24px;
+}
+
+.common-fluid-image {
+  margin: 40px calc(-50vw + 50%);
+  ;
+  width: 100vw;
+
+  &__parallax {
+    min-height: 376px;
+    background: transparent;
+  }
+
+  img {
+    display: none;
+  }
+}
+
+.common-wide-image {
+  margin: 40px calc(-50vw + 50%);
+  width: 100vw;
+  height: 192px;
+
+  &--high {
+    height: 208px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
 input[type="checkbox"].common-display-toggle-check {
   display: none;
+
   &:checked~* {
     display: none;
   }
@@ -103,6 +179,7 @@ input[type="checkbox"].common-display-toggle-check {
   bottom: 72px;
   z-index: 1000;
   pointer-events: none;
+
   &__toggle-button {
     position: absolute;
     top: calc(100% + 8px);
@@ -116,20 +193,23 @@ input[type="checkbox"].common-display-toggle-check {
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, .6);
     background-color: #fff;
     pointer-events: auto;
+
     &:before {
       content: '';
       display: block;
       width: 32px;
       height: 32px;
       flex-shrink: 0;
-      background: url("src/img/logo/knickaoffice_symbol.svg") no-repeat center;
+      background: url("/img/logo/knickaoffice_symbol.svg") no-repeat center;
       background-origin: border-box;
     }
   }
+
   &__button-line {
     width: 32px;
     height: 32px;
   }
+
   &__menu {
     margin: 0;
     padding: 0;
@@ -139,39 +219,50 @@ input[type="checkbox"].common-display-toggle-check {
     box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, .12);
     filter: opacity(0);
   }
+
   &__item {
     width: 78px;
     height: 78px;
+
+    >a {
+      >span {
+        font-size: 1.2rem;
+
+        &:first-child {
+          font-size: 1.5rem;
+        }
+      }
+    }
   }
-  &__item-title {
-    font-size: 1.5rem;
-  }
-  &__item-sub {
-    font-size: 1.2rem;
-  }
+
   &__item-home {
     display: none;
   }
+
   &[firstClicked="firstClicked"] {
     .global-nav__menu {
       transition: filter .5s;
     }
   }
+
   &[clicked="clicked"] {
     .global-nav__menu {
       filter: opacity(1);
     }
+
     .global-nav__item {
       >a {
         pointer-events: auto;
       }
     }
   }
+
   .parts-toggle-munu {
     display: flex;
     flex-wrap: wrap;
     align-content: space-evenly;
     justify-content: center;
+
     >span {
       display: block;
       width: 18px;
@@ -180,77 +271,95 @@ input[type="checkbox"].common-display-toggle-check {
       background-color: #000;
     }
   }
+
   &[firstClicked="firstClicked"] {
     .parts-toggle-munu {
       span {
         &:nth-of-type(1) {
           animation: toggle-menu-bar1 .5s forwards;
         }
+
         &:nth-of-type(2) {
           transition: filter .25s;
           filter: opacity(1);
         }
+
         &:nth-of-type(3) {
           animation: toggle-menu-bar3 .5s forwards;
         }
       }
     }
   }
+
   &[clicked="clicked"] {
     .parts-toggle-munu {
       span {
         &:nth-of-type(1) {
           animation: clicked-toggle-menu-bar1 .5s forwards;
         }
+
         &:nth-of-type(2) {
           filter: opacity(0);
         }
+
         &:nth-of-type(3) {
           animation: clicked-toggle-menu-bar3 .5s forwards;
         }
       }
     }
   }
+
   @keyframes toggle-menu-bar1 {
     0% {
       transform: translateY(8px) rotate(45deg);
     }
+
     50% {
       transform: translateY(8px) rotate(0);
     }
+
     100% {
       transform: translateY(0) rotate(0);
     }
   }
+
   @keyframes clicked-toggle-menu-bar1 {
     0% {
       transform: translateY(0) rotate(0);
     }
+
     50% {
       transform: translateY(8px) rotate(0);
     }
+
     100% {
       transform: translateY(8px) rotate(45deg);
     }
   }
+
   @keyframes toggle-menu-bar3 {
     0% {
       transform: translateY(-9px) rotate(-45deg);
     }
+
     50% {
       transform: translateY(-9px) rotate(0);
     }
+
     100% {
       transform: translateY(0) rotate(0);
     }
   }
+
   @keyframes clicked-toggle-menu-bar3 {
     0% {
       transform: translateY(0) rotate(0);
     }
+
     50% {
       transform: translateY(-9px) rotate(0);
     }
+
     100% {
       transform: translateY(-9px) rotate(-45deg);
     }
@@ -258,8 +367,9 @@ input[type="checkbox"].common-display-toggle-check {
 }
 
 .main-content-wrapper {
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 74px;
   box-sizing: border-box;
   width: 100%;
 }
@@ -268,194 +378,315 @@ input[type="checkbox"].common-display-toggle-check {
   margin-top: 112px;
   margin-bottom: 16px;
   text-align: center;
+
   &__logo {
+    width: 18px;
+    margin-left: auto;
+    margin-right: auto;
     filter: opacity(33%);
   }
+
   &__copy {
     font-size: 0.8rem;
     color: #a9a9a9;
   }
 }
 
-.top-wrapper {
-  background: url(./img/visual-knicka.png) no-repeat top 198px right calc(-120px + 16%);
-  background-origin: border-box;
-}
+.sns-button {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: flex-end;
+  margin: 28px 0;
 
-.top-statement {
-  background-color: rgba(255, 255, 255, .9);
-  max-width: 300px;
-  padding: 4px 4px 0;
-  box-sizing: border-box;
-  &__title {
-    font-size: 2.8rem;
-    padding: 4px;
-  }
-  &__text {
-    padding: 40px 4px 40px 40px;
-  }
-}
+  &__item {
+    margin-left: 20px;
+    display: block;
+    width: 40px;
+    height: 40px;
 
-.quote-blog-wrapper {
-  position: relative;
-  background-color: rgba(232, 231, 229, .86);
-  padding: 12px 12px 24px;
-  border-radius: 4px;
-  &__title {
-    position: absolute;
-    top: -8px;
-    right: 16px;
-    color: #4E4222;
-    font-size: 1.2rem;
-    font-weight: normal;
-    margin: 0;
+    &:first-child {
+      margin-left: 0;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 
-.quate-blog-content {
-  background-color: rgba(255, 255, 255, .86);
-  padding: 12px;
-  border-radius: 4px;
+.about-detail {
+  &>button {
+    display: flex;
+    margin: 24px auto;
+    height: 64px;
+    background-color: #F5F4EE;
+    border: none;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px;
+    padding: 0 25px;
+  }
+
+  &--fit-left {
+    &>button {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      margin-left: -24px;
+      margin-right: auto;
+    }
+  }
+
+  &--fit-right {
+    &>button {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      margin-right: -24px;
+      margin-left: auto;
+    }
+  }
 }
 
 .signature {
   text-align: right;
 }
 
-.company-overview {
-  text-align: center;
-  font-weight: normal;
+.common-notice-right {
+  font-size: 1.4rem;
+  text-align: right;
 }
 
-.company-overview_heading {
-  font-weight: bold;
+.client-list {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  &__item {
+    margin: 8px 0;
+    width: calc(50% - 12px);
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__image {
+    width: 100%;
+    object-fit: scale-down;
+  }
 }
 
-.logo-explanation {
+.about-detail__button {
   text-align: center;
+}
+
+@media screen and (min-width:600px) and (max-width:1024px) {
+  /*　画面サイズが600pxから1024pxまではここを読み込む　*/
+
+}
+
+@media screen and (min-width:688px) {
+
+  /*　画面サイズが688pxからはここを読み込む　*/
+  .global-narrow-box {
+    width: 624px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media screen and (min-width:600px) {
-  /*　画面サイズが600pxからはここを読み込む　*/
-.global-nav {
-  position: relative;
-  bottom: initial;
-  pointer-events: auto;
-  &__toggle-button {
-    display: none;
-  }
-  &__menu {
-    filter: opacity(1) !important;
-    transition: filter 0s !important;
-    margin: 0;
-    padding: 16px 0 0;
-    width: 100%;
-    height: auto;
-    background-color: transparent;
-    box-shadow: none;
-    justify-content: flex-end;
-  }
-  &__item {
-    width: 120px;
-    height: auto;
-    margin: 0;
-    background-color: transparent;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-    >a {
-      >span {
-        &:first-child {
-          font-weight: normal;
-        }
-        &:not(:first-child) {
-          margin-top: 16px;
-        }
-      }
-      &:hover {
+
+  /*　画面サイズが600pxからはここを読み込む:共通パーツ用　*/
+  .global-nav {
+    position: relative;
+    bottom: initial;
+    pointer-events: auto;
+    z-index: 1000;
+
+    &__toggle-button {
+      display: none;
+    }
+
+    &__menu {
+      filter: opacity(1) !important;
+      transition: filter 0s !important;
+      margin: 0;
+      padding: 16px 0 0;
+      width: 100%;
+      height: auto;
+      background-color: transparent;
+      box-shadow: none;
+      justify-content: flex-end;
+    }
+
+    &__item {
+      width: 120px;
+      height: auto;
+      margin: 0;
+      background-color: transparent;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+
+      >a {
         >span {
+          font-size: 1.2rem;
+
           &:first-child {
-            text-decoration: underline;
+            font-size: 1.6rem;
+            font-weight: normal;
+          }
+
+          &:not(:first-child) {
+            margin-top: 16px;
+          }
+        }
+
+        &:hover {
+          >span {
+            &:first-child {
+              text-decoration: underline;
+            }
           }
         }
       }
     }
-  }
-  &__item-title {
-    font-size: 1.6rem;
-  }
-  &__item-sub {
-    font-size: 1.2rem;
-  }
-  &__item-home {
-    display: block;
-  }
-}
-.global-header {
-  &[scrolled="scrolled"] {
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-    height: 48px;
-    background-color: #fff;
-    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-shrink: 0;
-    flex-wrap: nowrap;
-    flex-direction: row-reverse;
-    align-items: center;
-    &+* {
-      padding-top: 122px;
+
+    &__item-title {
+      font-size: 1.6rem;
     }
-    .global-logo {
-      padding-top: 0;
-      padding-bottom: 0;
-      width: 36px;
-      height: 36px;
-      &> img {
-        display: none;
-      }
-      &:before {
-        display: block;
-        content: url("src/img/logo/knickaoffice_symbol.svg");
-      }
+
+    &__item-sub {
+      font-size: 1.2rem;
     }
-    .global-nav {
-      &__menu {
+
+    &__item-home {
+      display: block;
+    }
+  }
+
+  .global-header {
+    &[scrolled="scrolled"] {
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+      height: 48px;
+      background-color: #fff;
+      box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-shrink: 0;
+      flex-wrap: nowrap;
+      flex-direction: row-reverse;
+      align-items: center;
+
+      &+* {
+        &:before {
+          content: '';
+          display: block;
+          padding-top: 122px;
+        }
+      }
+
+      .global-logo {
         padding-top: 0;
+        padding-bottom: 0;
+        width: 36px;
+        height: 36px;
+
+        &>img {
+          display: none;
+        }
+
+        &:before {
+          display: block;
+          content: url("/img/logo/knickaoffice_symbol.svg");
+        }
       }
-      &__item {
-        width: auto;
-        margin-left: 20px;
-        margin-right: 20px;
+
+      .global-nav {
+        &__menu {
+          padding-top: 0;
+        }
+
+        &__item {
+          width: auto;
+          margin-left: 20px;
+          margin-right: 20px;
+        }
+
+        &__item-client {
+          display: none;
+        }
+
+        &__item-title {}
+
+        &__item-sub {
+          display: none;
+        }
       }
-      &__item-client {
-        display: none;
+    }
+  }
+
+  .main-content-wrapper {
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+  }
+
+  .about-detail {
+    &>button {
+      display: flex;
+      margin: 24px auto;
+      height: 64px;
+      background-color: #F5F4EE;
+      border: none;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 50px;
+      padding: 0 25px;
+    }
+
+    &--fit-left {
+      &>button {
+        border-radius: 50px;
+        margin-left: auto;
+        margin-right: auto;
       }
-      &__item-title {
-      }
-      &__item-sub {
-        display: none;
+    }
+
+    &--fit-right {
+      &>button {
+        border-radius: 50px;
+        margin-left: auto;
+        margin-right: auto;
       }
     }
   }
 }
 
-.main-content-wrapper {
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  background-position: top 76px right calc(-28px + 4%);
+@media screen and (min-width:768px) {
+  .client-list {
+    justify-content: flex-start;
+
+    &__item {
+      margin: 16px 0;
+      padding: 0 16px;
+      box-sizing: border-box;
+      width: calc(33%);
+    }
+  }
 }
 
-}  
-
-@media screen and (min-width:600px) and ( max-width:1024px) {
-  /*　画面サイズが600pxから1024pxまではここを読み込む　*/
-}  
-
-@media screen and (min-width:1024px) { 
-  /*　画面サイズが1024pxからはここを読み込む　*/
-
+@media screen and (min-width:1024px) {
+  .client-list {
+    &__item {
+      width: calc(25%);
+    }
+  }
 }
