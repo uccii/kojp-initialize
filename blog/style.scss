@@ -30,14 +30,23 @@
      }
   }
 }
+
+h2{
+  margin-top:40px;
+  font-size:1.4rem;
+  font-weight: normal;
+  text-align: center;
+  font-family: "knicka-mincho","ten-mincho-text",serif;
+}
+h3{
+  display: block;
+  font-size:1.6rem;
+  font-weight: normal;
+  width: 56px;
+  font-family: "knicka-mincho","ten-mincho-text",serif;
+}
+
 .blog-main{
-  h2{
-    margin-top:40px;
-    font-size:1.4rem;
-    font-weight: normal;
-    text-align: center;
-    font-family: "knicka-mincho","ten-mincho-text",serif;
-  }
   &__card{
     width: 296px;
     height: auto;
@@ -50,13 +59,6 @@
     display: block;
   }
   &__content{
-    > h3{
-      display: block;
-      font-size:1.6rem;
-      font-weight: normal;
-      width: 56px;
-      font-family: "knicka-mincho","ten-mincho-text",serif;
-    }
     font-family: "knicka-mincho","ten-mincho-text",serif;
     display: block;
     margin-top:64px;
@@ -68,9 +70,13 @@
     column-gap:64px;
     line-height: 2.1;
     writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
     padding-right: 76px;
+    width: 100%;
      >p{
       text-combine-upright: digits2;
+      -ms-text-combine-horizontal: digits 2;
+      -webkit-text-combine: horizontal;
      }
   }
   &__card{
@@ -202,7 +208,6 @@
 
 
 }
- /*　タイトル下は空白にするために、２カラムにしたほうがいいと思うが、どうしようか考える*/
     }
 
     @media screen and (min-width:736px){
@@ -230,4 +235,7 @@
       font-family: 'knicka-mincho';
       src: url("./font/knicka-mincho-Regular.woff2") format('woff2');
     }
-    
+     /*win✕Chrome の縦ラインが若干ずれていることとの修正方法として、"游明朝体"に変更することで対応する*/
+  .js_isWin{
+    font-family: "游明朝体",serif;
+  }
