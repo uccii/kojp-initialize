@@ -1,3 +1,8 @@
+import $ from 'jquery';
+
+window.jQuery = $;
+require('jquery-parallax.js');
+
 const utility = {
   toggleClickedAttr: (_e) => {
     const clickedName = 'clicked';
@@ -27,19 +32,17 @@ const commonWork = {
   toggleGlobalHeaderWithScroll: (_globalHeader) => {
     let scrollFlag = false;
     const threshold = _globalHeader.clientHeight;
-    const toggleScrolledAttr = (_e) => {
+    const toggleScrolledAttr = () => {
       if (!scrollFlag) {
         window.requestAnimationFrame(() => {
           scrollFlag = false;
           const scrolledName = 'scrolled';
           if (window.scrollY > threshold) {
             _globalHeader.setAttribute(scrolledName, scrolledName);
-            console.log('多い: ' + window.scrollY);
           } else {
             if (_globalHeader.hasAttribute(scrolledName)) {
               _globalHeader.removeAttribute(scrolledName);
             }
-            console.log('少ない: ' + window.scrollY);
           }
         });
         scrollFlag = true;
@@ -53,18 +56,15 @@ const commonWork = {
 
 const work = {
   slideToggle: (_e) => {
-    if (window.jQuery) {
-      const $ = window.jQuery;
-      const $target = $(
-        document.querySelector(
-          `[data-slide-content="${_e.currentTarget.dataset.slideTarget}"]`
-        )
-      );
-      if ($target.is(':visible')) {
-        $target.slideUp();
-      } else if ($target.is(':hidden')) {
-        $target.slideDown();
-      }
+    const $target = $(
+      document.querySelector(
+        `[data-slide-content="${_e.currentTarget.dataset.slideTarget}"]`
+      )
+    );
+    if ($target.is(':visible')) {
+      $target.slideUp();
+    } else if ($target.is(':hidden')) {
+      $target.slideDown();
     }
   },
   toggleLabel: class {
@@ -112,13 +112,10 @@ const init = () => {
 
   const parallaxTarget = document.querySelectorAll('.js-parallax-window');
   parallaxTarget.forEach((_element) => {
-    if (window.jQuery) {
-      const $ = window.jQuery;
-      $(_element).parallax({
-        imageSrc: _element.dataset.parallaxImageSrc,
-        overScrollFix: true
-      });
-    }
+    $(_element).parallax({
+      imageSrc: _element.dataset.parallaxImageSrc,
+      overScrollFix: true
+    });
   });
 };
 
