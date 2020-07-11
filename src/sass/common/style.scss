@@ -598,6 +598,10 @@ input[type="checkbox"].common-display-toggle-check {
         padding-bottom: 0;
         width: 36px;
         height: 36px;
+        display: flex;
+        flex-shrink: 0;
+        justify-content: center;
+        align-items: flex-end;
 
         &>img {
           display: none;
@@ -606,6 +610,8 @@ input[type="checkbox"].common-display-toggle-check {
         &:before {
           display: block;
           content: url("/img/logo/knickaoffice_symbol.svg");
+          width: 20px;
+          height: auto;
         }
       }
 
