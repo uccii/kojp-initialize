@@ -1,16 +1,16 @@
 const adjustmentVerticalTextBox = {
-  verticalBox: document.querySelectorAll(".blog-main__content"),
-  init: function() {
-    this.verticalBox.forEach(_element => {
-      const spacer = document.createElement("div");
-      spacer.style.zIndex = "-1";
-      spacer.style.pointerEvents = "none";
-      spacer.classList.add("blog-main__content-spacer");
-      _element.insertAdjacentElement("afterend", spacer);
+  verticalBox: document.querySelectorAll('.blog-main__content'),
+  init: function init() {
+    this.verticalBox.forEach((_element) => {
+      const spacer = document.createElement('div');
+      spacer.style.zIndex = '-1';
+      spacer.style.pointerEvents = 'none';
+      spacer.classList.add('blog-main__content-spacer');
+      _element.insertAdjacentElement('afterend', spacer);
     });
   },
-  adjustVerticalBox: function() {
-    this.verticalBox.forEach(_element => {
+  adjustVerticalBox: function adjustVerticalBox() {
+    this.verticalBox.forEach((_element) => {
       requestAnimationFrame(() => {
         const boxRange = document.createRange();
         boxRange.selectNodeContents(_element);
@@ -26,21 +26,21 @@ const adjustmentVerticalTextBox = {
         spacerElement.style.minHeight = `${boxHeight}px`;
       });
     });
-  }
+  },
 };
 
 const init = () => {
   adjustmentVerticalTextBox.init();
   adjustmentVerticalTextBox.adjustVerticalBox();
   window.addEventListener(
-    "resize",
-    _e => {
+    'resize',
+    () => {
       adjustmentVerticalTextBox.adjustVerticalBox();
     },
     {
-      passive: true
-    }
+      passive: true,
+    },
   );
 };
 
-init();
+export default init;

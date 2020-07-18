@@ -5,7 +5,38 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-Uh-Compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="/css/style.css">
+  <script>
+    (function (d) {
+      var config = {
+          kitId: 'xcm6mon',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h = d.documentElement,
+        t = setTimeout(function () {
+          h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+        }, config.scriptTimeout),
+        tk = d.createElement("script"),
+        f = false,
+        s = d.getElementsByTagName("script")[0],
+        a;
+      h.className += " wf-loading";
+      tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+      tk.async = true;
+      tk.onload = tk.onreadystatechange = function () {
+        a = this.readyState;
+        if (f || a && a != "complete" && a != "loaded") return;
+        f = true;
+        clearTimeout(t);
+        try {
+          Typekit.load(config)
+        } catch (e) {}
+      };
+      s.parentNode.insertBefore(tk, s)
+    })(document);
+
+  </script>
+  <link rel="stylesheet" href="/css/top/style.css">
   <title>Document</title>
 </head>
 
@@ -195,7 +226,7 @@
               <ul>
                 <li>東京理科大学大学院建築学専攻修了</li>
                 <li>株式会社リクルート入社　不動産情報サイトSUUMOの新規立ち上げを担当</li>
-                </ul>
+              </ul>
             </dd>
             <dt>2010年</dt>
             <dd>
@@ -277,6 +308,7 @@
       </p>
     </footer>
   </div>
+  <script src="/js/top/script.js"></script>
 </body>
 
 </html>

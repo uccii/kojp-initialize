@@ -1,0 +1,263 @@
+@import "../style";
+
+.global-wrapper {
+  background-color: #FFF;
+}
+
+.blog-header-nav {
+  margin-top: -56px;
+
+  &__day-before {
+    width: 88px;
+    height: 56px;
+    background-color: #FAFAFA;
+    border: none;
+    outline: none;
+    color: #707070;
+    font-size: 15px;
+    border-radius: 6px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    font-family: "ten-mincho-text", serif;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      height: 15px;
+      width: 15px;
+      background-image: url(/img/blog/day-before.svg);
+      background-repeat: no-repeat;
+      margin-top: 0.5px;
+    }
+  }
+}
+
+h2 {
+  margin-top: 40px;
+  font-size: 1.4rem;
+  font-weight: normal;
+  text-align: center;
+  font-family: "knicka-mincho", "ten-mincho-text", serif;
+}
+
+h3 {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: normal;
+  width: 56px;
+  font-family: "knicka-mincho", "ten-mincho-text", serif;
+}
+
+.blog-main {
+  &__card {
+    width: 296px;
+    height: auto;
+
+    >img {
+      border-style: none;
+    }
+  }
+
+  &__content-height {
+    width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  &__content {
+    font-family: "knicka-mincho", "ten-mincho-text", serif;
+    display: block;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    height: 300px;
+    column-width: 300px;
+    width: 93%;
+    text-align: left;
+    column-gap: 64px;
+    line-height: 2.1;
+    writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    padding-right: 76px;
+    width: 100%;
+
+    >p {
+      text-combine-upright: digits2;
+      -ms-text-combine-horizontal: digits 2;
+      -webkit-text-combine: horizontal;
+    }
+  }
+
+  &__card {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8px;
+  }
+}
+
+.blog-footer-nav {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+
+  &__day-before {
+    display: flex;
+    width: 344px;
+    height: 56px;
+    background-color: #FAFAFA;
+    border: none;
+    outline: none;
+    color: #707070;
+    font-size: 15px;
+    border-radius: 6px;
+  }
+
+  &__day-before-zenjitsu {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    font-family: "ten-mincho-text", serif;
+
+    &:before {
+      /* アイコンを上下中央にする術考える */
+      content: '';
+      display: inline-block;
+      height: 15px;
+      width: 15px;
+      background-image: url(/img/blog/day-before.svg);
+      background-repeat: no-repeat;
+      margin-bottom: 1px;
+    }
+
+    width: 49px;
+    height: auto;
+    flex-shrink: 0;
+    font-size: 1.5rem;
+    margin: auto 8px;
+  }
+
+  &__day-before-title {
+    height: auto;
+    font-size: 1.4rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: "ten-mincho-text", serif;
+  }
+
+  &__day-after {
+    margin-bottom: 64px;
+    display: flex;
+    justify-content: flex-end;
+    width: 344px;
+    height: 56px;
+    background-color: #FAFAFA;
+    border: none;
+    outline: none;
+    color: #707070;
+    font-size: 15px;
+    border-radius: 6px;
+    margin-top: 8px;
+  }
+
+  &__day-after-yokujitsu {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    font-family: "ten-mincho-text", serif;
+
+    &:after {
+      /* アイコンを上下中央にする術考える */
+      content: '';
+      display: inline-block;
+      height: 15px;
+      width: 15px;
+      background-image: url(/img/blog/day-after.svg);
+      background-repeat: no-repeat;
+      margin-left: 2px;
+      margin-bottom: 2px;
+    }
+
+    width: 49px;
+    height: auto;
+    flex-shrink: 0;
+    font-size: 1.5rem;
+    margin: auto 8px;
+  }
+
+  &__day-after-title {
+    height: auto;
+    font-size: 1.4rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: "ten-mincho-text", serif;
+  }
+}
+
+
+@media screen and (min-width:600px) {
+
+  /*　画面サイズが600pxからはここを読み込む　*/
+  .main-content-wrapper {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .blog-main {
+    &__content {
+      width: 560px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    &__content-right {
+      margin-top: -15px;
+      margin-right: -76px
+    }
+  }
+
+  .blog-header-nav {
+    margin-top: 62px;
+
+    &__day-before {
+      width: 160px;
+    }
+
+
+  }
+}
+
+@media screen and (min-width:736px) {
+
+  /*　画面サイズが736pxからはここを読み込む　*/
+  .blog-header-nav {
+    width: 736px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .blog-footer-nav {
+    margin-right: auto;
+    margin-left: auto;
+    width: 702px;
+    justify-content: space-between;
+
+    &__day-after {
+      margin-top: 0;
+    }
+
+  }
+}
+
+/*win✕Chrome の縦ラインが若干ずれていることとの修正方法として、"游明朝体"に変更することで対応する*/
+.js_isWin {
+  font-family: "游明朝体", serif;
+}

@@ -24,14 +24,14 @@ const getEntriesList = (targetTypes) => {
 
 const app = {
   entry: {
-    app: [
-      './src/js/app.js',
+    common: [
+      './src/js/script.js',
       './src/sass/style.scss',
     ],
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'js/[name].js',
+    filename: 'js/[name]/script.js',
     publicPath: '/',
   },
   devServer: {
@@ -97,8 +97,12 @@ const app = {
       from: path.resolve(__dirname, 'src/img/'),
       to: path.resolve(__dirname, 'dist/img/'),
     }]),
+    new CopyWebpackPlugin([{
+      from: path.resolve(__dirname, 'src/font/'),
+      to: path.resolve(__dirname, 'dist/font/'),
+    }]),
     new MiniCssExtractPlugin({
-      filename: 'css/style.css',
+      filename: 'css/[name]/style.css',
     }),
     new ImageminPlugin({
       test: /\.(jpe?g|png|gif|svg)$/i,
@@ -109,10 +113,28 @@ const app = {
   ],
 };
 
+Object.assign(
+  app.entry, {
+    top: [
+      './src/js/top/script.js',
+      './src/sass/top/style.scss',
+    ],
+    blog: [
+      './src/js/blog/script.js',
+      './src/sass/blog/style.scss',
+    ],
+    contact: [
+      './src/js/contact/script.js',
+      './src/sass/contact/style.scss',
+    ],
+  },
+);
+
 for (const [targetName, srcName] of Object.entries(getEntriesList({ ejs: 'html' }))) {
   app.plugins.push(new HtmlWebpackPlugin({
     filename: targetName,
     template: srcName,
+    inject: false,
   }));
 };
 
