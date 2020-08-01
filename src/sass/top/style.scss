@@ -9,25 +9,6 @@
   }
 }
 
-// placeholder
-%yu-mincho-pr6n {
-  font-family: "yu-mincho-pr6n", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-%ten-mincho {
-  font-family: "ten-mincho", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-%knicka-mincho-with-ten-mincho {
-  font-family: "knicka-mincho", "ten-mincho-text", "yu-mincho-pr6n", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
 .global-wrapper {
   background: url("/img/logo/knickaoffice_symbol.svg") no-repeat top 72px right calc(-128px + 18%);
   background-origin: border-box;
@@ -35,9 +16,11 @@
 }
 
 .top-statement {
+  @extend %knicka-mincho-with-ten-mincho;
+  color: #707070;
   background-color: rgba(255, 255, 255, .9);
   max-width: 320px;
-  padding: 4px 4px 0;
+  padding: 4px;
   box-sizing: border-box;
 
   &__title {
@@ -46,8 +29,9 @@
   }
 
   &__text {
-    margin: 8px 4px 24px 12px;
+    margin: 4px 4px 10px 12px;
     font-size: 1.5rem;
+    line-height: 1.4;
 
     >br {
       &:nth-child(1) {
@@ -67,15 +51,19 @@
     content: '';
     width: 40px;
     height: 1px;
-    margin: 32px auto;
+    margin: 52px auto 32px;
     border-top: 1px dashed #A4A4A4;
+  }
+  &--logo-explanation {
+    font-size: 1.8rem;
+    margin-bottom: 34px;
   }
 }
 
 .top-page-nav {
   margin-top: 120px;
 
-  &__title {
+  &__title .chief-profile__history {
     font-size: 1.6rem;
     text-align: center;
     margin-bottom: 24px;
@@ -121,6 +109,7 @@
 }
 
 .quote-blog-wrapper {
+  color: #707070;
   position: relative;
   background-color: rgba(232, 231, 229, .86);
   padding: 16px 8px;
@@ -195,7 +184,14 @@
 }
 
 .chief-profile {
+  &__name-wrapper {
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   &__name {
+    font-size: 1.8rem;
     display: inline-block;
 
     &:not(:nth-of-type(1)) {
@@ -203,9 +199,14 @@
         content: '';
         display: inline-block;
         background: #707070;
-        height: 14px;
+        height: 16px;
         width: 1px;
-        margin-right: 6px;
+        margin-right: 4px;
+        margin-left: 4px;
+        transform: translateY(0.1rem);
+        @media screen and (max-width:374px) {
+          height: 0;
+        }
       }
     }
   }
@@ -222,11 +223,11 @@
     padding: 24px 0;
 
     dt {
-      width: 25%;
+      width: 6.8rem;
     }
 
     dd {
-      width: 75%;
+      width: calc(100% - 6.8rem);
     }
   }
 
@@ -283,25 +284,31 @@
 
     dt {
       font-weight: normal;
-      width: 25%;
+      width: 6.8rem;
+      margin-top: 0;
     }
 
     dd {
-      width: 75%;
+      width: calc(100% - 6.8rem);
     }
   }
 }
 
 .logo-explanation {
   width: 274px;
+  height: 144px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 
   &__image {
     height: auto;
     width: 84px;
+  }
+
+  &__text {
+    margin-top: 44px;
   }
 }
 

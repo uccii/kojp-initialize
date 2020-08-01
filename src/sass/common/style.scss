@@ -31,7 +31,7 @@ html {
 
 body {
   overflow-x: hidden;
-  color: #707070;
+  color: #2B2B2B;
   font-size: 1.6rem;
   @extend %yu-mincho-pr6n;
   // @extend %knicka-mincho-with-ten-mincho;
@@ -51,10 +51,13 @@ ul {
   list-style: none;
 }
 
-%clearfix::after {
-  content: "";
-  display: block;
-  clear: both;
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
 }
 
 .global-logo {
@@ -74,14 +77,14 @@ ul {
   text-align: center;
   font-weight: normal;
   font-size: 2.2rem;
-  margin-bottom: 56px;
+  margin-bottom: 32px;
 }
 
 .common-heading3 {
   text-align: center;
   font-weight: normal;
   font-size: 1.8rem;
-  margin-bottom: 56px;
+  margin-bottom: 32px;
 }
 
 .common-nav-list {
@@ -151,7 +154,7 @@ ul {
 }
 
 .common-wide-image {
-  margin: 40px calc(-50vw + 50%);
+  margin: 32px calc(-50vw + 50%) 40px;
   width: 100vw;
   height: 192px;
 
@@ -190,7 +193,7 @@ input[type="checkbox"].common-display-toggle-check {
     border-radius: 8px;
     box-sizing: border-box;
     padding: 8px;
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, .6);
+    box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, .7);
     background-color: #fff;
     pointer-events: auto;
 
@@ -201,6 +204,7 @@ input[type="checkbox"].common-display-toggle-check {
       height: 32px;
       flex-shrink: 0;
       background: url("/img/logo/knickaoffice_symbol.svg") no-repeat center;
+      background-size: 26px 26px;
       background-origin: border-box;
     }
   }
@@ -208,6 +212,10 @@ input[type="checkbox"].common-display-toggle-check {
   &__button-line {
     width: 32px;
     height: 32px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-right: 1px;
+    box-sizing: border-box;
   }
 
   &__menu {
@@ -339,11 +347,11 @@ input[type="checkbox"].common-display-toggle-check {
 
   @keyframes toggle-menu-bar3 {
     0% {
-      transform: translateY(-9px) rotate(-45deg);
+      transform: translateY(-8px) rotate(-45deg);
     }
 
     50% {
-      transform: translateY(-9px) rotate(0);
+      transform: translateY(-8px) rotate(0);
     }
 
     100% {
@@ -357,11 +365,11 @@ input[type="checkbox"].common-display-toggle-check {
     }
 
     50% {
-      transform: translateY(-9px) rotate(0);
+      transform: translateY(-8px) rotate(0);
     }
 
     100% {
-      transform: translateY(-9px) rotate(-45deg);
+      transform: translateY(-8px) rotate(-45deg);
     }
   }
 }
@@ -375,20 +383,33 @@ input[type="checkbox"].common-display-toggle-check {
 }
 
 .global-footer {
-  margin-top: 112px;
+  margin-top: 144px;
   margin-bottom: 16px;
   text-align: center;
 
   &__logo {
-    width: 18px;
+    width: 44px;
+    height: 44px;
     margin-left: auto;
     margin-right: auto;
-    filter: opacity(33%);
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    box-sizing: border-box;
+    &>img {
+      filter: opacity(33%);
+      width: auto;
+      height: 100%;
+    }
   }
 
   &__copy {
-    font-size: 0.8rem;
-    color: #a9a9a9;
+    color: #818181;
+    &>small {
+      font-size: 1.2rem;
+    }
   }
 }
 

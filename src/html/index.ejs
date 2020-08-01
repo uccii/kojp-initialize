@@ -2,8 +2,9 @@
 <html lang="ja">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-Uh-Compatible" content="ie=edge" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-Uh-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <script>
     (function (d) {
@@ -44,7 +45,7 @@
   <div class="global-wrapper">
     <header class="global-header">
       <h1 class="global-logo">
-        <img class="global-logo__image" src="/img/logo/knickaoffice_logo.svg" alt="knicka office" />
+        <img class="global-logo__image" src="/img/logo/knickaoffice_logo.svg" alt="knicka office">
       </h1>
       <nav class="global-nav">
         <button class="global-nav__toggle-button">
@@ -175,8 +176,10 @@
         <figure class="common-wide-image common-wide-image--high chief-profile__chief-photo">
           <img src="/img/image-chief-profile.png" alt="ウチヤマケンイチ プロフィール写真">
         </figure>
-        <p class="chief-profile__name">ウチヤマ ケンイチ</p>
-        <p class="chief-profile__name">Kenichi UCHIYAMA</p>
+        <div class="chief-profile__name-wrapper">
+          <p class="chief-profile__name">ウチヤマ ケンイチ</p>
+          <p class="chief-profile__name">Kenichi UCHIYAMA</p>
+        </div>
         <dl class="chief-profile__history chief-profile__history-short">
           <dt>1981年</dt>
           <dd>神奈川県横浜市生まれ</dd>
@@ -288,21 +291,20 @@
           <img src="/img/image-about-office.png" alt="オフィスのこと">
         </div>
 
-        <h3 class="common-heading2 top-heading2">ロゴに込めた想い</h3>
+        <h3 class="common-heading2 top-heading2 top-heading2--logo-explanation">ロゴに込めた想い</h3>
         <div class="logo-explanation__wrapper">
           <p class="logo-explanation"><img class="logo-explanation__image" src="/img/logo/knickaoffice_symbol.svg"
-              alt="ニッカオフィスロゴ" /></p>
+              alt="ニッカオフィスロゴ"></p>
           <div class="logo-explanation__text">
-            <p>ニッカオフィスのロゴは、「人」と「鍵穴」の形をモチーフにしています。
-              <br>人をよく観察し、ずっと開かなかったドアの鍵をパッと開けるように問題解決の糸口を見つける。ニッカオフィスはそんなクリエイティブスタジオでありたいと思っています。
-            </p>
+            <p>ニッカオフィスのロゴは、「人」と「鍵穴」の形をモチーフにしています。</p>
+            <p>人をよく観察し、ずっと開かなかったドアの鍵をパッと開けるように問題解決の糸口を見つける。ニッカオフィスはそんなクリエイティブスタジオでありたいと思っています。</p>
           </div>
         </div>
       </div>
     </main>
 
     <footer class="global-footer">
-      <p class="global-footer__logo"><img src="/img/logo/knickaoffice_symbol.svg" alt="" /></p>
+      <p class="global-footer__logo"><img src="/img/logo/knickaoffice_symbol.svg" alt=""></p>
       <p class="global-footer__copy">
         <small>All content Copyright ニッカオフィス / knicka office</small>
       </p>
