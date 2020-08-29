@@ -43,41 +43,7 @@
 
 <body>
   <div class="global-wrapper">
-    <header class="global-header">
-      <div class="global-header__inner">
-        <h1 class="global-logo">
-          <img class="global-logo__image" src="/img/logo/knickaoffice_logo.svg" alt="knicka office">
-        </h1>
-        <nav class="global-nav">
-          <button class="global-nav__toggle-button">
-            <div class="global-nav__button-line parts-toggle-munu">
-              <span></span><span></span><span></span>
-            </div>
-          </button>
-          <ul class="global-nav__menu common-nav-list">
-            <li class="global-nav__item global-nav__item-home common-nav-list__item">
-              <a href=""><span class="global-nav__item-title">HOME</span><span class="global-nav__item-sub">ホーム</span></a>
-            </li>
-            <li class="global-nav__item common-nav-list__item">
-              <a href=""><span class="global-nav__item-title">ABOUT</span><span
-                  class="global-nav__item-sub">オフィスのこと</span></a>
-            </li>
-            <li class="global-nav__item global-nav__item-client common-nav-list__item">
-              <a href=""><span class="global-nav__item-title">CLIENT</span><span
-                  class="global-nav__item-sub">顧客</span></a>
-            </li>
-            <li class="global-nav__item common-nav-list__item">
-              <a href=""><span class="global-nav__item-title">BLOG</span><span class="global-nav__item-sub">ブログ</span></a>
-            </li>
-            <li class="global-nav__item common-nav-list__item">
-              <a href=""><span class="global-nav__item-title">CONTACT</span><span
-                  class="global-nav__item-sub">お問い合わせ</span></a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
+  <%- include('component/_header') %>
     <main class="main-content-wrapper">
       <div class="top-statement">
         <p class="top-statement__title">ぜんぶ、<br>使いやすくする</p>
@@ -86,11 +52,15 @@
 
       <nav class="top-page-nav">
         <ul class="top-page-nav__menu common-nav-list">
-          <li class="top-page-nav__item common-nav-list__item"><a href=""><span>About</span><span>オフィスのこと</span></a>
+          <li class="top-page-nav__item common-nav-list__item"><a
+              href="/#TOP_HEADING_ABOUT"><span>About</span><span>オフィスのこと</span></a>
           </li>
-          <li class="top-page-nav__item common-nav-list__item"><a href=""><span>Client</span><span>顧客</span></a></li>
-          <li class="top-page-nav__item common-nav-list__item"><a href=""><span>Blog</span><span>ブログ</span></a></li>
-          <li class="top-page-nav__item common-nav-list__item"><a href=""><span>Contact</span><span>お問い合わせ</span></a>
+          <li class="top-page-nav__item common-nav-list__item"><a
+              href="/#TOP_HEADING_CLIENT"><span>Client</span><span>顧客</span></a></li>
+          <li class="top-page-nav__item common-nav-list__item"><a href="/blog/"><span>Blog</span><span>ブログ</span></a>
+          </li>
+          <li class="top-page-nav__item common-nav-list__item"><a
+              href="/contact/"><span>Contact</span><span>お問い合わせ</span></a>
           </li>
         </ul>
       </nav>
@@ -112,7 +82,7 @@
         </article>
       </article>
 
-      <h2 class="common-heading2 top-heading2">About / オフィスのこと</h2>
+      <h2 class="common-heading2 top-heading2" id="TOP_HEADING_ABOUT">About / オフィスのこと</h2>
       <div class="global-narrow-box">
         <p>ニッカオフィスは、これまで50案件以上のサービス立ち上げやリニュアルを担当した知見を元に、あらゆるコトやモノを使いやすくデザインします。</p>
         <p>また制作以外にも、既存チームに入り込んで一緒にプロジェクトを進め、デザイン人材の育成や構築も行います。</p>
@@ -146,7 +116,7 @@
         <img src="/img/image-about-office.png" alt="オフィスのこと">
       </div>
 
-      <h2 class="common-heading2 top-heading2">Client / 顧客</h2>
+      <h2 class="common-heading2 top-heading2" id="TOP_HEADING_CLIENT">Client / 顧客</h2>
       <ul class="client-list">
         <li class="client-list__item"><a href="https://www.hr-s.co.jp/" target="_blank" class="client-list__link"><img
               src="/img/client-logo/HRsolutions.png" alt="HRソリューションズ株式会社" class="client-list__image"></a></li>

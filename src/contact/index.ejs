@@ -2,9 +2,10 @@
 <html lang="ja">
 
 <head>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-Uh-Compatible" content="ie=edge" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-Uh-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <script>
     (function (d) {
       var config = {
@@ -42,38 +43,7 @@
 
 <body>
   <div class="global-wrapper">
-    <header class="global-header">
-      <h1 class="global-logo">
-        <img class="global-logo__image" src="/img/logo/knickaoffice_logo.svg" alt="knicka office" />
-      </h1>
-      <nav class="global-nav">
-        <button class="global-nav__toggle-button">
-          <div class="global-nav__button-line parts-toggle-munu">
-            <span></span><span></span><span></span>
-          </div>
-        </button>
-        <ul class="global-nav__menu common-nav-list">
-          <li class="global-nav__item global-nav__item-home common-nav-list__item">
-            <a href=""><span class="global-nav__item-title">HOME</span><span class="global-nav__item-sub">ホーム</span></a>
-          </li>
-          <li class="global-nav__item common-nav-list__item">
-            <a href=""><span class="global-nav__item-title">ABOUT</span><span
-                class="global-nav__item-sub">オフィスのこと</span></a>
-          </li>
-          <li class="global-nav__item global-nav__item-client common-nav-list__item">
-            <a href=""><span class="global-nav__item-title">CLIENT</span><span
-                class="global-nav__item-sub">顧客</span></a>
-          </li>
-          <li class="global-nav__item common-nav-list__item">
-            <a href=""><span class="global-nav__item-title">BLOG</span><span class="global-nav__item-sub">ブログ</span></a>
-          </li>
-          <li class="global-nav__item common-nav-list__item">
-            <a href=""><span class="global-nav__item-title">CONTACT</span><span
-                class="global-nav__item-sub">お問い合わせ</span></a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <%- include('../component/_header') %>
     <main class="main-content-wrapper">
 
       <h2 class="content-page-title">CONTACT / お問い合わせ</h2>
@@ -88,24 +58,24 @@
           <div class="contact-primary__mail">
             <a href="mailto:s@knickaoffice.jp" class="contact-primary__mail-link">
               <div class="contact-primary__mail-icon">
-                <img src="/img/contact/mail.svg" alt="mail" />
+                <img src="/img/contact/mail.svg" alt="mail">
               </div>
               <div class="contact-primary__mail-contents" id="mail">s@knickaoffice.jp</div>
             </a>
             <button class="contact-primary__mail-copy">
-              <img src="/img/contact/copy.svg" alt="copy-mail" />
+              <img src="/img/contact/copy.svg" alt="copy-mail">
             </button>
           </div>
 
           <div class="contact-primary__phone">
             <a href="tel:+81-045-516-2763" class="contact-primary__phone-link">
               <div class="contact-primary__phone-icon">
-                <img src="/img/contact/phone.svg" alt="phone" />
+                <img src="/img/contact/phone.svg" alt="phone">
               </div>
               <div class="contact-primary__phone-contents" id="phone">045-516-2763</div>
             </a>
             <button class="contact-primary__phone-copy">
-              <img src="/img/contact/copy.svg" alt="copy-phone" />
+              <img src="/img/contact/copy.svg" alt="copy-phone">
             </button>
           </div>
         </div>
@@ -149,36 +119,36 @@
           <div class="contact-secondary__twitter">
             <a href="https://twitter.com/knickaoffice" class="contact-secondary__twitter-link">
               <div class="contact-secondary__twitter-icon">
-                <img src="/img/contact/twitter.svg" alt="twitter" />
+                <img src="/img/contact/twitter.svg" alt="twitter">
               </div>
               <div class="contact-secondary__twitter-contents" id="twitter">@knickaoffice</div>
             </a>
             <button class="contact-secondary__twitter-copy">
-              <img src="/img/contact/copy.svg" alt="copy-twitter" />
+              <img src="/img/contact/copy.svg" alt="copy-twitter">
             </button>
           </div>
 
           <div class="contact-secondary__facebook">
             <a href="fb://profile/194345830616701" class="contact-secondary__facebook-link">
               <div class="contact-secondary__facebook-icon">
-                <img src="/img/contact/facebook-f.svg" alt="facebook" />
+                <img src="/img/contact/facebook-f.svg" alt="facebook">
               </div>
               <div class="contact-secondary__facebook-contents" id="facebook">knickaoffice</div>
             </a>
             <button class="contact-secondary__facebook-copy">
-              <img src="/img/contact/copy.svg" alt="copy-facebook" />
+              <img src="/img/contact/copy.svg" alt="copy-facebook">
             </button>
           </div>
 
           <div class="contact-secondary__line">
             <a href="https://line.me/R/ti/p/@cwr6960h" class="contact-secondary__line-link">
               <div class="contact-secondary__line-icon">
-                <img src="/img/contact/line.svg" alt="line" />
+                <img src="/img/contact/line.svg" alt="line">
               </div>
               <div class="contact-secondary__line-contents" id="line">knickaoffice</div>
             </a>
             <button class="contact-secondary__line-copy">
-              <img src="/img/contact/copy.svg" alt="copy-line" />
+              <img src="/img/contact/copy.svg" alt="copy-line">
             </button>
           </div>
         </div>
@@ -190,12 +160,13 @@
     </main>
 
     <footer class="global-footer">
-      <p class="global-footer__logo"><img src="/img/logo/knickaoffice_symbol.svg" alt="" /></p>
+      <p class="global-footer__logo"><img src="/img/logo/knickaoffice_symbol.svg" alt=""></p>
       <p class="global-footer__copy">
         <small>All content Copyright ニッカオフィス / knicka office</small>
       </p>
     </footer>
   </div>
+  <script src="/js/top/script.js"></script>
   <script src="/js/contact/script.js"></script>
 </body>
 
