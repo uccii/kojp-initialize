@@ -35,7 +35,7 @@ const app = {
     publicPath: '/',
   },
   devServer: {
-    contentBase: './dist/html',
+    contentBase: './dist',
     watchContentBase: true,
     port: 3000,
     open: true,
