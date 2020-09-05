@@ -179,7 +179,7 @@ input[type="checkbox"].common-display-toggle-check {
 
 .global-nav {
   position: fixed;
-  bottom: 72px;
+  bottom: 96px;
   z-index: 1000;
   pointer-events: none;
 
@@ -699,7 +699,7 @@ input[type="checkbox"].common-display-toggle-check {
   }
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:600px) {
   .client-list {
     justify-content: flex-start;
 
@@ -711,6 +711,19 @@ input[type="checkbox"].common-display-toggle-check {
     }
   }
 }
+
+// @media screen and (min-width:768px) {
+//   .client-list {
+//     justify-content: flex-start;
+
+//     &__item {
+//       margin: 16px 0;
+//       padding: 0 16px;
+//       box-sizing: border-box;
+//       width: calc(33%);
+//     }
+//   }
+// }
 
 @media screen and (min-width:1024px) {
   .global-header {
