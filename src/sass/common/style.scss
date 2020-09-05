@@ -185,7 +185,7 @@ input[type="checkbox"].common-display-toggle-check {
 
   &__toggle-button {
     position: absolute;
-    top: calc(100% + 8px);
+    top: calc(100% + -16px);
     left: 16px;
     display: flex;
     width: 80px;
@@ -699,7 +699,7 @@ input[type="checkbox"].common-display-toggle-check {
   }
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:600px) {
   .client-list {
     justify-content: flex-start;
 
@@ -711,6 +711,19 @@ input[type="checkbox"].common-display-toggle-check {
     }
   }
 }
+
+// @media screen and (min-width:768px) {
+//   .client-list {
+//     justify-content: flex-start;
+
+//     &__item {
+//       margin: 16px 0;
+//       padding: 0 16px;
+//       box-sizing: border-box;
+//       width: calc(33%);
+//     }
+//   }
+// }
 
 @media screen and (min-width:1024px) {
   .global-header {
