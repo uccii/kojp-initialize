@@ -179,13 +179,13 @@ input[type="checkbox"].common-display-toggle-check {
 
 .global-nav {
   position: fixed;
-  bottom: 72px;
+  bottom: 96px;
   z-index: 1000;
   pointer-events: none;
 
   &__toggle-button {
     position: absolute;
-    top: calc(100% + -16px);
+    top: calc(100% + 8px);
     left: 16px;
     display: flex;
     width: 80px;
