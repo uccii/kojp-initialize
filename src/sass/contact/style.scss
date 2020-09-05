@@ -2,16 +2,14 @@
 
 .global-wrapper {
   background-color: #FFF;
-  margin: 0 32px;
 }
 
 
 .content-page-title {
-  color: #000000;
+  color: #2B2B2B;
   text-align: center;
   font-weight: normal;
   font-size: 2.4rem;
-  margin-top: 72px;
 }
 
 .contact-primary {
@@ -21,7 +19,7 @@
   &__description {
     margin-left: auto;
     margin-right: auto;
-    color: #707070;
+    color: #2B2B2B;
     margin-top: 56px;
   }
 
@@ -32,42 +30,49 @@
     width: 278px;
     margin-left: auto;
     margin-right: auto;
+    margin-top:52px;
   }
 
-  &__mail {
-    display: flex;
-    align-items: flex-end;
+  /*&__mail {
+    -display: flex;
+    -align-items: flex-end;
     margin-top: 53px;
     width: 278px;
     height: 40px;
-  }
+  } */
 
 
   &__mail-link {
-    display: flex;
-    align-items: flex-end;
-    flex-shrink: 0;
+    -display: flex;
+    -align-items: flex-end;
+    -flex-shrink: 0;
     text-decoration: none;
-    color: #707070;
-    border-bottom: 1px solid #707070;
-    height: 48px;
-    width: 248px;
+    color: #2B2B2B;
+    border-bottom: 1px solid #2B2B2B;
+    height: 40px;
+    width: 240px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   &__mail-icon {
     width: 40px;
-    flex-shrink: 0;
-    margin-right: 8px;
+    -flex-shrink: 0;
+    -margin-right: 8px;
+    padding: 0px 8px 8px 8px;
+    float: left;
 
     >img {
       outline: 0;
       width: 38px;
-      margin-bottom: -4px;
+      -margin-bottom: -4px;
+      padding-bottom: 4px;
+      float: left;
     }
   }
 
   &__mail-contents {
-    color: #707070;
+    color: #2B2B2B;
     flex-shrink: 0;
     font-size: 2.2rem;
     height: 40px;
@@ -78,7 +83,7 @@
 
     >a {
       text-decoration: none;
-      color: #707070;
+      color: #2B2B2B;
     }
   }
 
@@ -91,7 +96,7 @@
 
     >img {
       width: 22px;
-      margin-bottom: 8px;
+      margin-bottom: -12px;
     }
   }
 
@@ -109,8 +114,8 @@
     align-items: flex-end;
     flex-shrink: 0;
     text-decoration: none;
-    color: #707070;
-    border-bottom: 1px solid #707070;
+    color: #2B2B2B;
+    border-bottom: 1px solid #2B2B2B;
     height: 48px;
     width: 248px;
   }
@@ -128,7 +133,7 @@
   }
 
   &__phone-contents {
-    color: #707070;
+    color: #2B2B2B;
     flex-shrink: 0;
     font-size: 2.2rem;
     height: 40px;
@@ -139,7 +144,7 @@
 
     >a {
       text-decoration: none;
-      color: #707070;
+      color: #2B2B2B;
     }
   }
 
@@ -169,16 +174,17 @@
   }
 
   &__description {
-    color: #707070;
+    color: #2B2B2B;
     width: 100%;
     box-sizing: border-box;
     line-height: 21px;
+    text-align: center;
   }
 
   &__button-1st {
     flex-shrink: 0;
-    color: #707070;
-    border: solid 1px #707070;
+    color: #2B2B2B;
+    border: solid 1px #2B2B2B;
     background-color: #FFF;
     border-radius: 98px;
     width: 96px;
@@ -207,8 +213,8 @@
     resize: none;
     width: 263px;
     height: 172px;
-    color: #707070;
-    border: solid 1px #707070;
+    color: #2B2B2B;
+    border: solid 1px #2B2B2B;
     background-color: #FFF;
     padding: 8px 16px;
     list-style: none;
@@ -221,8 +227,8 @@
   &__button-2nd {
     display: block;
     margin-top: 16px;
-    color: #707070;
-    border: solid 1px #707070;
+    color: #2B2B2B;
+    border: solid 1px #2B2B2B;
     background-color: #FFF;
     border-radius: 98px;
     width: 288px;
@@ -234,7 +240,7 @@
 }
 
 .contact-border {
-  border-bottom: dashed 2px #A4A4A4;
+  border-bottom: dashed 2px #2B2B2B;
   width: 136px;
   display: block;
   /* 直前のdivに対してmargin-topがあたらない */
@@ -250,7 +256,7 @@
   &__description {
     margin-left: auto;
     margin-right: auto;
-    color: #707070;
+    color: #2B2B2B;
     margin-top: 56px;
     text-align: center;
   }
@@ -278,8 +284,8 @@
     align-items: flex-end;
     flex-shrink: 0;
     text-decoration: none;
-    color: #707070;
-    border-bottom: 1px solid #707070;
+    color: #2B2B2B;
+    border-bottom: 1px solid #2B2B2B;
     height: 48px;
     width: 248px;
   }
@@ -297,7 +303,7 @@
   }
 
   &__twitter-contents {
-    color: #707070;
+    color: #2B2B2B;
     flex-shrink: 0;
     font-size: 2.2rem;
     height: 40px;
@@ -308,7 +314,7 @@
 
     >a {
       text-decoration: none;
-      color: #707070;
+      color: #2B2B2B;
     }
   }
 
@@ -340,8 +346,8 @@
     align-items: flex-end;
     flex-shrink: 0;
     text-decoration: none;
-    color: #707070;
-    border-bottom: 1px solid #707070;
+    color: #2B2B2B;
+    border-bottom: 1px solid #2B2B2B;
     height: 48px;
     width: 248px;
   }
@@ -360,7 +366,7 @@
   }
 
   &__facebook-contents {
-    color: #707070;
+    color: #2B2B2B;
     flex-shrink: 0;
     font-size: 2.2rem;
     height: 40px;
@@ -371,7 +377,7 @@
 
     >a {
       text-decoration: none;
-      color: #707070;
+      color: #2B2B2B;
     }
   }
 
@@ -402,8 +408,8 @@
     align-items: flex-end;
     flex-shrink: 0;
     text-decoration: none;
-    color: #707070;
-    border-bottom: 1px solid #707070;
+    color: #2B2B2B;
+    border-bottom: 1px solid #2B2B2B;
     height: 48px;
     width: 248px;
   }
@@ -421,7 +427,7 @@
   }
 
   &__line-contents {
-    color: #707070;
+    color: #2B2B2B;
     flex-shrink: 0;
     font-size: 2.2rem;
     height: 40px;
@@ -432,7 +438,7 @@
 
     >a {
       text-decoration: none;
-      color: #707070;
+      color: #2B2B2B;
     }
   }
 
@@ -451,13 +457,13 @@
 }
 
 .contact-bye-text {
-  color: #707070;
+  color: #2B2B2B;
   margin-top: 72px;
 }
 
 .futter-logo {
   text-align: center;
-  color: #707070;
+  color: #2B2B2B;
   font-size: 0.75rem;
 }
 
@@ -486,10 +492,10 @@
       justify-content: space-between;
     }
 
-    &__mail {
+    /*&__mail {
       margin-top: 120px;
       width: 288px;
-    }
+    }*/
 
 
 
