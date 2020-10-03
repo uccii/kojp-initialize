@@ -24,144 +24,78 @@
   }
 
   &__primary-how {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 278px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top:52px;
+    padding : 24px;
   }
 
-  /*&__mail {
-    -display: flex;
-    -align-items: flex-end;
-    margin-top: 53px;
-    width: 278px;
+
+
+  &__mail{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  &__mail-icon{
     height: 40px;
-  } */
+    width: auto;
+    padding:4px;
+    > img{
+      height: auto;
+      width: 40px;
+      padding:4px;
+    }
+  }
 
-
-  &__mail-link {
-    -display: flex;
-    -align-items: flex-end;
-    -flex-shrink: 0;
-    text-decoration: none;
+  &__mail-contents{
+    font-size: 2.2rem;
     color: #2B2B2B;
-    border-bottom: 1px solid #2B2B2B;
-    height: 40px;
+    text-decoration: none;
+  }
+
+  &__mail-copy{
+    height: 24px;
+    width: auto;
+    padding: 10px;
+  }
+
+  &__border{
+    display: block;
     width: 240px;
-    margin-left: auto;
-    margin-right: auto;
+    height: 1px;
+    border-top: 1px solid #2B2B2B;
   }
 
-  &__mail-icon {
-    width: 40px;
-    -flex-shrink: 0;
-    -margin-right: 8px;
-    padding: 0px 8px 8px 8px;
-    float: left;
 
-    >img {
-      outline: 0;
-      width: 38px;
-      -margin-bottom: -4px;
-      padding-bottom: 4px;
-      float: left;
+
+  &__phone{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 54px;
+  }
+
+  &__phone-icon{
+    height: 40px;
+    width: auto;
+    padding:4px;
+    > img{
+      height: auto;
+      width: 36px;
+      padding:4px;
     }
   }
 
-  &__mail-contents {
-    color: #2B2B2B;
-    flex-shrink: 0;
+  &__phone-contents{
     font-size: 2.2rem;
-    height: 40px;
-    width: 171px;
-    flex-shrink: 0;
-    text-align: center;
-    font-style: normal;
-
-    >a {
-      text-decoration: none;
-      color: #2B2B2B;
-    }
-  }
-
-  &__mail-copy {
-    width: 32px;
-    flex-shrink: 0;
-    width: 38px;
-    background: none;
-    border: none;
-
-    >img {
-      width: 22px;
-      margin-bottom: -12px;
-    }
-  }
-
-  &__phone {
-    display: flex;
-    align-items: flex-end;
-    margin-top: 53px;
-    width: 278px;
-    height: 40px;
-  }
-
-
-  &__phone-link {
-    display: flex;
-    align-items: flex-end;
-    flex-shrink: 0;
+    color: #2B2B2B;
     text-decoration: none;
-    color: #2B2B2B;
-    border-bottom: 1px solid #2B2B2B;
-    height: 48px;
-    width: 248px;
   }
 
-  &__phone-icon {
-    width: 40px;
-    flex-shrink: 0;
-    margin-right: 8px;
-
-    >img {
-      outline: 0;
-      width: 38px;
-      margin-bottom: -4px;
-    }
+  &__phone-copy{
+    height: 24px;
+    width: auto;
+    padding: 10px;
   }
-
-  &__phone-contents {
-    color: #2B2B2B;
-    flex-shrink: 0;
-    font-size: 2.2rem;
-    height: 40px;
-    width: 171px;
-    flex-shrink: 0;
-    text-align: center;
-    font-style: normal;
-
-    >a {
-      text-decoration: none;
-      color: #2B2B2B;
-    }
-  }
-
-  &__phone-copy {
-    width: 32px;
-    flex-shrink: 0;
-    width: 38px;
-    background: none;
-    border: none;
-
-    >img {
-      width: 22px;
-      margin-bottom: 8px;
-    }
-  }
-
-
 
 }
 
@@ -212,7 +146,7 @@
     overflow: hidden;
     resize: none;
     width: 263px;
-    height: 172px;
+    height: 360px;
     color: #2B2B2B;
     border: solid 1px #2B2B2B;
     background-color: #FFF;
@@ -240,13 +174,15 @@
 }
 
 .contact-border {
-  border-bottom: dashed 2px #2B2B2B;
-  width: 136px;
-  display: block;
-  /* 直前のdivに対してmargin-topがあたらない */
   margin-top: 64px;
   margin-left: auto;
   margin-right: auto;
+  display: block;
+  content: '';
+  width: 40px;
+  height: 1px;
+  margin: 52px auto 32px;
+  border-top: 1px dashed #A4A4A4;
 }
 
 
@@ -276,6 +212,7 @@
     margin-top: 53px;
     width: 278px;
     height: 40px;
+    padding-left: 8px;
   }
 
 
@@ -299,6 +236,7 @@
       outline: 0;
       width: 38px;
       margin-bottom: -4px;
+      padding-left: 4px;
     }
   }
 
@@ -338,6 +276,7 @@
     margin-top: 53px;
     width: 278px;
     height: 40px;
+    padding-left: 8px;
   }
 
 
@@ -362,6 +301,7 @@
       width: 22px;
       margin-bottom: -4px;
       padding-left: 4px;
+      padding-left: 12px;
     }
   }
 
@@ -400,6 +340,7 @@
     margin-top: 53px;
     width: 278px;
     height: 40px;
+    padding-left: 8px;
   }
 
 
@@ -423,6 +364,7 @@
       outline: 0;
       width: 38px;
       margin-bottom: -4px;
+      padding-left: 4px;
     }
   }
 
@@ -486,6 +428,7 @@
 
 
     &__primary-how {
+      padding : 24px;
       width: 630px;
       display: flex;
       align-items: flex-end;
