@@ -55,22 +55,30 @@ const commonWork = {
 };
 
 const work = {
-  slideToggle: (_e, _progressCallback) => {
+  slideToggle: (_e, _parallaxMirrorElements) => {
     const $target = $(
       document.querySelector(
         `[data-slide-content="${_e.currentTarget.dataset.slideTarget}"]`
       )
     );
+    const adjustPosition = (_numericDifference) => {
+      _parallaxMirrorElements.forEach((_element) => {
+        const element = _element;
+        element.style.top = `${_numericDifference}px`;
+      });
+    };
     if ($target.is(':visible')) {
       $target.slideUp({
-        progress: () => {
-          _progressCallback.stylingParallax();
+        progress: (_animation) => {
+          adjustPosition(_animation.elem.offsetHeight
+            + parseInt(_animation.elem.style.marginBottom, 10));
         }
       });
     } else if ($target.is(':hidden')) {
       $target.slideDown({
-        progress: () => {
-          _progressCallback.stylingParallax();
+        progress: (_animation) => {
+          adjustPosition(_animation.elem.offsetHeight
+            + parseInt(_animation.elem.style.marginBottom, 10));
         }
       });
     }
@@ -122,12 +130,14 @@ const init = () => {
   const styleParallax = new work.Parallax(parallaxTargets);
   styleParallax.stylingParallax();
 
+  const parallaxMirrorElements = document.querySelectorAll('.parallax-mirror');
+
   const slideToggleButton = document.querySelectorAll(
     '.js-slide-toggle-button'
   );
   slideToggleButton.forEach((_element) => {
     _element.addEventListener('click', (_e) => {
-      work.slideToggle(_e, styleParallax);
+      work.slideToggle(_e, parallaxMirrorElements);
     });
   });
 
