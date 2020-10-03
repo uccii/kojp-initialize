@@ -127,6 +127,10 @@ Object.assign(
       './src/js/contact/script.js',
       './src/sass/contact/style.scss',
     ],
+    faq: [
+      './src/js/faq/script.js',
+      './src/sass/faq/style.scss',
+    ],
   },
 );
 
