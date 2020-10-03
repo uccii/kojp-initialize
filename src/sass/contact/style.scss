@@ -15,6 +15,12 @@
 .contact-primary {
   font-style: normal;
 
+  &__primary-how{
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+  }
+
 
   &__description {
     margin-left: auto;
@@ -23,11 +29,11 @@
     margin-top: 56px;
   }
 
-  &__primary-how {
+  &__mail-content {
     padding : 24px;
+    width: 280px;
+    height: 40px;
   }
-
-
 
   &__mail{
     display: flex;
@@ -65,13 +71,17 @@
     border-top: 1px solid #2B2B2B;
   }
 
-
+  &__phone-content {
+    padding : 24px;
+    width: 280px;
+    height: 40px;
+    -margin-top: 54px;
+  }
 
   &__phone{
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    margin-top: 54px;
   }
 
   &__phone-icon{
@@ -132,6 +142,21 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 32px;
+  }
+  &__faq-link{
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid;
+    border: 1px solid #707070;
+    border-radius: 98px;
+    width: 206px;
+    height: 48px;
+    > a{
+      margin-left: auto;
+      margin-right: auto;
+      text-decoration: none;
+      color: #707070;
+    }
   }
 
   &__copy-frame {
@@ -435,12 +460,6 @@
       justify-content: space-between;
     }
 
-    /*&__mail {
-      margin-top: 120px;
-      width: 288px;
-    }*/
-
-
 
     &__mail-icon-contents {
       margin-top: 0;
@@ -448,7 +467,7 @@
 
     &__phone {
       margin-top: 0px;
-      width: 288px;
+      width: 280px;
     }
 
     &__phone-icon-contents {
