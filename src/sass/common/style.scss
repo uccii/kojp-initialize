@@ -27,6 +27,11 @@
 html {
   font-size: 62.5%;
   line-height: 1.8;
+  visibility: hidden;
+  &.wf-active,
+  &.loading-delay {
+    visibility: visible;
+  }
 }
 
 body {
@@ -236,9 +241,11 @@ input[type="checkbox"].common-display-toggle-check {
     >a {
       >span {
         font-size: 1.2rem;
+        letter-spacing: -1px;
 
         &:first-child {
-          font-size: 1.5rem;
+          font-size: 1.4rem;
+          letter-spacing: 0;
         }
       }
     }
