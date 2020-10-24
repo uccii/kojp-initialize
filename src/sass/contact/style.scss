@@ -16,6 +16,8 @@
   font-style: normal;
 
   &__primary-how{
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     flex-wrap: wrap;
     width: auto;
@@ -27,12 +29,16 @@
     margin-right: auto;
     color: #2B2B2B;
     margin-top: 56px;
+    margin-bottom: 52px;
   }
 
   &__mail-content {
-    padding : 24px;
+    margin-left: auto;
+    margin-right: auto;
+    padding : 16px;
     width: 280px;
     height: 40px;
+    margin-bottom: 28px;
   }
 
   &__mail{
@@ -72,10 +78,12 @@
   }
 
   &__phone-content {
-    padding : 24px;
+    margin-left: auto;
+    margin-right: auto;
+    padding : 16px;
     width: 280px;
     height: 40px;
-    -margin-top: 54px;
+    margin-bottom: 28px;
   }
 
   &__phone{
@@ -144,18 +152,20 @@
     margin-top: 32px;
   }
   &__faq-link{
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     border: 1px solid;
     border: 1px solid #707070;
     border-radius: 98px;
     width: 206px;
-    height: 48px;
+    padding: 9px;
+    margin-bottom: 50px;
     > a{
-      margin-left: auto;
-      margin-right: auto;
+      margin: auto;
       text-decoration: none;
       color: #707070;
+    }
+    &__faq-text{
+      margin: auto;
     }
   }
 
@@ -223,204 +233,148 @@
   }
 
   &__secondary-how {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 278px;
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
   }
 
-  &__twitter {
-    display: flex;
-    align-items: flex-end;
-    margin-top: 53px;
-    width: 278px;
+  &__twitter-content {
+    margin-left: auto;
+    margin-right: auto;
+    padding : 16px;
+    width: 280px;
     height: 40px;
-    padding-left: 8px;
+    margin-bottom: 28px;
   }
 
-
-  &__twitter-link {
+  &__twitter{
     display: flex;
     align-items: flex-end;
-    flex-shrink: 0;
-    text-decoration: none;
-    color: #2B2B2B;
-    border-bottom: 1px solid #2B2B2B;
-    height: 48px;
-    width: 248px;
+    justify-content: space-between;
   }
 
-  &__twitter-icon {
-    width: 40px;
-    flex-shrink: 0;
-    margin-right: 8px;
-
-    >img {
-      outline: 0;
-      width: 38px;
-      margin-bottom: -4px;
-      padding-left: 4px;
+  &__twitter-icon{
+    height: 40px;
+    width: auto;
+    padding:4px;
+    > img{
+      height: auto;
+      width: 40px;
+      padding:4px;
     }
   }
 
-  &__twitter-contents {
-    color: #2B2B2B;
-    flex-shrink: 0;
+  &__twitter-contents{
     font-size: 2.2rem;
-    height: 40px;
-    width: 171px;
-    flex-shrink: 0;
-    text-align: center;
-    font-style: normal;
-
-    >a {
-      text-decoration: none;
-      color: #2B2B2B;
-    }
-  }
-
-  &__twitter-copy {
-    width: 32px;
-    flex-shrink: 0;
-    width: 38px;
-    background: none;
-    border: none;
-
-    >img {
-      width: 22px;
-      margin-bottom: 8px;
-    }
-  }
-
-
-  &__facebook {
-    display: flex;
-    align-items: flex-end;
-    margin-top: 53px;
-    width: 278px;
-    height: 40px;
-    padding-left: 8px;
-  }
-
-
-  &__facebook-link {
-    display: flex;
-    align-items: flex-end;
-    flex-shrink: 0;
+    color: #2B2B2B;
     text-decoration: none;
-    color: #2B2B2B;
-    border-bottom: 1px solid #2B2B2B;
-    height: 48px;
-    width: 248px;
   }
 
-  &__facebook-icon {
-    width: 40px;
-    flex-shrink: 0;
-    margin-right: 8px;
+  &__twitter-copy{
+    height: 24px;
+    width: auto;
+    padding: 10px;
+  }
 
-    >img {
-      outline: 0;
-      width: 22px;
-      margin-bottom: -4px;
-      padding-left: 4px;
-      padding-left: 12px;
+  &__border{
+    display: block;
+    width: 240px;
+    height: 1px;
+    border-top: 1px solid #2B2B2B;
+  }
+
+  &__facebook-content {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top : 14px;
+    padding-bottom : 16px;
+    padding-left : 16px;
+    padding-right : 16px;
+    width: 280px;
+    height: 40px;
+    margin-bottom: 28px;
+  }
+
+  &__facebook{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  &__facebook-icon{
+    height: 40px;
+    width: auto;
+    padding-top:0px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 12px;
+    > img{
+      height: 44px;
+      width: auto;
+      padding: 4px;
     }
   }
 
-  &__facebook-contents {
-    color: #2B2B2B;
-    flex-shrink: 0;
+  &__facebook-contents{
     font-size: 2.2rem;
-    height: 40px;
-    width: 171px;
-    flex-shrink: 0;
-    text-align: center;
-    font-style: normal;
-
-    >a {
-      text-decoration: none;
-      color: #2B2B2B;
-    }
-  }
-
-  &__facebook-copy {
-    width: 32px;
-    flex-shrink: 0;
-    width: 38px;
-    background: none;
-    border: none;
-
-    >img {
-      width: 22px;
-      margin-bottom: 8px;
-    }
-  }
-
-  &__line {
-    display: flex;
-    align-items: flex-end;
-    margin-top: 53px;
-    width: 278px;
-    height: 40px;
-    padding-left: 8px;
-  }
-
-
-  &__line-link {
-    display: flex;
-    align-items: flex-end;
-    flex-shrink: 0;
+    color: #2B2B2B;
     text-decoration: none;
-    color: #2B2B2B;
-    border-bottom: 1px solid #2B2B2B;
-    height: 48px;
-    width: 248px;
   }
 
-  &__line-icon {
-    width: 40px;
-    flex-shrink: 0;
-    margin-right: 8px;
-
-    >img {
-      outline: 0;
-      width: 38px;
-      margin-bottom: -4px;
-      padding-left: 4px;
-    }
+  &__facebook-copy{
+    height: 24px;
+    width: auto;
+    padding: 10px;
   }
 
-  &__line-contents {
-    color: #2B2B2B;
-    flex-shrink: 0;
-    font-size: 2.2rem;
+  &__border{
+    display: block;
+    width: 240px;
+    height: 1px;
+    border-top: 1px solid #2B2B2B;
+  }
+
+
+  &__line-content {
+    margin-left: auto;
+    margin-right: auto;
+    padding : 16px;
+    width: 280px;
     height: 40px;
-    width: 171px;
-    flex-shrink: 0;
-    text-align: center;
-    font-style: normal;
+    margin-bottom: 28px;
+  }
 
-    >a {
-      text-decoration: none;
-      color: #2B2B2B;
+  &__line{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  &__line-icon{
+    height: 40px;
+    width: auto;
+    padding:4px;
+    > img{
+      height: auto;
+      width: 36px;
+      padding:4px;
     }
   }
 
-  &__line-copy {
-    width: 32px;
-    flex-shrink: 0;
-    width: 38px;
-    background: none;
-    border: none;
-
-    >img {
-      width: 22px;
-      margin-bottom: 8px;
-    }
+  &__line-contents{
+    font-size: 2.2rem;
+    color: #2B2B2B;
+    text-decoration: none;
   }
+
+  &__line-copy{
+    height: 24px;
+    width: auto;
+    padding: 10px;
+  }
+
 }
 
 .contact-bye-text {
@@ -449,12 +403,13 @@
       width: 600px;
       margin-left: auto;
       margin-right: auto;
+      margin-bottom: 52px;
     }
 
 
     &__primary-how {
       padding : 24px;
-      width: 630px;
+      width: auto;
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
@@ -514,10 +469,6 @@
       width: 288px;
     }
 
-    &__facebook-icon-contents {
-      margin-top: 56px;
-    }
-
     &__line {
       margin-top: 50px;
       width: 288px;
@@ -533,7 +484,7 @@
 
   .contact-secondary {
     &__description {
-      text-align: center;
+      -text-align: center;
     }
   }
 
@@ -549,10 +500,12 @@
   .contact-primary {
 
     &__description {
-      width: 600px;
+      -width: 600px;
+      -margin-bottom: 52px;
     }
   }
 }
+
 
 @media screen and (min-width:600px) {
   /*　画面サイズが600pxからはここを読み込む　*/
