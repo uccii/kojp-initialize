@@ -92,6 +92,7 @@ const app = {
   resolve: {
     extensions: ['.js'],
   },
+  devtool: 'cheap-module-eval-source-map',
   plugins: [
     new CopyWebpackPlugin([{
       from: path.resolve(__dirname, 'src/img/'),

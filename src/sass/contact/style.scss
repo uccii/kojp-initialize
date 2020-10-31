@@ -391,14 +391,10 @@
 @media screen and (min-width:768px) {
   /*　画面サイズが768pxからはここを読み込む　*/
 
-  .global-wrapper {
-    width: 768px;
+  .contact-primary {
+    width: 672px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 72px;
-  }
-
-  .contact-primary {
     &__description {
       width: 600px;
       margin-left: auto;
@@ -494,14 +490,14 @@
 }
 
 
-@media screen and (min-width:650px) {
+@media screen and (min-width:672px) {
 
   /*　画面サイズが650pxからはここを読み込む　*/
-  .contact-primary {
+  .contact-secondary {
 
-    &__description {
-      -width: 600px;
-      -margin-bottom: 52px;
+    &__line-content {
+      margin-left: 0px;
+      margin-right: 0px;
     }
   }
 }

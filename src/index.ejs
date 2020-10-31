@@ -1,3 +1,8 @@
+<% var pageData = {
+  pageTitle: 'knickaoffice',
+  pageGlobalNavActive: 'top',
+  pageType: 'top'
+}; %>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -43,7 +48,7 @@
 
 <body>
   <div class="global-wrapper">
-  <%- include('component/_header') %>
+<%- include('component/_header', {page: pageData}) %>
     <main class="main-content-wrapper">
       <div class="top-statement">
         <p class="top-statement__title">ぜんぶ、<br>使いやすくする</p>
@@ -275,12 +280,7 @@
       </div>
     </main>
 
-    <footer class="global-footer">
-      <p class="global-footer__logo"><img src="/img/logo/knickaoffice_symbol.svg" alt=""></p>
-      <p class="global-footer__copy">
-        <small>All content Copyright ニッカオフィス / knicka office</small>
-      </p>
-    </footer>
+<%- include('component/_footer', {page: pageData}) %>
   </div>
   <script src="/js/top/script.js"></script>
 </body>
