@@ -494,14 +494,14 @@
 }
 
 
-@media screen and (min-width:650px) {
+@media screen and (min-width:672px) {
 
   /*　画面サイズが650pxからはここを読み込む　*/
-  .contact-primary {
+  .contact-secondary {
 
-    &__description {
-      -width: 600px;
-      -margin-bottom: 52px;
+    &__line-content {
+      margin-left: 0px;
+      margin-right: 0px;
     }
   }
 }
