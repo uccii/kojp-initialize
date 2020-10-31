@@ -43,7 +43,7 @@
 
 <body>
   <div class="global-wrapper">
-    <%- include('../component/_header') %>
+<%- include('../component/_header') %>
     <main class="main-content-wrapper">
 
       <h2 class="content-page-title">CONTACT / お問い合わせ</h2>
@@ -55,36 +55,32 @@
           </p>
         </div>
         <div class="contact-primary__primary-how">
-          <div class="contact-primary__mail">
-            <a href="mailto:s@knickaoffice.jp" class="contact-primary__mail-link">
-              <div class="contact-primary__mail-icon">
-                <img src="/img/contact/mail.svg" alt="mail">
-              </div>
-              <div class="contact-primary__mail-contents" id="mail">s@knickaoffice.jp</div>
-            </a>
-            <button class="contact-primary__mail-copy">
-              <img src="/img/contact/copy.svg" alt="copy-mail">
-            </button>
+
+          <div class="contact-primary__mail-content">
+            <div class="contact-primary__mail">
+              <a href="mailto:s@knickaoffice.jp"  class="contact-primary__mail-icon" ><img src="/img/contact/mail.svg" alt="mail"></a>
+              <a href="mailto:s@knickaoffice.jp" class="contact-primary__mail-contents" id="mail">s@knickaoffice.jp</a>
+              <img src="/img/contact/copy.svg" alt="copy-mail" class="contact-primary__mail-copy">
+            </div>
+            <span class="contact-primary__border"></span>
           </div>
 
-          <div class="contact-primary__phone">
-            <a href="tel:+81-045-516-2763" class="contact-primary__phone-link">
-              <div class="contact-primary__phone-icon">
-                <img src="/img/contact/phone.svg" alt="phone">
-              </div>
-              <div class="contact-primary__phone-contents" id="phone">045-516-2763</div>
-            </a>
-            <button class="contact-primary__phone-copy">
-              <img src="/img/contact/copy.svg" alt="copy-phone">
-            </button>
+          <div class="contact-primary__phone-content">
+            <div class="contact-primary__phone">
+              <a href="tel:+81-045-516-2763"  class="contact-primary__phone-icon" ><img src="/img/contact/phone.svg" alt="phone"></a>
+              <a href="tel:+81-045-516-2763" class="contact-primary__phone-contents" id="phone">045-516-2763</a>
+              <img src="/img/contact/copy.svg" alt="copy-phone" class="contact-primary__phone-copy">
+            </div>
+            <span class="contact-primary__border"></span>
           </div>
+
         </div>
       </address>
 
       <div class="contact-tpl">
         <div class="contact-tpl__button-1st_wrapper">
           <p class="contact-tpl__description">
-            お問い合わせ用のテンプレートをご用意しています（任意）
+            問い合わせ用テンプレート（ご利用は任意です）
           </p>
           <button id="contact_tpl_button_1st" class="contact-tpl__button-1st">
             表示する
@@ -94,12 +90,18 @@
         <div class="contact-tpl__button-2nd_wrapper" id="contact_tpl">
           <div class="contact-tpl__copy-frame">
             <textarea class="contact-tpl__copy-text" readonly="readonly">
-お名前：
-貴社名：
-ご希望の返信先（メール、電話など）：
-お問い合わせの内容（デザインの依頼、見積もりの依頼、講演の依頼、など）：
-対象となるサービスのURLなど：
-</textarea>
+ニッカオフィス合同会社担当者御中 以下、ご確認下さい。
+
+【お名前】内山賢一
+【貴社名】ニッカオフィス合同会社
+【希望連絡先】
+s@knickaoffice.jp もしくは
+045-516-2763
+【問い合わせ内容】
+デザインの依頼、見積もりの依頼、講演の依頼
+【対象サービスのURL】
+https://knickaoffice.jp/
+            </textarea>
           </div>
           <button class="contact-tpl__button-2nd">
             テキストをコピーする
@@ -110,63 +112,53 @@
       <span class="contact-border"></span>
       <div class="contact-secondary">
         <div class="contact-secondary__description">
+          <div class="contact-tpl__faq-link">
+            <a href="/faq/"  class="contact-tpl__faq-text">よくある質問（FAQ）</a>
+          </div>
           <p>
             以下のアプリでもお問い合わせも可能です
           </p>
         </div>
 
         <div class="contact-secondary__secondary-how">
-          <div class="contact-secondary__twitter">
-            <a href="https://twitter.com/knickaoffice" class="contact-secondary__twitter-link">
-              <div class="contact-secondary__twitter-icon">
-                <img src="/img/contact/twitter.svg" alt="twitter">
-              </div>
-              <div class="contact-secondary__twitter-contents" id="twitter">@knickaoffice</div>
-            </a>
-            <button class="contact-secondary__twitter-copy">
-              <img src="/img/contact/copy.svg" alt="copy-twitter">
-            </button>
+
+          <div class="contact-secondary__twitter-content">
+            <div class="contact-secondary__twitter">
+              <a href="https://twitter.com/knickaoffice"  class="contact-secondary__twitter-icon" ><img src="/img/contact/twitter.svg" alt="twitter"></a>
+              <a href="https://twitter.com/knickaoffice" class="contact-secondary__twitter-contents" id="twitter">@knickaoffice</a>
+              <img src="/img/contact/copy.svg" alt="copy-twitter" class="contact-secondary__twitter-copy">
+            </div>
+            <span class="contact-secondary__border"></span>
           </div>
 
-          <div class="contact-secondary__facebook">
-            <a href="fb://profile/194345830616701" class="contact-secondary__facebook-link">
-              <div class="contact-secondary__facebook-icon">
-                <img src="/img/contact/facebook-f.svg" alt="facebook">
-              </div>
-              <div class="contact-secondary__facebook-contents" id="facebook">knickaoffice</div>
-            </a>
-            <button class="contact-secondary__facebook-copy">
-              <img src="/img/contact/copy.svg" alt="copy-facebook">
-            </button>
+          <div class="contact-secondary__facebook-content">
+            <div class="contact-secondary__facebook">
+              <a href="fb://profile/194345830616701"  class="contact-secondary__facebook-icon" ><img src="/img/contact/facebook-f.svg" alt="facebook"></a>
+              <a href="fb://profile/194345830616701" class="contact-secondary__facebook-contents" id="facebook">knickaoffice</a>
+              <img src="/img/contact/copy.svg" alt="copy-facebook" class="contact-secondary__facebook-copy">
+            </div>
+            <span class="contact-secondary__border"></span>
           </div>
 
-          <div class="contact-secondary__line">
-            <a href="https://line.me/R/ti/p/@cwr6960h" class="contact-secondary__line-link">
-              <div class="contact-secondary__line-icon">
-                <img src="/img/contact/line.svg" alt="line">
-              </div>
-              <div class="contact-secondary__line-contents" id="line">knickaoffice</div>
-            </a>
-            <button class="contact-secondary__line-copy">
-              <img src="/img/contact/copy.svg" alt="copy-line">
-            </button>
+          <div class="contact-secondary__line-content">
+            <div class="contact-secondary__line">
+              <a href="https://line.me/R/ti/p/@cwr6960h"  class="contact-secondary__line-icon" ><img src="/img/contact/line.svg" alt="line"></a>
+              <a href="https://line.me/R/ti/p/@cwr6960h" class="contact-secondary__line-contents" id="line">knickaoffice</a>
+              <img src="/img/contact/copy.svg" alt="copy-line" class="contact-secondary__line-copy">
+            </div>
+            <span class="contact-secondary__border"></span>
           </div>
-        </div>
+
       </div>
 
       <div class="contact-bye-text">
         いいご縁がありますように！ご連絡お待ちしています。
       </div>
+      </div>
     </main>
 
-    <footer class="global-footer">
-      <p class="global-footer__logo"><img src="/img/logo/knickaoffice_symbol.svg" alt=""></p>
-      <p class="global-footer__copy">
-        <small>All content Copyright ニッカオフィス / knicka office</small>
-      </p>
-    </footer>
+<%- include('../component/_footer') %>
   </div>
-  <script src="/js/top/script.js"></script>
   <script src="/js/contact/script.js"></script>
 </body>
 
