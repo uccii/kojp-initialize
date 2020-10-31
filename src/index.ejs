@@ -1,3 +1,8 @@
+<% var pageData = {
+  pageTitle: 'knickaoffice',
+  pageGlobalNavActive: 'top',
+  pageType: 'top'
+}; %>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -43,7 +48,7 @@
 
 <body>
   <div class="global-wrapper">
-  <%- include('component/_header') %>
+<%- include('component/_header', {page: pageData}) %>
     <main class="main-content-wrapper">
       <div class="top-statement">
         <p class="top-statement__title">ぜんぶ、<br>使いやすくする</p>
@@ -51,13 +56,13 @@
       </div>
 
       <nav class="top-page-nav">
-        <ul class="top-page-nav__menu common-nav-list">
+        <ul class="js-smoothTrigger top-page-nav__menu common-nav-list">
           <li class="top-page-nav__item common-nav-list__item"><a
-              href="/#TOP_HEADING_ABOUT"><span>About</span><span>オフィスのこと</span></a>
+              href="#TOP_HEADING_ABOUT"><span>About</span><span>オフィスのこと</span></a>
           </li>
           <li class="top-page-nav__item common-nav-list__item"><a
-              href="/#TOP_HEADING_CLIENT"><span>Client</span><span>顧客</span></a></li>
-          <li class="top-page-nav__item common-nav-list__item"><a href="/blog/"><span>Blog</span><span>ブログ</span></a>
+              href="#TOP_HEADING_CLIENT"><span>Client</span><span>顧客</span></a></li>
+          <li class="top-page-nav__item common-nav-list__item"><a href="/blog/"><span>Essay</span><span>エッセイ</span></a>
           </li>
           <li class="top-page-nav__item common-nav-list__item"><a
               href="/contact/"><span>Contact</span><span>お問い合わせ</span></a>
@@ -275,12 +280,7 @@
       </div>
     </main>
 
-    <footer class="global-footer">
-      <p class="global-footer__logo"><img src="/img/logo/knickaoffice_symbol.svg" alt=""></p>
-      <p class="global-footer__copy">
-        <small>All content Copyright ニッカオフィス / knicka office</small>
-      </p>
-    </footer>
+<%- include('component/_footer', {page: pageData}) %>
   </div>
   <script src="/js/top/script.js"></script>
 </body>
