@@ -62,7 +62,7 @@ h3 {
   }
 
   &__content-height {
-    width: 560px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -81,7 +81,6 @@ h3 {
     line-height: 2.1;
     writing-mode: vertical-rl;
     -ms-writing-mode: tb-rl;
-    padding-right: 76px;
     width: 100%;
 
     >p {
@@ -212,10 +211,15 @@ h3 {
   }
 
   .blog-main {
+    &__content-height {
+      width: 560px;
+    }
+
     &__content {
       width: 560px;
       margin-right: auto;
       margin-left: auto;
+      padding-right: 76px;
     }
 
     &__content-right {
