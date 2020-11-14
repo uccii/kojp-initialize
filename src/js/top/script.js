@@ -63,7 +63,6 @@ const work = {
       this.targets.forEach((_element) => {
         $(_element).parallax({
           imageSrc: _element.dataset.parallaxImageSrc,
-          overScrollFix: true
         });
       });
     }
@@ -73,9 +72,10 @@ const work = {
 const init = () => {
   commonInit();
 
-  const parallaxTargets = document.querySelectorAll('.js-parallax-window');
-  const styleParallax = new work.Parallax(parallaxTargets);
-  styleParallax.stylingParallax();
+  jarallax(document.querySelectorAll('.js-parallax-window'), {
+    imgElement: '.common-fluid-image__parallax-image',
+    speed: 0.2
+  });
 
   const parallaxMirrorElements = document.querySelectorAll('.parallax-mirror');
 
