@@ -6,32 +6,16 @@ window.jQuery = $;
 require('jquery-parallax.js');
 
 const work = {
-  slideToggle: (_e, _parallaxMirrorElements) => {
+  slideToggle: (_e) => {
     const $target = $(
       document.querySelector(
         `[data-slide-content="${_e.currentTarget.dataset.slideTarget}"]`
       )
     );
-    const adjustPosition = (_numericDifference) => {
-      _parallaxMirrorElements.forEach((_element) => {
-        const element = _element;
-        element.style.top = `${_numericDifference}px`;
-      });
-    };
     if ($target.is(':visible')) {
-      $target.slideUp({
-        progress: (_animation) => {
-          adjustPosition(_animation.elem.offsetHeight +
-            parseInt(_animation.elem.style.marginBottom, 10));
-        }
-      });
+      $target.slideUp();
     } else if ($target.is(':hidden')) {
-      $target.slideDown({
-        progress: (_animation) => {
-          adjustPosition(_animation.elem.offsetHeight +
-            parseInt(_animation.elem.style.marginBottom, 10));
-        }
-      });
+      $target.slideDown();
     }
   },
   ToggleLabel: class {
@@ -72,19 +56,12 @@ const work = {
 const init = () => {
   commonInit();
 
-  jarallax(document.querySelectorAll('.js-parallax-window'), {
-    imgElement: '.common-fluid-image__parallax-image',
-    speed: 0.2
-  });
-
-  const parallaxMirrorElements = document.querySelectorAll('.parallax-mirror');
-
   const slideToggleButton = document.querySelectorAll(
     '.js-slide-toggle-button'
   );
   slideToggleButton.forEach((_element) => {
     _element.addEventListener('click', (_e) => {
-      work.slideToggle(_e, parallaxMirrorElements);
+      work.slideToggle(_e);
     });
   });
 
