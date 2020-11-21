@@ -59,4 +59,28 @@ export default function () {
     document.body.removeChild(area);
     alert('コピーしました');
   }
+
+    //モーダル挙動
+    $('.credit__open').click(function () {
+      $('#producer').fadeIn();
+    });
+    $('.producer__close').click(function () {
+      $('#producer').fadeOut();
+    });
+    
+    /*
+    $(function(){
+      var scrollPosition;
+      $('.mcredit__open').click(function () {
+        scrollPosition = $(window).scrollTop();
+        $('body').addClass('fixed').css({'top': -scrollPosition});
+      });
+      $('.producer__close').click(function () {
+        $('body').removeClass('fixed').css({'top': 0});
+        window.scrollTo( 0 , scrollPosition );
+      });
+    });
+    */
+
+
 }
