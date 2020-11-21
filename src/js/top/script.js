@@ -3,7 +3,6 @@ import * as lib from '../common/lib';
 import commonInit from '../common/init';
 
 window.jQuery = $;
-require('jquery-parallax.js');
 
 const work = {
   slideToggle: (_e) => {
