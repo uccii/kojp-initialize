@@ -395,7 +395,7 @@
   &__modal{
   position: fixed;
   z-index: 2000;
-  top: 45px;
+  top: 0px;
   background-color: rgba(255, 255, 255, 0.95);
   border-radius: 10px;
   width: 100%;
@@ -411,6 +411,8 @@
 
   &__content{
     width: 280px;
+    padding-left: 48px;
+    padding-right: 48px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -420,16 +422,68 @@
     justify-content: space-between;
     padding-bottom: 42px;
   }
+
+  &__name-wrapper{
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 42px;
+    height: 24px;
+  }
+
+  &__kenichi-en{
+        &:before {
+          content: '';
+          display: inline-block;
+          background: #707070;
+          height: 16px;
+          width: 1px;
+          margin-right: 4px;
+          margin-left: 4px;
+          transform: translateY(0.1rem);
+          }
+  }
+
   &__takuro{
     display: flex;
     justify-content: space-between;
     padding-bottom: 42px;
   }
+
+  &__takuro-en{
+        &:before {
+          content: '';
+          display: inline-block;
+          background: #707070;
+          height: 16px;
+          width: 1px;
+          margin-right: 4px;
+          margin-left: 4px;
+          transform: translateY(0.1rem);
+          }
+  }
+
   &__kaho{
     display: flex;
     justify-content: space-between;
     padding-bottom: 42px;
   }
+
+  &__kaho-en{
+    &:before {
+      content: '';
+      display: inline-block;
+      background: #707070;
+      height: 16px;
+      width: 1px;
+      margin-right: 4px;
+      margin-left: 4px;
+      transform: translateY(0.1rem);
+      }
+}
 
   &__close{
     >p{
