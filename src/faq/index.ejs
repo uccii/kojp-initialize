@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-Uh-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script>
+    (function (d) {
+      var config = {
+          kitId: 'xcm6mon',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h = d.documentElement,
+        t = setTimeout(function () {
+          h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+        }, config.scriptTimeout),
+        tk = d.createElement("script"),
+        f = false,
+        s = d.getElementsByTagName("script")[0],
+        a;
+      h.className += " wf-loading";
+      tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+      tk.async = true;
+      tk.onload = tk.onreadystatechange = function () {
+        a = this.readyState;
+        if (f || a && a != "complete" && a != "loaded") return;
+        f = true;
+        clearTimeout(t);
+        try {
+          Typekit.load(config)
+        } catch (e) {}
+      };
+      s.parentNode.insertBefore(tk, s)
+    })(document);
+
+  </script>
+  <link rel="stylesheet" href="/css/faq/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="global-wrapper">
+    <%- include('../component/_header') %>
+    <main class="main-content-wrapper">
+
+      <h2 class="content-page-title">FAQ / よくあるご質問</h2>
+
+        <div class="contact-primary__description">
+          <p>
+            よくあるご質問をまとめました。とはいえ、ニッカオフィスは１人でやっている小さなスタジオです。お客様に合わせてできるだけ柔軟に対応いたします。
+          </p>
+        </div>
+        <div class="contact-primary__primary-how">
+          <ul>
+            <li>
+              <dl>
+                <dt class="question_sentence">
+          <p>Q どのような入り方が多いですか？</p>
+        </dt>
+        <dd>
+          <p>
+          A  大きく３パターンあります。
+          １．既存のチームに入り、デザイナーさんの制作をサポートするパターン。主要画面はこちらで制作することもります。
+          ２．デザイナーさんがいないチームに入り、ニッカオフィスで制作をするパターン
+          ３．既存チームに入り、既存メンバーは通常運用をしつつ、新規案件やリニュアル案件をニッカオフィスが担当するパターン
+        </p>
+        </dd>
+        </dl>
+        </li>
+        <li>
+          <dl>
+            <dt class="question_sentence">
+          <p>
+          Q どのような契約になりますか？
+        </p>
+        </dt>
+        <dd>
+          <p>
+          A 準委任契約（顧問契約）となります。少人数のスタジオのため納品物ベースでの請負契約は現在対応しておりません。
+        </p>
+        </dd>
+      </dl>
+      </li>
+      <li>
+      <dl>
+        <dt class="question_sentence">
+          <p>
+          Q 発注や更新のタイミングは？
+          </p>
+        </dt>
+        <dd>
+          <p>
+          A 都度で大丈夫です。ただし直前のご発注の場合、対応できないケースがございますので、四半期、半期単位で発注頂けますとスムーズです。なお契約解除は翌月から。月途中の解除は不可です。
+          </p>
+        </dd>
+      </dl>
+      </li>
+      <li>
+      <dl>
+        <dt class="question_sentence">
+<p>
+  Q プランや単価は？
+</p>
+        </dt>
+        <dd>
+          <p>
+          A 単価一律のタイムチャージとなります。単価は１人月（160時間）＝320万円（税抜）となります。
+          例：0.2人月のご契約の場合は32時間稼働で64万円/月
+        </p>
+      </dd>
+    </dl>
+    </li>
+    <li>
+  <dl>
+    <dt class="question_sentence">
+        <p>
+          Q どのような発注が多いですか？
+          </p>
+        </dt>
+        <dd>
+          <p>
+          A 毎月0.1～0.3人月（16～48時間）で契約いただくケースが多いです。
+          </p>
+        </dd>
+      </li>
+      <li>
+      <dl>
+        <dt class="question_sentence">
+          <p>
+            Q オフィスには来てもらえますか？
+          </p>
+        </dt>
+        <p>
+          A 可能です。貴社指定場所に伺う場合は、移動工数として１時間分の工数を頂いております。遠方の場合は都度相談です。オンラインミーティング、弊社での打ち合わせ、持ち帰り稼働については稼働分のみカウントします。
+        </p>
+      </dt>
+    </dl>
+      </li>
+      </ul>
+
+      <div class="contact-bye-text">
+      分からないことがありましたら、お問い合わせください！
+      </div>
+    </main>
+
+    <footer class="global-footer">
+      <p class="global-footer__logo"><img src="/img/logo/knickaoffice_symbol.svg" alt=""></p>
+      <p class="global-footer__copy">
+        <small>All content Copyright ニッカオフィス / knicka office</small>
+      </p>
+    </footer>
+  </div>
+  <script src="/js/top/script.js"></script>
+  <script src="/js/faq/script.js"></script>
+</body>
+
+</html>

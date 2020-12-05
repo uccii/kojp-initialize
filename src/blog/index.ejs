@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-Uh-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script>
+    (function (d) {
+      var config = {
+          kitId: 'xcm6mon',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h = d.documentElement,
+        t = setTimeout(function () {
+          h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+        }, config.scriptTimeout),
+        tk = d.createElement("script"),
+        f = false,
+        s = d.getElementsByTagName("script")[0],
+        a;
+      h.className += " wf-loading";
+      tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+      tk.async = true;
+      tk.onload = tk.onreadystatechange = function () {
+        a = this.readyState;
+        if (f || a && a != "complete" && a != "loaded") return;
+        f = true;
+        clearTimeout(t);
+        try {
+          Typekit.load(config)
+        } catch (e) {}
+      };
+      s.parentNode.insertBefore(tk, s)
+    })(document);
+
+  </script>
+  <link rel="stylesheet" href="/css/blog/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+<%- include('../component/_header') %>
+  <main class="main-content-wrapper">
+    <article class="blog-main">
+      <div class="blog-header-nav">
+        <button class="blog-header-nav__day-before">
+          <p>前日</p>
+        </button>
+      </div>
+      <h2>令和元年12月20日に考えたこと</h2>
+      <div class="blog-main__content-height">
+        <div class="blog-main__content">
+          <h3 class="blog-main__content-right">理屈に頼り過ぎず感覚も大事にする</h3>
+          <div class="blog-main__content-left">
+            <p>ニッカオフィスのウチヤマケンイチです。</p>
+
+            <p>物事を考えるとき、あわせてその理由もセットで考える癖が僕にはあります。</p>
+            <p>思いつきの意見じゃなくて、きちんとロジカルに話を組み立てることは仕事ではとても重要で、理由とセットで思考する癖。訓練して身につけたわけです。</p>
+
+            <p>ただ最近、そんなふうに理由に囚われてばかりいると、思考が狭まってしまうというか、なんとも窮屈な感じを覚えるようになりました。</p>
+            <p>直感で思いついた案があっても、理由がつけられないからとその案を捨てる。本当にこれで良いのでしょうか。</p>
+
+            <p>例えば、飲食店を始めたいとか、日本一周したいとか。そんなふうになんとなく思いついたことはあっても、ではそれをやる合理的な理由は？と聞かれると、答えられなかったり。</p>
+            <p>であればそれらはやるべきでないのかというと、それはそれで違う気もするのです。</p>
+
+            <p>プライベートはもちろん、仕事についてもある程度は感覚で進めてしまうことも必要なのかもしれない。</p>
+            <p>
+              ロジカルと感覚のどっちが正しいというよりも、ロジカルには説明できないことも結構あるんじゃないかということ。いや説明しようとすればできるのかもしれないけれど、時間がかかってしまうし、その間に鮮度も落ちてしまうのかなと、そう思うのです。
+            </p>
+
+            <p>思考の鮮度。生きている考えというのは、一本釣りのように突然現れるものなのかもしれません。</p>
+            <p>理屈に頼り過ぎず感覚も大事にする。きっとそういうターンもあるものさ。</p>
+
+            <p>ウチヤマ ケンイチ</p>
+          </div>
+        </div>
+      </div>
+      <div class="blog-main__card">
+        <img class="blog-main__card" src="/img/blog/blog-one-point.png" alt="blog-one-point">
+      </div>
+    </article>
+
+    <div class="blog-footer-nav">
+      <button class="blog-footer-nav__day-before">
+        <p class="blog-footer-nav__day-before-zenjitsu">前日</p>
+        <p class="blog-footer-nav__day-before-title">ニッカオフィスのウチヤマケンイチです。きちんとしたレッスンのおかげでゴル
+      </button>
+      <span class="blog-footer-nav__day-space"></span>
+      <button class="blog-footer-nav__day-after">
+        <p class="blog-footer-nav__day-after-title">「普通の人」なんていない</p>
+        <p class="blog-footer-nav__day-after-yokujitsu">翌日</p>
+      </button>
+    </div>
+  </main>
+
+<%- include('../component/_footer') %>
+  <script src="/js/blog/script.js"></script>
+</body>
+
+</html>

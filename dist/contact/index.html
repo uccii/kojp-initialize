@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-Uh-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script>
+    (function (d) {
+      var config = {
+          kitId: 'xcm6mon',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h = d.documentElement,
+        t = setTimeout(function () {
+          h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+        }, config.scriptTimeout),
+        tk = d.createElement("script"),
+        f = false,
+        s = d.getElementsByTagName("script")[0],
+        a;
+      h.className += " wf-loading";
+      tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+      tk.async = true;
+      tk.onload = tk.onreadystatechange = function () {
+        a = this.readyState;
+        if (f || a && a != "complete" && a != "loaded") return;
+        f = true;
+        clearTimeout(t);
+        try {
+          Typekit.load(config)
+        } catch (e) {}
+      };
+      s.parentNode.insertBefore(tk, s)
+    })(document);
+
+  </script>
+  <link rel="stylesheet" href="/css/contact/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="global-wrapper">
+
+    <header class="global-header">
+      <div class="global-header__inner">
+        <h1 class="global-logo">
+          <img class="global-logo__image" src="/img/logo/knickaoffice_logo.svg" alt="knicka office">
+        </h1>
+        <nav class="global-nav">
+          <button class="global-nav__toggle-button">
+            <div class="global-nav__button-line parts-toggle-munu">
+              <span></span><span></span><span></span>
+            </div>
+          </button>
+          <ul class="js-smoothTrigger global-nav__menu common-nav-list">
+            <li class="global-nav__item global-nav__item-home common-nav-list__item">
+              <a href="/"><span class="global-nav__item-title">Home</span><span
+                  class="global-nav__item-sub">ホーム</span></a>
+            </li>
+            <li class="global-nav__item common-nav-list__item">
+              <a href="/#TOP_HEADING_ABOUT"><span
+                  class="global-nav__item-title">About</span><span
+                  class="global-nav__item-sub">オフィスのこと</span></a>
+            </li>
+            <li class="global-nav__item global-nav__item-client common-nav-list__item">
+              <a href="/#TOP_HEADING_CLIENT"><span class="global-nav__item-title">Client</span><span
+                  class="global-nav__item-sub">顧客</span></a>
+            </li>
+            <li class="global-nav__item common-nav-list__item">
+              <a href="/blog/"><span class="global-nav__item-title">Essay</span><span
+                  class="global-nav__item-sub">エッセイ</span></a>
+            </li>
+            <li class="global-nav__item common-nav-list__item">
+              <a href="/contact/"><span class="global-nav__item-title">Contact</span><span
+                  class="global-nav__item-sub">お問い合わせ</span></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content-wrapper">
+
+      <h2 class="content-page-title">CONTACT / お問い合わせ</h2>
+
+      <address class="contact-primary">
+        <div class="contact-primary__description">
+          <p>
+            デザインのご依頼など、お問い合わせは以下よりお受けいたします。返信まで数営業日かかることもございます。
+          </p>
+        </div>
+        <div class="contact-primary__primary-how">
+
+          <div class="contact-primary__mail-content">
+            <div class="contact-primary__mail">
+              <a href="mailto:s@knickaoffice.jp"  class="contact-primary__mail-icon" ><img src="/img/contact/mail.svg" alt="mail"></a>
+              <a href="mailto:s@knickaoffice.jp" class="contact-primary__mail-contents" id="mail">s@knickaoffice.jp</a>
+              <img src="/img/contact/copy.svg" alt="copy-mail" class="contact-primary__mail-copy">
+            </div>
+            <span class="contact-primary__border"></span>
+          </div>
+
+          <div class="contact-primary__phone-content">
+            <div class="contact-primary__phone">
+              <a href="tel:+81-045-516-2763"  class="contact-primary__phone-icon" ><img src="/img/contact/phone.svg" alt="phone"></a>
+              <a href="tel:+81-045-516-2763" class="contact-primary__phone-contents" id="phone">045-516-2763</a>
+              <img src="/img/contact/copy.svg" alt="copy-phone" class="contact-primary__phone-copy">
+            </div>
+            <span class="contact-primary__border"></span>
+          </div>
+
+        </div>
+      </address>
+
+      <div class="contact-tpl">
+        <div class="contact-tpl__button-1st_wrapper">
+          <p class="contact-tpl__description">
+            問い合わせ用テンプレート（ご利用は任意です）
+          </p>
+          <button id="contact_tpl_button_1st" class="contact-tpl__button-1st">
+            表示する
+          </button>
+        </div>
+
+        <div class="contact-tpl__button-2nd_wrapper" id="contact_tpl">
+          <div class="contact-tpl__copy-frame">
+            <textarea class="contact-tpl__copy-text" readonly="readonly">
+ニッカオフィス合同会社担当者御中 以下、ご確認下さい。
+
+【お名前】内山賢一
+【貴社名】ニッカオフィス合同会社
+【希望連絡先】
+s@knickaoffice.jp もしくは
+045-516-2763
+【問い合わせ内容】
+デザインの依頼、見積もりの依頼、講演の依頼
+【対象サービスのURL】
+https://knickaoffice.jp/
+            </textarea>
+          </div>
+          <button class="contact-tpl__button-2nd">
+            テキストをコピーする
+          </button>
+        </div>
+      </div>
+
+      <span class="contact-border"></span>
+      <div class="contact-secondary">
+        <div class="contact-secondary__description">
+          <div class="contact-tpl__faq-link">
+            <a href="/faq/"  class="contact-tpl__faq-text">よくある質問（FAQ）</a>
+          </div>
+          <p>
+            以下のアプリでもお問い合わせも可能です
+          </p>
+        </div>
+
+        <div class="contact-secondary__secondary-how">
+
+          <div class="contact-secondary__twitter-content">
+            <div class="contact-secondary__twitter">
+              <a href="https://twitter.com/knickaoffice"  class="contact-secondary__twitter-icon" ><img src="/img/contact/twitter.svg" alt="twitter"></a>
+              <a href="https://twitter.com/knickaoffice" class="contact-secondary__twitter-contents" id="twitter">@knickaoffice</a>
+              <img src="/img/contact/copy.svg" alt="copy-twitter" class="contact-secondary__twitter-copy">
+            </div>
+            <span class="contact-secondary__border"></span>
+          </div>
+
+          <div class="contact-secondary__facebook-content">
+            <div class="contact-secondary__facebook">
+              <a href="fb://profile/194345830616701"  class="contact-secondary__facebook-icon" ><img src="/img/contact/facebook-f.svg" alt="facebook"></a>
+              <a href="fb://profile/194345830616701" class="contact-secondary__facebook-contents" id="facebook">knickaoffice</a>
+              <img src="/img/contact/copy.svg" alt="copy-facebook" class="contact-secondary__facebook-copy">
+            </div>
+            <span class="contact-secondary__border"></span>
+          </div>
+
+          <div class="contact-secondary__line-content">
+            <div class="contact-secondary__line">
+              <a href="https://line.me/R/ti/p/@cwr6960h"  class="contact-secondary__line-icon" ><img src="/img/contact/line.svg" alt="line"></a>
+              <a href="https://line.me/R/ti/p/@cwr6960h" class="contact-secondary__line-contents" id="line">knickaoffice</a>
+              <img src="/img/contact/copy.svg" alt="copy-line" class="contact-secondary__line-copy">
+            </div>
+            <span class="contact-secondary__border"></span>
+          </div>
+
+      </div>
+
+      <div class="contact-bye-text">
+        いいご縁がありますように！ご連絡お待ちしています。
+      </div>
+      </div>
+    </main>
+<!-- コンポーネントからfooterコピー
+    <footer class="global-footer">
+      <p class="global-footer__logo"><img src="/img/logo/knickaoffice_symbol.svg" alt=""></p>
+      <p class="global-footer__copy">
+        <small>All content Copyright ニッカオフィス / knicka office</small>
+      </p>
+    </footer>
+
+-->
+ <!-- ▼ここから -->
+<footer class="global-footer" id="footer-modal">
+
+
+
+  <div class="producer" id="producer">
+    <div class="producer__modal">
+      
+      <div class="producer__content">
+
+        <p class="producer__title">
+        このサイトの製作者</p>
+        <ul>
+        <li class="producer__kenichi">
+          <p>内山 賢一｜Kenichi UCHIYAMA</p>
+        <a href="hogehoge" lass="producer__link">
+          <img src="/img/contact/link-icon.svg" alt="Kenichi UCHIYAMA_link">
+        </a>
+        </li>
+
+        <li class="producer__takuro">
+          <p>佐藤 拓朗｜Takuro SATO</p>
+        <a href="hogehoge" lass="producer__link">
+          <img src="/img/contact/link-icon.svg" alt="Takuro SATO_link">
+        </a>
+        </li>
+
+        <li class="producer__kaho">
+          <p>堀本 佳歩｜Kaho HORIMOTO</p>
+        <a href="hogehoge" class="producer__link">
+          <img src="/img/contact/link-icon.svg" alt="Kaho HORIMOTO_link">
+        </a>
+        </li> 
+        </ul>
+
+        <button class="producer__close" id="producer__close">
+          <p>とじる</p>
+          <span class="producer__close-icon"></span>
+        </button>
+
+      </div> 
+
+    </div>
+  </div>
+
+
+  <div class="credit__open" id="credit__open">credit</div>
+  <p class="global-footer__logo"><img src="/img/logo/knickaoffice_symbol.svg" alt=""></p>
+  <p class="global-footer__copy">
+    <small>All content Copyright ニッカオフィス / knicka office</small>
+  </p>
+
+
+
+</footer>
+ <!-- ▲ここまで▲ -->
+
+
+  </div>
+  <script src="/js/contact/script.js"></script> 
+</body>
+
+</html>
