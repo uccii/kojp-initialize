@@ -61,7 +61,7 @@ export default function () {
   }
 
     //モーダル挙動
-    $('.credit__open').click(function () {
+    $('.global-footer__credit').click(function () {
       $('#producer').fadeIn();
     });
     $('.producer__close').click(function () {
@@ -110,7 +110,7 @@ export default function () {
 
   const initFixedModal = () => {
     const onOffModal = fixedModal();
-    $('.credit__open').on('click', () => {
+    $('.global-footer__credit').on('click', () => {
       onOffModal.fixedOn();
     });
     $('.producer__close').on('click', () => {

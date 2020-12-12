@@ -395,7 +395,7 @@
   &__modal{
   position: fixed;
   z-index: 2000;
-  top: 45px;
+  top: 0px;
   background-color: rgba(255, 255, 255, 0.95);
   border-radius: 10px;
   width: 100%;
@@ -411,6 +411,8 @@
 
   &__content{
     width: 280px;
+    padding-left: 48px;
+    padding-right: 48px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -420,16 +422,68 @@
     justify-content: space-between;
     padding-bottom: 42px;
   }
+
+  &__name-wrapper{
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 42px;
+    height: 24px;
+  }
+
+  &__kenichi-en{
+        &:before {
+          content: '';
+          display: inline-block;
+          background: #707070;
+          height: 16px;
+          width: 1px;
+          margin-right: 4px;
+          margin-left: 4px;
+          transform: translateY(0.1rem);
+          }
+  }
+
   &__takuro{
     display: flex;
     justify-content: space-between;
     padding-bottom: 42px;
   }
+
+  &__takuro-en{
+        &:before {
+          content: '';
+          display: inline-block;
+          background: #707070;
+          height: 16px;
+          width: 1px;
+          margin-right: 4px;
+          margin-left: 4px;
+          transform: translateY(0.1rem);
+          }
+  }
+
   &__kaho{
     display: flex;
     justify-content: space-between;
     padding-bottom: 42px;
   }
+
+  &__kaho-en{
+    &:before {
+      content: '';
+      display: inline-block;
+      background: #707070;
+      height: 16px;
+      width: 1px;
+      margin-right: 4px;
+      margin-left: 4px;
+      transform: translateY(0.1rem);
+      }
+}
 
   &__close{
     >p{
@@ -559,6 +613,90 @@ body.fixed {
   }
 }
 
+.global-footer{
+
+  &__logo{
+    margin-bottom: 22px;
+  }
+
+  &__main-logo{
+     > img{
+    width: 116px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+     }
+  }
+
+  &__background{
+    background-color: #F5F4EE;
+    width: 100%;
+    height: auto;
+  }
+
+  &__wrap{
+    max-width: 718px;
+    height: auto;
+    padding-top: 25px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 14px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__link{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 13px;
+    a >{
+      color: #707070;
+      text-decoration: none;
+      border-style: none;
+    }
+    margin-bottom: 24px;
+  }
+
+  &__links{
+    > a{
+    display: block;
+    width:100px;
+    margin-bottom:20px;
+    color: #707070;
+    text-decoration: none;
+    border-style: none;
+    }
+  }
+
+  &__credit{
+    width: 156px;
+    height: auto;
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 13px;
+    border-radius: 3px;
+    color: #707070;
+    border: 1px solid #707070;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+  }
+  
+  &__address{
+     > p{
+      text-decoration: none;
+      font-size: 13px;
+      font-style:normal;
+      color: #707070;
+     }
+
+  }
+
+}
 
 @media screen and (min-width:454px) {
   /*　画面サイズが454pxからはここを読み込む　*/
@@ -578,7 +716,7 @@ body.fixed {
 
 @media screen and (min-width:672px) {
 
-  /*　画面サイズが650pxからはここを読み込む　*/
+  /*　画面サイズが672pxからはここを読み込む　*/
   .contact-secondary {
 
     &__line-content {
@@ -611,6 +749,23 @@ body.fixed {
 
 
 
+@media screen and (max-width:702px) {
+
+  /*　画面サイズが672pxからはここを読み込む　*/
+  .global-footer{
+
+    &__link{
+      text-align: left;
+      margin-bottom: 0px;
+      width: 327px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+  }
+
+
+}
 
 
 
