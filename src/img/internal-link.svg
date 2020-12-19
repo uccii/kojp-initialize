@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="10.355" height="17.883" viewBox="0 0 10.355 17.883">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #707070;
+        stroke-linecap: round;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="グループ_719" data-name="グループ 719" transform="translate(18024.914 5491.914)">
+    <line id="線_249" data-name="線 249" class="cls-1" x2="7.527" y2="7.459" transform="translate(-18023.5 -5490.5)"/>
+    <line id="線_250" data-name="線 250" class="cls-1" x2="7.459" y2="7.527" transform="translate(-18023.5 -5475.445) rotate(-90)"/>
+  </g>
+</svg>
