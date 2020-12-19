@@ -146,16 +146,35 @@ button {
 
 .common-fluid-image {
   margin: 40px calc(-50vw + 50%);
-  ;
   width: 100vw;
 
-  &__parallax {
-    min-height: 376px;
-    background: transparent;
+  &__parallax-wrapper {
+    position: relative;
+    width: 100%;
+    height: 376px;
   }
 
-  img {
-    display: none;
+  &__parallax {
+    clip-path: rect(0, auto, auto ,0);
+    clip-path: inset(0 0 0 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__parallax-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-attachment: scroll;
+    background-image: url(/img/image-about-office.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
@@ -514,13 +533,13 @@ input[type="checkbox"].common-display-toggle-check {
 }
 
 @media screen and (min-width:600px) and (max-width:1024px) {
-  /*　画面サイズが600pxから1024pxまではここを読み込む　*/
+  // 画面サイズが600pxから1024pxまではここを読み込む
 
 }
 
 @media screen and (min-width:688px) {
 
-  /*　画面サイズが688pxからはここを読み込む　*/
+  // 画面サイズが688pxからはここを読み込む
   .global-narrow-box {
     width: 624px;
     margin-left: auto;
@@ -529,7 +548,7 @@ input[type="checkbox"].common-display-toggle-check {
 }
 
 @media screen and (min-width:600px) {
-  /*　画面サイズが600pxからはここを読み込む:共通パーツ用　*/
+  // 画面サイズが600pxからはここを読み込む:共通パーツ用
   .global-nav {
     position: relative;
     bottom: initial;
