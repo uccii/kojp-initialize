@@ -13,4 +13,7 @@ export default function () {
   });
 
   lib.commonWork.waitWebFontLoad('loading-delay');
+
+  const initCreditModal = lib.commonWork.creditModal();
+  initCreditModal();
 }
