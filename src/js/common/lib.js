@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 const utility = {
   toggleClickedAttr: (_e) => {
     const clickedName = 'clicked';
@@ -66,7 +68,68 @@ const commonWork = {
     setTimeout(() => {
       document.getElementsByTagName('html')[0].classList.add(_className);
     }, 3000);
+  },
+  creditModal: () => {
+    $('.global-footer__credit').on('click', () => {
+      $('#producer').fadeIn();
+    });
+    $('.producer__close').on('click', () => {
+      $('#producer').fadeOut();
+    });
+
+    const fixedModal = () => {
+      let scrollPosition = 0;
+      const ua = window.navigator.userAgent.toLowerCase();
+      const isiOS = ua.indexOf('iphone') > -1 || ua.indexOf('ipad') > -1 || ua.indexOf('macintosh') > -1 && 'ontouchend' in document;
+
+      const fixedOn = () => {
+        if (isiOS) {
+          scrollPosition = $(window).scrollTop();
+          $('body').css({
+            width: '100%',
+            position: 'fixed',
+            top: `-${scrollPosition}px`
+          });
+        } else {
+          $('body').css({
+            overflow: 'hidden'
+          });
+        }
+      };
+
+      const fixedOff = () => {
+        if (isiOS) {
+          $('body').css({
+            width: '',
+            position: '',
+            top: ''
+          });
+          $(window).scrollTop(scrollPosition);
+        } else {
+          $('body').css({
+            overflow: ''
+          });
+        }
+      };
+
+      return {
+        fixedOn,
+        fixedOff
+      };
+    };
+
+    const initFixedModal = () => {
+      const onOffModal = fixedModal();
+      $('.global-footer__credit').on('click', () => {
+        onOffModal.fixedOn();
+      });
+      $('.producer__close').on('click', () => {
+        onOffModal.fixedOff();
+      });
+    };
+
+    return initFixedModal;
   }
 };
 
-export {utility, commonWork};
+export { utility, commonWork };

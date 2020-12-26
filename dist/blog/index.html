@@ -84,9 +84,9 @@
   <main class="main-content-wrapper">
     <article class="blog-main">
       <div class="blog-header-nav">
-        <button class="blog-header-nav__day-before">
+        <a class="blog-header-nav__day-before">
           <p>前日</p>
-        </button>
+        </a>
       </div>
       <h2>令和元年12月20日に考えたこと</h2>
       <div class="blog-main__content-height">
@@ -122,24 +122,84 @@
     </article>
 
     <div class="blog-footer-nav">
-      <button class="blog-footer-nav__day-before">
+      <a class="blog-footer-nav__day-before">
         <p class="blog-footer-nav__day-before-zenjitsu">前日</p>
-        <p class="blog-footer-nav__day-before-title">ニッカオフィスのウチヤマケンイチです。きちんとしたレッスンのおかげでゴル
-      </button>
-      <span class="blog-footer-nav__day-space"></span>
-      <button class="blog-footer-nav__day-after">
+        <p class="blog-footer-nav__day-before-title">ニッカオフィスのウチヤマケンイチです。きちんとしたレッスンのおかげでゴル</p>
+      </a>
+      <a class="blog-footer-nav__day-after">
         <p class="blog-footer-nav__day-after-title">「普通の人」なんていない</p>
         <p class="blog-footer-nav__day-after-yokujitsu">翌日</p>
-      </button>
+      </a>
     </div>
   </main>
 
-    <footer class="global-footer">
-      <p class="global-footer__logo"><img src="/img/logo/knickaoffice_symbol.svg" alt=""></p>
-      <p class="global-footer__copy">
-        <small>All content Copyright ニッカオフィス / knicka office</small>
-      </p>
-    </footer>
+<footer class="global-footer" id="footer-modal">
+  <div class="producer" id="producer">
+    <div class="producer__modal">
+      <div class="producer__content">
+        <p class="producer__title">
+          このサイトの製作者</p>
+        <ul>
+          <li class="producer__name-wrapper">
+            <div class="producer__kenichi">
+              <p>内山 賢一</p>
+              <p class="producer__kenichi-en">Kenichi UCHIYAMA</p>
+            </div>
+            <a href="/#chief-profile" class="producer__link">
+              <img src="/img/internal-link.svg" alt="Kenichi UCHIYAMA_link">
+            </a>
+          </li>
+          <li class="producer__name-wrapper">
+            <div class="producer__takuro">
+              <p>佐藤 拓朗</p>
+              <p class="producer__takuro-en">Takuro SATO</p>
+            </div>
+            <a href="https://www.facebook.com/takuro.sato1212/" target="_blank" class="producer__link">
+              <img src="/img/link-icon.svg" alt="Takuro SATO_link">
+            </a>
+          </li>
+          <li class="producer__name-wrapper">
+            <div class="producer__kaho">
+              <p>堀本 佳歩</p>
+              <p class="producer__kaho-en">Kaho HORIMOTO</p>
+            </div>
+            <a href="https://www.facebook.com/kaho.horimoto.9/" target="_blank" class="producer__link">
+              <img src="/img/link-icon.svg" alt="Kaho HORIMOTO_link">
+            </a>
+          </li>
+        </ul>
+        <button class="producer__close" id="producer__close">
+          <p>とじる</p>
+          <span class="producer__close-icon"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <p class="global-footer__logo"><img src="/img/logo/knickaoffice_symbol.svg" alt=""></p>
+  <div class="global-footer__background">
+    <div class="global-footer__wrap">
+      <ul class="global-footer__link">
+        <li class="global-footer__links"><a href="/">ホーム</a></li>
+        <li class="global-footer__links"><a href="/#TOP_HEADING_ABOUT/">オフィスのこと</a></li>
+        <li class="global-footer__links"><a href="/#TOP_HEADING_CLIENT">顧客</a></li>
+        <li class="global-footer__links"><a href="/blog/">エッセイ</a></li>
+        <li class="global-footer__links"><a href="/faq/">よくある質問</a></li>
+        <li class="global-footer__links"><a href="/contact/">お問い合わせ</a></li>
+      </ul>
+      <div class="global-footer__credit" id="credit__open">
+        <p>このサイトの制作メンバー</p>
+      </div>
+    </div>
+  </div>
+  <p class="global-footer__main-logo"><img src="/img/logo/knickaoffice_logo.svg" alt=""></p>
+  <address class="global-footer__address">
+    <p>ニッカオフィス合同会社</p>
+    <p>神奈川県横浜市西区中央2-3-13 ニッカオフィスビル４F</p>
+  </address>
+  <p class="global-footer__copy">
+    <small>All content Copyright ニッカオフィス / knicka office</small>
+  </p>
+</footer>
 
   <script src="/js/blog/script.js"></script>
 </body>
