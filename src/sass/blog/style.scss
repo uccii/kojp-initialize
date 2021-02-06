@@ -8,6 +8,9 @@
   margin-top: -56px;
   display: flex;
   justify-content: space-between;
+  > a {
+    text-decoration: none;
+  }
   &__day-before,
   &__day-after {
     width: 88px;
@@ -31,6 +34,8 @@
       height: 15px;
       width: 15px;
       background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
       margin-top: 0.5px;
     }
   }
@@ -114,6 +119,9 @@ h3 {
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
+  > a {
+    text-decoration: none;
+  }
 
   &__day-before {
     display: flex;
