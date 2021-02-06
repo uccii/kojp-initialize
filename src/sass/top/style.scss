@@ -169,6 +169,9 @@
     display: block;
     text-align: right;
     position: relative;
+    > a {
+      text-decoration: none;
+    }
 
     &:after {
       content: '';
