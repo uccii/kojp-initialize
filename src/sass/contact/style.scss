@@ -96,6 +96,7 @@
     height: 40px;
     width: auto;
     padding:4px;
+    padding-bottom: 6px;
     > img{
       height: auto;
       width: 36px;
@@ -258,11 +259,14 @@
   &__twitter-icon{
     height: 40px;
     width: auto;
-    padding:4px;
+    padding-top:0px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 8px;
     > img{
-      height: auto;
-      width: 40px;
-      padding:4px;
+      height: 40px;
+      width: auto;
+      padding: 4px;
     }
   }
 
@@ -309,9 +313,9 @@
     padding-top:0px;
     padding-left: 4px;
     padding-right: 4px;
-    padding-bottom: 12px;
+    padding-bottom: 8px;
     > img{
-      height: 44px;
+      height: 40px;
       width: auto;
       padding: 4px;
     }
@@ -355,11 +359,14 @@
   &__line-icon{
     height: 40px;
     width: auto;
-    padding:4px;
+    padding-top:0px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 8px;
     > img{
-      height: auto;
-      width: 36px;
-      padding:4px;
+      height: 40px;
+      width: auto;
+      padding: 4px;
     }
   }
 
