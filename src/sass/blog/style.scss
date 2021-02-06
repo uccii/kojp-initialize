@@ -6,8 +6,10 @@
 
 .blog-header-nav {
   margin-top: -56px;
-
-  &__day-before {
+  display: flex;
+  justify-content: space-between;
+  &__day-before,
+  &__day-after {
     width: 88px;
     height: 56px;
     background-color: #FAFAFA;
@@ -22,15 +24,24 @@
     align-items: center;
     justify-content: center;
     font-family: "ten-mincho-text", serif;
-
-    &:before {
+    &:before,
+    &:after {
       content: '';
       display: inline-block;
       height: 15px;
       width: 15px;
-      background-image: url(/img/blog/day-before.svg);
       background-repeat: no-repeat;
       margin-top: 0.5px;
+    }
+  }
+  &__day-before {
+    &:before {
+      background-image: url(/img/blog/day-before.svg);
+    }
+  }
+  &__day-after {
+    &:after {
+      background-image: url(/img/blog/day-after.svg);
     }
   }
 }
@@ -230,8 +241,8 @@ h3 {
 
   .blog-header-nav {
     margin-top: 62px;
-
-    &__day-before {
+    &__day-before,
+    &__day-after {
       width: 160px;
     }
 
