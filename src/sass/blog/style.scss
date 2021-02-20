@@ -48,6 +48,9 @@
     &:after {
       background-image: url(/img/blog/day-after.svg);
     }
+    &:only-child {
+      margin-left: auto;
+    }
   }
 }
 
@@ -182,6 +185,9 @@ h3 {
     font-size: 15px;
     border-radius: 6px;
     margin-top: 8px;
+    &:only-child {
+      margin-left: auto;
+    }
   }
 
   &__day-after-yokujitsu {
