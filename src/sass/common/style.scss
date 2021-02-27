@@ -153,6 +153,9 @@ button {
     width: 100vw;
     height: 30vw;
     z-index: -1;
+    @media screen and (min-width:1024px) {
+      height: 310px;
+    }
   }
 
   &__parallax {
