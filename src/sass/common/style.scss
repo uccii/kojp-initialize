@@ -73,6 +73,11 @@ button {
   justify-content: flex-end;
   height: 62px;
 
+  & > a {
+    height: min-content;
+    align-self: center;
+  }
+
   &__image {
     width: 150px;
     height: auto;
@@ -658,15 +663,17 @@ input[type="checkbox"].common-display-toggle-check {
           align-items: flex-end;
           margin-top: 5px;
 
-          &>img {
+          &__image {
             display: none;
           }
 
-          &:before {
-            display: block;
-            content: url("/img/logo/knickaoffice_symbol.svg");
-            width: 20px;
-            height: auto;
+          & > a {
+            &:before {
+              display: block;
+              content: url("/img/logo/knickaoffice_symbol.svg");
+              width: 20px;
+              height: auto;
+            }
           }
         }
 
