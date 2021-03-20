@@ -289,5 +289,19 @@ h3 {
 
 /*win✕Chrome の縦ラインが若干ずれていることとの修正方法として、"游明朝体"に変更することで対応する*/
 .js_isWin {
-  font-family: "游明朝体", serif;
+  .blog-main {
+    h2 {
+      @extend %yu-mincho-pr6n;
+    }
+
+    h3 {
+      @extend %yu-mincho-pr6n;
+    }
+
+    .blog-main {
+      &__content {
+        @extend %yu-mincho-pr6n;
+      }
+    }
+  }
 }

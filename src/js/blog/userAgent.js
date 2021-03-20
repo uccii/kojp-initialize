@@ -92,7 +92,7 @@ export default function () {
 
   if (navigator.platform.indexOf('Win') != -1) {
     //Windowsならつけるクラス
-    $('main,h3,p,h2').addClass('js_isWin');
+    $('main').addClass('js_isWin');
   } else {
     //Windows以外ならつけるクラス
     $('main').addClass('js_isNotWin');
