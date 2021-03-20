@@ -816,7 +816,6 @@ input[type="checkbox"].common-display-toggle-check {
   &__kenichi {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 42px;
   }
 
   &__name-wrapper {
@@ -828,6 +827,10 @@ input[type="checkbox"].common-display-toggle-check {
     justify-content: space-between;
     padding-bottom: 42px;
     height: 24px;
+    > div,
+    > a {
+      margin-bottom: 42px;
+    }
   }
 
   &__kenichi-en {
@@ -846,7 +849,6 @@ input[type="checkbox"].common-display-toggle-check {
   &__takuro {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 42px;
   }
 
   &__takuro-en {
@@ -865,7 +867,6 @@ input[type="checkbox"].common-display-toggle-check {
   &__kaho {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 42px;
   }
 
   &__kaho-en {
@@ -979,6 +980,7 @@ input[type="checkbox"].common-display-toggle-check {
     color: #707070;
     border: 1px solid #707070;
     background: #FFFFFF 0% 0% no-repeat padding-box;
+    cursor: pointer;
   }
 
   &__address {

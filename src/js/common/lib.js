@@ -76,6 +76,11 @@ const commonWork = {
     $('.producer__close').on('click', () => {
       $('#producer').fadeOut();
     });
+    $('.producer__link').on('click', (_e) => {
+      if (_e.currentTarget.attributes.href.value.match(/^\/#/)) {
+        $('#producer').fadeOut();
+      }
+    });
 
     const fixedModal = () => {
       let scrollPosition = 0;
@@ -125,6 +130,11 @@ const commonWork = {
       });
       $('.producer__close').on('click', () => {
         onOffModal.fixedOff();
+      });
+      $('.producer__link').on('click', (_e) => {
+        if (_e.currentTarget.attributes.href.value.match(/^\/#/)) {
+          onOffModal.fixedOff();
+        }
       });
     };
 
