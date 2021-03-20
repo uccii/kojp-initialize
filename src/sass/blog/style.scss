@@ -107,9 +107,8 @@ h3 {
       -webkit-text-combine: horizontal;
     }
   }
-
-  &__content-left {
-    margin-top: 8px;
+  &__content-right {
+    margin-top: -15px;
   }
 
   &__card {
@@ -251,7 +250,6 @@ h3 {
 
     &__content-right {
       margin-left: 3rem;
-      margin-top: -15px;
       margin-right: -76px
     }
   }
