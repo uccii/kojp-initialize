@@ -139,6 +139,7 @@
     text-align: center;
     margin: 0;
     position: relative;
+    font-family: "knicka-mincho", "ten-mincho-text", serif;
 
     &:before {
       content: '';
@@ -155,11 +156,13 @@
     font-size: 1.2rem;
     margin-top: 8px;
     text-align: right;
+    font-family: "knicka-mincho", "ten-mincho-text", serif;
   }
 
   &__text {
     font-size: 1.4rem;
     margin-top: 4px;
+    font-family: "knicka-mincho", "ten-mincho-text", serif;
   }
 
   &__more {
