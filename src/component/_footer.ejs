@@ -6,7 +6,7 @@
           このサイトの製作者</p>
         <ul>
           <li class="producer__name-wrapper">
-            <a href="/#chief-profile" class="producer__link">
+            <a href="/#TOP_HEADING_OWNER-PROFILE" class="producer__link">
             <div class="producer__kenichi">
               <p>内山 賢一</p>
               <p class="producer__kenichi-en">Kenichi UCHIYAMA</p>
