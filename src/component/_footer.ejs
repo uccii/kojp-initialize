@@ -6,30 +6,30 @@
           このサイトの製作者</p>
         <ul>
           <li class="producer__name-wrapper">
+            <a href="/#chief-profile" class="producer__link">
             <div class="producer__kenichi">
               <p>内山 賢一</p>
               <p class="producer__kenichi-en">Kenichi UCHIYAMA</p>
             </div>
-            <a href="/#chief-profile" class="producer__link">
-              <img src="/img/internal-link.svg" alt="Kenichi UCHIYAMA_link">
+            <span><img src="/img/internal-link.svg" alt="Kenichi UCHIYAMA_link"></span>
             </a>
           </li>
           <li class="producer__name-wrapper">
+            <a href="https://www.facebook.com/takuro.sato1212/" target="_blank" class="producer__link">
             <div class="producer__takuro">
               <p>佐藤 拓朗</p>
               <p class="producer__takuro-en">Takuro SATO</p>
             </div>
-            <a href="https://www.facebook.com/takuro.sato1212/" target="_blank" class="producer__link">
-              <img src="/img/link-icon.svg" alt="Takuro SATO_link">
+            <span><img src="/img/link-icon.svg" alt="Takuro SATO_link"></span>
             </a>
           </li>
           <li class="producer__name-wrapper">
+            <a href="https://www.facebook.com/kaho.horimoto.9/" target="_blank" class="producer__link">
             <div class="producer__kaho">
               <p>堀本 佳歩</p>
               <p class="producer__kaho-en">Kaho HORIMOTO</p>
             </div>
-            <a href="https://www.facebook.com/kaho.horimoto.9/" target="_blank" class="producer__link">
-              <img src="/img/link-icon.svg" alt="Kaho HORIMOTO_link">
+            <span><img src="/img/link-icon.svg" alt="Kaho HORIMOTO_link"></span>
             </a>
           </li>
         </ul>
