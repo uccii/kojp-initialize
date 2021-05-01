@@ -955,7 +955,7 @@ input[type="checkbox"].common-display-toggle-check {
   &__link {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     font-size: 13px;
     margin-bottom: 24px;
   }
@@ -963,11 +963,11 @@ input[type="checkbox"].common-display-toggle-check {
   &__links {
     >a {
       display: block;
-      width: 100px;
+      margin-left: 28px;
+      margin-right: 28px;
       margin-bottom: 20px;
       color: #707070;
       text-decoration: none;
-      border-style: none;
     }
   }
 
@@ -997,17 +997,3 @@ input[type="checkbox"].common-display-toggle-check {
     }
   }
 }
-
-@media screen and (max-width:702px) {
-  /*　画面サイズが672pxからはここを読み込む　*/
-  .global-footer {
-    &__link {
-      text-align: left;
-      margin-bottom: 0px;
-      width: 327px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-}
-//  ▼モーダル有りfooterここまで▼
