@@ -59,14 +59,13 @@ h2 {
   font-size: 1.4rem;
   font-weight: normal;
   text-align: center;
-  font-family: "knicka-mincho", "ten-mincho-text", serif;
+  @extend %knicka-mincho-with-ten-mincho;
 }
 
 h3 {
   display: block;
   font-size: 1.8rem;
   font-weight: normal;
-  font-family: "knicka-mincho", "ten-mincho-text", serif;
 }
 
 .blog-main {
@@ -87,7 +86,7 @@ h3 {
   }
 
   &__content {
-    font-family: "knicka-mincho", "ten-mincho-text", serif;
+    @extend %knicka-mincho-with-ten-mincho;
     display: block;
     margin-top: 64px;
     margin-bottom: 64px;
@@ -284,24 +283,5 @@ h3 {
       margin-top: 0;
     }
 
-  }
-}
-
-/*win✕Chrome の縦ラインが若干ずれていることとの修正方法として、"游明朝体"に変更することで対応する*/
-.js_isWin {
-  .blog-main {
-    h2 {
-      @extend %yu-mincho-pr6n;
-    }
-
-    h3 {
-      @extend %yu-mincho-pr6n;
-    }
-
-    .blog-main {
-      &__content {
-        @extend %yu-mincho-pr6n;
-      }
-    }
   }
 }
