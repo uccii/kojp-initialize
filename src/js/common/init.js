@@ -6,6 +6,13 @@ export default function () {
   globalNav.addEventListener('click', lib.utility.toggleClickedAttr);
   globalNav.addEventListener('click', lib.utility.addfirstClickedAttr);
   lib.commonWork.toggleGlobalHeaderWithScroll(globalHeader);
+  const touchMoveHideGlobalNav = () => {
+    const clickEvent = new Event('click');
+    if (globalNav.hasAttribute('clicked')) {
+      globalNav.dispatchEvent(clickEvent);
+    }
+  };
+  window.addEventListener('touchmove', touchMoveHideGlobalNav);
 
   const smoothScrollTrigerElements = document.querySelectorAll('.js-smoothTrigger a[href^="#"]');
   smoothScrollTrigerElements.forEach((_element) => {
