@@ -29,8 +29,7 @@ html {
   font-size: 62.5%;
   line-height: 1.8;
   visibility: hidden;
-  &.wf-active,
-  &.loading-delay {
+  &.wf-active {
     visibility: visible;
   }
 }
