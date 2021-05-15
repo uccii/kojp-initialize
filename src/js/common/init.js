@@ -23,4 +23,9 @@ export default function () {
 
   const initCreditModal = lib.commonWork.creditModal();
   initCreditModal();
+
+  const facebookLinks = document.querySelectorAll('.sns-button__item-fb > a');
+  facebookLinks.forEach((_e) => {
+    lib.commonWork.switchFacebookLink(_e);
+  });
 }
