@@ -28,4 +28,6 @@ export default function () {
   facebookLinks.forEach((_e) => {
     lib.commonWork.switchFacebookLink(_e);
   });
+
+  lib.commonWork.activeGlobalHeader();
 }

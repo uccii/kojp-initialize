@@ -60,6 +60,32 @@ const commonWork = {
       passive: true
     });
   },
+  activeGlobalHeader: () => {
+    const pagePath = window.location.pathname;
+    const pageHash = window.location.hash;
+    const activeClassName = 'global-nav__item-link--active';
+    const globalNavItem = document.querySelectorAll('.global-nav__item > a');
+    const addActiveClassName = (_keyName) => {
+      globalNavItem.forEach((_e) => {
+        const href = _e.attributes.href && _e.attributes.href.value;
+        if (href === _keyName) {
+          _e.classList.add(activeClassName);
+        } else {
+          _e.classList.remove(activeClassName);
+        }
+      });
+    };
+    globalNavItem.forEach((_e) => {
+      const href = _e.attributes.href && _e.attributes.href.value;
+      if (href.indexOf('#') === 0) {
+        _e.addEventListener('click', (_ev) => {
+          addActiveClassName(href);
+          _ev.preventDefault();
+        });
+      }
+    });
+    addActiveClassName(pageHash || pagePath);
+  },
   smoothScroll: (_triggerElement, _addHeightElement) => {
     const targetElement = document.querySelector(_triggerElement.getAttribute('href'));
     if (targetElement) {

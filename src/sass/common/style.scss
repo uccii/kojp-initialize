@@ -652,6 +652,7 @@ input[type="checkbox"].common-display-toggle-check {
           }
         }
 
+        &.global-nav__item-link--active,
         &:hover {
           >span {
             &:first-child {
