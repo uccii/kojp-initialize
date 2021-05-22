@@ -60,7 +60,7 @@ const commonWork = {
       passive: true
     });
   },
-  activeGlobalHeader: () => {
+  activeGlobalHeader: (_globalHeader) => {
     const pagePath = window.location.pathname;
     const pageHash = window.location.hash;
     const activeClassName = 'global-nav__item-link--active';
@@ -75,6 +75,41 @@ const commonWork = {
         }
       });
     };
+    const switchWithScroll = () => {
+      class HitScrollArea {
+        constructor(_element) {
+          this.keyName = `#${_element.id}`;
+          this.wrapper = _element.parentNode ? _element.parentNode : _element;
+          this.top = this.wrapper.getBoundingClientRect().top - _globalHeader.clientHeight;
+          this.bottom = this.top + this.wrapper.clientHeight;
+          this.isHit = false;
+        }
+
+        update(_scrollValue) {
+          this.top += this.wrapper.getBoundingClientRect().top + _scrollValue;
+          this.bottom += this.top;
+        }
+
+        judgeHit(_scrollValue) {
+          this.update(_scrollValue)
+          if (this.top < _scrollValue && _scrollValue < this.bottom) {
+            if (!this.isHit) {
+              addActiveClassName(this.keyName);
+              this.isHit = true;
+            }
+          } else {
+            this.isHit = false;
+          }
+        }
+      }
+      const thresholdElements = Array.from(document.querySelectorAll('#TOP_HEADING_ABOUT, #TOP_HEADING_CLIENT'))
+        .map(_item => new HitScrollArea(_item));
+      window.addEventListener('scroll', () => {
+        thresholdElements.forEach((_item) => {
+          _item.judgeHit(window.scrollY);
+        });
+      });
+    };
     globalNavItem.forEach((_e) => {
       const href = _e.attributes.href && _e.attributes.href.value;
       if (href.indexOf('#') === 0) {
@@ -85,6 +120,7 @@ const commonWork = {
       }
     });
     addActiveClassName(pageHash || pagePath);
+    switchWithScroll();
   },
   smoothScroll: (_triggerElement, _addHeightElement) => {
     const targetElement = document.querySelector(_triggerElement.getAttribute('href'));

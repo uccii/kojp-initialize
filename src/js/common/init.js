@@ -29,5 +29,5 @@ export default function () {
     lib.commonWork.switchFacebookLink(_e);
   });
 
-  lib.commonWork.activeGlobalHeader();
+  lib.commonWork.activeGlobalHeader(globalHeader);
 }
