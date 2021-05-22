@@ -787,8 +787,16 @@ input[type="checkbox"].common-display-toggle-check {
 }
 
 //  ▼モーダル有りfooterここから▼
+
+
+
 .producer {
   display: none;
+  // overflow-y: hidden;
+  // overflow-y: scroll;
+  // max-height: 100vh;
+  // height: 100vh;
+  // width: 100vh;
 
   &__modal {
     position: fixed;
@@ -797,9 +805,12 @@ input[type="checkbox"].common-display-toggle-check {
     background-color: rgba(255, 255, 255, 0.95);
     border-radius: 10px;
     width: 100%;
-    height: 100%;
+    // height: 100%;
     text-align: center;
+    // overflow-y: hidden;
     overflow-y: scroll;
+    // max-height: 100vh;
+    height: 100vh;
   }
 
   &__title {
@@ -963,7 +974,6 @@ input[type="checkbox"].common-display-toggle-check {
   &__links {
     >a {
       display: block;
-      width: 100px;
       margin-bottom: 20px;
       color: #707070;
       text-decoration: none;
@@ -998,16 +1008,57 @@ input[type="checkbox"].common-display-toggle-check {
   }
 }
 
-@media screen and (max-width:702px) {
-  /*　画面サイズが672pxからはここを読み込む　*/
+@media screen and (max-width:747px) {
+  /*　画面サイズが747pxからはここを読み込む　*/
   .global-footer {
     &__link {
+      display: flex;
+      flex-wrap: wrap;
+      flex-flow: row wrap;
       text-align: left;
       margin-bottom: 0px;
-      width: 327px;
+      width: 311px;
       margin-left: auto;
       margin-right: auto;
+      >a {
+        display: block;
+        margin-bottom: 20px;
+        color: #707070;
+        text-decoration: none;
+        border-style: none;
+      }
+    }
+    &__links--box3{
+      display: block;
+      width: 52px;
+      margin-left: 39px;
+    }
+    &__links--box2{
+      display: block;
+      width: 91px;
+    }
+    &__links--box1{
+      display: block;
+      width: 78px;
     }
   }
+    /*　
+  .box1 {
+    display: block;
+    width: 78px;
+  }
+
+  .box2 {
+    display: block;
+    width: 91px;
+  }
+
+  .box3 {
+    display: block;
+    width: 52px;
+    margin-left: 39px;
+  }
+  　*/
+
 }
 //  ▼モーダル有りfooterここまで▼
