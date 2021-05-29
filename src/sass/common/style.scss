@@ -29,8 +29,7 @@ html {
   font-size: 62.5%;
   line-height: 1.8;
   visibility: hidden;
-  &.wf-active,
-  &.loading-delay {
+  &.wf-active {
     visibility: visible;
   }
 }
@@ -653,6 +652,7 @@ input[type="checkbox"].common-display-toggle-check {
           }
         }
 
+        &.global-nav__item-link--active,
         &:hover {
           >span {
             &:first-child {

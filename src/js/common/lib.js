@@ -22,6 +22,17 @@ const utility = {
       default:
         return false;
     }
+  },
+  decisionUA: () => {
+    const deviceUA = window.navigator.userAgent.toLowerCase();
+    const isIPhone = deviceUA.indexOf('iphone') !== -1 && deviceUA.indexOf('ipod') === -1; // iPhone (ここでは iPod touch を除外)
+    const isIPad = deviceUA.indexOf('ipad') !== -1 || deviceUA.indexOf('macintosh') > -1 && 'ontouchend' in document; // iPad (旧 iOS, 新 iPad OS とも
+    const isAndroid = deviceUA.indexOf('android') !== -1; // Android
+    return {
+      isIPhone,
+      isIPad,
+      isAndroid
+    }
   }
 };
 
@@ -48,6 +59,32 @@ const commonWork = {
     window.addEventListener('scroll', toggleScrolledAttr, {
       passive: true
     });
+  },
+  activeGlobalHeader: () => {
+    const pagePath = window.location.pathname;
+    const pageHash = window.location.hash;
+    const activeClassName = 'global-nav__item-link--active';
+    const globalNavItem = document.querySelectorAll('.global-nav__item > a');
+    const addActiveClassName = (_keyName) => {
+      globalNavItem.forEach((_e) => {
+        const href = _e.attributes.href && _e.attributes.href.value;
+        if (href === _keyName) {
+          _e.classList.add(activeClassName);
+        } else {
+          _e.classList.remove(activeClassName);
+        }
+      });
+    };
+    globalNavItem.forEach((_e) => {
+      const href = _e.attributes.href && _e.attributes.href.value;
+      if (href.indexOf('#') === 0) {
+        _e.addEventListener('click', (_ev) => {
+          addActiveClassName(href);
+          _ev.preventDefault();
+        });
+      }
+    });
+    addActiveClassName(pageHash || pagePath);
   },
   smoothScroll: (_triggerElement, _addHeightElement) => {
     const targetElement = document.querySelector(_triggerElement.getAttribute('href'));
@@ -139,6 +176,14 @@ const commonWork = {
     };
 
     return initFixedModal;
+  },
+  switchFacebookLink: (_element) => {
+    const isUA = utility.decisionUA();
+    if (isUA.isIPhone || isUA.isiOS) {
+      _element.setAttribute('href', 'fb://page?id=160483220669629');
+    } else if (isUA.isAndroid) {
+      _element.setAttribute('href', 'fb://page/160483220669629');
+    }
   }
 };
 
