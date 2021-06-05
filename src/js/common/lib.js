@@ -78,36 +78,55 @@ const commonWork = {
     const switchWithScroll = () => {
       class HitScrollArea {
         constructor(_element) {
-          this.keyName = `#${_element.id}`;
-          this.wrapper = _element.parentNode ? _element.parentNode : _element;
-          this.top = this.wrapper.getBoundingClientRect().top - _globalHeader.clientHeight;
+          this.keyName = (_element.hash) ? _element.hash : `#${_element.getAttribute('href')}`;
+          this.target = document.querySelectorAll(this.keyName)[0];
+          this.wrapper = this.target.parentNode ? this.target.parentNode : this.target;
+          this.scrollValue = window.scrollY;
+          this.top = this.wrapper.offsetTop - _globalHeader.clientHeight;
           this.bottom = this.top + this.wrapper.clientHeight;
           this.isHit = false;
         }
 
-        update(_scrollValue) {
-          this.top += this.wrapper.getBoundingClientRect().top + _scrollValue;
-          this.bottom += this.top;
+        update() {
+          this.scrollValue = window.scrollY;
+          this.top = this.wrapper.offsetTop - _globalHeader.clientHeight;
+          this.bottom = this.top + this.wrapper.clientHeight;
         }
 
-        judgeHit(_scrollValue) {
-          this.update(_scrollValue)
-          if (this.top < _scrollValue && _scrollValue < this.bottom) {
+        judgeHit() {
+          this.update();
+          if (this.top < this.scrollValue && this.scrollValue < this.bottom) {
             if (!this.isHit) {
+              console.log(`${this.target.id}:hit`);
               addActiveClassName(this.keyName);
               this.isHit = true;
             }
           } else {
+            console.log(`${this.target.id}:out`);
+            addActiveClassName(false);
             this.isHit = false;
           }
         }
+
+        onScroll() {
+          window.addEventListener('scroll', this.judgeHit.bind(this));
+        }
+
+        testArea() {
+          const testArea = document.createElement('div');
+          testArea.innerText = this.keyName;
+          testArea.style.position = 'absolute';
+          testArea.style.border = '1px solid red';
+          testArea.style.top = `${this.top}px`;
+          testArea.style.height = `${this.wrapper.clientHeight}px`
+          document.body.appendChild(testArea);
+        }
       }
-      const thresholdElements = Array.from(document.querySelectorAll('#TOP_HEADING_ABOUT, #TOP_HEADING_CLIENT'))
+      const thresholdElements = Array.from(_globalHeader.querySelectorAll('[href^="#TOP_HEADING_ABOUT"]'))
         .map(_item => new HitScrollArea(_item));
-      window.addEventListener('scroll', () => {
-        thresholdElements.forEach((_item) => {
-          _item.judgeHit(window.scrollY);
-        });
+      thresholdElements.forEach((_item) => {
+        _item.onScroll();
+        _item.testArea();
       });
     };
     globalNavItem.forEach((_e) => {
