@@ -75,16 +75,33 @@ const commonWork = {
         }
       });
     };
+    const toggleActiveClassName = (_element, _flag) => {
+      if (_flag) {
+        _element.classList.add(activeClassName);
+      } else {
+        _element.classList.remove(activeClassName);
+      }
+    };
     const switchWithScroll = () => {
       class HitScrollArea {
         constructor(_element) {
-          this.keyName = (_element.hash) ? _element.hash : `#${_element.getAttribute('href')}`;
+          this.element = _element;
+          this.keyName = (this.element.hash) ? this.element.hash : `#${this.element.getAttribute('href')}`;
           this.target = document.querySelectorAll(this.keyName)[0];
           this.wrapper = this.target.parentNode ? this.target.parentNode : this.target;
           this.scrollValue = window.scrollY;
           this.top = this.wrapper.offsetTop - _globalHeader.clientHeight;
           this.bottom = this.top + this.wrapper.clientHeight;
           this.isHit = false;
+          this.testArea = document.createElement('hr');
+          this.testAreaB = document.createElement('hr');
+        }
+
+        validActive() {
+          if (_globalHeader.querySelector(`.${activeClassName}`) === this.element) {
+            return true;
+          }
+          return false;
         }
 
         update() {
@@ -95,15 +112,19 @@ const commonWork = {
 
         judgeHit() {
           this.update();
+          this.testAreaUpdate();
           if (this.top < this.scrollValue && this.scrollValue < this.bottom) {
             if (!this.isHit) {
               console.log(`${this.target.id}:hit`);
               addActiveClassName(this.keyName);
               this.isHit = true;
+            } else if (!this.validActive()) {
+              addActiveClassName(this.keyName);
             }
-          } else {
+          } else if (this.isHit) {
             console.log(`${this.target.id}:out`);
-            addActiveClassName(false);
+            toggleActiveClassName(this.element, false);
+            addActiveClassName(pagePath);
             this.isHit = false;
           }
         }
@@ -112,21 +133,31 @@ const commonWork = {
           window.addEventListener('scroll', this.judgeHit.bind(this));
         }
 
-        testArea() {
-          const testArea = document.createElement('div');
-          testArea.innerText = this.keyName;
-          testArea.style.position = 'absolute';
-          testArea.style.border = '1px solid red';
-          testArea.style.top = `${this.top}px`;
-          testArea.style.height = `${this.wrapper.clientHeight}px`
-          document.body.appendChild(testArea);
+        testAreas() {
+          this.testArea.style.position = 'absolute';
+          this.testArea.style.border = '1px solid red';
+          this.testArea.style.width = '100px';
+          this.testArea.style.margin = 0;
+          this.testArea.style.top = `${this.top}px`;
+          document.body.appendChild(this.testArea);
+          this.testAreaB.style.position = 'absolute';
+          this.testAreaB.style.border = '1px solid green';
+          this.testAreaB.style.width = '100px';
+          this.testAreaB.style.margin = 0;
+          this.testAreaB.style.top = `${this.bottom}px`;
+          document.body.appendChild(this.testAreaB);
+        }
+
+        testAreaUpdate() {
+          this.testArea.style.top = `${this.top}px`;
+          this.testAreaB.style.top = `${this.bottom}px`;
         }
       }
-      const thresholdElements = Array.from(_globalHeader.querySelectorAll('[href^="#TOP_HEADING_ABOUT"]'))
+      const thresholdElements = Array.from(_globalHeader.querySelectorAll('[href^="#"]'))
         .map(_item => new HitScrollArea(_item));
       thresholdElements.forEach((_item) => {
         _item.onScroll();
-        _item.testArea();
+        _item.testAreas();
       });
     };
     globalNavItem.forEach((_e) => {
