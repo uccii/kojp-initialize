@@ -109,23 +109,27 @@ const commonWork = {
         }
 
         judgeHit() {
-          this.update();
-          if (this.top < this.scrollValue && this.scrollValue < this.bottom) {
-            if (!this.isHit) {
-              addActiveClassName(this.keyName);
-              this.isHit = true;
-            } else if (!this.validActive()) {
-              addActiveClassName(this.keyName);
+          window.requestAnimationFrame(() => {
+            this.update();
+            if (this.top < this.scrollValue && this.scrollValue < this.bottom) {
+              if (!this.isHit) {
+                addActiveClassName(this.keyName);
+                this.isHit = true;
+              } else if (!this.validActive()) {
+                addActiveClassName(this.keyName);
+              }
+            } else if (this.isHit) {
+              toggleActiveClassName(this.element, false);
+              addActiveClassName(pagePath);
+              this.isHit = false;
             }
-          } else if (this.isHit) {
-            toggleActiveClassName(this.element, false);
-            addActiveClassName(pagePath);
-            this.isHit = false;
-          }
+          });
         }
 
         onScroll() {
-          window.addEventListener('scroll', this.judgeHit.bind(this));
+          window.addEventListener('scroll', this.judgeHit.bind(this), {
+            passive: true
+          });
         }
       }
       const thresholdElements = Array.from(_globalHeader.querySelectorAll('[href^="#"]'))
