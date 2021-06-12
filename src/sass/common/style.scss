@@ -36,11 +36,9 @@ html {
 
 body {
   overflow-x: hidden;
-  overflow-y: scroll;
   color: #2B2B2B;
   font-size: 1.6rem;
   @extend %yu-mincho-pr6n;
-  // @extend %knicka-mincho-with-ten-mincho;
 }
 
 p {
@@ -259,7 +257,8 @@ input[type="checkbox"].common-display-toggle-check {
     justify-content: space-evenly;
     margin: 0;
     padding: 0;
-    width: 100vw;
+    //width: 100vw; ここは%じゃないとNG
+    width: 100%;
     height: 68px;
     background-color: #fff;
     box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, .12);
@@ -673,7 +672,7 @@ input[type="checkbox"].common-display-toggle-check {
   }
 
   .global-header {
-    width: 100%;
+    width: 100vw;
 
     &[scrolled="scrolled"] {
       position: fixed;
@@ -757,18 +756,6 @@ input[type="checkbox"].common-display-toggle-check {
   }
 }
 
-// @media screen and (min-width:768px) {
-//   .client-list {
-//     justify-content: flex-start;
-
-//     &__item {
-//       margin: 16px 0;
-//       padding: 0 16px;
-//       box-sizing: border-box;
-//       width: calc(33%);
-//     }
-//   }
-// }
 
 @media screen and (min-width:1024px) {
   .global-header {
@@ -787,19 +774,29 @@ input[type="checkbox"].common-display-toggle-check {
 }
 
 //  ▼モーダル有りfooterここから▼
+
+.html{
+  overflow-y: scroll;
+  width: 100vw;
+}
+body{
+  overflow-y: scroll;
+  width: 100vw;
+}
+
 .producer {
   display: none;
 
   &__modal {
+    width: 100vw;
+    height: 100%;
+    overflow: auto;
     position: fixed;
     z-index: 2000;
-    top: 0px;
+    top: 0;
+    left: 0;
     background-color: rgba(255, 255, 255, 0.95);
-    border-radius: 10px;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    overflow-y: scroll;
+    box-sizing: border-box;
   }
 
   &__title {
@@ -814,6 +811,9 @@ input[type="checkbox"].common-display-toggle-check {
     padding-right: 48px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
+    background-clip: padding-box;
+    display: block;
   }
 
   &__kenichi {
@@ -963,7 +963,6 @@ input[type="checkbox"].common-display-toggle-check {
   &__links {
     >a {
       display: block;
-      width: 100px;
       margin-bottom: 20px;
       color: #707070;
       text-decoration: none;
@@ -998,16 +997,39 @@ input[type="checkbox"].common-display-toggle-check {
   }
 }
 
-@media screen and (max-width:702px) {
-  /*　画面サイズが672pxからはここを読み込む　*/
+@media screen and (max-width:747px) {
+  /*　画面サイズが747pxからはここを読み込む　*/
   .global-footer {
     &__link {
+      display: flex;
+      flex-wrap: wrap;
+      flex-flow: row wrap;
       text-align: left;
       margin-bottom: 0px;
-      width: 327px;
+      width: 311px;
       margin-left: auto;
       margin-right: auto;
+      >a {
+        display: block;
+        margin-bottom: 20px;
+        color: #707070;
+        text-decoration: none;
+        border-style: none;
+      }
+    }
+    &__links--box3{
+      display: block;
+      width: 52px;
+      margin-left: 39px;
+    }
+    &__links--box2{
+      display: block;
+      width: 91px;
+    }
+    &__links--box1{
+      display: block;
+      width: 78px;
     }
   }
+
 }
-//  ▼モーダル有りfooterここまで▼
