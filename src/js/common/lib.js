@@ -93,8 +93,6 @@ const commonWork = {
           this.top = this.wrapper.offsetTop - _globalHeader.clientHeight;
           this.bottom = this.top + this.wrapper.clientHeight;
           this.isHit = false;
-          this.testArea = document.createElement('hr');
-          this.testAreaB = document.createElement('hr');
         }
 
         validActive() {
@@ -112,17 +110,14 @@ const commonWork = {
 
         judgeHit() {
           this.update();
-          this.testAreaUpdate();
           if (this.top < this.scrollValue && this.scrollValue < this.bottom) {
             if (!this.isHit) {
-              console.log(`${this.target.id}:hit`);
               addActiveClassName(this.keyName);
               this.isHit = true;
             } else if (!this.validActive()) {
               addActiveClassName(this.keyName);
             }
           } else if (this.isHit) {
-            console.log(`${this.target.id}:out`);
             toggleActiveClassName(this.element, false);
             addActiveClassName(pagePath);
             this.isHit = false;
@@ -132,32 +127,11 @@ const commonWork = {
         onScroll() {
           window.addEventListener('scroll', this.judgeHit.bind(this));
         }
-
-        testAreas() {
-          this.testArea.style.position = 'absolute';
-          this.testArea.style.border = '1px solid red';
-          this.testArea.style.width = '100px';
-          this.testArea.style.margin = 0;
-          this.testArea.style.top = `${this.top}px`;
-          document.body.appendChild(this.testArea);
-          this.testAreaB.style.position = 'absolute';
-          this.testAreaB.style.border = '1px solid green';
-          this.testAreaB.style.width = '100px';
-          this.testAreaB.style.margin = 0;
-          this.testAreaB.style.top = `${this.bottom}px`;
-          document.body.appendChild(this.testAreaB);
-        }
-
-        testAreaUpdate() {
-          this.testArea.style.top = `${this.top}px`;
-          this.testAreaB.style.top = `${this.bottom}px`;
-        }
       }
       const thresholdElements = Array.from(_globalHeader.querySelectorAll('[href^="#"]'))
         .map(_item => new HitScrollArea(_item));
       thresholdElements.forEach((_item) => {
         _item.onScroll();
-        _item.testAreas();
       });
     };
     globalNavItem.forEach((_e) => {
