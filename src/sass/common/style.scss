@@ -35,12 +35,10 @@ html {
 }
 
 body {
-  //  overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-x: hidden;
   color: #2B2B2B;
   font-size: 1.6rem;
   @extend %yu-mincho-pr6n;
-  // @extend %knicka-mincho-with-ten-mincho;
 }
 
 p {
@@ -790,13 +788,13 @@ body{
   display: none;
 
   &__modal {
+    width: 100vw;
+    height: 100%;
     overflow: auto;
     position: fixed;
     z-index: 2000;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100%;
     background-color: rgba(255, 255, 255, 0.95);
     box-sizing: border-box;
   }
