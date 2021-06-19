@@ -149,8 +149,19 @@ button {
 }
 
 .common-fluid-image {
-  margin: 40px calc(-50vw + 50%);
+  margin: 0 calc(-50vw + 50%);
   width: 100vw;
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+  }
+  &:before {
+    margin-top: 40px;
+  }
 
   &__parallax-wrapper {
     position: relative;
