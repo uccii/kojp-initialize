@@ -153,12 +153,12 @@ const commonWork = {
   smoothScroll: (_triggerElement, _addHeightElement) => {
     const targetElement = document.querySelector(_triggerElement.getAttribute('href'));
     if (targetElement) {
-      const targetTop = targetElement.getBoundingClientRect().top;
+      const targetTop = targetElement.offsetTop;
       let addHeight = _addHeightElement.clientHeight;
-      let scrollToTop = targetTop + window.pageYOffset - addHeight;
+      let scrollToTop = targetTop - addHeight;
       const calcScrollToTop = () => {
         addHeight = _addHeightElement.clientHeight;
-        scrollToTop = targetTop + window.pageYOffset - addHeight;
+        scrollToTop = targetTop - addHeight;
         return scrollToTop;
       };
       _triggerElement.addEventListener('click', (_e) => {
