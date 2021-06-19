@@ -149,8 +149,19 @@ button {
 }
 
 .common-fluid-image {
-  margin: 40px calc(-50vw + 50%);
+  margin: 0 calc(-50vw + 50%);
   width: 100vw;
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+  }
+  &:before {
+    margin-top: 40px;
+  }
 
   &__parallax-wrapper {
     position: relative;
@@ -257,8 +268,7 @@ input[type="checkbox"].common-display-toggle-check {
     justify-content: space-evenly;
     margin: 0;
     padding: 0;
-    //width: 100vw; ここは%じゃないとNG
-    width: 100%;
+    width: 100vw;
     height: 68px;
     background-color: #fff;
     box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, .12);

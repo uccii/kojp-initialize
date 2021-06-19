@@ -46,13 +46,15 @@
 }
 
 .top-heading2 {
+  margin-top: 0;
   &:before {
     display: block;
     content: '';
     width: 40px;
     height: 1px;
-    margin: 52px auto 32px;
-    border-top: 1px dashed #A4A4A4;
+    border-bottom: 1px dashed #A4A4A4;
+    margin: 0 auto 32px;
+    padding: 52px 0 0;
   }
   &--logo-explanation {
     font-size: 1.8rem;
