@@ -1000,36 +1000,45 @@ body{
 @media screen and (max-width:747px) {
   /*　画面サイズが747pxからはここを読み込む　*/
   .global-footer {
-    &__link {
-      display: flex;
-      flex-wrap: wrap;
-      flex-flow: row wrap;
-      text-align: left;
-      margin-bottom: 0px;
-      width: 311px;
-      margin-left: auto;
-      margin-right: auto;
-      >a {
-        display: block;
-        margin-bottom: 20px;
-        color: #707070;
-        text-decoration: none;
-        border-style: none;
+      &__wrap {
+        width: 308px;
+      }
+      &__link {
+        margin-bottom: 0px;
       }
     }
-    &__links--box3{
-      display: block;
-      width: 52px;
-      margin-left: 39px;
-    }
-    &__links--box2{
-      display: block;
-      width: 91px;
-    }
-    &__links--box1{
-      display: block;
-      width: 78px;
-    }
+
+  #container {
+    display: grid; /* グリッドレイアウト */
+    grid-template-rows: 52px 52px;
+    grid-template-columns: 108px 108px 92px;
+    text-align: left;
+  }
+  #itemA {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    padding-left: 40px;
+  }
+  #itemB {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+  }
+  #itemC {
+    grid-row: 1 / 2;
+    grid-column: 3 / 4;
+  }
+  #itemD {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    padding-left: 40px;
+  }
+  #itemE {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+  }
+  #itemF {
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
   }
 
 }
