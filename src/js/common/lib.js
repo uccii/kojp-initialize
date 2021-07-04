@@ -154,12 +154,8 @@ const commonWork = {
     const targetElement = document.querySelector(_triggerElement.getAttribute('href'));
     if (targetElement) {
       const targetTop = targetElement.offsetTop;
-      let addHeight = _addHeightElement.clientHeight;
-      let scrollToTop = targetTop - addHeight;
       const calcScrollToTop = () => {
-        addHeight = _addHeightElement.clientHeight;
-        scrollToTop = targetTop - addHeight;
-        return scrollToTop;
+        return targetTop - 52;
       };
       _triggerElement.addEventListener('click', (_e) => {
         window.scrollTo({
