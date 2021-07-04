@@ -141,10 +141,9 @@ h3 {
 
   &__day-before-zenjitsu {
     display: flex;
-    flex-wrap: nowrap;
+    justify-content: space-between;
     flex-shrink: 0;
     align-items: center;
-    justify-content: center;
     font-family: "ten-mincho-text", serif;
 
     &:before {
@@ -152,13 +151,13 @@ h3 {
       content: '';
       display: inline-block;
       height: 15px;
-      width: 15px;
+      width: 10px;
       background-image: url(/img/blog/day-before.svg);
       background-repeat: no-repeat;
-      margin-bottom: 1px;
+      // margin-bottom: 1px;
     }
 
-    width: 49px;
+    width: 44px;
     height: auto;
     flex-shrink: 0;
     font-size: 1.5rem;
@@ -170,7 +169,8 @@ h3 {
     font-size: 1.4rem;
     margin-top: auto;
     margin-bottom: auto;
-    font-family: "ten-mincho-text", serif;
+    font-family: "knicka-mincho","ten-mincho-text","yu-mincho-pr6n",serif;
+    margin-left: 8px;
   }
 
   &__day-after {
@@ -193,25 +193,24 @@ h3 {
 
   &__day-after-yokujitsu {
     display: flex;
-    flex-wrap: nowrap;
+    justify-content: space-between;
     flex-shrink: 0;
     align-items: center;
-    justify-content: center;
+    // justify-content: center;
     font-family: "ten-mincho-text", serif;
 
     &:after {
-      /* アイコンを上下中央にする術考える */
       content: '';
       display: inline-block;
       height: 15px;
-      width: 15px;
+      width: 10px;
       background-image: url(/img/blog/day-after.svg);
       background-repeat: no-repeat;
-      margin-left: 2px;
-      margin-bottom: 2px;
+      // margin-bottom: 1px;
+      // float: right;
     }
 
-    width: 49px;
+    width: 44px;
     height: auto;
     flex-shrink: 0;
     font-size: 1.5rem;
@@ -223,7 +222,8 @@ h3 {
     font-size: 1.4rem;
     margin-top: auto;
     margin-bottom: auto;
-    font-family: "ten-mincho-text", serif;
+    font-family: "knicka-mincho","ten-mincho-text","yu-mincho-pr6n",serif;
+    margin-left: 8px;
   }
 }
 
