@@ -46,7 +46,8 @@
 }
 
 .top-heading2 {
-  margin-top: 0;
+  padding-top: 48px;
+  margin-top: -48px;
   &:before {
     display: block;
     content: '';

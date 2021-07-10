@@ -59,16 +59,19 @@ const commonWork = {
     window.addEventListener('scroll', toggleScrolledAttr, {
       passive: true
     });
+    toggleScrolledAttr();
   },
   activeGlobalHeader: (_globalHeader) => {
-    const pagePath = window.location.pathname;
+    const pagePath = `/${window.location.pathname.split('/')[1]}`;
     const pageHash = window.location.hash;
     const activeClassName = 'global-nav__item-link--active';
     const globalNavItem = document.querySelectorAll('.global-nav__item > a');
     const addActiveClassName = (_keyName) => {
       globalNavItem.forEach((_e) => {
-        const href = _e.attributes.href && _e.attributes.href.value;
-        if (href === _keyName) {
+        const href = _e.attributes.href
+          && (_e.attributes.href.value === '/') ? '/home' : _e.attributes.href.value;
+        const keyName = (_keyName === '/') ? '/home' : _keyName;
+        if (href.indexOf(keyName) !== -1) {
           _e.classList.add(activeClassName);
         } else {
           _e.classList.remove(activeClassName);
@@ -151,11 +154,18 @@ const commonWork = {
     switchWithScroll();
   },
   smoothScroll: (_triggerElement, _addHeightElement) => {
+    const mediaQuery = window.matchMedia('(max-width: 599px)');
     const targetElement = document.querySelector(_triggerElement.getAttribute('href'));
     if (targetElement) {
       const targetTop = targetElement.offsetTop;
+      const adjustPc = Number(targetElement.dataset.scrollAdjustTopPc || '0');
+      const adjustSp = Number(targetElement.dataset.scrollAdjustTopSp || '0');
+      const setTargetAdjustTop = () => {
+        return (mediaQuery.matches) ? adjustSp : adjustPc;
+      };
+      let targetAdjustTop = setTargetAdjustTop();
       const calcScrollToTop = () => {
-        return targetTop - 52;
+        return targetTop + targetAdjustTop;
       };
       _triggerElement.addEventListener('click', (_e) => {
         window.scrollTo({
