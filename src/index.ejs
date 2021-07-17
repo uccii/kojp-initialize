@@ -49,6 +49,18 @@
 </head>
 
 <body>
+  <%#<div style="position:fixed; top: 112px; left: 1px;">
+    <script>
+      function globalClickUP () {
+        window.scrollTo({top: window.scrollY - 1});
+      };
+      function globalClickDown () {
+        window.scrollTo({top: window.scrollY + 1});
+      };
+    </script>
+    <a onclick="globalClickUP()">UP</a><br>
+    <a onclick="globalClickDown()">DOWN</a>
+  </div>%>
   <div class="global-wrapper">
 <%- include('component/_header', {page: pageData}) %>
     <main class="main-content-wrapper">

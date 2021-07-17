@@ -86,6 +86,24 @@ const commonWork = {
       }
     };
     const switchWithScroll = () => {
+      const hitAreas = {
+        areas: [],
+        setArea(_areaName) {
+          if (this.areas.indexOf(_areaName) === -1) {
+            if (_areaName === pagePath || _areaName === pageHash) {
+              this.areas.unshift(_areaName);
+            } else {
+              this.areas.push(_areaName);
+            }
+          }
+        },
+        removeArea(_areaName) {
+          this.areas = this.areas.filter(area => area !== _areaName);
+        },
+        getArea() {
+          return this.areas[this.areas.length - 1];
+        }
+      };
       class HitScrollArea {
         constructor(_element) {
           this.element = _element;
@@ -116,15 +134,20 @@ const commonWork = {
             this.update();
             if (this.top < this.scrollValue && this.scrollValue < this.bottom) {
               if (!this.isHit) {
-                addActiveClassName(this.keyName);
+                hitAreas.setArea(this.keyName);
+                hitAreas.removeArea(pagePath);
                 this.isHit = true;
-              } else if (!this.validActive()) {
-                addActiveClassName(this.keyName);
+                if (hitAreas.getArea()) {
+                  addActiveClassName(hitAreas.getArea());
+                }
               }
             } else if (this.isHit) {
-              toggleActiveClassName(this.element, false);
-              addActiveClassName(pagePath);
+              hitAreas.setArea(pagePath);
+              hitAreas.removeArea(this.keyName);
               this.isHit = false;
+              if (hitAreas.getArea()) {
+                addActiveClassName(hitAreas.getArea());
+              }
             }
           });
         }
