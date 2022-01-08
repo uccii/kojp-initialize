@@ -1,9 +1,5 @@
 @import "../style";
 
-.global-wrapper {
-  background-color: #FFF;
-}
-
 .blog-header-nav {
   margin-top: -56px;
   display: flex;
@@ -104,6 +100,23 @@ h3 {
       text-combine-upright: digits2;
       -ms-text-combine-horizontal: digits 2;
       -webkit-text-combine: horizontal;
+    }
+    a {
+      color: #2B2B2B;
+      text-decoration: none;
+      display: inline-block;
+      position: relative;
+      &:before {
+        display: block;
+        position: absolute;
+        content: '';
+        left: 6px;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        background-size: 1px 4px;
+        background-image: linear-gradient(to bottom, #2B2B2B, #2B2B2B 2px, transparent 2px, transparent 4px);
+      }
     }
   }
   &__content-right {
