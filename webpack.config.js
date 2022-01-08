@@ -133,6 +133,10 @@ Object.assign(
       './src/js/faq/script.js',
       './src/sass/faq/style.scss',
     ],
+    photo: [
+      './src/js/photo/script.js',
+      './src/sass/photo/style.scss',
+    ],
   },
 );
 
