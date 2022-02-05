@@ -18,12 +18,14 @@
     <button id="stop">stop</button>
 
     <div id="text"></div>
+    <div id="distanse"></div>
 
     <script>
 const video = document.getElementById('input');
 const canvas = document.getElementById('output');
 const ctx = canvas.getContext('2d');
 const text = document.getElementById('text');
+const distanse = document.getElementById('distanse');
 
 const config = {
   locateFile: file => `https://cdn.jsdelivr.net/npm/@mediapipe/hands/${file}`
@@ -53,10 +55,17 @@ document.getElementById('start')
 document.getElementById('stop')
     .addEventListener('click', () =>  camera.stop());
 
+let thumbTipX = 0;
 let thumbTipY = 0;
+let indexTipX = 0;
 let indexTipY = 0;
 let before = 0;
 let now = 0;
+
+function getDistanse (x2, x1, y2, y1) {
+  const distanse = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y2, 2));
+  return distanse;
+};
 
 hands.onResults(results => {
     ctx.clearRect(0,0,canvas.width,canvas.height);
@@ -80,9 +89,14 @@ hands.onResults(results => {
 
           console.log(marks[8]);
 
+          thumbTipX = marks[4]?.x;
           thumbTipY = marks[4]?.y;
+          indexTipX = marks[8]?.x;
           indexTipY = marks[8]?.y;
-          now = 2 - thumbTipY - indexTipY;
+
+          now = getDistanse(thumbTipX, indexTipX, thumbTipY, indexTipY);
+
+          distanse.innerText = now;
 
           if(now > before){
             text.innerText = '広がる';
