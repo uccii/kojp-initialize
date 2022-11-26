@@ -107,15 +107,24 @@
 
 .vr-member {
   display: flex;
+  align-items: center;
 }
 
 .vr-member__wrapper {
   display: flex;
+  align-items: center;
   margin-left: 24px;
-
 }
 
+.vr-member_link {
+  display: flex;
+  align-items: center;
+}
 
+.vr-member__link-icon {
+  display: flex;
+  align-items: center;
+}
 
 @media screen and (min-width:768px) {
   /*　画面サイズが768pxからはここを読み込む　*/
