@@ -104,7 +104,7 @@ h4 {
 h4 > span {
   position: absolute;
   background-color: #fff;
-  padding-right: 16px;
+  padding-right: 8px;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -129,6 +129,9 @@ h4 {
   display: flex;
   align-items: center;
   margin-left: 24px;
+  &:first-child {
+  margin-left: 8px;
+  }
 }
 
 .vr-member_link {
@@ -151,6 +154,82 @@ h4 {
   height: 24px;
   border-radius: 50%;
   object-fit:cover;
+}
+
+.lab-list-item-dashed {
+  &:not(:first-of-type){
+  &:before {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #A4A4A4;
+    margin: 16px auto 16px;
+  }
+}
+}
+
+.headline-box {
+    background-color: #FFFFFF;
+    border: 1px solid #2b2b2b;
+    border-radius: 5px;
+    padding: 4px;
+    width: 56px;
+    text-align: center;
+    line-height: 16px;
+    margin-right: 16px;
+}
+
+.vr_container {
+  display: grid;
+  grid-template-columns: auto 120px;
+  gap: 10px;
+  grid-template-rows: auto;
+  grid-auto-columns: 544px;
+}
+
+.vr_item {
+  display: grid;
+  place-items: center;
+}
+
+.vr_item > img {
+  width: 100%;
+}
+
+
+
+.vr-btn {
+  display: flex;
+  border: 1px solid #2b2b2b;
+  border-radius: 48px;
+  width: 120px;
+  height: 48px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  align-items: center;
+  >a {
+    margin: auto;
+    text-decoration: none;
+    color: #2b2b2b;
+     }
+}
+
+.vr-study {
+  display: flex;
+  align-items: center;
+}
+
+.vr-study_dd {
+  display: flex;
+  align-items: center;
+}
+
+.vr-study_img_button {
+  display: flex;
+  align-items: center;
+  width: 544px;
 }
 
 @media screen and (min-width:768px) {
@@ -189,4 +268,11 @@ h4 {
       width: 600px;
     }
   }
+}
+
+@media screen and (max-width:576px) {
+  /*　画面サイズが576px以下はここを読み込む　*/
+.vr_container {
+  margin: 16px auto 16px;
+}
 }
