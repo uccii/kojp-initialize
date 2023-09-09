@@ -35,8 +35,8 @@ const app = {
     publicPath: '/',
   },
   devServer: {
-    static: './dist',
-    hot: true,
+    contentBase: './dist',
+    watchContentBase: true,
     host: '0.0.0.0',
     port: 3000,
     open: true,
@@ -44,7 +44,7 @@ const app = {
   module: {
     rules: [{
       test: /\.ejs$/,
-      use: [
+      loader: [
         'html-loader',
         'ejs-html-loader',
       ],
@@ -93,24 +93,16 @@ const app = {
   resolve: {
     extensions: ['.js'],
   },
-  devtool: 'eval-cheap-module-source-map',
+  devtool: 'cheap-module-eval-source-map',
   plugins: [
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: path.resolve(__dirname, 'src/img/'),
-          to: path.resolve(__dirname, 'dist/img/'),
-        },
-      ],
-    }),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: path.resolve(__dirname, 'src/font/'),
-          to: path.resolve(__dirname, 'dist/font/'),
-        },
-      ],
-    }),
+    new CopyWebpackPlugin([{
+      from: path.resolve(__dirname, 'src/img/'),
+      to: path.resolve(__dirname, 'dist/img/'),
+    }]),
+    new CopyWebpackPlugin([{
+      from: path.resolve(__dirname, 'src/font/'),
+      to: path.resolve(__dirname, 'dist/font/'),
+    }]),
     new MiniCssExtractPlugin({
       filename: 'css/[name]/style.css',
     }),
