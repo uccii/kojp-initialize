@@ -122,6 +122,12 @@ h3 {
   &__content-right {
     margin-top: -15px;
   }
+  &__content-left {
+    p {
+      margin-right: 16px;
+      margin-left: 16px;
+    }
+  }
 
   &__card {
     margin-left: auto;
